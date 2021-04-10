@@ -1,0 +1,745 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 16
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Profet:BTS7008-2EPA U?
+U 1 1 5F5AE18D
+P 4650 3350
+AR Path="/5F5AE18D" Ref="U?"  Part="1" 
+AR Path="/5F54BF48/5F5AE18D" Ref="U?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE18D" Ref="U6"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE18D" Ref="U7"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE18D" Ref="U8"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE18D" Ref="U9"  Part="1" 
+F 0 "U9" H 5050 3517 50  0000 C CNN
+F 1 "BTS7008-2EPA" H 5050 3426 50  0000 C CNN
+F 2 "Profet:TDSO-14" H 4650 3350 50  0001 L BNN
+F 3 "" H 4650 3350 50  0001 C CNN
+F 4 "BTS70082EPAXUMA1CT-ND" H 4650 3350 50  0001 C CNN "Digi-Key_PN"
+	1    4650 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F5AE193
+P 3650 3650
+AR Path="/5EC855FC/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5ED7C935/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5ED881F7/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F16CB83/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F16D718/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F16D750/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F16D77D/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F16D85C/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F16D884/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F16D916/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F16D93F/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5AE193" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE193" Ref="R25"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE193" Ref="R33"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE193" Ref="R41"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE193" Ref="R49"  Part="1" 
+F 0 "R49" V 3445 3650 50  0000 C CNN
+F 1 "4.7K" V 3536 3650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3650 3650 50  0001 C CNN
+F 3 "~" H 3650 3650 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 3650 3650 50  0001 C CNN "Digi-Key_PN"
+	1    3650 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F5AE199
+P 3650 3750
+AR Path="/5EC855FC/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5ED7C935/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5ED881F7/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F16CB83/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F16D718/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F16D750/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F16D77D/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F16D85C/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F16D884/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F16D916/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F16D93F/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5AE199" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE199" Ref="R26"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE199" Ref="R34"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE199" Ref="R42"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE199" Ref="R50"  Part="1" 
+F 0 "R50" V 3850 3750 50  0000 C CNN
+F 1 "4.7K" V 3750 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3650 3750 50  0001 C CNN
+F 3 "~" H 3650 3750 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 3650 3750 50  0001 C CNN "Digi-Key_PN"
+	1    3650 3750
+	0    1    1    0   
+$EndComp
+NoConn ~ 4450 4350
+$Comp
+L Device:C_Small C?
+U 1 1 5F5AE1A0
+P 6250 2800
+AR Path="/5EC855FC/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5ED7C935/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5ED881F7/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F16CB83/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F16D718/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F16D750/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F16D77D/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F16D85C/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F16D884/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F16D916/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F16D93F/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F54BF48/5F5AE1A0" Ref="C?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE1A0" Ref="C18"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE1A0" Ref="C21"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE1A0" Ref="C24"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE1A0" Ref="C27"  Part="1" 
+F 0 "C27" H 6158 2754 50  0000 R CNN
+F 1 "100nF" H 6158 2845 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6250 2800 50  0001 C CNN
+F 3 "~" H 6250 2800 50  0001 C CNN
+F 4 "478-1395-1-ND" H 6250 2800 50  0001 C CNN "Digi-Key_PN"
+	1    6250 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5F5AE1A6
+P 5750 2800
+AR Path="/5EC855FC/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5ED7C935/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5ED881F7/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F16CB83/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F16D718/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F16D750/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F16D77D/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F16D85C/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F16D884/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F16D916/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F16D93F/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F54BF48/5F5AE1A6" Ref="C?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE1A6" Ref="C17"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE1A6" Ref="C20"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE1A6" Ref="C23"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE1A6" Ref="C26"  Part="1" 
+F 0 "C26" H 5658 2754 50  0000 R CNN
+F 1 "47nF" H 5658 2845 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5750 2800 50  0001 C CNN
+F 3 "~" H 5750 2800 50  0001 C CNN
+F 4 "399-1166-1-ND" H 5750 2800 50  0001 C CNN "Digi-Key_PN"
+	1    5750 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F5AE1AC
+P 6000 3150
+AR Path="/5EC855FC/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5ED7C935/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5ED881F7/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F16CB83/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F16D718/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F16D750/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F16D77D/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F16D85C/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F16D884/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F16D916/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F16D93F/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5AE1AC" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE1AC" Ref="R30"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE1AC" Ref="R38"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE1AC" Ref="R46"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE1AC" Ref="R54"  Part="1" 
+F 0 "R54" V 6100 3150 50  0000 C CNN
+F 1 "47R 1/4W" V 6200 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 6000 3150 50  0001 C CNN
+F 3 "~" H 6000 3150 50  0001 C CNN
+F 4 "311-47.0FRCT-ND" H 6000 3150 50  0001 C CNN "Digi-Key_PN"
+	1    6000 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F5AE1B2
+P 6250 3150
+AR Path="/5EC855FC/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5ED7C935/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5ED881F7/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F16CB83/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D718/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D750/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D77D/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D85C/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D884/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D916/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D93F/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F54BF48/5F5AE1B2" Ref="#PWR?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE1B2" Ref="#PWR036"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE1B2" Ref="#PWR040"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE1B2" Ref="#PWR044"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE1B2" Ref="#PWR048"  Part="1" 
+F 0 "#PWR048" H 6250 2900 50  0001 C CNN
+F 1 "GND" H 6255 2977 50  0000 C CNN
+F 2 "" H 6250 3150 50  0001 C CNN
+F 3 "" H 6250 3150 50  0001 C CNN
+	1    6250 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3450 5750 3450
+Wire Wire Line
+	5750 3450 5750 3150
+Wire Wire Line
+	5750 3150 5900 3150
+Wire Wire Line
+	5750 2900 5750 3150
+Connection ~ 5750 3150
+Wire Wire Line
+	6100 3150 6250 3150
+Wire Wire Line
+	6250 3150 6250 2900
+Connection ~ 6250 3150
+Wire Wire Line
+	5750 2700 5750 2600
+Wire Wire Line
+	5750 2600 6250 2600
+Wire Wire Line
+	6250 2600 6250 2700
+Wire Wire Line
+	4350 3450 4450 3450
+Wire Wire Line
+	5750 2600 4350 2600
+Connection ~ 5750 2600
+Wire Wire Line
+	4350 2600 4350 3450
+Wire Wire Line
+	4450 3750 3750 3750
+Wire Wire Line
+	3400 3750 3550 3750
+Wire Wire Line
+	3400 3650 3550 3650
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F5AE1CA
+P 6900 4450
+AR Path="/5EC855FC/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5ED7C935/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5ED881F7/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F16CB83/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F16D718/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F16D750/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F16D77D/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F16D85C/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F16D884/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F16D916/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F16D93F/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5AE1CA" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE1CA" Ref="R32"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE1CA" Ref="R40"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE1CA" Ref="R48"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE1CA" Ref="R56"  Part="1" 
+F 0 "R56" V 7000 4450 50  0000 C CNN
+F 1 "4.7K" V 7100 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 6900 4450 50  0001 C CNN
+F 3 "~" H 6900 4450 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 6900 4450 50  0001 C CNN "Digi-Key_PN"
+	1    6900 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5F5AE1D0
+P 7150 4550
+AR Path="/5EC855FC/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5ED7C935/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5ED881F7/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F16CB83/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F16D718/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F16D750/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F16D77D/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F16D85C/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F16D884/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F16D916/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F16D93F/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F54B02A/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F54BF48/5F5AE1D0" Ref="C?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE1D0" Ref="C19"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE1D0" Ref="C22"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE1D0" Ref="C25"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE1D0" Ref="C28"  Part="1" 
+F 0 "C28" H 7050 4550 50  0000 R CNN
+F 1 "220pF" H 7100 4650 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7150 4550 50  0001 C CNN
+F 3 "~" H 7150 4550 50  0001 C CNN
+F 4 "399-1138-1-ND" H 7150 4550 50  0001 C CNN "Digi-Key_PN"
+	1    7150 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F5AE1D6
+P 5800 4550
+AR Path="/5EC855FC/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5ED7C935/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5ED881F7/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F16CB83/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F16D718/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F16D750/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F16D77D/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F16D85C/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F16D884/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F16D916/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F16D93F/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5AE1D6" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE1D6" Ref="R29"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE1D6" Ref="R37"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE1D6" Ref="R45"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE1D6" Ref="R53"  Part="1" 
+F 0 "R53" H 5600 4600 50  0000 L CNN
+F 1 "1.2K" H 5550 4500 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5800 4550 50  0001 C CNN
+F 3 "~" H 5800 4550 50  0001 C CNN
+F 4 "311-1.20KCRCT-ND" H 5800 4550 50  0001 C CNN "Digi-Key_PN"
+	1    5800 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F5AE1DC
+P 6100 4450
+AR Path="/5EC855FC/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5ED7C935/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5ED881F7/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F16CB83/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F16D718/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F16D750/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F16D77D/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F16D85C/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F16D884/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F16D916/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F16D93F/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5AE1DC" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE1DC" Ref="R31"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE1DC" Ref="R39"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE1DC" Ref="R47"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE1DC" Ref="R55"  Part="1" 
+F 0 "R55" V 6200 4450 50  0000 C CNN
+F 1 "220K" V 6300 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 6100 4450 50  0001 C CNN
+F 3 "~" H 6100 4450 50  0001 C CNN
+F 4 "311-220KARCT-ND" H 6100 4450 50  0001 C CNN "Digi-Key_PN"
+	1    6100 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Zener_Small D?
+U 1 1 5F5AE1E2
+P 6400 4550
+AR Path="/5EC855FC/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5ED7C935/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5ED881F7/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F16CB83/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F16D718/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F16D750/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F16D77D/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F16D85C/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F16D884/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F16D916/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F16D93F/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F54B02A/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F54BF48/5F5AE1E2" Ref="D?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE1E2" Ref="D9"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE1E2" Ref="D10"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE1E2" Ref="D11"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE1E2" Ref="D12"  Part="1" 
+F 0 "D12" V 6354 4618 50  0000 L CNN
+F 1 "3.3V" V 6445 4618 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" V 6400 4550 50  0001 C CNN
+F 3 "~" V 6400 4550 50  0001 C CNN
+F 4 "SZMMSZ4684T1GOSCT-ND" H 6400 4550 50  0001 C CNN "Digi-Key_PN"
+	1    6400 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 4350 5700 4350
+Wire Wire Line
+	5700 4350 5700 4450
+Wire Wire Line
+	5700 4450 5800 4450
+Wire Wire Line
+	5800 4450 6000 4450
+Wire Wire Line
+	7000 4450 7150 4450
+Wire Wire Line
+	6200 4450 6400 4450
+Connection ~ 5800 4450
+Connection ~ 6400 4450
+Wire Wire Line
+	6400 4450 6800 4450
+$Comp
+L power:GND #PWR?
+U 1 1 5F5AE1F1
+P 5800 4650
+AR Path="/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5EC855FC/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5ED7C935/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5ED881F7/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F16CB83/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D718/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D750/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D77D/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D85C/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D884/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D916/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D93F/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F54BF48/5F5AE1F1" Ref="#PWR?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE1F1" Ref="#PWR035"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE1F1" Ref="#PWR039"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE1F1" Ref="#PWR043"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE1F1" Ref="#PWR047"  Part="1" 
+F 0 "#PWR047" H 5800 4400 50  0001 C CNN
+F 1 "GND" H 5805 4477 50  0000 C CNN
+F 2 "" H 5800 4650 50  0001 C CNN
+F 3 "" H 5800 4650 50  0001 C CNN
+	1    5800 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F5AE1F7
+P 6400 4650
+AR Path="/5EC855FC/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5ED7C935/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5ED881F7/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F16CB83/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D718/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D750/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D77D/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D85C/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D884/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D916/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D93F/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F54BF48/5F5AE1F7" Ref="#PWR?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE1F7" Ref="#PWR037"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE1F7" Ref="#PWR041"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE1F7" Ref="#PWR045"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE1F7" Ref="#PWR049"  Part="1" 
+F 0 "#PWR049" H 6400 4400 50  0001 C CNN
+F 1 "GND" H 6405 4477 50  0000 C CNN
+F 2 "" H 6400 4650 50  0001 C CNN
+F 3 "" H 6400 4650 50  0001 C CNN
+	1    6400 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F5AE1FD
+P 7150 4650
+AR Path="/5EC855FC/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5ED7C935/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5ED881F7/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F16CB83/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D718/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D750/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D77D/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D85C/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D884/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D916/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F16D93F/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F54BF48/5F5AE1FD" Ref="#PWR?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE1FD" Ref="#PWR038"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE1FD" Ref="#PWR042"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE1FD" Ref="#PWR046"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE1FD" Ref="#PWR050"  Part="1" 
+F 0 "#PWR050" H 7150 4400 50  0001 C CNN
+F 1 "GND" H 7150 4500 50  0000 C CNN
+F 2 "" H 7150 4650 50  0001 C CNN
+F 3 "" H 7150 4650 50  0001 C CNN
+	1    7150 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 4450 7500 4450
+Connection ~ 7150 4450
+Text Notes 6850 4950 0    50   ~ 0
+RC Filter
+Text HLabel 4350 2600 1    50   Input ~ 0
+BATT
+Text HLabel 3400 3650 0    50   Input ~ 0
+IN0
+Text HLabel 3400 3750 0    50   Input ~ 0
+DEN
+Text HLabel 7450 3600 2    50   Output ~ 0
+OUT0
+Text HLabel 7500 4450 2    50   Output ~ 0
+IS
+Wire Wire Line
+	4450 3650 3750 3650
+Wire Notes Line
+	6650 4350 7450 4350
+Wire Notes Line
+	7450 4350 7450 4850
+Wire Notes Line
+	7450 4850 6650 4850
+Wire Notes Line
+	6650 4850 6650 4350
+NoConn ~ 4450 4250
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F5AE211
+P 4050 3950
+AR Path="/5EC855FC/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5ED7C935/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5ED881F7/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F16CB83/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F16D718/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F16D750/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F16D77D/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F16D85C/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F16D884/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F16D916/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F16D93F/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5AE211" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE211" Ref="R27"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE211" Ref="R35"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE211" Ref="R43"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE211" Ref="R51"  Part="1" 
+F 0 "R51" V 4250 3950 50  0000 C CNN
+F 1 "4.7K" V 4150 3950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4050 3950 50  0001 C CNN
+F 3 "~" H 4050 3950 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 4050 3950 50  0001 C CNN "Digi-Key_PN"
+	1    4050 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F5AE217
+P 4050 4050
+AR Path="/5EC855FC/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5ECC43FA/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5ED7C935/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5ED881F7/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F16CB83/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F16D718/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F16D750/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F16D77D/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F16D7AF/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F16D85C/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F16D884/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F16D8B6/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F16D8D4/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F16D8FC/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F16D916/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F16D93F/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B652/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B654/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B657/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F54B659/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F54B02A/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5AE217" Ref="R?"  Part="1" 
+AR Path="/5F54BF48/5F5A9675/5F5AE217" Ref="R28"  Part="1" 
+AR Path="/5F54BF48/5F5B0A9E/5F5AE217" Ref="R36"  Part="1" 
+AR Path="/5F54BF48/5F5B191B/5F5AE217" Ref="R44"  Part="1" 
+AR Path="/5F54BF48/5F5B1FA0/5F5AE217" Ref="R52"  Part="1" 
+F 0 "R52" V 4250 4050 50  0000 C CNN
+F 1 "4.7K" V 4150 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4050 4050 50  0001 C CNN
+F 3 "~" H 4050 4050 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 4050 4050 50  0001 C CNN "Digi-Key_PN"
+	1    4050 4050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4150 4050 4450 4050
+Wire Wire Line
+	4450 3950 4150 3950
+Text HLabel 3400 4050 0    50   Input ~ 0
+IN1
+Text HLabel 3400 3950 0    50   Input ~ 0
+DSEL
+Wire Wire Line
+	3400 3950 3950 3950
+Wire Wire Line
+	3400 4050 3950 4050
+Text HLabel 7450 3950 2    50   Output ~ 0
+OUT1
+Wire Wire Line
+	7450 3950 5650 3950
+Wire Wire Line
+	5650 3950 5650 4050
+Connection ~ 5650 3950
+Connection ~ 5650 4050
+Wire Wire Line
+	5650 4050 5650 4150
+Wire Wire Line
+	7450 3600 5650 3600
+Wire Wire Line
+	5650 3600 5650 3700
+Connection ~ 5650 3600
+Connection ~ 5650 3700
+Wire Wire Line
+	5650 3700 5650 3800
+$EndSCHEMATC

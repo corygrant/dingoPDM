@@ -1,0 +1,76 @@
+Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet,Digi-Key_PN,PN,Status,Category,Family,MPN,DK_Datasheet_Link,DK_Detail_Page,Manufacturer,Field10,Field8,Field9,Field4,Field7,Field6,Field5,Field11,Field12
+1,"Unpolarized capacitor, small symbol",C_Small,C62 C63,15pF,C_0805_2012Metric,2,~,311-4165-1-ND,,,,,,,,,,,,,,,,,
+2,"Unpolarized capacitor, small symbol",C_Small,C42 C43,27pF,C_0805_2012Metric,2,~,478-10518-1-ND,,,,,,,,,,,,,,,,,
+3,"Unpolarized capacitor, small symbol",C_Small,C4 C8 C12 C16 C19 C22 C25 C28,220pF,C_0805_2012Metric,8,~,399-1138-1-ND,,,,,,,,,,,,,,,,,
+4,"Unpolarized capacitor, small symbol",C_Small,C3 C7 C11 C15 C30 C31 C32 C33 C34 C35 C52,10nF,C_0805_2012Metric,11,~,311-1136-1-ND,,,,,,,,,,,,,,,,,
+5,"Unpolarized capacitor, small symbol",C_Small,C1 C5 C9 C13 C17 C20 C23 C26,47nF,C_0805_2012Metric,8,~,399-1166-1-ND,,,,,,,,,,,,,,,,,
+6,"Unpolarized capacitor, small symbol",C_Small,C2 C6 C10 C14 C18 C21 C24 C27 C29 C36 C38 C39 C40 C41 C44 C45 C46 C47 C48 C49 C50 C54 C55 C61 C64 C65,100nF,C_0805_2012Metric,26,~,478-1395-1-ND,,,,,,,,,,,,,,,,,
+7,"Unpolarized capacitor, small symbol",C_Small,C37 C53,1uF,C_0805_2012Metric,2,~,311-1365-1-ND,,,,,,,,,,,,,,,,,
+8,"Unpolarized capacitor, small symbol",C_Small,C51,4.7uF,C_0805_2012Metric,1,~,1276-2873-1-ND,,,,,,,,,,,,,,,,,
+9,"Unpolarized capacitor, small symbol",C_Small,C59,10uF,C_0805_2012Metric,1,~,490-18663-1-ND,,,,,,,,,,,,,,,,,
+10,"Polarized capacitor, US symbol",CP1,C60,0.47F/3.5V,FC0V474ZFTBR24,1,~,399-10942-1-ND,FC0V474ZFTBR24,,,,,,,,,,,,,,,,
+11,"Unpolarized capacitor, small symbol",C_Small,C58,100nF/16V,C_0805_2012Metric,1,~,478-1395-1-ND,,,,,,,,,,,,,,,,,
+12,"Unpolarized capacitor, small symbol",C_Small,C56,10uF/50V,C_0805_2012Metric,1,~,490-18663-1-ND,,,,,,,,,,,,,,,,,
+13,"Unpolarized capacitor, small symbol",C_Small,C57,22uF/16V,C_0805_2012Metric,1,~,490-10749-1-ND,,,,,,,,,,,,,,,,,
+14,"Zener diode, small symbol",D_Zener_Small,D2 D4 D6 D8 D9 D10 D11 D12 D36,3V,D_SOD-323_HandSoldering,9,~,MMSZ4683T1GOSCT-ND,,,,,,,,,,,,,,,,,
+15,schottky barrier diode,BAT54S,D14 D15 D16 D17 D18 D19 D40,BAT54S,SOT-23,7,https://www.diodes.com/assets/Datasheets/ds11005.pdf,BAT54SLT1GOSCT-ND,,,,,,,,,,,,,,,,,
+16,DIODE SCHOTTKY 40V 1A SMA,SS14,D1 D3 D5 D7,BYG23M,DO-214AC,4,https://www.onsemi.com/pub/Collateral/SS19-D.PDF,BYG23M-E3/TR3GICT-ND,,Active,,,,,,,,,,,,,,,
+17,"Light emitting diode, small symbol",LED_Small,D32 D43,GRN,LED_0805_2012Metric,2,~,475-1410-1-ND,,,,,,,,,,,,,,,,,
+18,TVS DIODE 24V 44V SOT23-3,NUP2105LT1G,D13,NUP2105LT1G,SOT-23-3,1,http://www.onsemi.com/pub/Collateral/NUP2105L-D.PDF,NUP2105LT1GOSCT-ND,,Active,Circuit Protection,TVS - Diodes,NUP2105LT1G,http://www.onsemi.com/pub/Collateral/NUP2105L-D.PDF,/product-detail/en/on-semiconductor/NUP2105LT1G/NUP2105LT1GOSCT-ND/1485001,ON Semiconductor,,,,,,,,,
+19,"Light emitting diode, small symbol",LED_Small,D33 D34,ORG,LED_0805_2012Metric,2,~,475-2488-1-ND,,,,,,,,,,,,,,,,,
+20,"Light emitting diode, small symbol",LED_Small,D35 D42 D44,RED,LED_0805_2012Metric,3,~,475-1278-1-ND,,,,,,,,,,,,,,,,,
+21,Bidirectional transient-voltage-suppression diode,D_TVS,D37,SMCJ20CA,DO-214AB_TVS,1,~,SMCJ20CABCT-ND,,,,,,,,,,,,,,,,,
+22,Schottky diode,D_Schottky,D38 D39 D41,Schottky,D_SOD-123,3,~,1727-2394-1-ND,,,,,,,,,,,,,,,,,
+23,"Light emitting diode, small symbol",LED_Small,D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31,YEL,LED_0805_2012Metric,12,~,475-2560-1-ND,,,,,,,,,,,,,,,,,
+24,"Ferrite bead, small symbol",Ferrite_Bead_Small,FB1,Ferrite_Bead_Small,R_0805_2012Metric,1,~,490-1054-1-ND,,,,,,,,,,,,,,,,,
+25,,DRT_Logo,G1,DRT_Logo,DRTLogo,1,,,,,,,,,,,,,,,,,,,
+26,,DRT_Logo,G2,DingoFace,DingoFaceNoFill,1,,,,,,,,,,,,,,,,,,,
+27,,DTM1312PA12PBR008,J3,DTM1312PA12PBR008,TE_DTM1312PA12PBR008,1,TE Connectivity,1734-1131-ND,,,,,,,,,Double Header 24 pin receptacle,Manufacturer recommendation,E,https://www.snapeda.com/parts/DTM1312PA12PBR008/TE%20Connectivity/datasheet/,Good,18.76 USD,Compliant,None,DTM1312PA12PBR008
+28,,RedCubeTerminal,J1,RedCubeTerminal,M6_Hole_8Pin_7461084,1,,732-3203-ND,,,,,,,,,,,,,,,,,
+29,"Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_01x02_Male,J5,SHORT,SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm,1,~,,,,,,,,,,,,,,,,,,
+30,"Cortex Debug Connector, standard ARM Cortex-M SWD and JTAG interface",Conn_ARM_JTAG_SWD_10,J4,SWD_10,PinHeader_2x5_P1.27_SMD,1,http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf,609-3695-1-ND,,,,,,,,,,,,,,,,,
+31,USB Full-Featured Type-C Receptacle connector,USB_C_Receptacle,J2,USB_C_Receptacle,USB_C_Receptacle_GCT_USB4085,1,https://www.usb.org/sites/default/files/documents/usb_type-c.zip,2073-USB4085-GF-ACT-ND,,,,,,,,,,,,,,,,,
+32,"Resistor, small US symbol",R_Small_US,R61 R62,0R,R_0805_2012Metric,2,~,RMCF0805ZT0R00CT-ND,,,,,,,,,,,,,,,,,
+33,"Resistor, small US symbol",R_Small_US,R103,100R,R_0805_2012Metric,1,~,311-100CRCT-ND,,,,,,,,,,,,,,,,,
+34,"Resistor, small US symbol",R_Small_US,R91 R92 R93 R99,120R,R_0805_2012Metric,4,~,311-120CRCT-ND,,,,,,,,,,,,,,,,,
+35,"Resistor, small US symbol",R_Small_US,R65 R72 R73 R74 R75 R77 R78 R79 R80 R81 R82 R83 R84 R85 R86 R87,560R,R_0805_2012Metric,16,~,311-2.00KCRCT-ND,,,,,,,,,,,,,,,,,
+36,"Resistor, small US symbol",R_Small_US,R98,1k,R_0805_2012Metric,1,~,311-1.0KARCT-ND,,,,,,,,,,,,,,,,,
+37,"Resistor, small US symbol",R_Small_US,R3 R9 R15 R21 R29 R37 R45 R53,1.2K,R_0805_2012Metric,8,~,311-1.20KCRCT-ND,,,,,,,,,,,,,,,,,
+38,"Resistor, small US symbol",R_Small_US,R88,1.5K,R_0805_2012Metric,1,~,,,,,,,,,,,,,,,,,,
+39,"Resistor, small US symbol",R_Small_US,R1 R2 R5 R6 R7 R8 R11 R12 R13 R14 R17 R18 R19 R20 R23 R24 R25 R26 R27 R28 R31 R32 R33 R34 R35 R36 R39 R40 R41 R42 R43 R44 R47 R48 R49 R50 R51 R52 R55 R56 R66 R67 R68 R89 R90 R94,4.7K,R_0805_2012Metric,46,~,311-4.70KCRCT-ND,,,,,,,,,,,,,,,,,
+40,"Resistor, small US symbol",R_Small_US,R58 R59 R60 R63 R64 R69 R70 R71 R76 R95 R96 R97 R100 R101 R102 R104 R105 R106,10k,R_0805_2012Metric,18,~,311-10.0KCRDKR-ND,,,,,,,,,,,,,,,,,
+41,"Resistor, small US symbol",R_Small_US,R57,47k,R_0805_2012Metric,1,~,311-47.0KCRCT-ND,,,,,,,,,,,,,,,,,
+42,"Resistor, small US symbol",R_Small_US,R4 R10 R16 R22 R30 R38 R46 R54,47R 1/4W,R_1206_3216Metric,8,~,RMCF1206FT4R70CT-ND 311-47.0FRCT-ND,,,,,,,,,,,,,,,,,
+43,SWITCH TACTILE SPST-NO 0.05A 24V,FSM4JSMATR,S1,RESET_SW,Switch_Tactile_SMD_6x6mm,1,https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=2-1437565-7&DocType=Customer+Drawing&DocLang=English,CKN9084CT-ND,,Active,Switches,Tactile Switches,FSM4JSMATR,https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=2-1437565-7&DocType=Customer+Drawing&DocLang=English,/product-detail/en/te-connectivity-alcoswitch-switches/FSM4JSMATR/450-1759-1-ND/2271638,TE Connectivity ALCOSWITCH Switches,,,,,,,,,
+44,"Switch, single pole double throw",SW_SPDT,SW1 SW2 SW3,SW_SPDT,CJS-1200TB,3,~,563-1022-1-ND,,,,,,,,,,,,,,,,,
+45,"Ultra-Small, Low-Power, I2C-Compatible, 3.3-kSPS, 12-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10",ADS1015IDGS,U16 U17 U21 U23,ADS1115,VSSOP-10_3x3mm_P0.5mm,4,http://www.ti.com/lit/ds/symlink/ads1015.pdf,,,,,,,,,,,,,,,,,,
+46,,BTS7008-2EPA,U6 U7 U8 U9,BTS7008-2EPA,TDSO-14,4,,BTS70082EPAXUMA1CT-ND,,,,,,,,,,,,,,,,,
+47,,BTS700n-1EPP,U2 U3 U4 U5,BTS700n-1EPP,TDSO-14,4,,BTS70021EPPXUMA1CT-ND,,,,,,,,,,,,,,,,,
+48,,ISP752R,U20,ISP752R,PG-DSO-8,1,,ISP752RFUMA1CT-ND,,,,,,,,,,,,,,,,,
+49,IC REG LINEAR 3.3V 800MA SOT223,LD1117S33CTR,U18,LD1117S33CTR,SOT-223,1,http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf,497-1241-1-ND,,Active,Integrated Circuits (ICs),PMIC - Voltage Regulators - Linear,LD1117S33CTR,http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf,/product-detail/en/stmicroelectronics/LD1117S33CTR/497-1241-1-ND/586241,STMicroelectronics,,,,,,,,,
+50,,MB85RC256V,U15,MB85RC256V,SOIC-8_3.9x4.9mm_P1.27mm,1,,865-1261-1-ND,,,,,,,,,,,,,,,,,
+51,"High-Speed CAN Transceiver, 1Mbps, 5V supply, SOIC-8",MCP2551-I-SN,U19,MCP2551,SOIC-8_3.9x4.9mm_P1.27mm,1,http://ww1.microchip.com/downloads/en/devicedoc/21667d.pdf,MCP2551T-I/SNCT-ND,,,,,,,,,,,,,,,,,
+52,,MCP9808,U10,MCP9808,MSOP-8_3x3mm_P0.65mm,1,https://ww1.microchip.com/downloads/en/DeviceDoc/25095A.pdf,MCP9808T-E/MSCT-ND,,,,,,,,,,,,,,,,,
+53,"IO expander 16 GPIO, I2C 400kHz, Interrupt, 2.3 - 5.5V, TSSOP-24",PCA9555PW,U12 U13,PCA9555PW,TSSOP-24_4.4x7.8mm_P0.65mm,2,https://www.nxp.com/docs/en/data-sheet/PCA9555.pdf,568-1058-1-ND,,,,,,,,,,,,,,,,,
+54,"16-bit PWM Fm+ I2C-bus LED driver, TSSOP-28",PCA9635,U14,PCA9635,TSSOP-28_4.4x9.7mm_P0.65mm,1,https://www.nxp.com/docs/en/data-sheet/PCA9635.pdf,568-4067-1-ND,,,,,,,,,,,,,,,,,
+55,"ARM Cortex-M4 MCU, 256KB flash, 40KB RAM, 72MHz, 2-3.6V, 37 GPIO, LQFP-48",STM32F303CCTx,U11,STM32F303CCTx,LQFP-48_7x7mm_P0.5mm,1,http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00058181.pdf,497-13318-ND,,,,,,,,,,,,,,,,,
+56,,VXO780x-500-M,U22,VXO780x-500-M,VXO78x-500-M,1,,102-VXO7805-500-M-CT-ND,,,,,,,,,,,,,,,,,
+57,IC FLASH 32M SPI 133MHZ 8SOIC,W25Q32JVSSIQ_TR,U1,W25Q32JVSSIQ_TR,SOIC-8_W5.6mm,1,http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf,W25Q32JVSSIQCT-ND,,Active,Integrated Circuits (ICs),Memory,W25Q32JVSSIQ TR,http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf,/product-detail/en/winbond-electronics/W25Q32JVSSIQ-TR/W25Q32JVSSIQCT-ND/7393546,Winbond Electronics,,,,,,,,,
+58,Two pin crystal,Crystal,Y2,32.768kHz,Crystal_SMD_3215-2Pin_3.2x1.5mm,1,~,535-9808-1-ND,,,,,,,,,,,,,,,,,
+59,Two pin crystal,Crystal,Y1,8mHz,Crystal_SMD_5032-2Pin_5.0x3.2mm,1,~,535-10630-1-ND,,,,,,,,,,,,,,,,,
+
+
+
+
+
+Component Groups:,59
+Component Count:,252
+Fitted Components:,252
+Number of PCBs:,1
+Total components:,252
+Schematic Version:,v2
+Schematic Date:,2020-10-15
+PCB Variant:,[u'default']
+BoM Date:,10/16/2020 1:51:45 AM
+Schematic Source:,DingoPDM.sch
+KiCad Version:,Eeschema (5.1.6)-1

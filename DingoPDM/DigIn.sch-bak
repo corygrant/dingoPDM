@@ -1,0 +1,910 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 16 16
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Diode:BAT54S D?
+U 1 1 606082B3
+P 2200 925
+AR Path="/5F5E4627/606082B3" Ref="D?"  Part="1" 
+AR Path="/605F89A8/606082B3" Ref="D14"  Part="1" 
+F 0 "D14" H 2200 1150 50  0000 C CNN
+F 1 "BAT54S" H 2200 1059 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2275 1050 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 2080 925 50  0001 C CNN
+F 4 "BAT54SLT1GOSCT-ND" H 2200 925 50  0001 C CNN "Digi-Key_PN"
+	1    2200 925 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 606082B9
+P 1850 975
+AR Path="/5F5B7065/606082B9" Ref="#PWR?"  Part="1" 
+AR Path="/606082B9" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/606082B9" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/606082B9" Ref="#PWR0166"  Part="1" 
+F 0 "#PWR0166" H 1850 725 50  0001 C CNN
+F 1 "GND" H 1855 802 50  0000 C CNN
+F 2 "" H 1850 975 50  0001 C CNN
+F 3 "" H 1850 975 50  0001 C CNN
+	1    1850 975 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 925  1850 925 
+Wire Wire Line
+	1850 925  1850 975 
+$Comp
+L power:+3V3 #PWR?
+U 1 1 606082C1
+P 2550 875
+AR Path="/5F5B7065/606082C1" Ref="#PWR?"  Part="1" 
+AR Path="/606082C1" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/606082C1" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/606082C1" Ref="#PWR0167"  Part="1" 
+F 0 "#PWR0167" H 2550 725 50  0001 C CNN
+F 1 "+3V3" H 2565 1048 50  0000 C CNN
+F 2 "" H 2550 875 50  0001 C CNN
+F 3 "" H 2550 875 50  0001 C CNN
+	1    2550 875 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 875  2550 925 
+Wire Wire Line
+	2550 925  2500 925 
+Wire Wire Line
+	2200 1125 2200 1225
+$Comp
+L Device:C_Small C?
+U 1 1 606082CB
+P 1900 1325
+AR Path="/5F5E4627/606082CB" Ref="C?"  Part="1" 
+AR Path="/605F89A8/606082CB" Ref="C33"  Part="1" 
+F 0 "C33" H 1992 1371 50  0000 L CNN
+F 1 "10nF" H 1992 1280 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1900 1325 50  0001 C CNN
+F 3 "~" H 1900 1325 50  0001 C CNN
+F 4 "311-1136-1-ND" H 1900 1325 50  0001 C CNN "Digi-Key_PN"
+	1    1900 1325
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 1225
+Wire Wire Line
+	1900 1225 2200 1225
+$Comp
+L power:GND #PWR?
+U 1 1 606082D3
+P 1900 1425
+AR Path="/5F5B7065/606082D3" Ref="#PWR?"  Part="1" 
+AR Path="/606082D3" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/606082D3" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/606082D3" Ref="#PWR0168"  Part="1" 
+F 0 "#PWR0168" H 1900 1175 50  0001 C CNN
+F 1 "GND" H 1905 1252 50  0000 C CNN
+F 2 "" H 1900 1425 50  0001 C CNN
+F 3 "" H 1900 1425 50  0001 C CNN
+	1    1900 1425
+	1    0    0    -1  
+$EndComp
+Text GLabel 1150 1225 0    50   Input ~ 0
+INPUT1
+Text GLabel 2650 1225 2    50   Output ~ 0
+IN_1
+Wire Wire Line
+	2650 1225 2200 1225
+Connection ~ 2200 1225
+$Comp
+L Diode:BAT54S D?
+U 1 1 606082DE
+P 2200 1975
+AR Path="/5F5E4627/606082DE" Ref="D?"  Part="1" 
+AR Path="/605F89A8/606082DE" Ref="D15"  Part="1" 
+F 0 "D15" H 2200 2200 50  0000 C CNN
+F 1 "BAT54S" H 2200 2109 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2275 2100 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 2080 1975 50  0001 C CNN
+F 4 "BAT54SLT1GOSCT-ND" H 2200 1975 50  0001 C CNN "Digi-Key_PN"
+	1    2200 1975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 606082E5
+P 1300 2275
+AR Path="/5F5E4627/606082E5" Ref="R?"  Part="1" 
+AR Path="/605F89A8/606082E5" Ref="R66"  Part="1" 
+F 0 "R66" V 1095 2275 50  0000 C CNN
+F 1 "4.7k" V 1186 2275 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 1300 2275 50  0001 C CNN
+F 3 "~" H 1300 2275 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 1300 2275 50  0001 C CNN "Digi-Key_PN"
+	1    1300 2275
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 606082EB
+P 1850 2025
+AR Path="/5F5B7065/606082EB" Ref="#PWR?"  Part="1" 
+AR Path="/606082EB" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/606082EB" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/606082EB" Ref="#PWR0170"  Part="1" 
+F 0 "#PWR0170" H 1850 1775 50  0001 C CNN
+F 1 "GND" H 1855 1852 50  0000 C CNN
+F 2 "" H 1850 2025 50  0001 C CNN
+F 3 "" H 1850 2025 50  0001 C CNN
+	1    1850 2025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1975 1850 1975
+Wire Wire Line
+	1850 1975 1850 2025
+$Comp
+L power:+3V3 #PWR?
+U 1 1 606082F3
+P 2550 1925
+AR Path="/5F5B7065/606082F3" Ref="#PWR?"  Part="1" 
+AR Path="/606082F3" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/606082F3" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/606082F3" Ref="#PWR0173"  Part="1" 
+F 0 "#PWR0173" H 2550 1775 50  0001 C CNN
+F 1 "+3V3" H 2565 2098 50  0000 C CNN
+F 2 "" H 2550 1925 50  0001 C CNN
+F 3 "" H 2550 1925 50  0001 C CNN
+	1    2550 1925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1925 2550 1975
+Wire Wire Line
+	2550 1975 2500 1975
+Wire Wire Line
+	2200 2175 2200 2275
+$Comp
+L Device:C_Small C?
+U 1 1 606082FD
+P 1900 2375
+AR Path="/5F5E4627/606082FD" Ref="C?"  Part="1" 
+AR Path="/605F89A8/606082FD" Ref="C34"  Part="1" 
+F 0 "C34" H 1992 2421 50  0000 L CNN
+F 1 "10nF" H 1992 2330 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1900 2375 50  0001 C CNN
+F 3 "~" H 1900 2375 50  0001 C CNN
+F 4 "311-1136-1-ND" H 1900 2375 50  0001 C CNN "Digi-Key_PN"
+	1    1900 2375
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 2275
+Wire Wire Line
+	1900 2275 2200 2275
+$Comp
+L power:GND #PWR?
+U 1 1 60608305
+P 1900 2475
+AR Path="/5F5B7065/60608305" Ref="#PWR?"  Part="1" 
+AR Path="/60608305" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/60608305" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/60608305" Ref="#PWR0176"  Part="1" 
+F 0 "#PWR0176" H 1900 2225 50  0001 C CNN
+F 1 "GND" H 1905 2302 50  0000 C CNN
+F 2 "" H 1900 2475 50  0001 C CNN
+F 3 "" H 1900 2475 50  0001 C CNN
+	1    1900 2475
+	1    0    0    -1  
+$EndComp
+Text GLabel 1125 2275 0    50   Input ~ 0
+INPUT2
+Wire Wire Line
+	1125 2275 1200 2275
+Text GLabel 2650 2275 2    50   Output ~ 0
+IN_2
+Wire Wire Line
+	2650 2275 2200 2275
+Connection ~ 2200 2275
+$Comp
+L Diode:BAT54S D?
+U 1 1 60608311
+P 2200 2975
+AR Path="/5F5E4627/60608311" Ref="D?"  Part="1" 
+AR Path="/605F89A8/60608311" Ref="D16"  Part="1" 
+F 0 "D16" H 2200 3200 50  0000 C CNN
+F 1 "BAT54S" H 2200 3109 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2275 3100 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 2080 2975 50  0001 C CNN
+F 4 "BAT54SLT1GOSCT-ND" H 2200 2975 50  0001 C CNN "Digi-Key_PN"
+	1    2200 2975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 60608318
+P 1300 3275
+AR Path="/5F5E4627/60608318" Ref="R?"  Part="1" 
+AR Path="/605F89A8/60608318" Ref="R67"  Part="1" 
+F 0 "R67" V 1095 3275 50  0000 C CNN
+F 1 "4.7k" V 1186 3275 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 1300 3275 50  0001 C CNN
+F 3 "~" H 1300 3275 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 1300 3275 50  0001 C CNN "Digi-Key_PN"
+	1    1300 3275
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6060831E
+P 1850 3025
+AR Path="/5F5B7065/6060831E" Ref="#PWR?"  Part="1" 
+AR Path="/6060831E" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/6060831E" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/6060831E" Ref="#PWR0177"  Part="1" 
+F 0 "#PWR0177" H 1850 2775 50  0001 C CNN
+F 1 "GND" H 1855 2852 50  0000 C CNN
+F 2 "" H 1850 3025 50  0001 C CNN
+F 3 "" H 1850 3025 50  0001 C CNN
+	1    1850 3025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2975 1850 2975
+Wire Wire Line
+	1850 2975 1850 3025
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60608326
+P 2550 2925
+AR Path="/5F5B7065/60608326" Ref="#PWR?"  Part="1" 
+AR Path="/60608326" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/60608326" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/60608326" Ref="#PWR0178"  Part="1" 
+F 0 "#PWR0178" H 2550 2775 50  0001 C CNN
+F 1 "+3V3" H 2565 3098 50  0000 C CNN
+F 2 "" H 2550 2925 50  0001 C CNN
+F 3 "" H 2550 2925 50  0001 C CNN
+	1    2550 2925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2925 2550 2975
+Wire Wire Line
+	2550 2975 2500 2975
+Wire Wire Line
+	2200 3175 2200 3275
+$Comp
+L Device:C_Small C?
+U 1 1 60608330
+P 1900 3375
+AR Path="/5F5E4627/60608330" Ref="C?"  Part="1" 
+AR Path="/605F89A8/60608330" Ref="C35"  Part="1" 
+F 0 "C35" H 1992 3421 50  0000 L CNN
+F 1 "10nF" H 1992 3330 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1900 3375 50  0001 C CNN
+F 3 "~" H 1900 3375 50  0001 C CNN
+F 4 "311-1136-1-ND" H 1900 3375 50  0001 C CNN "Digi-Key_PN"
+	1    1900 3375
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 3275
+Wire Wire Line
+	1900 3275 2200 3275
+$Comp
+L power:GND #PWR?
+U 1 1 60608338
+P 1900 3475
+AR Path="/5F5B7065/60608338" Ref="#PWR?"  Part="1" 
+AR Path="/60608338" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/60608338" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/60608338" Ref="#PWR0179"  Part="1" 
+F 0 "#PWR0179" H 1900 3225 50  0001 C CNN
+F 1 "GND" H 1905 3302 50  0000 C CNN
+F 2 "" H 1900 3475 50  0001 C CNN
+F 3 "" H 1900 3475 50  0001 C CNN
+	1    1900 3475
+	1    0    0    -1  
+$EndComp
+Text GLabel 1100 3275 0    50   Input ~ 0
+INPUT3
+Wire Wire Line
+	1100 3275 1200 3275
+Text GLabel 2650 3275 2    50   Output ~ 0
+IN_3
+Wire Wire Line
+	2650 3275 2200 3275
+Connection ~ 2200 3275
+$Comp
+L Diode:BAT54S D?
+U 1 1 60608344
+P 2325 3950
+AR Path="/5F5E4627/60608344" Ref="D?"  Part="1" 
+AR Path="/605F89A8/60608344" Ref="D17"  Part="1" 
+F 0 "D17" H 2325 4175 50  0000 C CNN
+F 1 "BAT54S" H 2325 4084 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2400 4075 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 2205 3950 50  0001 C CNN
+F 4 "BAT54SLT1GOSCT-ND" H 2325 3950 50  0001 C CNN "Digi-Key_PN"
+	1    2325 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 6060834B
+P 1325 4250
+AR Path="/5F5E4627/6060834B" Ref="R?"  Part="1" 
+AR Path="/605F89A8/6060834B" Ref="R69"  Part="1" 
+F 0 "R69" V 1120 4250 50  0000 C CNN
+F 1 "4.7k" V 1211 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 1325 4250 50  0001 C CNN
+F 3 "~" H 1325 4250 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 1325 4250 50  0001 C CNN "Digi-Key_PN"
+	1    1325 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60608351
+P 1975 4000
+AR Path="/5F5B7065/60608351" Ref="#PWR?"  Part="1" 
+AR Path="/60608351" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/60608351" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/60608351" Ref="#PWR0180"  Part="1" 
+F 0 "#PWR0180" H 1975 3750 50  0001 C CNN
+F 1 "GND" H 1980 3827 50  0000 C CNN
+F 2 "" H 1975 4000 50  0001 C CNN
+F 3 "" H 1975 4000 50  0001 C CNN
+	1    1975 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2025 3950 1975 3950
+Wire Wire Line
+	1975 3950 1975 4000
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60608359
+P 2675 3900
+AR Path="/5F5B7065/60608359" Ref="#PWR?"  Part="1" 
+AR Path="/60608359" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/60608359" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/60608359" Ref="#PWR0181"  Part="1" 
+F 0 "#PWR0181" H 2675 3750 50  0001 C CNN
+F 1 "+3V3" H 2690 4073 50  0000 C CNN
+F 2 "" H 2675 3900 50  0001 C CNN
+F 3 "" H 2675 3900 50  0001 C CNN
+	1    2675 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2675 3900 2675 3950
+Wire Wire Line
+	2675 3950 2625 3950
+Wire Wire Line
+	2325 4150 2325 4250
+$Comp
+L Device:C_Small C?
+U 1 1 60608363
+P 2025 4350
+AR Path="/5F5E4627/60608363" Ref="C?"  Part="1" 
+AR Path="/605F89A8/60608363" Ref="C44"  Part="1" 
+F 0 "C44" H 2117 4396 50  0000 L CNN
+F 1 "10nF" H 2117 4305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2025 4350 50  0001 C CNN
+F 3 "~" H 2025 4350 50  0001 C CNN
+F 4 "311-1136-1-ND" H 2025 4350 50  0001 C CNN "Digi-Key_PN"
+	1    2025 4350
+	1    0    0    -1  
+$EndComp
+Connection ~ 2025 4250
+Wire Wire Line
+	2025 4250 2325 4250
+$Comp
+L power:GND #PWR?
+U 1 1 6060836B
+P 2025 4450
+AR Path="/5F5B7065/6060836B" Ref="#PWR?"  Part="1" 
+AR Path="/6060836B" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/6060836B" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/6060836B" Ref="#PWR0182"  Part="1" 
+F 0 "#PWR0182" H 2025 4200 50  0001 C CNN
+F 1 "GND" H 2030 4277 50  0000 C CNN
+F 2 "" H 2025 4450 50  0001 C CNN
+F 3 "" H 2025 4450 50  0001 C CNN
+	1    2025 4450
+	1    0    0    -1  
+$EndComp
+Text GLabel 1100 4250 0    50   Input ~ 0
+INPUT4
+Wire Wire Line
+	1100 4250 1225 4250
+Text GLabel 2775 4250 2    50   Output ~ 0
+IN_4
+Wire Wire Line
+	2775 4250 2325 4250
+Connection ~ 2325 4250
+$Comp
+L Diode:BAT54S D?
+U 1 1 60608377
+P 4975 950
+AR Path="/5F5E4627/60608377" Ref="D?"  Part="1" 
+AR Path="/605F89A8/60608377" Ref="D18"  Part="1" 
+F 0 "D18" H 4975 1175 50  0000 C CNN
+F 1 "BAT54S" H 4975 1084 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5050 1075 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 4855 950 50  0001 C CNN
+F 4 "BAT54SLT1GOSCT-ND" H 4975 950 50  0001 C CNN "Digi-Key_PN"
+	1    4975 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 6060837E
+P 3975 1250
+AR Path="/5F5E4627/6060837E" Ref="R?"  Part="1" 
+AR Path="/605F89A8/6060837E" Ref="R92"  Part="1" 
+F 0 "R92" V 3770 1250 50  0000 C CNN
+F 1 "4.7k" V 3861 1250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3975 1250 50  0001 C CNN
+F 3 "~" H 3975 1250 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 3975 1250 50  0001 C CNN "Digi-Key_PN"
+	1    3975 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60608384
+P 4625 1000
+AR Path="/5F5B7065/60608384" Ref="#PWR?"  Part="1" 
+AR Path="/60608384" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/60608384" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/60608384" Ref="#PWR0183"  Part="1" 
+F 0 "#PWR0183" H 4625 750 50  0001 C CNN
+F 1 "GND" H 4630 827 50  0000 C CNN
+F 2 "" H 4625 1000 50  0001 C CNN
+F 3 "" H 4625 1000 50  0001 C CNN
+	1    4625 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4675 950  4625 950 
+Wire Wire Line
+	4625 950  4625 1000
+$Comp
+L power:+3V3 #PWR?
+U 1 1 6060838C
+P 5325 900
+AR Path="/5F5B7065/6060838C" Ref="#PWR?"  Part="1" 
+AR Path="/6060838C" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/6060838C" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/6060838C" Ref="#PWR0184"  Part="1" 
+F 0 "#PWR0184" H 5325 750 50  0001 C CNN
+F 1 "+3V3" H 5340 1073 50  0000 C CNN
+F 2 "" H 5325 900 50  0001 C CNN
+F 3 "" H 5325 900 50  0001 C CNN
+	1    5325 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5325 900  5325 950 
+Wire Wire Line
+	5325 950  5275 950 
+Wire Wire Line
+	4975 1150 4975 1250
+$Comp
+L Device:C_Small C?
+U 1 1 60608396
+P 4675 1350
+AR Path="/5F5E4627/60608396" Ref="C?"  Part="1" 
+AR Path="/605F89A8/60608396" Ref="C45"  Part="1" 
+F 0 "C45" H 4767 1396 50  0000 L CNN
+F 1 "10nF" H 4767 1305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4675 1350 50  0001 C CNN
+F 3 "~" H 4675 1350 50  0001 C CNN
+F 4 "311-1136-1-ND" H 4675 1350 50  0001 C CNN "Digi-Key_PN"
+	1    4675 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 4675 1250
+Wire Wire Line
+	4675 1250 4975 1250
+$Comp
+L power:GND #PWR?
+U 1 1 6060839E
+P 4675 1450
+AR Path="/5F5B7065/6060839E" Ref="#PWR?"  Part="1" 
+AR Path="/6060839E" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/6060839E" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/6060839E" Ref="#PWR0185"  Part="1" 
+F 0 "#PWR0185" H 4675 1200 50  0001 C CNN
+F 1 "GND" H 4680 1277 50  0000 C CNN
+F 2 "" H 4675 1450 50  0001 C CNN
+F 3 "" H 4675 1450 50  0001 C CNN
+	1    4675 1450
+	1    0    0    -1  
+$EndComp
+Text GLabel 3750 1250 0    50   Input ~ 0
+INPUT5
+Wire Wire Line
+	3750 1250 3875 1250
+Text GLabel 5425 1250 2    50   Output ~ 0
+IN_5
+Wire Wire Line
+	5425 1250 4975 1250
+Connection ~ 4975 1250
+$Comp
+L Diode:BAT54S D?
+U 1 1 606083AA
+P 4975 1950
+AR Path="/5F5E4627/606083AA" Ref="D?"  Part="1" 
+AR Path="/605F89A8/606083AA" Ref="D19"  Part="1" 
+F 0 "D19" H 4975 2175 50  0000 C CNN
+F 1 "BAT54S" H 4975 2084 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5050 2075 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 4855 1950 50  0001 C CNN
+F 4 "BAT54SLT1GOSCT-ND" H 4975 1950 50  0001 C CNN "Digi-Key_PN"
+	1    4975 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 606083B1
+P 3950 2250
+AR Path="/5F5E4627/606083B1" Ref="R?"  Part="1" 
+AR Path="/605F89A8/606083B1" Ref="R70"  Part="1" 
+F 0 "R70" V 3745 2250 50  0000 C CNN
+F 1 "4.7k" V 3836 2250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3950 2250 50  0001 C CNN
+F 3 "~" H 3950 2250 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 3950 2250 50  0001 C CNN "Digi-Key_PN"
+	1    3950 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 606083B7
+P 4625 2000
+AR Path="/5F5B7065/606083B7" Ref="#PWR?"  Part="1" 
+AR Path="/606083B7" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/606083B7" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/606083B7" Ref="#PWR0186"  Part="1" 
+F 0 "#PWR0186" H 4625 1750 50  0001 C CNN
+F 1 "GND" H 4630 1827 50  0000 C CNN
+F 2 "" H 4625 2000 50  0001 C CNN
+F 3 "" H 4625 2000 50  0001 C CNN
+	1    4625 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4675 1950 4625 1950
+Wire Wire Line
+	4625 1950 4625 2000
+$Comp
+L power:+3V3 #PWR?
+U 1 1 606083BF
+P 5325 1900
+AR Path="/5F5B7065/606083BF" Ref="#PWR?"  Part="1" 
+AR Path="/606083BF" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/606083BF" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/606083BF" Ref="#PWR0187"  Part="1" 
+F 0 "#PWR0187" H 5325 1750 50  0001 C CNN
+F 1 "+3V3" H 5340 2073 50  0000 C CNN
+F 2 "" H 5325 1900 50  0001 C CNN
+F 3 "" H 5325 1900 50  0001 C CNN
+	1    5325 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5325 1900 5325 1950
+Wire Wire Line
+	5325 1950 5275 1950
+Wire Wire Line
+	4975 2150 4975 2250
+$Comp
+L Device:C_Small C?
+U 1 1 606083C9
+P 4675 2350
+AR Path="/5F5E4627/606083C9" Ref="C?"  Part="1" 
+AR Path="/605F89A8/606083C9" Ref="C64"  Part="1" 
+F 0 "C64" H 4767 2396 50  0000 L CNN
+F 1 "10nF" H 4767 2305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4675 2350 50  0001 C CNN
+F 3 "~" H 4675 2350 50  0001 C CNN
+F 4 "311-1136-1-ND" H 4675 2350 50  0001 C CNN "Digi-Key_PN"
+	1    4675 2350
+	1    0    0    -1  
+$EndComp
+Connection ~ 4675 2250
+Wire Wire Line
+	4675 2250 4975 2250
+$Comp
+L power:GND #PWR?
+U 1 1 606083D1
+P 4675 2450
+AR Path="/5F5B7065/606083D1" Ref="#PWR?"  Part="1" 
+AR Path="/606083D1" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/606083D1" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/606083D1" Ref="#PWR0188"  Part="1" 
+F 0 "#PWR0188" H 4675 2200 50  0001 C CNN
+F 1 "GND" H 4680 2277 50  0000 C CNN
+F 2 "" H 4675 2450 50  0001 C CNN
+F 3 "" H 4675 2450 50  0001 C CNN
+	1    4675 2450
+	1    0    0    -1  
+$EndComp
+Text GLabel 3750 2250 0    50   Input ~ 0
+INPUT6
+Wire Wire Line
+	3750 2250 3850 2250
+Text GLabel 5425 2250 2    50   Output ~ 0
+IN_6
+Wire Wire Line
+	5425 2250 4975 2250
+Connection ~ 4975 2250
+Text Notes 6500 4800 2    50   ~ 10
+Digital Input Protection
+Wire Wire Line
+	1150 1225 1225 1225
+$Comp
+L Device:R_Small_US R?
+U 1 1 606083DF
+P 1325 1225
+AR Path="/5F5E4627/606083DF" Ref="R?"  Part="1" 
+AR Path="/605F89A8/606083DF" Ref="R68"  Part="1" 
+F 0 "R68" V 1120 1225 50  0000 C CNN
+F 1 "4.7k" V 1211 1225 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 1325 1225 50  0001 C CNN
+F 3 "~" H 1325 1225 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 1325 1225 50  0001 C CNN "Digi-Key_PN"
+	1    1325 1225
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1400 3275 1900 3275
+Wire Wire Line
+	4050 2250 4675 2250
+Wire Wire Line
+	4075 1250 4675 1250
+Wire Wire Line
+	1425 4250 2025 4250
+Wire Wire Line
+	1425 1225 1900 1225
+$Comp
+L Diode:BAT54S D?
+U 1 1 606083EB
+P 4975 2950
+AR Path="/5F5E4627/606083EB" Ref="D?"  Part="1" 
+AR Path="/605F89A8/606083EB" Ref="D43"  Part="1" 
+F 0 "D43" H 4975 3175 50  0000 C CNN
+F 1 "BAT54S" H 4975 3084 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5050 3075 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 4855 2950 50  0001 C CNN
+F 4 "BAT54SLT1GOSCT-ND" H 4975 2950 50  0001 C CNN "Digi-Key_PN"
+	1    4975 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 606083F2
+P 3975 3250
+AR Path="/5F5E4627/606083F2" Ref="R?"  Part="1" 
+AR Path="/605F89A8/606083F2" Ref="R95"  Part="1" 
+F 0 "R95" V 3770 3250 50  0000 C CNN
+F 1 "4.7k" V 3861 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3975 3250 50  0001 C CNN
+F 3 "~" H 3975 3250 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 3975 3250 50  0001 C CNN "Digi-Key_PN"
+	1    3975 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 606083F8
+P 4625 3000
+AR Path="/5F5B7065/606083F8" Ref="#PWR?"  Part="1" 
+AR Path="/606083F8" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/606083F8" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/606083F8" Ref="#PWR0189"  Part="1" 
+F 0 "#PWR0189" H 4625 2750 50  0001 C CNN
+F 1 "GND" H 4630 2827 50  0000 C CNN
+F 2 "" H 4625 3000 50  0001 C CNN
+F 3 "" H 4625 3000 50  0001 C CNN
+	1    4625 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4675 2950 4625 2950
+Wire Wire Line
+	4625 2950 4625 3000
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60608400
+P 5325 2900
+AR Path="/5F5B7065/60608400" Ref="#PWR?"  Part="1" 
+AR Path="/60608400" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/60608400" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/60608400" Ref="#PWR0190"  Part="1" 
+F 0 "#PWR0190" H 5325 2750 50  0001 C CNN
+F 1 "+3V3" H 5340 3073 50  0000 C CNN
+F 2 "" H 5325 2900 50  0001 C CNN
+F 3 "" H 5325 2900 50  0001 C CNN
+	1    5325 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5325 2900 5325 2950
+Wire Wire Line
+	5325 2950 5275 2950
+Wire Wire Line
+	4975 3150 4975 3250
+$Comp
+L Device:C_Small C?
+U 1 1 6060840A
+P 4675 3350
+AR Path="/5F5E4627/6060840A" Ref="C?"  Part="1" 
+AR Path="/605F89A8/6060840A" Ref="C65"  Part="1" 
+F 0 "C65" H 4767 3396 50  0000 L CNN
+F 1 "10nF" H 4767 3305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4675 3350 50  0001 C CNN
+F 3 "~" H 4675 3350 50  0001 C CNN
+F 4 "311-1136-1-ND" H 4675 3350 50  0001 C CNN "Digi-Key_PN"
+	1    4675 3350
+	1    0    0    -1  
+$EndComp
+Connection ~ 4675 3250
+Wire Wire Line
+	4675 3250 4975 3250
+$Comp
+L power:GND #PWR?
+U 1 1 60608412
+P 4675 3450
+AR Path="/5F5B7065/60608412" Ref="#PWR?"  Part="1" 
+AR Path="/60608412" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/60608412" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/60608412" Ref="#PWR0191"  Part="1" 
+F 0 "#PWR0191" H 4675 3200 50  0001 C CNN
+F 1 "GND" H 4680 3277 50  0000 C CNN
+F 2 "" H 4675 3450 50  0001 C CNN
+F 3 "" H 4675 3450 50  0001 C CNN
+	1    4675 3450
+	1    0    0    -1  
+$EndComp
+Text GLabel 3750 3250 0    50   Input ~ 0
+INPUT7
+Wire Wire Line
+	3750 3250 3875 3250
+Text GLabel 5425 3250 2    50   Output ~ 0
+IN_7
+Wire Wire Line
+	5425 3250 4975 3250
+Connection ~ 4975 3250
+$Comp
+L Diode:BAT54S D?
+U 1 1 6060841E
+P 4975 3950
+AR Path="/5F5E4627/6060841E" Ref="D?"  Part="1" 
+AR Path="/605F89A8/6060841E" Ref="D46"  Part="1" 
+F 0 "D46" H 4975 4175 50  0000 C CNN
+F 1 "BAT54S" H 4975 4084 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5050 4075 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 4855 3950 50  0001 C CNN
+F 4 "BAT54SLT1GOSCT-ND" H 4975 3950 50  0001 C CNN "Digi-Key_PN"
+	1    4975 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 60608425
+P 3950 4250
+AR Path="/5F5E4627/60608425" Ref="R?"  Part="1" 
+AR Path="/605F89A8/60608425" Ref="R71"  Part="1" 
+F 0 "R71" V 3745 4250 50  0000 C CNN
+F 1 "4.7k" V 3836 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3950 4250 50  0001 C CNN
+F 3 "~" H 3950 4250 50  0001 C CNN
+F 4 "311-4.70KCRCT-ND" H 3950 4250 50  0001 C CNN "Digi-Key_PN"
+	1    3950 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6060842B
+P 4625 4000
+AR Path="/5F5B7065/6060842B" Ref="#PWR?"  Part="1" 
+AR Path="/6060842B" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/6060842B" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/6060842B" Ref="#PWR0192"  Part="1" 
+F 0 "#PWR0192" H 4625 3750 50  0001 C CNN
+F 1 "GND" H 4630 3827 50  0000 C CNN
+F 2 "" H 4625 4000 50  0001 C CNN
+F 3 "" H 4625 4000 50  0001 C CNN
+	1    4625 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4675 3950 4625 3950
+Wire Wire Line
+	4625 3950 4625 4000
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60608433
+P 5325 3900
+AR Path="/5F5B7065/60608433" Ref="#PWR?"  Part="1" 
+AR Path="/60608433" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/60608433" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/60608433" Ref="#PWR0193"  Part="1" 
+F 0 "#PWR0193" H 5325 3750 50  0001 C CNN
+F 1 "+3V3" H 5340 4073 50  0000 C CNN
+F 2 "" H 5325 3900 50  0001 C CNN
+F 3 "" H 5325 3900 50  0001 C CNN
+	1    5325 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5325 3900 5325 3950
+Wire Wire Line
+	5325 3950 5275 3950
+Wire Wire Line
+	4975 4150 4975 4250
+$Comp
+L Device:C_Small C?
+U 1 1 6060843D
+P 4675 4350
+AR Path="/5F5E4627/6060843D" Ref="C?"  Part="1" 
+AR Path="/605F89A8/6060843D" Ref="C66"  Part="1" 
+F 0 "C66" H 4767 4396 50  0000 L CNN
+F 1 "10nF" H 4767 4305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4675 4350 50  0001 C CNN
+F 3 "~" H 4675 4350 50  0001 C CNN
+F 4 "311-1136-1-ND" H 4675 4350 50  0001 C CNN "Digi-Key_PN"
+	1    4675 4350
+	1    0    0    -1  
+$EndComp
+Connection ~ 4675 4250
+Wire Wire Line
+	4675 4250 4975 4250
+$Comp
+L power:GND #PWR?
+U 1 1 60608445
+P 4675 4450
+AR Path="/5F5B7065/60608445" Ref="#PWR?"  Part="1" 
+AR Path="/60608445" Ref="#PWR?"  Part="1" 
+AR Path="/5F5E4627/60608445" Ref="#PWR?"  Part="1" 
+AR Path="/605F89A8/60608445" Ref="#PWR0194"  Part="1" 
+F 0 "#PWR0194" H 4675 4200 50  0001 C CNN
+F 1 "GND" H 4680 4277 50  0000 C CNN
+F 2 "" H 4675 4450 50  0001 C CNN
+F 3 "" H 4675 4450 50  0001 C CNN
+	1    4675 4450
+	1    0    0    -1  
+$EndComp
+Text GLabel 3750 4250 0    50   Input ~ 0
+INPUT8
+Wire Wire Line
+	3750 4250 3850 4250
+Text GLabel 5425 4250 2    50   Output ~ 0
+IN_8
+Wire Wire Line
+	5425 4250 4975 4250
+Connection ~ 4975 4250
+Wire Wire Line
+	4050 4250 4675 4250
+Wire Wire Line
+	4075 3250 4675 3250
+Wire Wire Line
+	1400 2275 1900 2275
+Wire Notes Line
+	6675 475  6675 4925
+Wire Notes Line
+	6675 4925 475  4925
+$EndSCHEMATC

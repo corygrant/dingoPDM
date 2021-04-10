@@ -1,0 +1,152 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 16
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 2600 3750 850  550 
+U 5F5A35A0
+F0 "sheet5F5A3599" 50
+F1 "BTS700n_1EPP.sch" 50
+F2 "BATT" I L 2600 3800 50 
+F3 "IN" I L 2600 4000 50 
+F4 "DEN" I L 2600 4150 50 
+F5 "OUT" O R 3450 4000 50 
+F6 "IS" O R 3450 4200 50 
+$EndSheet
+$Sheet
+S 2600 4800 850  500 
+U 5F5A35A6
+F0 "sheet5F5A359A" 50
+F1 "BTS700n_1EPP.sch" 50
+F2 "BATT" I L 2600 4900 50 
+F3 "IN" I L 2600 5050 50 
+F4 "DEN" I L 2600 5200 50 
+F5 "OUT" O R 3450 4900 50 
+F6 "IS" O R 3450 5200 50 
+$EndSheet
+Text GLabel 3450 4000 2    50   Input ~ 0
+PF_OUT7
+$Comp
+L power:+12V #PWR?
+U 1 1 5F5A35AD
+P 2450 3800
+AR Path="/5F5A35AD" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F5A35AD" Ref="#PWR04"  Part="1" 
+F 0 "#PWR04" H 2450 3650 50  0001 C CNN
+F 1 "+12V" H 2465 3973 50  0000 C CNN
+F 2 "" H 2450 3800 50  0001 C CNN
+F 3 "" H 2450 3800 50  0001 C CNN
+	1    2450 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 3800 2600 3800
+$Comp
+L power:+12V #PWR?
+U 1 1 5F5A35B4
+P 2500 4900
+AR Path="/5F5A35B4" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F5A35B4" Ref="#PWR06"  Part="1" 
+F 0 "#PWR06" H 2500 4750 50  0001 C CNN
+F 1 "+12V" H 2515 5073 50  0000 C CNN
+F 2 "" H 2500 4900 50  0001 C CNN
+F 3 "" H 2500 4900 50  0001 C CNN
+	1    2500 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 4900 2600 4900
+$Sheet
+S 2600 1750 850  550 
+U 5F5A40C0
+F0 "sheet5F5A40B9" 50
+F1 "BTS700n_1EPP.sch" 50
+F2 "BATT" I L 2600 1800 50 
+F3 "IN" I L 2600 2000 50 
+F4 "DEN" I L 2600 2150 50 
+F5 "OUT" O R 3450 2000 50 
+F6 "IS" O R 3450 2200 50 
+$EndSheet
+$Sheet
+S 2600 2750 850  500 
+U 5F5A40C6
+F0 "sheet5F5A40BA" 50
+F1 "BTS700n_1EPP.sch" 50
+F2 "BATT" I L 2600 2850 50 
+F3 "IN" I L 2600 3000 50 
+F4 "DEN" I L 2600 3150 50 
+F5 "OUT" O R 3450 2850 50 
+F6 "IS" O R 3450 3150 50 
+$EndSheet
+Text GLabel 3450 2000 2    50   Input ~ 0
+PF_OUT1
+$Comp
+L power:+12V #PWR?
+U 1 1 5F5A40CD
+P 2450 1800
+AR Path="/5F5A40CD" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F5A40CD" Ref="#PWR03"  Part="1" 
+F 0 "#PWR03" H 2450 1650 50  0001 C CNN
+F 1 "+12V" H 2465 1973 50  0000 C CNN
+F 2 "" H 2450 1800 50  0001 C CNN
+F 3 "" H 2450 1800 50  0001 C CNN
+	1    2450 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 1800 2600 1800
+$Comp
+L power:+12V #PWR?
+U 1 1 5F5A40D4
+P 2500 2850
+AR Path="/5F5A40D4" Ref="#PWR?"  Part="1" 
+AR Path="/5F54B02A/5F5A40D4" Ref="#PWR05"  Part="1" 
+F 0 "#PWR05" H 2500 2700 50  0001 C CNN
+F 1 "+12V" H 2515 3023 50  0000 C CNN
+F 2 "" H 2500 2850 50  0001 C CNN
+F 3 "" H 2500 2850 50  0001 C CNN
+	1    2500 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2850 2600 2850
+Text GLabel 3450 2850 2    50   Input ~ 0
+PF_OUT2
+Text GLabel 3450 4900 2    50   Input ~ 0
+PF_OUT8
+Text GLabel 2600 2000 0    50   Input ~ 0
+PF_IN1
+Text GLabel 2600 2150 0    50   Input ~ 0
+PF_DEN1
+Text GLabel 2600 4000 0    50   Input ~ 0
+PF_IN7
+Text GLabel 2600 4150 0    50   Input ~ 0
+PF_DEN7
+Text GLabel 2600 5050 0    50   Input ~ 0
+PF_IN8
+Text GLabel 2600 5200 0    50   Input ~ 0
+PF_DEN8
+Text GLabel 2600 3000 0    50   Input ~ 0
+PF_IN2
+Text GLabel 2600 3150 0    50   Input ~ 0
+PF_DEN2
+Text GLabel 3450 2200 2    50   Input ~ 0
+PF_IS1
+Text GLabel 3450 3150 2    50   Input ~ 0
+PF_IS2
+Text GLabel 3450 4200 2    50   Input ~ 0
+PF_IS7
+Text GLabel 3450 5200 2    50   Input ~ 0
+PF_IS8
+$EndSCHEMATC

@@ -1,0 +1,188 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 16
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+12V #PWR?
+U 1 1 5F58D87E
+P 2050 1550
+AR Path="/5F58D87E" Ref="#PWR?"  Part="1" 
+AR Path="/5F54BF48/5F58D87E" Ref="#PWR031"  Part="1" 
+F 0 "#PWR031" H 2050 1400 50  0001 C CNN
+F 1 "+12V" H 2065 1723 50  0000 C CNN
+F 2 "" H 2050 1550 50  0001 C CNN
+F 3 "" H 2050 1550 50  0001 C CNN
+	1    2050 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1550 2250 1550
+$Sheet
+S 2250 1400 1050 900 
+U 5F5A9675
+F0 "Sheet5F5A9674" 50
+F1 "BTS7008_2EPA.sch" 50
+F2 "BATT" I L 2250 1550 50 
+F3 "IN0" I L 2250 1750 50 
+F4 "DEN" I L 2250 2100 50 
+F5 "OUT0" O R 3300 1700 50 
+F6 "IS" O R 3300 2200 50 
+F7 "IN1" I L 2250 1850 50 
+F8 "DSEL" I L 2250 2000 50 
+F9 "OUT1" O R 3300 1950 50 
+$EndSheet
+Text GLabel 2250 1750 0    50   Input ~ 0
+PF_IN3
+Text GLabel 2250 1850 0    50   Input ~ 0
+PF_IN4
+Text GLabel 2250 2000 0    50   Input ~ 0
+PF_DSEL3_4
+Text GLabel 2250 2100 0    50   Input ~ 0
+PF_DEN3_4
+Text GLabel 3300 2200 2    50   Input ~ 0
+PF_IS3_4
+Text GLabel 3300 1700 2    50   Input ~ 0
+PF_OUT3
+Text GLabel 3300 1950 2    50   Input ~ 0
+PF_OUT4
+$Comp
+L power:+12V #PWR?
+U 1 1 5F5B0A93
+P 2050 2950
+AR Path="/5F5B0A93" Ref="#PWR?"  Part="1" 
+AR Path="/5F54BF48/5F5B0A93" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 2050 2800 50  0001 C CNN
+F 1 "+12V" H 2065 3123 50  0000 C CNN
+F 2 "" H 2050 2950 50  0001 C CNN
+F 3 "" H 2050 2950 50  0001 C CNN
+	1    2050 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2950 2250 2950
+$Sheet
+S 2250 2800 1050 900 
+U 5F5B0A9E
+F0 "sheet5F5B0A8D" 50
+F1 "BTS7008_2EPA.sch" 50
+F2 "BATT" I L 2250 2950 50 
+F3 "IN0" I L 2250 3150 50 
+F4 "DEN" I L 2250 3500 50 
+F5 "OUT0" O R 3300 3100 50 
+F6 "IS" O R 3300 3600 50 
+F7 "IN1" I L 2250 3250 50 
+F8 "DSEL" I L 2250 3400 50 
+F9 "OUT1" O R 3300 3350 50 
+$EndSheet
+Text GLabel 2250 3150 0    50   Input ~ 0
+PF_IN5
+Text GLabel 2250 3250 0    50   Input ~ 0
+PF_IN6
+Text GLabel 2250 3400 0    50   Input ~ 0
+PF_DSEL5_6
+Text GLabel 2250 3500 0    50   Input ~ 0
+PF_DEN5_6
+Text GLabel 3300 3600 2    50   Input ~ 0
+PF_IS5_6
+Text GLabel 3300 3100 2    50   Input ~ 0
+PF_OUT5
+Text GLabel 3300 3350 2    50   Input ~ 0
+PF_OUT6
+$Comp
+L power:+12V #PWR?
+U 1 1 5F5B1910
+P 6650 1600
+AR Path="/5F5B1910" Ref="#PWR?"  Part="1" 
+AR Path="/5F54BF48/5F5B1910" Ref="#PWR033"  Part="1" 
+F 0 "#PWR033" H 6650 1450 50  0001 C CNN
+F 1 "+12V" H 6665 1773 50  0000 C CNN
+F 2 "" H 6650 1600 50  0001 C CNN
+F 3 "" H 6650 1600 50  0001 C CNN
+	1    6650 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 1600 6850 1600
+$Sheet
+S 6850 1450 1050 900 
+U 5F5B191B
+F0 "sheet5F5B190A" 50
+F1 "BTS7008_2EPA.sch" 50
+F2 "BATT" I L 6850 1600 50 
+F3 "IN0" I L 6850 1800 50 
+F4 "DEN" I L 6850 2150 50 
+F5 "OUT0" O R 7900 1750 50 
+F6 "IS" O R 7900 2250 50 
+F7 "IN1" I L 6850 1900 50 
+F8 "DSEL" I L 6850 2050 50 
+F9 "OUT1" O R 7900 2000 50 
+$EndSheet
+Text GLabel 6850 1900 0    50   Input ~ 0
+PF_IN9
+Text GLabel 6850 1800 0    50   Input ~ 0
+PF_IN10
+Text GLabel 6850 2050 0    50   Input ~ 0
+PF_DSEL9_10
+Text GLabel 6850 2150 0    50   Input ~ 0
+PF_DEN9_10
+Text GLabel 7900 2250 2    50   Input ~ 0
+PF_IS9_10
+Text GLabel 7900 2000 2    50   Input ~ 0
+PF_OUT9
+Text GLabel 7900 1750 2    50   Input ~ 0
+PF_OUT10
+$Comp
+L power:+12V #PWR?
+U 1 1 5F5B1F95
+P 6650 2950
+AR Path="/5F5B1F95" Ref="#PWR?"  Part="1" 
+AR Path="/5F54BF48/5F5B1F95" Ref="#PWR034"  Part="1" 
+F 0 "#PWR034" H 6650 2800 50  0001 C CNN
+F 1 "+12V" H 6665 3123 50  0000 C CNN
+F 2 "" H 6650 2950 50  0001 C CNN
+F 3 "" H 6650 2950 50  0001 C CNN
+	1    6650 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2950 6850 2950
+$Sheet
+S 6850 2800 1050 900 
+U 5F5B1FA0
+F0 "sheet5F5B1F8F" 50
+F1 "BTS7008_2EPA.sch" 50
+F2 "BATT" I L 6850 2950 50 
+F3 "IN0" I L 6850 3150 50 
+F4 "DEN" I L 6850 3500 50 
+F5 "OUT0" O R 7900 3100 50 
+F6 "IS" O R 7900 3600 50 
+F7 "IN1" I L 6850 3250 50 
+F8 "DSEL" I L 6850 3400 50 
+F9 "OUT1" O R 7900 3350 50 
+$EndSheet
+Text GLabel 6850 3250 0    50   Input ~ 0
+PF_IN11
+Text GLabel 6850 3150 0    50   Input ~ 0
+PF_IN12
+Text GLabel 6850 3400 0    50   Input ~ 0
+PF_DSEL11_12
+Text GLabel 6850 3500 0    50   Input ~ 0
+PF_DEN11_12
+Text GLabel 7900 3600 2    50   Input ~ 0
+PF_IS11_12
+Text GLabel 7900 3350 2    50   Input ~ 0
+PF_OUT11
+Text GLabel 7900 3100 2    50   Input ~ 0
+PF_OUT12
+$EndSCHEMATC
