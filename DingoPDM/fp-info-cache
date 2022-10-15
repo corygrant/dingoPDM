@@ -1,4 +1,4 @@
-20682178744683509
+20683835472172056
 AMPSeal
 AMPSeal_23Pin_Horiz
 
@@ -51085,6 +51085,13 @@ LCD 16x2 Alphanumeric 16pin
 0
 20
 16
+DisplayVisionsOLED
+EA_OLEDM204-GGA
+
+
+0
+0
+0
 Display_7Segment
 7SEGMENT-LED__HDSM531_HDSM533_SMD
 7-Segment Display, HDSM53x, https://docs.broadcom.com/docs/AV02-0713EN
@@ -57215,8 +57222,8 @@ MX120G_12Pin
 
 
 0
-0
-0
+12
+12
 MountingEquipment
 DINRailAdapter_3xM3_PhoenixContact_1201578
 https://www.phoenixcontact.com/online/portal/us?uri=pxc-oc-itemdetail:pid=1201578&library=usen&tab=1
