@@ -1035,7 +1035,7 @@
   )
 
   (no_connect (at 55.88 60.96) (uuid 098339af-468a-46c4-b2a4-faecee1fe1cc))
-  (no_connect (at 55.88 95.25) (uuid 098339af-468a-46c4-b2a4-faecee1fe1cc))
+  (no_connect (at 55.88 95.25) (uuid 098339af-468a-46c4-b2a4-faecee1fe1cd))
   (no_connect (at 105.41 173.99) (uuid 56fc7d63-9ae8-46c5-a20b-516d05dc4292))
   (no_connect (at 24.765 149.225) (uuid 5fe25506-30d5-4800-bc68-c8728aa23e89))
   (no_connect (at 50.165 149.225) (uuid 8b9058f9-7035-420e-b6c6-5de350afd595))
