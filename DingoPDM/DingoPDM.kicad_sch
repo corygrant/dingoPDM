@@ -397,7 +397,7 @@
     (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify left bottom))
     (uuid 16eeb9be-3601-4dc0-922f-1b74a7490431)
   )
-  (text "V4\n-Changed to 2x AMPSEAL 14 pin connectors, gold (14A per pin)\n-Remove ADC IRQ and Dig Input IRQ, using polling instead \n-Add pulldown resistor to PF GPIO reset pin\n\nTODO\n-Space out LEDS?\n-Examine 12VSW"
+  (text "V4\n-Changed to 2x AMPSEAL 14 pin connectors, gold (14A per pin)\n-Remove ADC IRQ and Dig Input IRQ, using polling instead \n-Add pulldown resistor to PF GPIO reset pin\n\nTODO\n-Space out LEDS?"
     (at 86.995 189.23 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d5554cde-b5e1-4809-b7b2-36ac9ac8efee)
@@ -2195,10 +2195,10 @@
       (reference "U24") (unit 1) (value "BTS7008-2EPA") (footprint "Profet:TDSO-14")
     )
     (path "/00000000-0000-0000-0000-00005f4db108/00000000-0000-0000-0000-00005f4e276a"
-      (reference "Y1") (unit 1) (value "8mHz") (footprint "Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm")
+      (reference "Y1") (unit 1) (value "8mHz") (footprint "Crystals_Modify:Crystal_SMD_5032-2Pin_5.0x3.2mm_HandSoldering")
     )
     (path "/00000000-0000-0000-0000-00005f4db108/00000000-0000-0000-0000-00005f6286d5"
-      (reference "Y2") (unit 1) (value "32.768kHz") (footprint "Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm")
+      (reference "Y2") (unit 1) (value "32.768kHz") (footprint "Crystals_Modify:Crystal_SMD_3215-2Pin_3.2x1.5mm_HandSoldering")
     )
   )
 )
