@@ -5,8 +5,6 @@ DingoPDM is an Infineon Profet based Power Distribution Module.
 
 ![Bottom](/Images/DingoPDM_v4_Bottom.png)
 
-[DingoPDM Firmware](https://github.com/corygrant/DingoPDM_FW)
-
 
 # Goals
 - Learn more about PDMs and high DC current devices
@@ -94,8 +92,6 @@ This is a personal hobby project. I am not a professional. Use at your own risk.
 
 # Open Items
 - Design a new case and heatsink for the V4 board (AMPSeal connectors)
-- Firmware, see [DingoPDM Firmware](https://github.com/corygrant/DingoPDM_FW)
-- Software, I have some test consoles to send/receive settings and data but nothing that is very useable
 
 # Issues
 - The super cap drains faster than my calculations
