@@ -559,7 +559,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "DingoPDM.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
