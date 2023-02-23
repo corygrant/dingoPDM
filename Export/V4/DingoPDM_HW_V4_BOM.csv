@@ -1,0 +1,84 @@
+Qty,Reference,Value,Footprint,Digikey PN
+29,">  C1, C10-C17, C19, C24-C29, C33, C35, C36, C39, C40, C43, C46, C50, C54, C58, C62, C65, C68",100nF,Capacitor_SMD:C_0805_2012Metric,478-1395-1-ND
+13,">  C2-C9, C31, C47, C51, C55, C59",10nF,Capacitor_SMD:C_0805_2012Metric,311-1136-1-ND
+2,">  C18, C32",1uF,Capacitor_SMD:C_0805_2012Metric,311-1365-1-ND
+2,">  C20, C21",27pF,Capacitor_SMD:C_0805_2012Metric,478-10518-1-ND
+2,">  C22, C23",15pF,Capacitor_SMD:C_0805_2012Metric,311-4165-1-ND
+1,    C30,4.7uF,Capacitor_SMD:C_0805_2012Metric,1276-2873-1-ND
+1,    C34,0.47F/3.5V,SuperCap:FC0V474ZFTBR24,399-10942-1-ND
+1,    C38,22uF,Capacitor_SMD:C_0805_2012Metric,490-10749-1-ND
+2,">  C37, C41",10uF,Capacitor_SMD:C_0805_2012Metric,445-11516-1-ND
+8,">  C42, C45, C49, C53, C57, C61, C64, C67",47nF,Capacitor_SMD:C_0805_2012Metric,399-1166-1-ND
+8,">  C44, C48, C52, C56, C60, C63, C66, C69",220pF,Capacitor_SMD:C_0805_2012Metric,399-1138-1-ND
+9,">  D1, D35, D37, D39, D41, D43-D46",3.3V,Diode_SMD:D_SOD-323_HandSoldering,SZMMSZ4684T1GOSCT-ND
+4,">  D2, D30-D32",Schottky,Diode_SMD:D_SOD-123,1727-2394-1-ND
+8,>  D3-D10,BAT54S,Package_TO_SOT_SMD:SOT-23,BAT54SLT1GOSCT-ND
+3,">  D11, D27, D33",RED,LED_SMD:LED_0805_2012Metric,475-1278-1-ND
+12,>  D12-D23,YEL,LED_SMD:LED_0805_2012Metric,475-2560-1-ND
+2,">  D24, D34",GRN,LED_SMD:LED_0805_2012Metric,475-1410-1-ND
+2,">  D25, D26",ORG,LED_SMD:LED_0805_2012Metric,475-2488-1-ND
+1,    D28,NUP2105LT1G,digikey-footprints:SOT-23-3,NUP2105LT1GOSCT-ND
+1,    D29,SMCJ20CA,digikey-footprints:DO-214AB_TVS,SMCJ20CABCT-ND
+4,">  D36, D38, D40, D42",BYG23M,digikey-footprints:DO-214AC,BYG23M-E3/TR3GICT-ND
+1,    FB1,Ferrite_Bead_Small,Resistor_SMD:R_0805_2012Metric,490-1054-1-ND
+1,    G1,DRT_Logo,DRTLogo:DRTLogo,
+1,    G2,DingoFace,DRTLogo:DingoFaceNoFill,
+3,>  H1-H3,M3,MountingHole:MountingHole_3mm_Pad,
+1,    J1,RedCubeTerminal,RedCube:M6_Hole_8Pin_7461084,732-3203-ND
+1,    J2,USB_C_Receptacle_USB2.0,Connector_USB:USB_C_Receptacle_GCT_USB4085,2073-USB4085-GF-ACT-ND
+2,">  J3, J4",1-776267-1,AMPSeal:AMPSeal_14Pin_Horiz_NoHoles,A142413-ND
+1,    J5,SWD_10,digikey-footprints:PinHeader_2x5_P1.27_SMD,609-3695-1-ND
+1,    J6,SHORT,Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm,
+1,    Q1,BC817-40,digikey-footprints:SOT-23-3,1727-2919-1-ND
+1,    R1,47k,Resistor_SMD:R_0805_2012Metric,311-47.0KCRCT-ND
+8,">  R2, R17-R20, R40, R41, R48",10k,Resistor_SMD:R_0805_2012Metric,311-10.0KCRDKR-ND
+34,">  R3, R4, R51-R54, R58-R60, R64-R66, R70-R72, R76-R78, R82-R86, R90-R94, R98-R102, R106",4.7K,Resistor_SMD:R_0805_2012Metric,311-4.70KCRCT-ND
+1,    R5,1.5K,Resistor_SMD:R_0805_2012Metric,311-1.50KCRCT-ND
+1,    R6,10K,Resistor_SMD:R_0805_2012Metric,311-4.70KCRCT-ND
+1,    R7,47K,Resistor_SMD:R_0805_2012Metric,311-4.70KCRCT-ND
+5,">  R8, R21, R43, R44, R46",100R,Resistor_SMD:R_0805_2012Metric,311-100CRCT-ND
+8,>  R9-R16,4.7k,Resistor_SMD:R_0805_2012Metric,311-4.70KCRCT-ND
+16,>  R22-R37,560R,Resistor_SMD:R_0805_2012Metric,311-560ARCT-ND
+2,">  R38, R39",0R,Resistor_SMD:R_0805_2012Metric,RMCF0805ZT0R00CT-ND
+1,    R42,1k,Resistor_SMD:R_0805_2012Metric,311-1.0KARCT-ND
+1,    R45,120R 2W,Resistor_SMD:R_2512_6332Metric,CRM2512-FX-1000ELFCT-ND
+1,    R47,470R,Resistor_SMD:R_0805_2012Metric,311-4.70KCRCT-ND
+2,">  R49, R50",120R,Resistor_SMD:R_0805_2012Metric,311-100CRCT-ND
+8,">  R55, R61, R67, R73, R79, R87, R95, R103",1.2K,Resistor_SMD:R_0805_2012Metric,311-1.20KCRCT-ND
+8,">  R56, R62, R68, R74, R80, R88, R96, R104",47R 1/4W,Resistor_SMD:R_1206_3216Metric,311-47.0FRCT-ND
+8,">  R57, R63, R69, R75, R81, R89, R97, R105",220K,Resistor_SMD:R_0805_2012Metric,311-220KARCT-ND
+1,    S1,RESET_SW,digikey-footprints:Switch_Tactile_SMD_6x6mm,CKN9084CT-ND
+1,    SW1,SW_SPDT,SlideSwitch:CJS-1200TB,563-1022-1-ND
+1,    SW2,AlwaysOn,SlideSwitch:CJS-1200TB,563-1022-1-ND
+1,    TP1,I2C1_SCL,TestPoint:TestPoint_Keystone_5000-5004_Miniature,
+1,    TP2,I2C1_SDA,TestPoint:TestPoint_Keystone_5000-5004_Miniature,
+1,    TP3,I2C2_SCL,TestPoint:TestPoint_Keystone_5000-5004_Miniature,
+1,    TP4,I2C2_SDA,TestPoint:TestPoint_Keystone_5000-5004_Miniature,
+1,    TP5,EXTRA2,TestPoint:TestPoint_Keystone_5000-5004_Miniature,
+1,    TP6,CAN_T,TestPoint:TestPoint_Keystone_5000-5004_Miniature,
+1,    TP7,CAN_R,TestPoint:TestPoint_Keystone_5000-5004_Miniature,
+1,    TP9,EXTRA1,TestPoint:TestPoint_Keystone_5000-5004_Miniature,
+1,    TP10,EXTRA3,TestPoint:TestPoint_Keystone_5000-5004_Miniature,
+1,    TP11,MCO,TestPoint:TestPoint_Pad_D1.0mm,
+1,    TP12,GND,TestPoint:TestPoint_Keystone_5000-5004_Miniature,
+1,    TP13,5V,TestPoint:TestPoint_Pad_D1.0mm,
+1,    TP14,3V3B,TestPoint:TestPoint_Pad_D1.0mm,
+1,    TP15,3V3,TestPoint:TestPoint_Pad_D1.0mm,
+2,">  U1, U4",PCA9539,Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm,568-1843-1-ND
+2,">  U2, U3",ADS1015,Package_SO:VSSOP-10_3x3mm_P0.5mm,296-41185-1-ND
+1,    U5,MB85RC256V,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,865-1261-1-ND
+1,    U6,MCP9808,Package_SO:MSOP-8_3x3mm_P0.65mm,MCP9808T-E/MSCT-ND
+1,    U7,PCAL9554B,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,568-9926-1-ND
+1,    U8,PCA9635,Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm,568-4067-1-ND
+1,    U9,STM32F303CCTx,Package_QFP:LQFP-48_7x7mm_P0.5mm,497-13318-ND
+1,    U10,PCA82C250,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,568-10316-1-ND
+1,    U11,TLP172AM,Package_SO:MFSOP6-4_4.4x3.6mm_P1.27mm,TLP175A(TPLECT-ND
+1,    U12,W25Q32JVSSIQ_TR,digikey-footprints:SOIC-8_W5.6mm,W25Q32JVSSIQCT-ND
+1,    U13,VXO780x-500-M,CUI_Regulators:VXO78x-500-M,102-VXO7805-500-M-CT-ND
+1,    U14,TLP2361_TPL_E,"Profet:TLP2710(TP,E",TLP2361(TPLECT-ND
+1,    U15,LD1117S33CTR,digikey-footprints:SOT-223,497-1241-1-ND
+1,    U16,ISP752R,Profet:PG-DSO-8,ISP752RFUMA1CT-ND
+4,">  U17, U22-U24",BTS7008-2EPA,Profet:TDSO-14,BTS70082EPAXUMA1CT-ND
+4,>  U18-U21,BTS700n-1EPP,Profet:TDSO-14,BTS70021EPPXUMA1CT-ND
+1,    Y1,8mHz,Crystals_Modify:Crystal_SMD_5032-2Pin_5.0x3.2mm_HandSoldering,535-10630-1-ND
+1,    Y2,32.768kHz,Crystals_Modify:Crystal_SMD_3215-2Pin_3.2x1.5mm_HandSoldering,535-9808-1-ND
