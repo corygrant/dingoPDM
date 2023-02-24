@@ -4,6 +4,14 @@
 
   (paper "A4")
 
+  (title_block
+    (title "Dingo_PDM")
+    (date "2023-02-23")
+    (rev "v5")
+    (comment 3 "github.com/corygrant")
+    (comment 4 "Cory Grant")
+  )
+
   (lib_symbols
     (symbol "power:+12V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
@@ -322,7 +330,7 @@
     )
     (instances
       (project "DingoPDM"
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54b02a" (page "10"))
+        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54b02a" (page "8"))
       )
     )
   )
@@ -359,7 +367,7 @@
     )
     (instances
       (project "DingoPDM"
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54b02a" (page "11"))
+        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54b02a" (page "9"))
       )
     )
   )
@@ -396,7 +404,7 @@
     )
     (instances
       (project "DingoPDM"
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54b02a" (page "12"))
+        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54b02a" (page "10"))
       )
     )
   )
@@ -433,7 +441,7 @@
     )
     (instances
       (project "DingoPDM"
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54b02a" (page "13"))
+        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54b02a" (page "11"))
       )
     )
   )

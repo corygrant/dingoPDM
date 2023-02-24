@@ -8,6 +8,7 @@
     (title "Dingo_PDM")
     (date "2023-02-23")
     (rev "v5")
+    (comment 3 "github.com/corygrant")
     (comment 4 "Cory Grant")
   )
 
@@ -397,7 +398,7 @@
     (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify left bottom))
     (uuid 16eeb9be-3601-4dc0-922f-1b74a7490431)
   )
-  (text "V5\n-Changed PCB to fit JLCPCB 2oz rules\n-Changed on switch input to 12V in\n-Switched to TagConnect TC2030\n"
+  (text "V5\n-Changed ADS1015 to MAX11613EUA+T due to supply issues\n-Changed PCB to match JLCPCB 2oz rules\n-Changed ON_SW input to 12V switched\n-Switched to TagConnect TC2030\n-Changed pin positions of GND, IN1, IN2"
     (at 86.995 189.23 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d5554cde-b5e1-4809-b7b2-36ac9ac8efee)
@@ -827,7 +828,7 @@
     )
     (instances
       (project "DingoPDM"
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d" (page "7"))
+        (path "/8948e307-9174-4227-9c28-3ff885e6e83d" (page "4"))
       )
     )
   )
@@ -844,7 +845,7 @@
     )
     (instances
       (project "DingoPDM"
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d" (page "4"))
+        (path "/8948e307-9174-4227-9c28-3ff885e6e83d" (page "7"))
       )
     )
   )
@@ -861,7 +862,7 @@
     )
     (instances
       (project "DingoPDM"
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d" (page "6"))
+        (path "/8948e307-9174-4227-9c28-3ff885e6e83d" (page "12"))
       )
     )
   )
@@ -878,7 +879,7 @@
     )
     (instances
       (project "DingoPDM"
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d" (page "2"))
+        (path "/8948e307-9174-4227-9c28-3ff885e6e83d" (page "3"))
       )
     )
   )
@@ -912,7 +913,7 @@
     )
     (instances
       (project "DingoPDM"
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d" (page "8"))
+        (path "/8948e307-9174-4227-9c28-3ff885e6e83d" (page "2"))
       )
     )
   )
@@ -929,7 +930,7 @@
     )
     (instances
       (project "DingoPDM"
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d" (page "3"))
+        (path "/8948e307-9174-4227-9c28-3ff885e6e83d" (page "6"))
       )
     )
   )
