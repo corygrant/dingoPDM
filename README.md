@@ -51,7 +51,7 @@ This is a personal hobby project. I am not a professional. Use at your own risk.
         - Boot select switch included
 - Opto-isolated sleep/wakeup
     - For power shutdown (keyswitch)
-    - Ground switched
+    - 12V switched
     - Slider switch included for always on
 - 12V voltage measurement
 - THT test pads for easy connection of logic analyzer (ex: Saleae leads)
