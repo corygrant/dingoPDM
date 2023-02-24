@@ -12,7 +12,7 @@ DingoPDM is an Infineon Profet based Power Distribution Module.
 - Create a low cost device that my friends and I can use in our project cars
 - Layout the board to fit simple case designs
     - 3D printed top shell and flat aluminum heatsinks (no machining)
-- Use low cost 1oz/0.5oz 4 layer PCBs 
+- Use low cost 1oz/0.5oz 4 layer PCBs (low cost 2oz/1oz now available from JLCPCB)
 - Share my work with others for reference, inspiration or collaboration. 
 
 If this project does help you in any way, I'd appreciate a message!
