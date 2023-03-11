@@ -569,7 +569,7 @@
     (property "Datasheet" "" (at 103.505 119.38 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digi-Key_PN" "SZMMSZ4684T1GOSCT-ND" (at 103.505 119.38 0)
+    (property "Digi-Key_PN" "1727-5150-1-ND" (at 103.505 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid fae5100d-318e-4938-956c-5a656927196f))
