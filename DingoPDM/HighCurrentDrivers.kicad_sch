@@ -2,11 +2,11 @@
 
   (uuid 04727b03-bbca-44ef-aac6-e3bdd87f0df4)
 
-  (paper "A4")
+  (paper "USLetter")
 
   (title_block
     (title "Dingo_PDM")
-    (date "2023-02-23")
+    (date "2023-04-01")
     (rev "v5")
     (comment 3 "github.com/corygrant")
     (comment 4 "Cory Grant")
