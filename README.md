@@ -91,7 +91,7 @@ This is a personal hobby project. I am not a professional. Use at your own risk.
 | B | 14 | CAN L |
 
 # Open Items
-- Design a new case and heatsink for the V4 board (AMPSeal connectors)
+-
 
 # Issues
 - The super cap drains faster than my calculations
@@ -117,6 +117,21 @@ This is a personal hobby project. I am not a professional. Use at your own risk.
     - ![Spacer Plate](/Images/DingoPDM_v3_Heatsink.png)
 - The LEDs are too close together which makes using light tubes in the case difficult
 - A design could be decently waterproofed with some 3D printed TPU seals, but this is something I have not tried as my installation locations are on the interior
+
+# Case
+V5 Case/Heatsink design
+- 3D Printed (Case and Faceplate)
+- Flat aluminum heatsink plate
+- Flat aluminum baseplate
+- Apply 3M 5583S to both sides of the heatsink plate
+
+![](/Images/CaseV5/DingoPDM_V5_Case1.png)
+
+![](/Images/CaseV5/DingoPDM_V5_Case2.png)
+
+![](/Images/CaseV5/DingoPDM_V5_Case3.png)
+
+![](/Images/CaseV5/DingoPDM_V5_Case4.png)
 
 # Photos
 Some various photos of different versions
