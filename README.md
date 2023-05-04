@@ -108,13 +108,6 @@ This is a personal hobby project. I am not a professional. Use at your own risk.
         - This made it difficult to 3D print cases as the clips require accurate and strong features
     - Increase the terminal current rating (AMPSeal gold pins are rated much higher) 
     - Get away from the TE DTM case which was fully sealed. That didn't allow for a heatsink to be added that would be externally exposed. 
-- The heatsink is designed to be 2 pieces. A spacer/spreader plate and a main plate
-    - The spacer plate provides clearance for the THT pins of the AMPSeal connectors and the RedCube terminal while getting as close to the Profets as possible
-    - **Note:** the spacer plate should be covered on both sides with a thermal pad material to electricaly isolate the heatsink while still providing a thermal interface (I use 3M 5583S)
-    - The main plate holds the case and also sandwiches the spacer plate to the PCB
-    - Here's an example of the V3 case:
-    - ![Case w/ main plate](/Images/DingoPDM_v3_Case.png)
-    - ![Spacer Plate](/Images/DingoPDM_v3_Heatsink.png)
 - The LEDs are too close together which makes using light tubes in the case difficult
 - A design could be decently waterproofed with some 3D printed TPU seals, but this is something I have not tried as my installation locations are on the interior
 
@@ -123,7 +116,10 @@ V5 Case/Heatsink design
 - 3D Printed (Case and Faceplate)
 - Flat aluminum heatsink plate
 - Flat aluminum baseplate
-- Apply 3M 5583S to both sides of the heatsink plate
+- The heatsink is designed to be 2 pieces. A heatsink plate and a baseplate
+    - The heatsink plate provides clearance for the THT pins of the AMPSeal connectors and the RedCube terminal while getting as close to the Profets as possible
+    - **Note:** the heatsink plate should be covered on both sides with a thermal pad material to electricaly isolate the heatsink while still providing a thermal interface (I use 3M 5583S)
+    - The baseplate holds the case and also sandwiches the spacer plate to the PCB
 
 ![](/Images/CaseV5/DingoPDM_V5_Case1.png)
 
