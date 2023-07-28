@@ -402,6 +402,10 @@
     (stroke (width 0) (type default))
     (uuid 338b107d-64ee-4a5d-a23d-cb49822773e4)
   )
+  (wire (pts (xy 143.51 91.44) (xy 190.5 91.44))
+    (stroke (width 0) (type default))
+    (uuid 33d9bdac-5514-44f1-8f3d-31312d80d034)
+  )
   (polyline (pts (xy 168.91 110.49) (xy 189.23 110.49))
     (stroke (width 0) (type default))
     (uuid 3ab0473e-05c7-42ee-87a8-f59c002d952c)
@@ -455,7 +459,7 @@
     (stroke (width 0) (type default))
     (uuid 88a3ef40-44ca-4060-a9cf-84b38bf83873)
   )
-  (wire (pts (xy 189.23 100.33) (xy 143.51 100.33))
+  (wire (pts (xy 143.51 100.33) (xy 190.5 100.33))
     (stroke (width 0) (type default))
     (uuid 8f56b478-f0f6-4355-97f8-9e278ca626ae)
   )
@@ -508,10 +512,6 @@
     (stroke (width 0) (type default))
     (uuid ce1380f4-1e84-492e-9d1b-8c2f36ca15a9)
   )
-  (wire (pts (xy 189.23 91.44) (xy 143.51 91.44))
-    (stroke (width 0) (type default))
-    (uuid da6e3231-462e-4103-b281-d03d261ed25e)
-  )
   (wire (pts (xy 146.05 68.58) (xy 146.05 66.04))
     (stroke (width 0) (type default))
     (uuid de1ab5f0-5072-49ed-ba64-f92b2eddc034)
@@ -534,7 +534,7 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 31860c8a-b3aa-49ba-94dd-b36713a519ba)
   )
-  (hierarchical_label "OUT1" (shape output) (at 189.23 100.33 0) (fields_autoplaced)
+  (hierarchical_label "OUT1" (shape output) (at 190.5 100.33 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 3ed50e09-e9ab-4d8e-bf98-30e093c28565)
   )
@@ -546,7 +546,7 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 8f54086c-f704-45b7-ad48-c36c2f60dd1a)
   )
-  (hierarchical_label "OUT0" (shape output) (at 189.23 91.44 0) (fields_autoplaced)
+  (hierarchical_label "OUT0" (shape output) (at 190.5 91.44 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 9f8836d9-fc50-4acc-8151-a4c0f7e59912)
   )
@@ -566,7 +566,7 @@
   (symbol (lib_id "Profet:BTS7008-2EPA") (at 118.11 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae18d)
-    (property "Reference" "U17" (at 128.27 80.8482 0)
+    (property "Reference" "U11" (at 128.27 80.8482 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BTS7008-2EPA" (at 128.27 83.1596 0)
@@ -579,6 +579,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Digi-Key_PN" "BTS70082EPAXUMA1CT-ND" (at 118.11 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C2150060" (at 118.11 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 62729cfb-92ed-4eed-aa42-860fc4c9dafa))
@@ -599,16 +602,7 @@
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "U17") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "U22") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "U23") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "U24") (unit 1)
+          (reference "U11") (unit 1)
         )
       )
     )
@@ -617,7 +611,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 92.71 92.71 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae193)
-    (property "Reference" "R51" (at 92.71 87.503 90)
+    (property "Reference" "R26" (at 92.71 87.503 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4.7k" (at 92.71 89.8144 90)
@@ -632,21 +626,15 @@
     (property "Digi-Key_PN" "311-4.70KCRCT-ND" (at 92.71 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C17673" (at 92.71 92.71 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 73c689f5-e1a9-4306-9dcd-b26acc68c79a))
     (pin "2" (uuid d1ca0722-ea92-466c-81d5-f9ec6afdc031))
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "R51") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "R83") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "R91") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "R99") (unit 1)
+          (reference "R26") (unit 1)
         )
       )
     )
@@ -655,7 +643,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 92.71 95.25 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae199)
-    (property "Reference" "R52" (at 92.71 100.33 90)
+    (property "Reference" "R27" (at 92.71 100.33 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4.7k" (at 92.71 97.79 90)
@@ -670,21 +658,15 @@
     (property "Digi-Key_PN" "311-4.70KCRCT-ND" (at 92.71 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C17673" (at 92.71 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 1f7ab3f1-bf85-498a-a47a-dac21a9927eb))
     (pin "2" (uuid d5cf6fd4-00d7-4e74-9875-48ee13141c44))
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "R52") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "R84") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "R92") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "R100") (unit 1)
+          (reference "R27") (unit 1)
         )
       )
     )
@@ -693,7 +675,7 @@
   (symbol (lib_id "Device:C_Small") (at 158.75 71.12 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae1a0)
-    (property "Reference" "C43" (at 161.0868 69.9516 0)
+    (property "Reference" "C31" (at 161.0868 69.9516 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100nF" (at 161.0868 72.263 0)
@@ -708,21 +690,15 @@
     (property "Digi-Key_PN" "478-1395-1-ND" (at 158.75 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C49678" (at 158.75 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 51f51c16-a4cc-4f00-819c-e11dc7d1d113))
     (pin "2" (uuid 7afba0c6-ee1d-4451-8da6-4101e8a058ac))
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "C43") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "C62") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "C65") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "C68") (unit 1)
+          (reference "C31") (unit 1)
         )
       )
     )
@@ -731,7 +707,7 @@
   (symbol (lib_id "Device:C_Small") (at 146.05 71.12 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae1a6)
-    (property "Reference" "C42" (at 148.3868 69.9516 0)
+    (property "Reference" "C30" (at 148.3868 69.9516 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "47nF" (at 148.3868 72.263 0)
@@ -746,21 +722,15 @@
     (property "Digi-Key_PN" "399-1166-1-ND" (at 146.05 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "" (at 146.05 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 8fdcbe64-b8b4-4806-872f-19f7110932b0))
     (pin "2" (uuid f024e381-cf81-41c0-85a8-873dccfdcdee))
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "C42") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "C61") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "C64") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "C67") (unit 1)
+          (reference "C30") (unit 1)
         )
       )
     )
@@ -769,7 +739,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 152.4 80.01 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae1ac)
-    (property "Reference" "R56" (at 152.4 82.55 90)
+    (property "Reference" "R31" (at 152.4 82.55 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "47R 1/4W" (at 152.4 85.09 90)
@@ -784,21 +754,15 @@
     (property "Digi-Key_PN" "311-47.0FRCT-ND" (at 152.4 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "" (at 152.4 80.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid cbb1aa84-d762-450a-a1b0-3419a32db604))
     (pin "2" (uuid c7b71d4c-9695-4774-93ef-4f6d16e643f4))
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "R56") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "R88") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "R96") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "R104") (unit 1)
+          (reference "R31") (unit 1)
         )
       )
     )
@@ -807,7 +771,7 @@
   (symbol (lib_id "power:GND") (at 158.75 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae1b2)
-    (property "Reference" "#PWR0138" (at 158.75 86.36 0)
+    (property "Reference" "#PWR069" (at 158.75 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 158.877 84.4042 0)
@@ -823,16 +787,7 @@
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "#PWR0138") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "#PWR0166") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "#PWR0170") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "#PWR0174") (unit 1)
+          (reference "#PWR069") (unit 1)
         )
       )
     )
@@ -841,7 +796,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 175.26 113.03 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae1ca)
-    (property "Reference" "R58" (at 175.26 115.57 90)
+    (property "Reference" "R33" (at 175.26 115.57 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4.7k" (at 175.26 118.11 90)
@@ -856,21 +811,15 @@
     (property "Digi-Key_PN" "311-4.70KCRCT-ND" (at 175.26 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C17673" (at 175.26 113.03 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 2bb85131-3472-4640-b1c3-7376f220155e))
     (pin "2" (uuid 9a2fe863-412a-41ca-9d26-e7042cc2b387))
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "R58") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "R90") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "R98") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "R106") (unit 1)
+          (reference "R33") (unit 1)
         )
       )
     )
@@ -879,7 +828,7 @@
   (symbol (lib_id "Device:C_Small") (at 181.61 115.57 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae1d0)
-    (property "Reference" "C44" (at 184.15 115.57 0)
+    (property "Reference" "C32" (at 184.15 115.57 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "220pF" (at 182.88 118.11 0)
@@ -894,21 +843,15 @@
     (property "Digi-Key_PN" "399-1138-1-ND" (at 181.61 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "" (at 181.61 115.57 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 056550e6-30de-447c-b434-6a1af8aad43e))
     (pin "2" (uuid bc035ca5-82ae-4d70-bc57-7dad5803f389))
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "C44") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "C63") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "C66") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "C69") (unit 1)
+          (reference "C32") (unit 1)
         )
       )
     )
@@ -917,7 +860,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 147.32 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae1d6)
-    (property "Reference" "R55" (at 142.24 114.3 0)
+    (property "Reference" "R30" (at 142.24 114.3 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1.2k" (at 140.97 116.84 0)
@@ -932,21 +875,15 @@
     (property "Digi-Key_PN" "311-1.20KCRCT-ND" (at 147.32 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "" (at 147.32 115.57 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid cc47cbb0-28d9-45de-a139-4f1bc9e6eee5))
     (pin "2" (uuid 456a873e-8eeb-49ea-af95-bbf61cb0b90e))
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "R55") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "R87") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "R95") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "R103") (unit 1)
+          (reference "R30") (unit 1)
         )
       )
     )
@@ -955,10 +892,10 @@
   (symbol (lib_id "Device:R_Small_US") (at 154.94 113.03 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae1dc)
-    (property "Reference" "R57" (at 154.94 115.57 90)
+    (property "Reference" "R32" (at 154.94 115.57 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "220k" (at 154.94 118.11 90)
+    (property "Value" "4.7K" (at 154.94 118.11 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 154.94 113.03 0)
@@ -970,21 +907,15 @@
     (property "Digi-Key_PN" "311-220KARCT-ND" (at 154.94 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "" (at 154.94 113.03 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid aff2c545-6a33-4368-92e6-37c5e103c939))
     (pin "2" (uuid 9671ac05-0cb3-45c8-bada-a29a24bd76cb))
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "R57") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "R89") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "R97") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "R105") (unit 1)
+          (reference "R32") (unit 1)
         )
       )
     )
@@ -993,7 +924,7 @@
   (symbol (lib_id "Device:D_Zener_Small") (at 162.56 115.57 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae1e2)
-    (property "Reference" "D35" (at 164.2872 114.4016 90)
+    (property "Reference" "D12" (at 164.2872 114.4016 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "3.3V" (at 164.2872 116.713 90)
@@ -1008,21 +939,15 @@
     (property "Digi-Key_PN" "1727-5150-1-ND" (at 162.56 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "" (at 162.56 115.57 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid f1eae782-fefd-4f87-a2b9-6683120e6f08))
     (pin "2" (uuid 5c94aa64-8a33-42d1-b7b8-015cccae8d45))
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "D35") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "D44") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "D45") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "D46") (unit 1)
+          (reference "D12") (unit 1)
         )
       )
     )
@@ -1031,7 +956,7 @@
   (symbol (lib_id "power:GND") (at 147.32 118.11 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae1f1)
-    (property "Reference" "#PWR0137" (at 147.32 124.46 0)
+    (property "Reference" "#PWR068" (at 147.32 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 147.447 122.5042 0)
@@ -1047,16 +972,7 @@
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "#PWR0137") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "#PWR0165") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "#PWR0169") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "#PWR0173") (unit 1)
+          (reference "#PWR068") (unit 1)
         )
       )
     )
@@ -1065,7 +981,7 @@
   (symbol (lib_id "power:GND") (at 162.56 118.11 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae1f7)
-    (property "Reference" "#PWR0139" (at 162.56 124.46 0)
+    (property "Reference" "#PWR070" (at 162.56 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 162.687 122.5042 0)
@@ -1081,16 +997,7 @@
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "#PWR0139") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "#PWR0167") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "#PWR0171") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "#PWR0175") (unit 1)
+          (reference "#PWR070") (unit 1)
         )
       )
     )
@@ -1099,7 +1006,7 @@
   (symbol (lib_id "power:GND") (at 181.61 118.11 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae1fd)
-    (property "Reference" "#PWR0140" (at 181.61 124.46 0)
+    (property "Reference" "#PWR071" (at 181.61 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 181.61 121.92 0)
@@ -1115,16 +1022,7 @@
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "#PWR0140") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "#PWR0168") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "#PWR0172") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "#PWR0176") (unit 1)
+          (reference "#PWR071") (unit 1)
         )
       )
     )
@@ -1133,7 +1031,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 102.87 100.33 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae211)
-    (property "Reference" "R53" (at 102.87 95.25 90)
+    (property "Reference" "R28" (at 102.87 95.25 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4.7k" (at 102.87 97.79 90)
@@ -1148,21 +1046,15 @@
     (property "Digi-Key_PN" "311-4.70KCRCT-ND" (at 102.87 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C17673" (at 102.87 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 42dec3c5-7837-4c08-90a0-128aa1ce2eb6))
     (pin "2" (uuid 06c1d7db-f0df-4f74-bc6f-d88bcd32660d))
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "R53") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "R85") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "R93") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "R101") (unit 1)
+          (reference "R28") (unit 1)
         )
       )
     )
@@ -1171,7 +1063,7 @@
   (symbol (lib_id "Device:R_Small_US") (at 102.87 102.87 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005f5ae217)
-    (property "Reference" "R54" (at 102.87 107.95 90)
+    (property "Reference" "R29" (at 102.87 107.95 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4.7k" (at 102.87 105.41 90)
@@ -1186,21 +1078,15 @@
     (property "Digi-Key_PN" "311-4.70KCRCT-ND" (at 102.87 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C17673" (at 102.87 102.87 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 64a0f65f-e429-4465-81a7-f2e71e7b4b66))
     (pin "2" (uuid 80bbe536-32ca-42f3-98cb-6690d5c131f1))
     (instances
       (project "DingoPDM"
         (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5a9675"
-          (reference "R54") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b0a9e"
-          (reference "R86") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b191b"
-          (reference "R94") (unit 1)
-        )
-        (path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f54bf48/00000000-0000-0000-0000-00005f5b1fa0"
-          (reference "R102") (unit 1)
+          (reference "R29") (unit 1)
         )
       )
     )
