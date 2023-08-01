@@ -6,7 +6,7 @@
 
   (title_block
     (title "Dingo_PDM")
-    (date "2023-07-25")
+    (date "2023-07-28")
     (rev "v6")
     (comment 3 "github.com/corygrant")
     (comment 4 "Cory Grant")
@@ -362,7 +362,7 @@
     (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify left bottom))
     (uuid 16eeb9be-3601-4dc0-922f-1b74a7490431)
   )
-  (text "V5\n-Changed ADS1015 to MAX11613EUA+T due to supply issues\n-Changed PCB to match JLCPCB 2oz rules\n-Changed ON_SW input to 12V switched\n-Switched to TagConnect TC2030\n-Changed pin positions of GND, IN1, IN2"
+  (text "V6\n-Drastically simplied design\n-Changed to 2x high power outputs, 2x med power outputs, and 4x low power outputs\n-Changed to 2x digital inputs\n-Removed USB\n-Removed SPI Flash\n-Removed VBAT super cap\n-Removed I2C GPIO\n-Removed I2C ADC\n-Removed LEDs and I2C driver\n-Changed to single Deutsch DT\n-Added a RedCube for ground\n-Removed power on/sleep input\n-Removed CAN terminating resistor switch\n-Removed input power switch"
     (at 86.995 189.23 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d5554cde-b5e1-4809-b7b2-36ac9ac8efee)
@@ -548,7 +548,7 @@
     (property "Digi-Key_PN" "311-47.0KCRCT-ND" (at 84.455 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "" (at 84.455 106.68 0)
+    (property "LCSC" "C327035" (at 84.455 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 022d214a-a584-48ea-b647-d8e5deb28f45))
@@ -612,7 +612,7 @@
     (property "Digi-Key_PN" "1727-5150-1-ND" (at 103.505 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "" (at 103.505 119.38 0)
+    (property "LCSC" "C177016" (at 103.505 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid fae5100d-318e-4938-956c-5a656927196f))

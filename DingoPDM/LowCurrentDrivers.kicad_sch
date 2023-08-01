@@ -6,8 +6,8 @@
 
   (title_block
     (title "Dingo_PDM")
-    (date "2023-04-01")
-    (rev "v5")
+    (date "2023-07-28")
+    (rev "v6")
     (comment 3 "github.com/corygrant")
     (comment 4 "Cory Grant")
   )
@@ -642,6 +642,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "LCSC" "C82656" (at 153.67 97.79 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Digi-Key_PN" "BTS724GXUMA1CT-ND" (at 153.67 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 2431344d-08a1-47c6-a258-5d124069e117))

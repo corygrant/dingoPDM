@@ -6,8 +6,8 @@
 
   (title_block
     (title "Dingo_PDM")
-    (date "2023-04-01")
-    (rev "v5")
+    (date "2023-07-28")
+    (rev "v6")
     (comment 3 "github.com/corygrant")
     (comment 4 "Cory Grant")
   )
@@ -421,7 +421,7 @@
     (stroke (width 0) (type default))
     (uuid 555f3d60-ae54-4cf7-bcfa-24809c34384d)
   )
-  (polyline (pts (xy 169.545 12.065) (xy 169.545 125.095))
+  (polyline (pts (xy 88.265 12.065) (xy 88.265 75.565))
     (stroke (width 0) (type default))
     (uuid 560c5cc5-812b-4644-994d-360f10a159bd)
   )
@@ -446,7 +446,7 @@
     (stroke (width 0) (type default))
     (uuid 79669244-be8d-42af-8cb2-87d2b8d1a36c)
   )
-  (polyline (pts (xy 169.545 125.095) (xy 12.065 125.095))
+  (polyline (pts (xy 88.265 75.565) (xy 12.065 75.565))
     (stroke (width 0) (type default))
     (uuid 8e401a53-40d8-4677-986c-f9dac07f174e)
   )
@@ -476,7 +476,7 @@
     (uuid e37b578d-11ae-4ca9-af4d-4998c5794f6c)
   )
 
-  (text "Digital Input Protection" (at 165.1 121.92 0)
+  (text "Digital Input Protection" (at 86.995 73.025 0)
     (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify right bottom))
     (uuid fad417bd-b9bb-477e-8bde-f1ad5fb4bcd8)
   )

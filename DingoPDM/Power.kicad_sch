@@ -6,8 +6,8 @@
 
   (title_block
     (title "Dingo_PDM")
-    (date "2023-04-01")
-    (rev "v5")
+    (date "2023-07-28")
+    (rev "v6")
     (comment 3 "github.com/corygrant")
     (comment 4 "Cory Grant")
   )
@@ -1382,10 +1382,10 @@
     (property "Datasheet" "" (at 199.39 28.575 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digi-Key_PN" "311-100CRCT-ND" (at 199.39 28.575 0)
+    (property "Digi-Key_PN" "311-120CRCT-ND" (at 199.39 28.575 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "" (at 199.39 28.575 0)
+    (property "LCSC" "C229076" (at 199.39 28.575 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 78a8b1c0-a2dd-4f6f-8f80-8f5e181f0b19))
