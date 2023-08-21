@@ -24,12 +24,10 @@ This is a personal hobby project. I am not a professional. Use at your own risk.
 - 2x Profet BTS7002-1EPP
     - 2x 14A outputs 
     - With flyback diodes
-- 1x Profet BTS7008-2EPA
-    - 2x 8A outputs
-- 1x Profet BTS724G
-    - 4x 3A outputs
+- 3x Profet BTS7008-2EPA
+    - 6x 8A outputs
 - 2x Digital Inputs
-- STM32F303CCT6 Microcontroller
+- STM32F446RET6 Microcontroller
 - 256Kbit FRAM 
     - Settings storage
 - CAN transceiver
@@ -45,12 +43,12 @@ This is a personal hobby project. I am not a professional. Use at your own risk.
 # Connections
 | Pin | Function| Current |
 | --- | ------- | ------- |
-| 1 | Output 8  | 3A  |
-| 2 | Output 7  | 3A  |
-| 3 | Output 6  | 3A  |
-| 4 | Output 5  | 3A  |
-| 5 | CAN L     |     |
-| 6 | CAN H     |     |
+| 1 | CAN L     |     |
+| 2 | CAN H     |     |
+| 3 | Output 8  | 8A  |
+| 4 | Output 7  | 8A  |
+| 5 | Output 6  | 8A  |
+| 6 | Output 5  | 8A  |
 | 7 | Output 1  | 14A |
 | 8 | Input 1   |     |
 | 9 | Output 4  | 8A  |
@@ -59,19 +57,20 @@ This is a personal hobby project. I am not a professional. Use at your own risk.
 | 12 | Output 2 | 14A |
 
 # Open Items
-- Test V6
-- Redo case design for V6
+- Test V7
+- Redo case design for V7
 
 # Untested
-- V6 boards have been ordered but haven't been tested
+- V7 boards have been ordered but haven't been tested
 
 # Design Notes
 - Prior to V6, the design had a lot of features which meant a lot of parts
 - To make the board cheaper, easier to source/produce and quicker to test the design was drastically simplified
 - The Deutsch DT connector was selected due to it's popularity, part availability and ease of use
+- BTS724 was used on V6, but removed for V7 due to thermal issues. It wouldn't trip until a very high current. 
 
 # Case
-**V6 case design in progress**
+**V7 case design in progress**
 
 V5 Case/Heatsink design
 - 3D Printed (Case and Faceplate)
