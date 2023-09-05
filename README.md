@@ -76,7 +76,7 @@ V7 Case/Heatsink design
     - **Note:** the heatsink plate should be covered on both sides with a thermal pad material to electricaly isolate the heatsink while still providing a thermal interface (I use 3M 5583S)
     - The baseplate holds the case and also sandwiches the spacer plate to the PCB
 
-![](/Images/DingoPDM_v7_1_Case.png.png)
+![](/Images/DingoPDM_v7_1_Case.png)
 
 ![](/Images/DingoPDM_v7_1_CaseBottom.png)
 
