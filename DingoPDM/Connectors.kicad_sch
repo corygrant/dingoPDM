@@ -6,8 +6,8 @@
 
   (title_block
     (title "Dingo_PDM")
-    (date "2023-08-20")
-    (rev "v7")
+    (date "2023-09-04")
+    (rev "v7.1")
     (comment 3 "github.com/corygrant")
     (comment 4 "Cory Grant")
   )

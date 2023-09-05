@@ -1,7 +1,7 @@
 # DingoPDM
 DingoPDM is an Infineon Profet based Power Distribution Module. 
 
-![Top](/Images/DingoPDMTop_V7.png)
+![Top](/Images/DingoPDMTop_V7_1.png)
 
 ![Bottom](/Images/DingoPDMBottom_V7.png)
 
@@ -34,6 +34,7 @@ This is a personal hobby project. I am not a professional. Use at your own risk.
     - No terminating resistor
 - Board temperature measured using MCP9808
 - 2x LEDs for power and temperature status
+- 2x LEDs for status
 - Onboard 12V to 5V to 3.3V regulation
 - 2x M6 lug 12V power connection
 - 12V voltage measurement
@@ -57,11 +58,7 @@ This is a personal hobby project. I am not a professional. Use at your own risk.
 | 12 | Output 2 | 14A |
 
 # Open Items
-- Test V7
-- Redo case design for V7
-
-# Untested
-- V7 boards have been ordered but haven't been tested
+- Test V7.1 thermal performance
 
 # Design Notes
 - Prior to V6, the design had a lot of features which meant a lot of parts
@@ -70,24 +67,18 @@ This is a personal hobby project. I am not a professional. Use at your own risk.
 - BTS724 was used on V6, but removed for V7 due to thermal issues. It wouldn't trip until a very high current. 
 
 # Case
-**V7 case design in progress**
-
-V5 Case/Heatsink design
-- 3D Printed (Case and Faceplate)
+V7 Case/Heatsink design
+- 3D Printed Case
 - Flat aluminum heatsink plate
 - Flat aluminum baseplate
 - The heatsink is designed to be 2 pieces. A heatsink plate and a baseplate
-    - The heatsink plate provides clearance for the THT pins of the AMPSeal connectors and the RedCube terminal while getting as close to the Profets as possible
+    - The heatsink plate provides clearance for the THT pins of the Deutsch connectors and the RedCube terminal while getting as close to the Profets as possible
     - **Note:** the heatsink plate should be covered on both sides with a thermal pad material to electricaly isolate the heatsink while still providing a thermal interface (I use 3M 5583S)
     - The baseplate holds the case and also sandwiches the spacer plate to the PCB
 
-![](/Images/CaseV5/DingoPDM_V5_Case1.png)
+![](/Images/DingoPDM_v7_1_Case.png.png)
 
-![](/Images/CaseV5/DingoPDM_V5_Case2.png)
-
-![](/Images/CaseV5/DingoPDM_V5_Case3.png)
-
-![](/Images/CaseV5/DingoPDM_V5_Case4.png)
+![](/Images/DingoPDM_v7_1_CaseBottom.png)
 
 # Photos
 Some various photos of different versions
