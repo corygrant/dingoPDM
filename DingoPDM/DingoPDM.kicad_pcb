@@ -481,7 +481,7 @@
       (net 115 "Net-(U4-PH0)") (pinfunction "1") (pintype "passive") (tstamp a12121d3-5d2a-4eef-932a-fa1a9516bd30))
     (pad "2" smd rect (at 2.05 0) (size 2.4 2.4) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 116 "Net-(U4-PH1)") (pinfunction "2") (pintype "passive") (tstamp 67d77ac5-4036-4740-a1d2-6e96395e70db))
-    (model "${CGRANTKICADLIBRARIES}/digikey-kicad-library-master/ABM3.STEP"
+    (model "${KIPRJMOD}/Models/ABM3.STEP"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -985,7 +985,7 @@
       (net 5 "+12V") (pintype "bidirectional") (tstamp ae6b1424-bc82-4e9a-a728-75d8d3b38afb))
     (pad "1" thru_hole circle (at 3.81 3.81) (size 1.875 1.875) (drill 1.475) (layers "*.Cu" "*.Mask")
       (net 5 "+12V") (pintype "bidirectional") (tstamp 4894dda0-5009-4a78-abfd-ba435cf5e23a))
-    (model "${CGRANTKICADLIBRARIES}/RedCube/Models/M6/8_Pin/Hole/7461084_Download_STP_7461084_rev1.stp"
+    (model "${KIPRJMOD}/Models/7461084_Download_STP_7461084_rev1.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2032,7 +2032,7 @@
       (net 15 "PF_OUT1") (pinfunction "OUT6") (pintype "output") (tstamp 5af6cf6b-a520-49e2-bb69-790b5acf5bae))
     (pad "15" smd rect (at 0 0 90) (size 2.65 4) (layers "F.Cu" "F.Mask")
       (net 5 "+12V") (pinfunction "VS") (pintype "power_in") (tstamp 76e38d76-1cc4-4c4c-99e8-3a9f8f5ba35e))
-    (model "${CGRANTKICADLIBRARIES}/Profet/Models/PG-TSDSO-14/PG-TSDSO-14_INF.step"
+    (model "${KIPRJMOD}/Models/PG-TSDSO-14_INF.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2755,7 +2755,7 @@
       (net 26 "PF_OUT3") (pinfunction "OUT0") (pintype "output") (tstamp eb138c68-f772-44ca-9150-4fa76cadd282))
     (pad "15" smd rect (at 0 0 90) (size 2.65 4) (layers "F.Cu" "F.Mask")
       (net 5 "+12V") (pinfunction "VS") (pintype "power_in") (tstamp fa3571e7-b3b2-48cc-9a3f-e18a547e40f2))
-    (model "${CGRANTKICADLIBRARIES}/Profet/Models/PG-TSDSO-14/PG-TSDSO-14_INF.step"
+    (model "${KIPRJMOD}/Models/PG-TSDSO-14_INF.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3036,8 +3036,8 @@
       (net 6 "INPUT2") (pinfunction "Pin_11") (pintype "passive") (tstamp 1a171f0b-4bb0-4bc9-8b5e-81f745fcd7fb))
     (pad "12" thru_hole circle (at 4.56 11.11 270) (size 2.655 2.655) (drill 1.77) (layers "*.Cu" "*.Mask")
       (net 17 "PF_OUT2") (pinfunction "Pin_12") (pintype "passive") (tstamp 807d2903-5816-4396-bc4a-1d0d9f6243b6))
-    (model ":CGRANTKICADLIBRARIES:DT/c-dt15-12pa-e-3d.stp"
-      (offset (xyz 0 0 30))
+    (model "${KIPRJMOD}/Models/c-dt15-12pa-e-3d.stp"
+      (offset (xyz 0 0 29.9974))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 -90))
     )
@@ -3126,8 +3126,8 @@
       (net 129 "Net-(D18-A)") (pinfunction "VOUT") (pintype "power_out") (tstamp 1d1c3e82-a4b2-4098-af82-cb94479ff322))
     (pad "4" smd rect (at -5.5 6 270) (size 2.5 2.5) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 74 "unconnected-(U1-EN-Pad4)") (pinfunction "EN") (pintype "input+no_connect") (tstamp 340ebccb-7593-4ad5-ad00-23c3ec489c55))
-    (model "${CGRANTKICADLIBRARIES}/CUI_Regulators/Models/CUI_VXO7805-500-M.step"
-      (offset (xyz -6.25 -6.7 1))
+    (model "${KIPRJMOD}/Models/CUI_VXO7805-500-M.step"
+      (offset (xyz -6.2484 -6.69798 0.9906))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
@@ -3784,7 +3784,7 @@
       (net 22 "CAN_L") (pintype "passive") (solder_mask_margin 0.07) (tstamp 2108b7aa-0dc9-404e-b85d-f327ceb9abfc))
     (pad "3" smd rect (at 1.05 0 270) (size 1.3 0.6) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 1 "GND") (pintype "passive") (solder_mask_margin 0.07) (tstamp 7b6b9d6a-3a57-48d7-b505-53967b36ebe4))
-    (model ":CgrantKicadLibraries:digikey-kicad-library-master/User Library-SOT23-3.step"
+    (model "${KIPRJMOD}/Models/User Library-SOT23-3.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
@@ -6623,8 +6623,8 @@
       (net 1 "GND") (pintype "passive") (tstamp 8152a410-34f6-415f-ab35-eeee22de6a2f))
     (pad "K" smd rect (at -2 0 180) (size 2.5 1.7) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 17 "PF_OUT2") (pintype "passive") (tstamp 3201d7be-b98b-44f3-9270-0092420b2c39))
-    (model "${CGRANTKICADLIBRARIES}/digikey-kicad-library-master/User Library-DO-214AC SMA.STEP"
-      (offset (xyz 0 0 1.4))
+    (model "${KIPRJMOD}/Models/User Library-DO-214AC SMA.STEP"
+      (offset (xyz 0 0 1.397))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 -90))
     )
@@ -6844,7 +6844,7 @@
       (net 24 "PF_OUT5") (pinfunction "OUT0") (pintype "output") (tstamp 27bbc96c-5921-4f49-a1eb-265f1a72815e))
     (pad "15" smd rect (at 0 0 270) (size 2.65 4) (layers "F.Cu" "F.Mask")
       (net 5 "+12V") (pinfunction "VS") (pintype "power_in") (tstamp 6b473aca-1e50-492c-8b24-3f9998a11163))
-    (model "${CGRANTKICADLIBRARIES}/Profet/Models/PG-TSDSO-14/PG-TSDSO-14_INF.step"
+    (model "${KIPRJMOD}/Models/PG-TSDSO-14_INF.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -7079,12 +7079,7 @@
       (net 1 "GND") (pinfunction "SHIELD") (pintype "passive") (tstamp 19a9e295-5bf8-4464-ae8a-4f7987537af6))
     (pad "S1" thru_hole oval (at 7.3 4.36) (size 0.9 1.7) (drill oval 0.6 1.4) (layers "*.Cu" "*.Mask")
       (net 1 "GND") (pinfunction "SHIELD") (pintype "passive") (tstamp ff986231-bc38-4d48-9404-3ea09d1dc11b))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4085.wrl"
-      (offset (xyz 0 0 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
-    )
-    (model ":CGRANTKICADLIBRARIES:digikey-kicad-library-master/USB4085-GF-A--3DModel-STEP-56544.STEP"
+    (model "${KIPRJMOD}/Models/USB4085-GF-A--3DModel-STEP-56544.STEP"
       (offset (xyz 2.9464 -4.0386 0))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -7552,7 +7547,7 @@
       (net 13 "PF_OUT7") (pinfunction "OUT0") (pintype "output") (tstamp ac0459aa-f978-4acd-9c58-ff1231b17b37))
     (pad "15" smd rect (at 0 0 270) (size 2.65 4) (layers "F.Cu" "F.Mask")
       (net 5 "+12V") (pinfunction "VS") (pintype "power_in") (tstamp 5e7b426f-f96d-4e24-92d9-8471706bd4af))
-    (model "${CGRANTKICADLIBRARIES}/Profet/Models/PG-TSDSO-14/PG-TSDSO-14_INF.step"
+    (model "${KIPRJMOD}/Models/PG-TSDSO-14_INF.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -8367,8 +8362,8 @@
       (net 1 "GND") (pintype "passive") (tstamp dca2bab3-360b-4962-8a9e-aa116e3b87ac))
     (pad "K" smd rect (at -2 0) (size 2.5 1.7) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 15 "PF_OUT1") (pintype "passive") (tstamp bcf5f37a-b935-4f9e-b2b9-c20caa03c7ea))
-    (model "${CGRANTKICADLIBRARIES}/digikey-kicad-library-master/User Library-DO-214AC SMA.STEP"
-      (offset (xyz 0 0 1.4))
+    (model "${KIPRJMOD}/Models/User Library-DO-214AC SMA.STEP"
+      (offset (xyz 0 0 1.397))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 -90))
     )
@@ -8781,8 +8776,8 @@
       (net 45 "+5V") (pinfunction "VIN") (pintype "power_in") (tstamp 43830658-662d-40cb-8e02-5318da6fc853))
     (pad "4" smd rect (at 0 -3.15) (size 3.8 2.2) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 20 "+3V3") (pinfunction "VOUT") (pintype "power_out") (tstamp 781e5095-ef47-483c-a47a-91136178f007))
-    (model "${CGRANTKICADLIBRARIES}/digikey-kicad-library-master/User Library-sot-223.STEP"
-      (offset (xyz 0 0 0.8))
+    (model "${KIPRJMOD}/Models/User Library-sot-223.STEP"
+      (offset (xyz 0 0 0.8001))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
@@ -9700,7 +9695,7 @@
       (net 17 "PF_OUT2") (pinfunction "OUT6") (pintype "output") (tstamp b1d5f43c-d191-4778-8833-bdd00874f68b))
     (pad "15" smd rect (at 0 0 90) (size 2.65 4) (layers "F.Cu" "F.Mask")
       (net 5 "+12V") (pinfunction "VS") (pintype "power_in") (tstamp 4cbc0da6-538f-4e84-8db1-c4dde2e143ca))
-    (model "${CGRANTKICADLIBRARIES}/Profet/Models/PG-TSDSO-14/PG-TSDSO-14_INF.step"
+    (model "${KIPRJMOD}/Models/PG-TSDSO-14_INF.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -9842,8 +9837,8 @@
       (net 5 "+12V") (pinfunction "A1") (pintype "passive") (tstamp 0659eb25-16a3-4b17-be79-4ea3e297b1a2))
     (pad "2" smd rect (at 3.45 0.01 270) (size 2.5 3.3) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 1 "GND") (pinfunction "A2") (pintype "passive") (tstamp eebed194-2fad-4608-b381-d5025a693aa1))
-    (model "${CGRANTKICADLIBRARIES}/digikey-kicad-library-master/User Library-DO-214AB SMC.STEP"
-      (offset (xyz 0 0 1.3))
+    (model "${KIPRJMOD}/Models/User Library-DO-214AB SMC.STEP"
+      (offset (xyz 0 0 1.2954))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 -90))
     )
@@ -9916,8 +9911,8 @@
       (net 85 "Net-(SW1-B)") (pinfunction "B") (pintype "passive") (tstamp d454ebff-59db-4a8e-b54e-11776eab2ed1))
     (pad "3" smd rect (at 1.75 1.95 90) (size 1 1.3) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 20 "+3V3") (pinfunction "C") (pintype "passive") (tstamp 5b7d7d1b-ffbc-48ef-a068-7954bd032de4))
-    (model "${CGRANTKICADLIBRARIES}/SlideSwitch/Models/CJS-1200TB.stp"
-      (offset (xyz 0 0 2.5))
+    (model "${KIPRJMOD}/Models/CJS-1200TB.stp"
+      (offset (xyz 0 0 2.49936))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
@@ -10920,7 +10915,7 @@
       (net 1 "GND") (pintype "bidirectional") (tstamp bd2f1f45-9e56-4b6b-98ed-7b2dea8ced57))
     (pad "1" thru_hole circle (at 3.81 3.81) (size 1.875 1.875) (drill 1.475) (layers "*.Cu" "*.Mask")
       (net 1 "GND") (pintype "bidirectional") (tstamp d6fad7af-7fda-473c-9f3a-46ceb51d3ae0))
-    (model "${CGRANTKICADLIBRARIES}/RedCube/Models/M6/8_Pin/Hole/7461084_Download_STP_7461084_rev1.stp"
+    (model "${KIPRJMOD}/Models/7461084_Download_STP_7461084_rev1.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
