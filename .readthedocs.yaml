@@ -12,3 +12,6 @@ build:
 
 mkdocs:
   configuration: mkdocs.yml
+
+# Build all formats
+formats: all
