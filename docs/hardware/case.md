@@ -11,7 +11,7 @@ The mechanical design is centered around simple designs that can be created in a
         The heatsink plate should be covered on both sides with a thermal pad material to electricaly isolate the heatsink while still providing a thermal interface (Example: 3M 5583S)
     * The baseplate holds the case and also sandwiches the spacer plate to the PCB
 
-![](/Images/DingoPDM_v7_1_Case.png)
+![](/DingoPDM_HW/Images/DingoPDM_v7_1_Case.png)
 
 ![](/Images/DingoPDM_v7_1_CaseBottom.png)
 
