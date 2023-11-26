@@ -42,5 +42,6 @@ nav:
     - Pinout: 'hardware-pinout.md'
   - Firmware:
     - Design: 'firmware.md'
+    - Test: 'firmware-test.md'
   - Software:
     - Design: 'software.md'
