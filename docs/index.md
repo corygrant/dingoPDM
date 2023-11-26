@@ -2,9 +2,9 @@
 
 DingoPDM is an Infineon Profet based Power Distribution Module. 
 
-![Top](/Images/DingoPDMTop_V7_2.png)
+![Top](/DingoPDM/Images/DingoPDMTop_V7_2.png)
 
-![Bottom](/Images/DingoPDMBottom_V7.png)
+![Bottom](/DingoPDM/Images/DingoPDMBottom_V7.png)
 
 
 ## Goals
