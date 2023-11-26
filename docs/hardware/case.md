@@ -1,17 +1,35 @@
-# Welcome to MkDocs
+# Case
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+The mechanical design is centered around simple designs that can be created in a home shop. 
 
-## Commands
+* 3D Printed Case
+* Flat aluminum heatsink plate
+* Flat aluminum baseplate
+* The heatsink is designed to be 2 pieces. A heatsink plate and a baseplate
+    * The heatsink plate provides clearance for the THT pins of the Deutsch connectors and the RedCube terminal while getting as close to the Profets as possible
+    * !!! warning
+        The heatsink plate should be covered on both sides with a thermal pad material to electricaly isolate the heatsink while still providing a thermal interface (Example: 3M 5583S)
+    * The baseplate holds the case and also sandwiches the spacer plate to the PCB
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+![](/Images/DingoPDM_v7_1_Case.png)
 
-## Project layout
+![](/Images/DingoPDM_v7_1_CaseBottom.png)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Photos
+
+Some various photos of different versions
+
+![](/Images/DingoPDM_V2_Bare.jpg)
+
+![](/Images/DingoPDM_v2_5.jpg)
+
+![](/Images/DingoPDM_v2_3.jpg)
+
+![](/Images/DingoPDM_v2_4.jpg)
+
+![](/Images/DingoPDM_v2_2.jpg)
+
+![](/Images/DingoPDM_v2_1.jpg)
+
+![](/Images/DingoPDM_v2.jpg)
+

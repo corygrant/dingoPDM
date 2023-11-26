@@ -1,17 +1,63 @@
-# Welcome to MkDocs
+# DingoPDM
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+DingoPDM is an Infineon Profet based Power Distribution Module. 
 
-## Commands
+![Top](/Images/DingoPDMTop_V7_2.png)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+![Bottom](/Images/DingoPDMBottom_V7.png)
 
-## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Goals
+
+* Learn more about PDMs and high DC current devices
+* Learn about developing firmware for a more complex STM32 based project
+* Create a low cost device that my friends and I can use in our project cars
+* Layout the board to fit simple case designs
+    * 3D printed top shell and flat aluminum heatsinks (no machining)
+* Use low cost 1oz/0.5oz 4 layer PCBs (low cost 2oz/1oz now available from JLCPCB)
+* Share my work with others for reference, inspiration or collaboration. 
+
+If this project does help you in any way, I'd appreciate a message!
+
+## Disclaimer
+
+This is a personal hobby project. I am not a professional. Use at your own risk. 
+
+## Hardware
+
+* 2x Profet BTS7002-1EPP
+    * 2x 14A outputs 
+    * With flyback diodes
+* 3x Profet BTS7008-2EPA
+    * 6x 8A outputs
+* 2x Digital Inputs
+* STM32F446RET6 Microcontroller
+* 256Kbit FRAM 
+    * Settings storage
+* CAN transceiver
+    * No terminating resistor
+* Board temperature measured using MCP9808
+* 2x LEDs for power and temperature status
+* 2x LEDs for status
+* Onboard 12V to 5V to 3.3V regulation
+* 2x M6 lug 12V power connection
+* 12V voltage measurement
+* THT test pads for easy connection of logic analyzer (ex: Saleae leads)
+* Deutsch DT 12 pin connector
+
+## Connections
+
+| Pin | Function| Current |
+| --- | ------- | ------- |
+| 1 | CAN L     |     |
+| 2 | CAN H     |     |
+| 3 | Output 8  | 8A  |
+| 4 | Output 7  | 8A  |
+| 5 | Output 6  | 8A  |
+| 6 | Output 5  | 8A  |
+| 7 | Output 1  | 14A |
+| 8 | Input 1   |     |
+| 9 | Output 4  | 8A  |
+| 10 | Output 3 | 8A  |
+| 11 | Input 2  |     |
+| 12 | Output 2 | 14A |

@@ -9,26 +9,25 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
-    - navigation.path
     - navigation.top
     - navigation.footer
-    - navigation.indexes
     - toc.follow
     - toc.integrate
     - search.suggest
     - search.highlight
+    - content.code.copy
   palette: 
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: grey
-      accent: green
+      accent: deep purple
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: grey
-      accent: green
+      accent: deep purple
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode  
@@ -38,15 +37,34 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/corygrant
+markdown_extensions:
+  - admonition
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg     
 nav:
   - Hardware:
-    - hardware/index.md
-    - Pinout: 'pinout.md'
-    - Case: 'case.md'
+    - Introduction: 'hardware/introduction.md'
+    - Pinout: 'hardware/pinout.md'
+    - Case: 'hardware/case.md'
   - Firmware:
-    - firmware/index.md
-    - Design: 'design.md'
-    - Code Style: 'code-style.md'
+    - Introduction: 'firmware/introduction.md'
+    - Design: 'firmware/design.md'
+    - Code Style: 'firmware/code-style.md'
   - Software:
-    - software/index.md
-    - Functionality: 'functionality.md'
+    - Introduction: 'software/introduction.md'
+    - Functionality: 'software/functionality.md'
