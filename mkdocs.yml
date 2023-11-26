@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: DingoPDM
 theme:
   name: material
   language: en
@@ -37,3 +37,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/corygrant
+nav:
+  - Hardware:
+    - Pinout: 'hardware-pinout.md'
+  - Firmware:
+    - Design: 'firmware.md'
+  - Software:
+    - Design: 'software.md'
