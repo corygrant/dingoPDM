@@ -1,2 +1,39 @@
 site_name: My Docs
-theme: readthedocs
+theme:
+  name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: grey
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: grey
+      accent: green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode  
+repo_url: https://github.com/corygrant/DingoPDM_HW
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/corygrant
