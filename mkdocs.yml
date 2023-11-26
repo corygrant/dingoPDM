@@ -12,6 +12,7 @@ theme:
     - navigation.path
     - navigation.top
     - navigation.footer
+    - navigation.indexes
     - toc.follow
     - toc.integrate
     - search.suggest
@@ -39,9 +40,13 @@ extra:
       link: https://github.com/corygrant
 nav:
   - Hardware:
-    - Pinout: 'hardware-pinout.md'
+    - hardware/index.md
+    - Pinout: 'pinout.md'
+    - Case: 'case.md'
   - Firmware:
-    - Design: 'firmware.md'
-    - Test: 'firmware-test.md'
+    - firmware/index.md
+    - Design: 'design.md'
+    - Code Style: 'code-style.md'
   - Software:
-    - Design: 'software.md'
+    - software/index.md
+    - Functionality: 'functionality.md'
