@@ -2,6 +2,8 @@ site_name: DingoPDM
 theme:
   name: material
   language: en
+  logo: assets/logo.png
+  favicon: assets/logo.png 
   icon:
     repo: fontawesome/brands/github
   features:
@@ -35,9 +37,6 @@ repo_url: https://github.com/corygrant/DingoPDM_HW
 repo_name: corygrant/DingoPDM
 extra:
   generator: false
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/corygrant
 markdown_extensions:
   - admonition
   - pymdownx.keys
@@ -59,8 +58,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg     
 nav:
   - Hardware:
-    - Introduction: 'hardware/introduction.md'
-    - Pinout: 'hardware/pinout.md'
+    - PCB: 'hardware/pcb.md'
+    - Connections: 'hardware/connections.md'
     - Case: 'hardware/case.md'
   - Firmware:
     - Introduction: 'firmware/introduction.md'
