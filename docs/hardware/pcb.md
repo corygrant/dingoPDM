@@ -1,5 +1,8 @@
 # Introduction
 
+![Traces](/images/PCBWhite.svg#only-dark)
+![Traces](/images/PCBBlack.svg#only-light)
+
 ## Components
 
 * 2x Profet `BTS7002-1EPP`

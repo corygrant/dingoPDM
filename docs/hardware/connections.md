@@ -2,21 +2,23 @@
 
 ## Connectors
 
-![Device Image with IDs](/DingoPDM/images/DingoPDM_v7_1_Case.png)
+![Connections](/images/ConnectionsWhite.svg#only-dark)
+![Connections](/images/ConnectionsBlack.svg#only-light)
 
 |ID| Connector           | Details         | Qty |
 | -| ------------------- | --------------  | --- |
 | 1| DT 12 Pos Connector | `DT06-12SA`     | 1   |
-| 2| DT 12 Wedgelock     | `W12S`          | 1   |
-| 3| 14-16AWG Socket     | `0462-209-16141`| 2   |
-| 4| 16-20AWG Socket     | `0462-201-16141`| 10  |
-| 5| 12V DC Power Lug    | `M6x1.0x14mm`   | 1   |
-| 6| Ground Lug          | `M6x1.0x14mm`   | 1   |
-| 7| USB Type C          |                 | 1   |
+|  | DT 12 Wedgelock     | `W12S`          | 1   |
+|  | 14-16AWG Socket     | `0462-209-16141`| 2   |
+|  | 16-20AWG Socket     | `0462-201-16141`| 10  |
+| 2| 12V DC Power Lug    | `M6` or `1/4"`  | 1   |
+| 3| Ground Lug          | `M6` or `1/4"`  | 1   |
+| 4| USB Type C          |                 | 1   |
 
 ## Pinout
 
-![DT 12 Image](/DingoPDM/images/DingoPDM_v7_1_Case.png)
+![DT 12](/images/DTPinNumsWhite.svg#only-dark)
+![DT 12](/images/DTPinNumsBlack.svg#only-light)
 
 | Pin | Function| Current |
 | --- | ------- | ------- |
@@ -36,17 +38,19 @@
 !!! note
     No internal terminating resistor on CAN connection, must be added externally
 
-## Test Ports
+## Test Points
 
-![Test Lead Image](/DingoPDM/images/DingoPDM_v7_1_Case.png)
+![Test Points](/images/TestPointsWhite.svg#only-dark)
+![Test Points](/images/TestPointsBlack.svg#only-light)
 
-| Label | Function     | MCU Pin |
-| ---   | ------------ | ------- |
-| I2C   | I2C1 Clock   | `PB6`   |
-| I2D   | I2C1 Data    | `PB7`   |
-| CR    | CAN Receive  | `PB8`   |
-| CT    | CAN Transmit | `PB9`   |
-| E1    | Extra 1      | `PC10`  |
-| E2    | Extra 2      | `PC11`  |
-| E3    | Extra 3      | `PC13`  |
-| GND   | Ground       | `Ground`|
+| Label     | Function     | MCU Pin |
+| ---       | ------------ | ------- |
+| I2C       | I2C1 Clock   | `PB6`   |
+| I2D       | I2C1 Data    | `PB7`   |
+| CR        | CAN Receive  | `PB8`   |
+| CT        | CAN Transmit | `PB9`   |
+| E1        | Extra 1      | `PC10`  |
+| E2        | Extra 2      | `PC11`  |
+| E3        | Extra 3      | `PC13`  |
+| GND       | Ground       | `Ground`|
+| TagConnect| Debugger     |         |

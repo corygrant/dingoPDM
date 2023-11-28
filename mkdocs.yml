@@ -1,9 +1,8 @@
 site_name: DingoPDM
+site_url: https://corygrant.github.io/DingoPDM/
 theme:
   name: material
   language: en
-  logo: assets/logo.png
-  favicon: assets/logo.png 
   icon:
     repo: fontawesome/brands/github
   features:
