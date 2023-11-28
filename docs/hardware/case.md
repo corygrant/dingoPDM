@@ -1,14 +1,14 @@
 # Case
 
-![Exploded1](images/ExplodedView1White.svg#only-dark)
-![Exploded1](images/ExplodedView1Black.svg#only-light)
+![Exploded1](../images/ExplodedView1White.svg#only-dark)
+![Exploded1](../images/ExplodedView1Black.svg#only-light)
 
-![Exploded2](images/ExplodedView2White.svg#only-dark)
-![Exploded2](images/ExplodedView2Black.svg#only-light)
+![Exploded2](../images/ExplodedView2White.svg#only-dark)
+![Exploded2](../images/ExplodedView2Black.svg#only-light)
 
-![](DingoPDM/images/DingoPDM_v7_1_Case.png)
+![](../DingoPDM/images/DingoPDM_v7_1_Case.png)
 
-![](DingoPDM/images/DingoPDM_v7_1_CaseBottom.png)
+![](../DingoPDM/images/DingoPDM_v7_1_CaseBottom.png)
 
 The mechanical design is centered around simple designs that can be created in a home shop. 
 
