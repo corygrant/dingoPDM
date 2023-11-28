@@ -1,7 +1,7 @@
 # Introduction
 
-![Traces](/images/PCBWhite.svg#only-dark)
-![Traces](/images/PCBBlack.svg#only-light)
+![Traces](images/PCBWhite.svg#only-dark)
+![Traces](images/PCBBlack.svg#only-light)
 
 ## Components
 
