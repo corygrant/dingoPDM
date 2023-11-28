@@ -1,5 +1,6 @@
 site_name: DingoPDM
 site_url: https://corygrant.github.io/DingoPDM/
+use_directory_urls: true
 theme:
   name: material
   language: en
