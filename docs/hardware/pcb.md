@@ -1,7 +1,6 @@
 # Introduction
 
-![Traces](../images/PCBWhite.svg#only-dark)
-![Traces](../images/PCBBlack.svg#only-light)
+![PCB Design](../images/DingoPDM_PCB_Layout_V7_2.png)
 
 ## Components
 
