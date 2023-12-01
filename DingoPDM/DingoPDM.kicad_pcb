@@ -6926,8 +6926,8 @@
     (at 21.59 59.182 180)
     (descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "LED")
-    (property "Digi-Key_PN" "475-1278-1-ND")
-    (property "LCSC" "C2899997")
+    (property "Digi-Key_PN" "475-1410-1-ND")
+    (property "LCSC" "C2899888")
     (property "Sheetfile" "MCU.kicad_sch")
     (property "Sheetname" "MCU")
     (property "ki_description" "Light emitting diode, small symbol")
@@ -6938,7 +6938,7 @@
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 763b86ba-794f-4881-aeed-eafd99d70f86)
     )
-    (fp_text value "RED" (at 0 1.65) (layer "F.Fab") hide
+    (fp_text value "GRN" (at 0 1.65) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp a14d6110-82f1-4ea6-91b9-b0829855cc9d)
     )
@@ -8486,8 +8486,8 @@
     (at 32.258 60.452 180)
     (descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "LED")
-    (property "Digi-Key_PN" "475-1410-1-ND")
-    (property "LCSC" "C2899888")
+    (property "Digi-Key_PN" "475-1278-1-ND")
+    (property "LCSC" "C2899997")
     (property "Sheetfile" "MCU.kicad_sch")
     (property "Sheetname" "MCU")
     (property "ki_description" "Light emitting diode, small symbol")
@@ -8498,7 +8498,7 @@
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 6e5562af-0344-4132-b42b-b8d5462c63c7)
     )
-    (fp_text value "GRN" (at 0 1.65) (layer "F.Fab") hide
+    (fp_text value "RED" (at 0 1.65) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 2c2caf62-34b4-43f1-857c-189229dfd539)
     )

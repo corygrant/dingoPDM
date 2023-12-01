@@ -16,3 +16,7 @@ private void ReadMessage10(byte[] data)
     Flashers[3].Value = Convert.ToBoolean((data[0] & 0x08) >> 3) && Flashers[3].Enabled && Flashers[3].InputValue;
 }
 ```
+
+![PDM Main](../images/DingoConfigurator_PDM_Main.png)
+
+![PDM Settings](../images/DingoConfigurator_PDM_Settings.png)

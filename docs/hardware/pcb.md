@@ -29,10 +29,6 @@
 
 * Designed using `KiCad v7.0.6`
 
-## Open Items
-
-* Test V7.1 thermal performance
-
 ## Design Notes
 
 * Prior to V6, the design had a lot of features which meant a lot of parts
