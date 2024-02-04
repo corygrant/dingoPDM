@@ -19,21 +19,22 @@ The mechanical design is centered around simple designs that can be created in a
 
 ## Exploded Assembly
 
-| ID| Description         | Details                     | Qty |
-|  -| ------------------- | --------------------------- | --- |
-|  1| Baseplate           | `Aluminum 6061`             | 1   |
-|  2| Heatsink            | `Aluminum 6061`             | 1   |
-|  3| Case                | `3D Print`                  | 1   |
-|4.1| PCB                 |                             | 1   |
-|5.1| Ring Lug            | `M6` or `1/4"`              | 1   |
-|5.2| Lug Washers         | `M6 Flat`                   | 2   |
-|5.3| Lug Screws          | `M6x1.0x14mm`               | 2   |
-|5.4| Connector Screws    | `No. 6, 5/8" Thread Forming`| 2   |
-|5.5| Case Washers        | `M6 Flat`                   | 4   |
-|5.6| Case Screws         | `M6x1.0x14mm`               | 4   |
-|5.7| PCB Washers         | `M3 Flat`                   | 4   |
-|5.8| PCB Screws          | `M3x0.5x12mm`               | 4   |
-|  6| DT Connector        | `12 Pin`                    | 1   |
+|  ID| Description         | Details                     | Qty |
+|   -| ------------------- | --------------------------- | --- |
+|   1| Baseplate           | `Aluminum 6061`             | 1   |
+|   2| Heatsink            | `Aluminum 6061`             | 1   |
+|   3| Case                | `3D Print`                  | 1   |
+| 4.1| PCB                 |                             | 1   |
+| 5.1| Ring Lug            | `M6` or `1/4"`              | 1   |
+| 5.2| Lug Washers         | `M6 Flat`                   | 2   |
+| 5.3| Lug Screws          | `M6x1.0x14mm`               | 2   |
+| 5.5| Case Washers        | `M6 Flat`                   | 4   |
+| 5.6| Case Screws         | `M6x1.0x14mm`               | 4   |
+| 5.7| PCB Washers         | `M3 Flat`                   | 4   |
+| 5.8| PCB Screws          | `M3x0.5x12mm`               | 4   |
+|   6| DT Connector        | `12 Pin`                    | 1   |
+|10.1| Light Pipe          | `PLPC2-10MM`                | 3   |
+|  13| Connector Screws    | `No. 6, 5/8" Thread Forming`| 2   |
 
 ## Models
 
