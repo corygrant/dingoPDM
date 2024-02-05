@@ -1,4 +1,4 @@
-site_name: DingoPDM
+site_name: dingoPDM
 site_url: https://corygrant.github.io/DingoPDM/
 use_directory_urls: true
 theme:
@@ -21,19 +21,19 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: grey
-      accent: deep purple
+      accent: lime
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: grey
-      accent: deep purple
+      accent: lime
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode  
 repo_url: https://github.com/corygrant/DingoPDM_HW
-repo_name: corygrant/DingoPDM
+repo_name: corygrant/dingoPDM
 extra:
   generator: false
 markdown_extensions:
