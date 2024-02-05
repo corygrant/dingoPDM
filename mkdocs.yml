@@ -1,5 +1,5 @@
 site_name: dingoPDM
-site_url: https://corygrant.github.io/DingoPDM/
+site_url: https://corygrant.github.io/dingoPDM/
 use_directory_urls: true
 theme:
   name: material
@@ -32,7 +32,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode  
-repo_url: https://github.com/corygrant/DingoPDM_HW
+repo_url: https://github.com/corygrant/dingoPDM
 repo_name: corygrant/dingoPDM
 extra:
   generator: false
