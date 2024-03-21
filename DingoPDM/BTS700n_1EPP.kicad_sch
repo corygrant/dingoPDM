@@ -1113,7 +1113,7 @@
     (property "Digi-Key_PN" "1727-5150-1-ND" (at 166.37 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C177016" (at 166.37 113.03 0)
+    (property "LCSC" "C426855" (at 166.37 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1fa7ac2c-d87e-4cc5-bfd7-78d621b8635f))
