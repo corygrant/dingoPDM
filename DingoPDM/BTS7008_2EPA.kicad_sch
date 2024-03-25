@@ -929,7 +929,7 @@
     (property "Digi-Key_PN" "311-1.20KCRCT-ND" (at 147.32 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C727987" (at 147.32 115.57 0)
+    (property "LCSC" "C2933520" (at 147.32 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid cc47cbb0-28d9-45de-a139-4f1bc9e6eee5))

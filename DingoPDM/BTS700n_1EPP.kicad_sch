@@ -1043,7 +1043,7 @@
     (property "Digi-Key_PN" "311-1.20KCRCT-ND" (at 151.13 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C727987" (at 151.13 113.03 0)
+    (property "LCSC" "C2933520" (at 151.13 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d263029e-5801-4159-a416-464a554001fe))
