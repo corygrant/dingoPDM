@@ -65,7 +65,7 @@ nav:
   - Firmware:
     - Introduction: 'firmware/introduction.md'
     - Design: 'firmware/design.md'
-    - Code Style: 'firmware/code-style.md'
+    - Updating: 'firmware/updating.md'
   - Software:
     - Introduction: 'software/introduction.md'
     - Functionality: 'software/functionality.md'
