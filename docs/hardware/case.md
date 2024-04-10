@@ -1,10 +1,10 @@
 # Case
 
-![Exploded1](../images/ExplodedView1White.svg#only-dark)
-![Exploded1](../images/ExplodedView1Black.svg#only-light)
+![Exploded1](../images/ExplodedView1White.svg#only-dark){ .off-glb }
+![Exploded1](../images/ExplodedView1Black.svg#only-light){ .off-glb }
 
-![Exploded2](../images/ExplodedView2White.svg#only-dark)
-![Exploded2](../images/ExplodedView2Black.svg#only-light)
+![Exploded2](../images/ExplodedView2White.svg#only-dark){ .off-glb }
+![Exploded2](../images/ExplodedView2Black.svg#only-light){ .off-glb }
 
 The mechanical design is centered around simple designs that can be created in a home shop. 
 

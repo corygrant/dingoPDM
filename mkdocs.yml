@@ -57,6 +57,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg  
   - pymdownx.tasklist:
       custom_checkbox: true   
+plugins:
+  - glightbox
 nav:
   - Hardware:
     - PCB: 'hardware/pcb.md'
@@ -68,4 +70,9 @@ nav:
     - Updating: 'firmware/updating.md'
   - Software:
     - Introduction: 'software/introduction.md'
-    - Functionality: 'software/functionality.md'
+    - ToolBar: 'software/toolbar.md'
+    - DeviceTree: 'software/devicetree.md'
+    - MessageList: 'software/messagelist.md'
+    - dingoPDM: 'software/dingopdm.md'
+    - CANBoard: 'software/canboard.md'
+    - CANMsgLog: 'software/msglog.md'

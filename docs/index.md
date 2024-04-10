@@ -28,6 +28,6 @@ dingoPDM is an open source Infineon Profet based Power Distribution Module.
 
 ## Open Items
 - [X] Redesign case for V7.2 PCB
-- [ ] Test PCB V7.2 and case thermal performance
+- [X] Test PCB V7.2 and case thermal performance
 - [ ] Finish adding remaining functionality to configuration software
 - [ ] Clean up firmware source code

@@ -2,8 +2,8 @@
 
 ## Connectors
 
-![Connections](../images/ConnectionsWhite.svg#only-dark)
-![Connections](../images/ConnectionsBlack.svg#only-light)
+![Connections](../images/ConnectionsWhite.svg#only-dark){ .off-glb }
+![Connections](../images/ConnectionsBlack.svg#only-light){ .off-glb }
 
 |ID| Connector           | Details         | Qty |
 | -| ------------------- | --------------  | --- |
@@ -17,8 +17,8 @@
 
 ## Pinout
 
-![DT 12](../images/DTPinNumsWhite.svg#only-dark)
-![DT 12](../images/DTPinNumsBlack.svg#only-light)
+![DT 12](../images/DTPinNumsWhite.svg#only-dark){ .off-glb }
+![DT 12](../images/DTPinNumsBlack.svg#only-light){ .off-glb }
 
 | Pin | Function| Current |
 | --- | ------- | ------- |
@@ -40,8 +40,8 @@
 
 ## Test Points
 
-![Test Points](../images/TestPointsWhite.svg#only-dark)
-![Test Points](../images/TestPointsBlack.svg#only-light)
+![Test Points](../images/TestPointsWhite.svg#only-dark){ .off-glb }
+![Test Points](../images/TestPointsBlack.svg#only-light){ .off-glb }
 
 | Label     | Function     | MCU Pin |
 | ---       | ------------ | ------- |
