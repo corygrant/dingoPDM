@@ -54,3 +54,15 @@
 | E3        | Extra 3      | `PC13`  |
 | GND       | Ground       | `Ground`|
 | TagConnect| Debugger     |         |
+
+## Wipers
+
+To control a wiper motor directly from dingoPDM a WiperModule is required. 
+The WiperModule uses 3 relays to properly control the slow, fast and brake functions of a wiper motor. 
+The internal connections are made based on the slow input (which also supplies all power to the motor) and the fast input. 
+The ground and park signals are passed through the module. 
+
+Information about the WiperModule can be found here: [WiperModule](https://github.com/corygrant/WiperModule)
+
+![WiperModuleConnections](../images/WiperModuleStatesWhite.svg#only-dark){ .off-glb }
+![WiperModuleConnections](../images/WiperModuleStatesBlack.svg#only-light){ .off-glb }
