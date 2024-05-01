@@ -1,7 +1,10 @@
-# dingoPDM
+## dingoPDM
 dingoPDM is an Infineon Profet based Power Distribution Module. 
 
 # [**Documentation**](https://corygrant.github.io/dingoPDM/)
+
+## Disclaimer
+This is a personal hobby project. I am not a professional. Use at your own risk. 
 
 ![Full1](docs/images/Full1.jpg)
 
@@ -15,5 +18,3 @@ dingoPDM is an Infineon Profet based Power Distribution Module.
 
 ![PCB4](docs/images/PCB4.jpg)
 
-# Disclaimer
-This is a personal hobby project. I am not a professional. Use at your own risk. 
