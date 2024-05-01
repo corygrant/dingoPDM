@@ -1,7 +1,7 @@
 # dingoPDM
 dingoPDM is an Infineon Profet based Power Distribution Module. 
 
-[**Documentation**](https://corygrant.github.io/dingoPDM/)
+# [**Documentation**](https://corygrant.github.io/dingoPDM/)
 
 ![Full1](docs/images/Full1.jpg)
 
