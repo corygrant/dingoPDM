@@ -4,7 +4,7 @@ DingoConfigurator is a Windows application designed to configure and monitor din
 
 ## Download
 
-The latest version can be downloaded here: [DingoConfigurator](https://github.com/corygrant/DingoConfigurator)
+The latest version can be downloaded here: [DingoConfigurator](https://github.com/corygrant/DingoConfigurator/releases)
 
 ## Installation
 
