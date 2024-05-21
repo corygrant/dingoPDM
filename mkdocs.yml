@@ -59,6 +59,7 @@ markdown_extensions:
       custom_checkbox: true   
 plugins:
   - glightbox
+  - search
 nav:
   - Hardware:
     - PCB: 'hardware/pcb.md'
