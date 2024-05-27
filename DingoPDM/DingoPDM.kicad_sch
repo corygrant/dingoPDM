@@ -6,8 +6,8 @@
 
   (title_block
     (title "Dingo_PDM")
-    (date "2023-09-11")
-    (rev "v7.2")
+    (date "2024-05-26")
+    (rev "v7.3")
     (comment 3 "github.com/corygrant")
     (comment 4 "Cory Grant")
   )
@@ -362,7 +362,7 @@
     (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify left bottom))
     (uuid 16eeb9be-3601-4dc0-922f-1b74a7490431)
   )
-  (text "V7.2\n-Added schottky to VXO7805 output to prevent backfeed from USB\n-Can't use PB13 (STM32 VBUS issue), shifted pins over\n-Fixed USB VBUS resistor divider values\n\nV7.1\n-Fixed FRAM SCL/SDA backwards\n-Changed top copper fill from solid to thermal reliefs to make soldering easier\n-Added 2x status LEDs\n-Fixed silkscreen\n\nV7\n-Changed to STM32F446RET6\n-Added USB again, for DFU and easy settings change\n-Switched BTS724 to 2x BTS7008-2EPA\n-Added another op-amp for IS\n-Added boot selector again to enable DFU\n"
+  (text "V7.3\n-Added power LED bridged jumper (cut trace to disable)\n-Added CAN standby connection to PC12\n-Added 5.1k resistors on USB-C CC pins to enable use of USB-C to USB-C cable\n-Increased M3 mounting hole size\n\nV7.2\n-Added schottky to VXO7805 output to prevent backfeed from USB\n-Can't use PB13 (STM32 VBUS issue), shifted pins over\n-Fixed USB VBUS resistor divider values\n\nV7.1\n-Fixed FRAM SCL/SDA backwards\n-Changed top copper fill from solid to thermal reliefs to make soldering easier\n-Added 2x status LEDs\n-Fixed silkscreen\n\nV7\n-Changed to STM32F446RET6\n-Added USB again, for DFU and easy settings change\n-Switched BTS724 to 2x BTS7008-2EPA\n-Added another op-amp for IS\n-Added boot selector again to enable DFU\n"
     (at 69.85 189.23 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d5554cde-b5e1-4809-b7b2-36ac9ac8efee)
