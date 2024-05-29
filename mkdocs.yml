@@ -68,6 +68,11 @@ nav:
   - Firmware:
     - Introduction: 'firmware/introduction.md'
     - Design: 'firmware/design.md'
+    - CAN: 'firmware/can.md'
+    - Digital Inputs: 'firmware/digitalinputs.md'
+    - Configuration: 'firmware/configuration.md'
+    - Variable Mapping: 'firmware/variablemap.md'
+    - Sleep: 'firmware/sleep.md'
     - Updating: 'firmware/updating.md'
   - Software:
     - Introduction: 'software/introduction.md'

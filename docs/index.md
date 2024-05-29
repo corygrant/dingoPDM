@@ -25,7 +25,7 @@ dingoPDM is an open source Infineon Profet based Power Distribution Module.
 - [X] Share my work with others for reference, inspiration or collaboration. 
 - [ ] Document the project in a professional way to make it easy to use and access
 - [ ] Develop an easy to use configuration PC software
-- [ ] Offer fully built devices for sale
+- [X] Offer fully built devices for sale
 
 !!! info
     If this project does help you in any way, I'd appreciate a message!
@@ -38,5 +38,5 @@ dingoPDM is an open source Infineon Profet based Power Distribution Module.
 ## Open Items
 - [X] Redesign case for V7.2 PCB
 - [X] Test PCB V7.2 and case thermal performance
-- [ ] Finish adding remaining functionality to configuration software
+- [ ] Finish adding remaining functionality to configuration software and firmware
 - [ ] Clean up firmware source code
