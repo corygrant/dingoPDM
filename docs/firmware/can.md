@@ -164,12 +164,52 @@ For every valid settings message, a response message will be sent back.
 
 The response message will have a lowercase letter prefix and will respond on ID = Base ID + 30
 
-!!! Danger
-    Insert message chart here
-
 `C` *CAN* --> `c`
 
+![CANChart](../images/canSettingsMsgsWhite.svg#only-dark){ .off-glb }
+![CANChart](../images/canSettingsMsgsBlack.svg#only-light){ .off-glb }
+
+- `SPE`
+    - Bit 0 = CAN enable/disable
+    - Bit 1 = CAN transmit enable/disable
+    - Bit 4 to 7 = CAN speed
+        - 0 = `10K`
+        - 1 = `20K`
+        - 2 = `50K`
+        - 3 = `100K`
+        - 4 = `125K`
+        - 5 = `250K`
+        - 6 = `500K`
+        - 7 = `750K`
+        - 8 = `1000K`
+- `IDH` - Base ID high byte
+- `IDL` - Base ID low byte
+- `TXR` - Transmit rate, delay between transmit (ms / 10)
+
 `N` *CAN Input* --> `n`
+
+![CANInputChart](../images/canInputMsgsWhite.svg#only-dark){ .off-glb }
+![CANInputChart](../images/canInputMsgsBlack.svg#only-light){ .off-glb }
+
+- `OME`
+    - Bit 0 = Input enable/disable
+    - Bit 1 to Bit 2 = Mode
+        - 0 = `Num`
+        - 1 = `Momentary`
+        - 2 = `Latching`
+    - Bit 4 to 7 = Operator
+        - 0 = `Equal`
+        - 1 = `Greater Than`
+        - 2 = `Less Than`
+        - 3 = `Bitwise And`
+        - 4 = `Bitwise Nand`
+- `NUM` - Input number
+- `IDH` - CAN ID high byte
+- `IDL` - CAN ID low byte
+- `BYT`
+    - Bit 0 to 4 = Low byte
+    - Bit 5 to 7 = High byte
+- `MSK` - Mask
 
 `I` *Input* --> `i`
 
@@ -203,14 +243,18 @@ Without this message, any settings change will be lost on a power cycle
 
 A response will be sent with the result of the Burn
 
+![BurnChart](../images/burnMsgsWhite.svg#only-dark){ .off-glb }
+![BurnChart](../images/burnMsgsBlack.svg#only-light){ .off-glb }
+
 !!! Tip
     This is an easy way to test new settings. Try new settings without Burn and then cycle power to restore the old settings
 
-`Q` *Sleep*
+`Q` *Sleep* --> `q`
 
 The sleep message triggers the PDM to immediately go to sleep. 
 
-There is no response to this message (that would wake the PDM)
+![SleepChart](../images/sleepMsgsWhite.svg#only-dark){ .off-glb }
+![SleepChart](../images/sleepMsgsBlack.svg#only-light){ .off-glb }
 
 !!! Note
     This message will not have an effect if the sleep conditions are not met, see Sleep
@@ -223,3 +267,15 @@ There is no response to this message.
 
 !!! Tip
     The format of this message is not critical, any CAN message will wake the PDM
+
+`V` *Version* --> `v`
+
+This message gets the firmware version
+
+![VersionChart](../images/versionMsgsWhite.svg#only-dark){ .off-glb }
+![VersionChart](../images/versionMsgsBlack.svg#only-light){ .off-glb }
+
+- `MA` - Major
+- `MI` - Minor
+- `BH` - Build High Byte
+- `BL` - Build Low Byte
