@@ -20,8 +20,8 @@ To update the firmware, the device must be put into bootloader using the `boot` 
 
 To enter the bootloader, move the slide switch to the position that aligns it with the lines on the switch body
 
-![BootSwitch1](../images/bootSwitchWhite.svg#only-dark){ width="100" }{ .off-glb }
-![BootSwitch1](../images/bootSwitchBlack.svg#only-light){ width="100" }{ .off-glb }
+![BootSwitch1](../images/bootSwitchWhite.svg#only-dark){ width="100", .off-glb }
+![BootSwitch1](../images/bootSwitchBlack.svg#only-light){ width="100", .off-glb }
 
 !!! Warning
     After updating, remember to set the boot switch back to the original position

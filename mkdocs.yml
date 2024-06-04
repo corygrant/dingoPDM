@@ -36,8 +36,12 @@ repo_url: https://github.com/corygrant/dingoPDM
 repo_name: corygrant/dingoPDM
 extra:
   generator: false
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/TFqa92dV
 markdown_extensions:
   - admonition
+  - tables
   - pymdownx.keys
   - pymdownx.details
   - pymdownx.highlight:
@@ -61,6 +65,8 @@ plugins:
   - glightbox
   - search
 nav:
+  - Getting Started:
+    - Introduction: 'gettingstarted/introduction.md'
   - Hardware:
     - PCB: 'hardware/pcb.md'
     - Connections: 'hardware/connections.md'

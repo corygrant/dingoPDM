@@ -8,14 +8,21 @@ The latest version can be downloaded here: [DingoConfigurator](https://github.co
 
 ## Installation
 
+!!!Info
+    The installer has not been built yet.
+
+    First install [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html) 
+
+    Download the `.zip` from the link above, unzip and run `DingoConfigurator.exe`
+
 ## Supported Devices
 
 DingoConfigurator currently supports these devices:
 
-| Manufacturer   | Device    |
-| --------       | --------- |
-| corygrant      | [dingoPDM](https://github.com/corygrant/dingoPDM)     |
-| corygrant      | [CANBoard](https://github.com/corygrant/CANBoard_HW)  |
+| Manufacturer           | Device    |
+| --------               | --------- |
+| Dingo Electronics      | [dingoPDM](https://github.com/corygrant/dingoPDM)     |
+| Dingo Electronics      | [CANBoard](https://github.com/corygrant/CANBoard_HW)  |
 
 !!! Note
     New devices can/will be added when I have access to the hardware 
@@ -24,10 +31,10 @@ DingoConfigurator currently supports these devices:
 
 DingoConfigurator currently supports these CAN interfaces.
 
-| Manufacturer   | Device    |
-| --------       | --------- |
-| corygrant      | [USB2CAN](https://github.com/corygrant/USB2CAN_HW)   |
-| PEAK-System    | [PCAN-USB](https://www.peak-system.com/PCAN-USB.199.0.html?&L=1)  |
+| Manufacturer           | Device    |
+| --------               | --------- |
+| Dingo Electronics      | [USB2CAN](https://github.com/corygrant/USB2CAN_HW)   |
+| PEAK-System            | [PCAN-USB](https://www.peak-system.com/PCAN-USB.199.0.html?&L=1)  |
 
 !!! Note
     New devices can/will be added when I have access to the hardware 

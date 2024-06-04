@@ -73,8 +73,14 @@ dingoPDM sends output, input and device information over CAN (and/or USB) cyclic
 !!! Warning
     The output format is under development and subject to change
 
-![OutputChart](../images/canoutputTableWhite.svg#only-dark){ .off-glb }
-![OutputChart](../images/canoutputTableBlack.svg#only-light){ .off-glb }
+| CAN ID     | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:----------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Base ID + 0 | 8   | DI     | DS     | TC     | TC     | BV     | BV     | BT     | BT    |
+|Base ID + 1 | 8   | OC1    | OC1    | OC2    | OC2    | OC3    | OC3    | OC4    | OC4   |
+|Base ID + 2 | 8   | OC5    | OC5    | OC6    | OC6    | OC7    | OC7    | OC8    | OC8   |
+|Base ID + 3 | 8   | OS12   | OS34   | OS56   | OS78   | WO     | WSS    | FIO    |       |
+|Base ID + 4 | 8   | OR1    | OR2    | OR3    | OR4    | OR5    | OR6    | OR7    | OR8   |
+|Base ID + 5 | 8   | CI     | CI     | CI     | CI     | VI     | VI     |        |       |
 
 - *Base ID + 0*
     - `DI` - Digital Inputs
@@ -90,12 +96,17 @@ dingoPDM sends output, input and device information over CAN (and/or USB) cyclic
             - 5 = `Overtemp`
             - 6 = `Error`
     - `TC` - Total Current (Amps * 10)
+        - 2 bytes
     - `BV` - Battery Voltage (V * 10)
+        - 2 bytes
     - `BT` - Board Temperature (deg C * 10)
+        - 2 bytes
 - *Base ID + 1*
     - `OC1` to `OC4` - Output n Current (Amps * 10)
+        - 2 bytes each
 - *Base ID + 2*
     - `OC5` to `OC8` - Output n Current (Amps * 10)
+        - 2 bytes each
 - *Base ID + 3*
     - `OSxy` - Output States x/y
         - Bits 0 to 3 - State x
@@ -164,10 +175,13 @@ For every valid settings message, a response message will be sent back.
 
 The response message will have a lowercase letter prefix and will respond on ID = Base ID + 30
 
-`C` *CAN* --> `c`
+### CAN
 
-![CANChart](../images/canSettingsMsgsWhite.svg#only-dark){ .off-glb }
-![CANChart](../images/canSettingsMsgsBlack.svg#only-light){ .off-glb }
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 1   | C      |        |        |        |        |        |        |       |
+|Set     | 5   | C      | SPE    | IDH    | IDL    | TXR    |        |        |       |
+|Response| 5   | c      | SPE    | IDH    | IDL    | TXR    |        |        |       |
 
 - `SPE`
     - Bit 0 = CAN enable/disable
@@ -186,10 +200,13 @@ The response message will have a lowercase letter prefix and will respond on ID 
 - `IDL` - Base ID low byte
 - `TXR` - Transmit rate, delay between transmit (ms / 10)
 
-`N` *CAN Input* --> `n`
+### CAN Input
 
-![CANInputChart](../images/canInputMsgsWhite.svg#only-dark){ .off-glb }
-![CANInputChart](../images/canInputMsgsBlack.svg#only-light){ .off-glb }
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 2   | N      | NUM    |        |        |        |        |        |       |
+|Set     | 7   | N      | OME    | NUM    | IDH    | IDL    | BYT    | MSK    |       |
+|Response| 7   | n      | OME    | NUM    | IDH    | IDL    | BYT    | MSK    |       |
 
 - `OME`
     - Bit 0 = Input enable/disable
@@ -211,31 +228,28 @@ The response message will have a lowercase letter prefix and will respond on ID 
     - Bit 5 to 7 = High byte
 - `MSK` - Mask
 
-`I` *Input* --> `i`
+### Input
 
-`O` *Output* --> `o`
+### Output
 
-`U` *Virtual Input* --> `u`
+### Virtual Input
 
-`H` *Flasher* --> `h`
+### Flasher
 
-`W` *Wiper* --> `w`
+### Wiper
 
-`P` *Wiper Speed* --> `p`
+### Wiper Speed
 
-`Y` *Wiper Delay* --> `y`
+### Wiper Delay
 
-`D` *Starter Disable* --> `d`
+### Starter Disable
 
 
 ## Special
 
 There are some special messages that are used for special functions. 
 
-!!! Danger
-    Insert message chart here
-
-`B` *Burn* --> `b`
+### Burn
 
 The burn message triggers the PDM to save the configuration to FRAM memory. 
 
@@ -243,23 +257,27 @@ Without this message, any settings change will be lost on a power cycle
 
 A response will be sent with the result of the Burn
 
-![BurnChart](../images/burnMsgsWhite.svg#only-dark){ .off-glb }
-![BurnChart](../images/burnMsgsBlack.svg#only-light){ .off-glb }
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 4   | B      | 1      | 3      | 8      |        |        |        |       |
+|Response| 2   | b      | OK     |        |        |        |        |        |       |
 
 !!! Tip
     This is an easy way to test new settings. Try new settings without Burn and then cycle power to restore the old settings
 
-`Q` *Sleep* --> `q`
+### Sleep
 
 The sleep message triggers the PDM to immediately go to sleep. 
 
-![SleepChart](../images/sleepMsgsWhite.svg#only-dark){ .off-glb }
-![SleepChart](../images/sleepMsgsBlack.svg#only-light){ .off-glb }
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 4   | Q      | U      | I      | T      |        |        |        |       |
+|Response| 2   | q      | OK     |        |        |        |        |        |       |
 
 !!! Note
     This message will not have an effect if the sleep conditions are not met, see Sleep
 
-`!` *Wake Up*
+### Wake Up
 
 This message triggers the PDM to wake up from sleep.
 
@@ -268,12 +286,14 @@ There is no response to this message.
 !!! Tip
     The format of this message is not critical, any CAN message will wake the PDM
 
-`V` *Version* --> `v`
+### Version
 
 This message gets the firmware version
 
-![VersionChart](../images/versionMsgsWhite.svg#only-dark){ .off-glb }
-![VersionChart](../images/versionMsgsBlack.svg#only-light){ .off-glb }
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 1   | V      |        |        |        |        |        |        |       |
+|Response| 5   | v      | MA     |  MI    |  BH    |  BL    |        |        |       |
 
 - `MA` - Major
 - `MI` - Minor

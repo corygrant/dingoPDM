@@ -15,6 +15,17 @@
 | 3| Ground Lug          | `M6` or `1/4"`  | 1   |
 | 4| USB Type C          |                 | 1   |
 
+
+## USB
+
+!!!warning
+    USB C-C cables are not supported with v7.2 hardware
+
+| Hardware    | USB C-C       | USB A-C        |
+|-------------| --------------| ---------------|
+| v7.2        | :red_square:  | :green_square: |
+| v7.3 and up | :green_square:| :green_square: |
+
 ## Pinout
 
 ![DT 12](../images/DTPinNumsWhite.svg#only-dark){ .off-glb }
