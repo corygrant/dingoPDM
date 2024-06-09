@@ -38,7 +38,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/TFqa92dV
+      link: https://discord.com/invite/TxnPYQkVu3
 markdown_extensions:
   - admonition
   - tables
