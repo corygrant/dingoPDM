@@ -15,8 +15,3 @@ Please note that this product has been designed by a hobbyist, not a professiona
 ![PCB1](docs/images/PCB1.jpg)
 
 ![PCB2](docs/images/PCB2.jpg)
-
-![PCB3](docs/images/PCB3.jpg)
-
-![PCB4](docs/images/PCB4.jpg)
-
