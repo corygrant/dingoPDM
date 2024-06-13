@@ -185,7 +185,11 @@ The response message will have a lowercase letter prefix and will respond on ID 
 
 - `SPE`
     - Bit 0 = CAN enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
     - Bit 1 = CAN transmit enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
     - Bit 4 to 7 = CAN speed
         - 0 = `10K`
         - 1 = `20K`
@@ -210,6 +214,8 @@ The response message will have a lowercase letter prefix and will respond on ID 
 
 - `OME`
     - Bit 0 = Input enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
     - Bit 1 to Bit 2 = Mode
         - 0 = `Num`
         - 1 = `Momentary`
@@ -230,20 +236,203 @@ The response message will have a lowercase letter prefix and will respond on ID 
 
 ### Input
 
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 2   | I      | NUM    |        |        |        |        |        |       |
+|Set     | 4   | I      | INS    | DBT    | PUL    |        |        |        |       |
+|Response| 4   | i      | INS    | DBT    | PUL    |        |        |        |       |
+
+- `NUM` - Input number
+- `INS`
+    - Bit 0 = Input enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bit 1-2 = Mode
+        - 0 = `Num`
+        - 1 = `Momentary`
+        - 2 = `Latching`
+    - Bit 3 = Invert input logic
+    - Bit 4-7 = Input number
+- `DBT` - Debounce time (ms / 10)
+- `PUL` - Pullup/pulldown
+    - 0 = `No pull`
+    - 1 = `Pullup`
+    - 2 = `Pulldown`
+
 ### Output
+
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 2   | O      | NUM    |        |        |        |        |        |       |
+|Set     | 8   | O      | NUM    | IN     | CL     | RES    | RT     | INL    | INT   |
+|Response| 8   | o      | NUM    | IN     | CL     | RES    | RT     | INL    | INT   |
+
+- `NUM`
+    - Bit 0 = Output enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bit 4-7 = Output number
+- `IN` - Input number (see [Variable Map](variablemap.md))
+- `CL` - Current limit (A)
+- `RES`
+    - Bit 0-3 = Reset Mode
+        - 0 = `None`
+        - 1 = `Count`
+        - 2 = `Endless`
+    - Bit 4-7 = Reset Count Limit
+- `RT` - Reset time (ms / 10)
+- `INL` - Inrush limit (A)
+- `INT` - Inrush time (ms / 10)
 
 ### Virtual Input
 
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 2   | U      | NUM    |        |        |        |        |        |       |
+|Set     | 7   | U      | NOT    | NUM    | VR0    | VR1    | VR2    | MDC    |       |
+|Response| 7   | u      | NOT    | NUM    | VR0    | VR1    | VR2    | MDC    |       |
+
+- `NUM` - Virtual input number
+- `NOT`
+    - Bit 0 = Virtual input enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bit 1 = Not variable 0
+        - 0 = `No invert`
+        - 1 = `Invert`
+    - Bit 2 = Not variable 1
+    - Bit 3 = Not variable 2
+- `VR0` - Variable 0 (see [Variable Map](variablemap.md))
+- `VR1` - Variable 1 (see [Variable Map](variablemap.md))
+- `VR2` - Variable 2 (see [Variable Map](variablemap.md))
+- `MDC`
+    - Bit 0-1 = Condition 0
+        - 0 = `And`
+        - 1 = `Or`
+        - 2 = `Nor`
+    - Bit 2-3 = Condition 1
+    - Bit 6-7 = Mode
+        - 0 = `Num`
+        - 1 = `Momentary`
+        - 2 = `Latching`
+
 ### Flasher
+
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 2   | H      | NUM    |        |        |        |        |        |       |
+|Set     | 6   | H      | NUM    | IN     | OUT    | ON     | OFF    |        |       |
+|Response| 6   | h      | NUM    | IN     | OUT    | ON     | OFF    |        |       |
+
+- `NUM`
+    - Bit 0 = Flasher enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bit 1 = Single/continous flash
+    - Bit 4-7 = Flasher number
+- `IN` - Flasher input (see [Variable Map](variablemap.md))
+- `OUT` - Flasher output (see [Variable Map](variablemap.md))
+- `ON` - Flash on time (ms / 10)
+- `OFF` - Flash off time (ms / 10)
 
 ### Wiper
 
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 1   | W      |        |        |        |        |        |        |       |
+|Set     | 8   | W      | CLM    | SIN    | FIN    | IIN    | OIN    | PIN    | WIN   |
+|Response| 8   | w      | CLM    | SIN    | FIN    | IIN    | OIN    | PIN    | WIN   |
+
+- `CLM`
+    - Bit 0 = Wiper enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bit 1-2 = Mode
+        - 0 = `Dig` Digital inputs for speed
+            - Must use at least `Slow` and `Park` inputs
+            - `Fast` and `Intermittent` inputs optional
+        - 1 = `Int` Integer speed input to select slow/fast/intermittent/park. Digital input for park
+            - One speed input value must be park (`0`)
+            - Must use `Speed` and `Park` inputs
+            - Use case: Rotary switch to select wiper on/speed
+        - 2 = `Mix` Integer input for slow/fast/intermittent. Digital inputs for on and park
+            - Must use `Speed`, `On` and `Park` input
+            - Use case: Rotary switch to select speed, latching button to turn wipers on/off
+    - Bit 3 = Park level
+        - 0 = Stop when input is low
+        - 1 = Stop when input is high
+    - Bit 4-7 = Wash cycles count, number of swipes after wash
+- `SIN` - Slow speed input (see [Variable Map](variablemap.md))
+- `FIN` - Fast speed input (see [Variable Map](variablemap.md))
+- `IIN` - Intermittent speed input (see [Variable Map](variablemap.md))
+- `OIN` - On input (see [Variable Map](variablemap.md))
+- `PIN` - Park input (see [Variable Map](variablemap.md))
+- `WIN` - Wash input (see [Variable Map](variablemap.md))
+
+!!! Bug
+    `Mode` = `Dig` is the only mode that is currently supported.  
+
 ### Wiper Speed
+
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 1   | P      |        |        |        |        |        |        |       |
+|Set     | 7   | P      | SWI    | SPI    | S01    | S23    | S45    | S67    |       |
+|Response| 7   | p      | SWI    | SPI    | S01    | S23    | S45    | S67    |       |
+
+- `SWI` - Swipe input (see [Variable Map](variablemap.md))
+- `SPI` - Speed integer input (see [Variable Map](variablemap.md))
+- `S01`
+    - Bit 0-3 = Speed map 0
+    - Bit 4-7 = Speed map 1 
+- `S23`
+    - Bit 0-3 = Speed map 2
+    - Bit 4-7 = Speed map 3
+- `S45`
+    - Bit 0-3 = Speed map 4
+    - Bit 4-7 = Speed map 5
+- `S67`
+    - Bit 0-3 = Speed map 6
+    - Bit 4-7 = Speed map 7
+- Speed map values are used when `Mode` is set to `Int` or `Mix`
+- The values of the speed map correspond to different speeds/states when the `Speed` input has that value
+    - 0 = `Park`
+    - 1 = `Slow`
+    - 2 = `Fast`
+    - 3 = `Intermittent 0`
+    - 4 = `Intermittent 1`
+    - 5 = `Intermittent 2`
+    - 6 = `Intermittent 3`
+    - 7 = `Intermittent 4`
+    - 8 = `Intermittent 5`
 
 ### Wiper Delay
 
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 1   | Y      |        |        |        |        |        |        |       |
+|Set     | 7   | Y      | IT0    | IT1    | IT2    | IT3    | IT4    | IT5    |       |
+|Response| 7   | y      | IT0    | IT1    | IT2    | IT3    | IT4    | IT5    |       |
+
+- `ITn` - Wiper intermittent time (ms / 1000)
+
 ### Starter Disable
 
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 1   | D      |        |        |        |        |        |        |       |
+|Set     | 4   | D      | EN     | IN     | OUT    |        |        |        |       |
+|Response| 4   | d      | EN     | IN     | OUT    |        |        |        |       |
+
+- `EN`
+    - Bit 0 = Starter disable enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+- `IN` - Starter disable input (see [Variable Map](variablemap.md))
+- `OUT` - Starter disable outputs
+    - Bit 0 = Output 1
+    - Bit n = Output n+1
+    - Bit 7 = Output 8
 
 ## Special
 
