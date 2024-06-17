@@ -515,6 +515,8 @@ Errors messages are sent when a non-recoverable issue occurs.
 
 The only way to reset is to cycle power on the device. 
 
+`N1` will contain the [error number](./errors.md#error-numbers). 
+
 ### Source
 
 | SRC Num| Description       | Parameter 1 | Parameter 2    | Parameter 3 | Description                     |
