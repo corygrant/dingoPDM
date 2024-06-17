@@ -488,3 +488,52 @@ This message gets the firmware version
 - `MI` - Minor
 - `BH` - Build High Byte
 - `BL` - Build Low Byte
+
+
+## Messages
+
+Periodically, the device will send info, warning or error messages to facilitate debugging. 
+
+These messages will have the format below. 
+
+The first byte is a message type, the second is the ID number and 3rd-5th are extra integer parameters that are added to some messages. 
+
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Info    | 5   | F      | SRC    |  N1    |  N2    | N3     |        |        |       |
+|Warning | 5   | R      | SRC    |  N1    |  N2    | N3     |        |        |       |
+|Error   | 5   | E      | SRC    |  N1    |  N2    | N3     |        |        |       |
+
+- `SRC` - Source, see table below
+- `N1` - Integer parameter
+- `N2` - Integer parameter
+- `N3` - Integer parameter
+
+#### Errors
+
+Errors messages are sent when a non-recoverable issue occurs.
+
+The only way to reset is to cycle power on the device. 
+
+### Source
+
+| SRC Num| Description       | Parameter 1 | Parameter 2    | Parameter 3 | Description                     |
+|:------:|:-----------------:|:-----------:|:--------------:|:-----------:|---------------------------------|
+| 1      | State Power On    |             |                |             | Device is in it's initial state |
+| 2      | State Starting    |             |                |             | Initializing peripherals        |
+| 3      | State Run         |             |                |             | Normal operating state          |
+| 4      | State Over Temp   | Temp (C*10) |                |             | Board temp > Max, outputs off   |
+| 5      | State Error       |             |                |             | Fatal error, power cycle        |
+| 6      | State Sleep       |             |                |             | Low power sleep, no activity    |
+| 7      | State Wake        |             |                |             | Wake from low power sleep       |
+| 8      | Overcurrent       | Output Num  | Current (A*10) |             | Overcurrent on output           |
+| 10     | Battery Voltage   | Volts (V*10)|                |             | Battery voltage under/over      |
+| 11     | CAN               |             |                |             | CAN warning or error            |
+| 12     | USB               |             |                |             | USB warning or error            |
+| 13     | Over Temperature  | Temp (C*10) |                |             | Board temp warning or error     |
+| 14     | Configuration     |             |                |             | Device config init error        |
+| 15     | FRAM              |             |                |             | FRAM init error                 |
+| 16     | ADC               |             |                |             | ADC DMA init error              |
+| 17     | I2C               |             |                |             | I2C init error                  |
+| 18     | Temperature Sensor|             |                |             | Temperature sensor init error   |
+| 19     | USB Connected     |             |                |             | USB cable connection detected   |
