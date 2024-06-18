@@ -2,11 +2,11 @@
 
 The ToolBar is divided into 3 sections:
 
-* `File Operations`
+* [File Operations](./toolbar.md#file-operations)
 
-* `Interface Connection`
+* [Interface Connection](./toolbar.md#interface-connection)
 
-* `Settings Communication`
+* [Settings Communication](./toolbar.md#settings-communication)
 
 !!! Note
     The sections of the ToolBar can be rearranged by dragging the sections using the handle on the left of each section
@@ -18,11 +18,10 @@ The ToolBar is divided into 3 sections:
 | New        | ++ctrl+n++ |
 | Open       | ++ctrl+o++ |
 | Save       | ++ctrl+s++ |
-| Refresh    | ++ctrl+r++ |
 | Connect    | ++ctrl+c++ |
 | Disconnect | ++ctrl+d++ |
-| Upload     | ++ctrl+u++ |
-| Download   | ++ctrl+w++ |
+| Read       | ++ctrl+r++ |
+| Write      | ++ctrl+w++ |
 | Burn       | ++ctrl+b++ |
 
 ## File Operations
@@ -125,16 +124,16 @@ The `Settings Communication` section of the ToolBar enables uploading, downloadi
 !!! Note
     Some devices do not support settings communication, therefore the buttons are disabled. 
 
-### Upload
+### Read
 
-`Upload` reads the settings from the selected device and updates the current configuration. 
+`Read` reads the settings from the selected device and updates the current configuration. 
 
 !!! Warning
-    `Upload` will overwrite the current configuration settings for the selected device
+    `Read` will overwrite the current configuration settings for the selected device
 
-### Download 
+### Write 
 
-`Download` sends the current configuration to the selected device. 
+`Write` sends the current configuration to the selected device. 
 
 
 ### Burn
@@ -145,3 +144,11 @@ This command tells the device to write the current configuration to non-volatile
 
 !!! Danger
     If a `Burn` is not performed after a `Download` the current configuration in the device will be lost on a power cycle
+
+### Sleep/Wake
+
+`Sleep` sends a sleep command to the selected device. 
+
+This command immediately sets the device to sleep state. 
+
+`Wake` sends a wake command to the selected device. 
