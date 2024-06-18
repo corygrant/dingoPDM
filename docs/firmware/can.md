@@ -191,15 +191,9 @@ The response message will have a lowercase letter prefix and will respond on ID 
         - 0 = `Disable`
         - 1 = `Enable`
     - Bit 4 to 7 = CAN speed
-        - 0 = `10K`
-        - 1 = `20K`
-        - 2 = `50K`
-        - 3 = `100K`
-        - 4 = `125K`
-        - 5 = `250K`
-        - 6 = `500K`
-        - 7 = `750K`
-        - 8 = `1000K`
+        - 0 = `1000K`
+        - 1 = `500K`
+        - 2 = `250K`
 - `IDH` - Base ID high byte
 - `IDL` - Base ID low byte
 - `TXR` - Transmit rate, delay between transmit (ms / 10)
