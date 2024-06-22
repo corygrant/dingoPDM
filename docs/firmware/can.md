@@ -523,13 +523,13 @@ The only way to reset is to cycle power on the device.
 | 6      | State Sleep       |             |                |             | Low power sleep, no activity    |
 | 7      | State Wake        |             |                |             | Wake from low power sleep       |
 | 8      | Overcurrent       | Output Num  | Current (A*10) |             | Overcurrent on output           |
-| 10     | Battery Voltage   | Volts (V*10)|                |             | Battery voltage under/over      |
-| 11     | CAN               |             |                |             | CAN warning or error            |
-| 12     | USB               |             |                |             | USB warning or error            |
-| 13     | Over Temperature  | Temp (C*10) |                |             | Board temp warning or error     |
-| 14     | Configuration     |             |                |             | Device config init error        |
-| 15     | FRAM              |             |                |             | FRAM init error                 |
-| 16     | ADC               |             |                |             | ADC DMA init error              |
-| 17     | I2C               |             |                |             | I2C init error                  |
-| 18     | Temperature Sensor|             |                |             | Temperature sensor init error   |
-| 19     | USB Connected     |             |                |             | USB cable connection detected   |
+| 9      | Battery Voltage   | Volts (V*10)|                |             | Battery voltage under/over      |
+| 10     | CAN               |             |                |             | CAN warning or error            |
+| 11     | USB               |             |                |             | USB warning or error            |
+| 12     | Over Temperature  | Temp (C*10) |                |             | Board temp warning or error     |
+| 13     | Configuration     |             |                |             | Device config init error        |
+| 14     | FRAM              |             |                |             | FRAM init error                 |
+| 15     | ADC               |             |                |             | ADC DMA init error              |
+| 16     | I2C               |             |                |             | I2C init error                  |
+| 17     | Temperature Sensor|             |                |             | Temperature sensor init error   |
+| 18     | USB Connected     |             |                |             | USB cable connection detected   |
