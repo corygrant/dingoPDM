@@ -408,7 +408,7 @@ The response message will have a lowercase letter prefix and will respond on ID 
 |Set     | 7   | Y      | IT0    | IT1    | IT2    | IT3    | IT4    | IT5    |       |
 |Response| 7   | y      | IT0    | IT1    | IT2    | IT3    | IT4    | IT5    |       |
 
-- `ITn` - Wiper intermittent time (ms / 1000)
+- `ITn` - Wiper intermittent time (ms / 100)
 
 ### Starter Disable
 
