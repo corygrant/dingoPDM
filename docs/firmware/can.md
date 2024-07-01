@@ -315,8 +315,8 @@ The response message will have a lowercase letter prefix and will respond on ID 
 | Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
 |:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
 |Get     | 2   | H      | NUM    |        |        |        |        |        |       |
-|Set     | 6   | H      | NUM    | IN     | OUT    | ON     | OFF    |        |       |
-|Response| 6   | h      | NUM    | IN     | OUT    | ON     | OFF    |        |       |
+|Set     | 6   | H      | NUM    | IN     |        | ON     | OFF    |        |       |
+|Response| 6   | h      | NUM    | IN     |        | ON     | OFF    |        |       |
 
 - `NUM`
     - Bit 0 = Flasher enable/disable
@@ -325,7 +325,6 @@ The response message will have a lowercase letter prefix and will respond on ID 
     - Bit 1 = Single/continous flash
     - Bit 4-7 = Flasher number
 - `IN` - Flasher input (see [Variable Map](variablemap.md))
-- `OUT` - Flasher output (see [Variable Map](variablemap.md))
 - `ON` - Flash on time (ms / 10)
 - `OFF` - Flash off time (ms / 10)
 

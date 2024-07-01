@@ -78,4 +78,8 @@ These are used to:
 | 58           | Output 8       |
 | 59           | Wiper Slow Out |
 | 60           | Wiper Fast Out |
-| 61           | Always On      |
+| 61           | Flasher 1      |
+| 62           | Flasher 2      |
+| 63           | Flasher 3      |
+| 64           | Flasher 4      |
+| 65           | Always On      |
