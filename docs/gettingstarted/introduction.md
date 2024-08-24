@@ -53,8 +53,8 @@ See invite link at the bottom right of the page
 | Support USB C to C cables  | :green_square: |
 | Finish documentation       | :yellow_square:|
 | Add device sleep           | :green_square: |
-| Add verbose error handling | :yellow_square:|
-| Add keypad support         | :red_square:   |
+| Add verbose error handling | :green_square: |
+| Add keypad support         | :yellow_square:|
 | Add PWM output support     | :red_square:   |
 | Switch-less bootloader     | :red_square:   |
 | Build software installer   | :red_square:   |

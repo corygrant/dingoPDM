@@ -21,6 +21,7 @@
 * 2x LEDs for status
 * Onboard 12V to 5V to 3.3V regulation
 * 2x M6 lug 12V power connection
+    * Ground connection not used for output power, can be a small gauge (ex: 18AWG or 20AWG)
 * 12V voltage measurement
 * THT test pads for easy connection of logic analyzer (ex: Saleae leads)
 * Deutsch `DT 12 pin` connector
@@ -83,7 +84,7 @@
 | `PC9`   | Input 2                       | Digital Input  |
 | `PC10`  | Extra 1                       | Undefined      |
 | `PC11`  | Extra 2                       | Undefined      |
-| `PC12`  | -                             | -              |
+| `PC12`  | CAN Standby                   | Digital Output |
 | `PC13`  | Extra 3                       | Undefined      |
 | `PC14`  | -                             | -              |
 | `PC15`  | -                             | -              |

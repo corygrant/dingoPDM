@@ -5,15 +5,15 @@
 ![Connections](../images/ConnectionsWhite.svg#only-dark){ .off-glb }
 ![Connections](../images/ConnectionsBlack.svg#only-light){ .off-glb }
 
-|ID| Connector           | Details         | Qty |
-| -| ------------------- | --------------  | --- |
-| 1| DT 12 Pos Connector | `DT06-12SA`     | 1   |
-|  | DT 12 Wedgelock     | `W12S`          | 1   |
-|  | 14-16AWG Socket     | `0462-209-16141`| 2   |
-|  | 16-20AWG Socket     | `0462-201-16141`| 10  |
-| 2| 12V DC Power Lug    | `M6` or `1/4"`  | 1   |
-| 3| Ground Lug          | `M6` or `1/4"`  | 1   |
-| 4| USB Type C          |                 | 1   |
+|ID| Connector           | Details             | Qty | Note                                                |
+| -| ------------------- | ------------------- | --- | --------------------------------------------------- |
+| 1| DT 12 Pos Connector | `DT06-12SA`         | 1   |                                                     |
+|  | DT 12 Wedgelock     | `W12S`              | 1   |                                                     |
+|  | 14-16AWG Socket     | `0462-209-16141`    | 2   |                                                     |
+|  | 16-20AWG Socket     | `0462-201-16141`    | 10  |                                                     |
+| 2| 12V DC Power Lug    | `M6` or `1/4"` lug  | 1   | Large gauge wire required (4 to 10AWG)              |
+| 3| Ground Lug          | `M6` or `1/4"` lug  | 1   | Small gauge wire can be used (18 to 20 AWG)         |
+| 4| USB Type C          |                     | 1   | USB C-C cables are not supported with v7.2 hardware |
 
 
 ## USB
