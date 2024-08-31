@@ -6,9 +6,20 @@ To update the firmware, the STMicroelectronics STM32CubeProgrammer is used.
 
 This software can be downloaded here: [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html)
 
+## Entering Bootloader
+
+To update the firmware, the device must be put into the bootloader. 
+
+This can be done using one of these methods:
+
+* Remove the case and move the [boot switch](#boot-switch) to the bootloader position
+* Use DingoConfigurator [FwUpdate button](#fwupdate) to jump the device to the bootloader
+
 ## Boot Switch
 
-To update the firmware, the device must be put into bootloader using the `boot` switch on the PCB. 
+To update the firmware, the device must be put into bootloader
+
+One option is using the `boot` switch on the PCB. 
 
 !!! Note
     The case must be removed to access the boot switch.
@@ -25,6 +36,13 @@ To enter the bootloader, move the slide switch to the position that aligns it wi
 
 !!! Warning
     After updating, remember to set the boot switch back to the original position
+
+## FwUpdate
+
+After connecting to the dingoPDM using dingoConfigurator, the `FwUpdate` button on the toolbar to send the `~BOOTL` message to put the device into the bootloader.
+
+!!! Warning
+    Pressing the `FwUpdate` button will stop the PDM and drop communication to DingoConfigurator
 
 ## Connection
 

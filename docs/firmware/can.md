@@ -482,6 +482,15 @@ This message gets the firmware version
 - `BH` - Build High Byte
 - `BL` - Build Low Byte
 
+### Bootloader
+
+This message jumps to the bootloader for firmware updating
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 4   | ~      | B      | O      | O      | T      | L      |        |       |
+|Response| 2   | `      | OK     |        |        |        |        |        |       |
+
+
 
 ## Messages
 
