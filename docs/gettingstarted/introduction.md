@@ -24,6 +24,32 @@ See invite link at the bottom right of the page
 !!! Note
     If the link is expired, send a message on the store page 
 
+## Test Config File
+
+When first powering on dingoPDM, whether one received from the store or built yourself, the included test file can be used to verify functionality. 
+
+The test file includes a very basic setup:
+
+- All outputs:
+    - Enabled
+    - Set to turn on with input 1
+    - Set to their max current limit with endless reset
+- Input 1 set to: 
+    - Pullup
+    - Invert
+    - Momentary
+    
+Connect input 1 to ground to turn all outputs on. 
+
+## Changing CAN ID
+
+The CAN Base ID default value is 2000. 
+
+To change this, modify the value in the [DeviceTree](../software/devicetree.md) and press `Update` and then `Burn` to save the setting. 
+
+On the next power up, the CAN Base ID will be updated. 
+
+
 ## Goals
 
 - [X] Learn more about PDMs and high DC current devices
@@ -33,8 +59,8 @@ See invite link at the bottom right of the page
     * [X] 3D printed top shell and flat aluminum heatsinks (no machining)
 - [X] Use low cost 1oz/0.5oz 4 layer PCBs (low cost 2oz/1oz now available from JLCPCB)
 - [X] Share my work with others for reference, inspiration or collaboration. 
-- [ ] Document the project in a professional way to make it easy to use and access
-- [ ] Develop an easy to use configuration PC software
+- [X] Document the project in a professional way to make it easy to use and access
+- [X] Develop an easy to use configuration PC software
 - [X] Offer fully built devices for sale
 
 !!! info
@@ -56,7 +82,7 @@ See invite link at the bottom right of the page
 | Add verbose error handling | :green_square: |
 | Add keypad support         | :yellow_square:|
 | Add PWM output support     | :red_square:   |
-| Switch-less bootloader     | :red_square:   |
+| Switch-less bootloader     | :green_square: |
 | Build software installer   | :red_square:   |
 | Add auto-updating          | :red_square:   |
 | Add soft HMI buttons       | :yellow_square:|
