@@ -28,7 +28,7 @@
 
 ## KiCad
 
-* Designed using `KiCad v7.0.6`
+* Designed using `KiCad v8.0.4`
 
 ## Design Notes
 
