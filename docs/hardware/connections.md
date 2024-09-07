@@ -31,6 +31,8 @@
 ![DT 12](../images/DTPinNumsWhite.svg#only-dark){ .off-glb }
 ![DT 12](../images/DTPinNumsBlack.svg#only-light){ .off-glb }
 
+# dingoPDM
+
 | Pin | Function| Current |
 | --- | ------- | ------- |
 | 1   | CAN L   |         |
@@ -39,12 +41,40 @@
 | 4   | Output 7| 8A      |
 | 5   | Output 6| 8A      |
 | 6   | Output 5| 8A      |
-| 7   | Output 1| 14A     |
+| 7   | Output 1| 13A     |
 | 8   | Input 1 |         |
 | 9   | Output 4| 8A      |
 | 10  | Output 3| 8A      |
 | 11  | Input 2 |         |
-| 12  | Output 2| 14A     |
+| 12  | Output 2| 13A     |
+
+!!! note
+    The current outputs are estimates and based on the maximum current rated by Deutsch.
+    The possible current may be higher depending on the installation and configuration. 
+
+!!! note
+    No internal terminating resistor on CAN connection, must be added externally    
+
+# dingoPDM-Max
+
+| Pin | Function| Current |
+| --- | ------- | ------- |
+| 1   | Output 4| 26A     |
+| 2   | Output 4| 26A     |
+| 3   | CAN L   |         |
+| 4   | CAN H   |         |
+| 5   | Output 3| 26A     |
+| 6   | Output 3| 26A     |
+| 7   | Output 1| 26A     |
+| 8   | Output 1| 26A     |
+| 9   | Input 1 |         |
+| 10  | Input 2 |         |
+| 11  | Output 2| 26A     |
+| 12  | Output 2| 26A     |
+
+!!! note
+    The current outputs are estimates and based on the maximum current rated by Deutsch.
+    The possible current may be higher depending on the installation and configuration. 
 
 !!! note
     No internal terminating resistor on CAN connection, must be added externally
