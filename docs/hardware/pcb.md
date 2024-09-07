@@ -4,7 +4,7 @@
 
 There are two versions of dingoPDM, standard and Max. 
 
-dingoPDM = 8 outputs (low and medium current)
+dingoPDM = 8 outputs (shown above, low and medium current)
 
 dingoPDM-Max = 4 outputs (high current)
 

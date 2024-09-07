@@ -1,6 +1,6 @@
 # dingoPDM
 
-dingoPDM is an open source Infineon Profet based Power Distribution Module. 
+dingoPDM and dingoPDM-Max are open source Infineon Profet based Power Distribution Modules. 
 
 ![Full1](images/Full1.jpg)
 

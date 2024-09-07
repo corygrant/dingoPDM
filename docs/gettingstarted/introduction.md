@@ -9,6 +9,13 @@ The latest releases can be found on the Releases page for each repo:
 - Firmware: [dingoPDM_FW](https://github.com/corygrant/DingoPDM_FW/releases)
 - Software: [DingoConfigurator](https://github.com/corygrant/DingoConfigurator/releases)
 
+dingoPDM-Max is split between 2 GitHub repos. 
+
+The latest releases can be found on the Releases page for each repo:
+
+- Hardware: [dingoPDM-Max](https://github.com/corygrant/dingoPDM-Max)
+- Firmware: [dingoPDM-Max_FW](https://github.com/corygrant/dingoPDM-Max_FW)
+
 !!! Note
     dingoPDM will ship with the latest firmware release installed at the time of shipping, but new firmware is released frequently. 
 
@@ -77,6 +84,7 @@ On the next power up, the CAN Base ID will be updated.
 | Finish case design         | :green_square: |
 | Test thermal performance   | :green_square: |
 | Support USB C to C cables  | :green_square: |
+| Develop dingoPDM-Max       | :green_square: |
 | Finish documentation       | :yellow_square:|
 | Add device sleep           | :green_square: |
 | Add verbose error handling | :green_square: |
