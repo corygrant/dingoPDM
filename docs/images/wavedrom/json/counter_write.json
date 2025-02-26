@@ -16,7 +16,6 @@
   {                  bits: 2, type:1 }
 ],
 config: {
-  title:"dddd",
   lanes: 8, 
   bits: 64, 
   compact: true,
