@@ -68,7 +68,7 @@ The handling of CAN inputs is defined by the user using DingoConfigurator.
 
 dingoPDM sends output, input and device information over CAN (and/or USB) cyclically. 
 !!! Note
-    Default output transmit is every 50ms (20Hz)
+    Default output transmit is every 100ms (10Hz)
 
 !!! Warning
     The output format is under development and subject to change
@@ -78,23 +78,35 @@ dingoPDM sends output, input and device information over CAN (and/or USB) cyclic
 |Base ID + 0 | 8   | DI     | DS     | TC     | TC     | BV     | BV     | BT     | BT    |
 |Base ID + 1 | 8   | OC1    | OC1    | OC2    | OC2    | OC3    | OC3    | OC4    | OC4   |
 |Base ID + 2 | 8   | OC5    | OC5    | OC6    | OC6    | OC7    | OC7    | OC8    | OC8   |
-|Base ID + 3 | 8   | OS12   | OS34   | OS56   | OS78   | WO     | WSS    | FIO    |       |
+|Base ID + 3 | 8   | OS12   | OS34   | OS56   | OS78   | WO     | WSS    | FIO    | 0     |
 |Base ID + 4 | 8   | OR1    | OR2    | OR3    | OR4    | OR5    | OR6    | OR7    | OR8   |
-|Base ID + 5 | 8   | CI     | CI     | CI     | CI     | VI     | VI     |        |       |
+|Base ID + 5 | 8   | CI     | CI     | CI     | CI     | VI     | VI     | 0      | 0     |
+|Base ID + 6 | 8   | CNT1   | CNT2   | CNT3   | CNT4   | CON    | CON    | CON    | CON   |
+|Base ID + 7 | 8   | CIV1   | CIV1   | CIV2   | CIV2   | CIV3   | CIV3   | CIV4   | CIV4  |
+|Base ID + 8 | 8   | CIV5   | CIV5   | CIV6   | CIV6   | CIV7   | CIV7   | CIV8   | CIV8  |
+|Base ID + 9 | 8   | CIV9   | CIV9   | CIV10  | CIV10  | CIV11  | CIV11  | CIV12  | CIV12 |
+|Base ID + 10| 8   | CIV13  | CIV13  | CIV14  | CIV14  | CIV15  | CIV15  | CIV16  | CIV16 |
+|Base ID + 11| 8   | CIV17  | CIV17  | CIV18  | CIV18  | CIV19  | CIV19  | CIV20  | CIV20 |
+|Base ID + 12| 8   | CIV21  | CIV21  | CIV22  | CIV22  | CIV23  | CIV23  | CIV24  | CIV24 |
+|Base ID + 13| 8   | CIV25  | CIV25  | CIV26  | CIV26  | CIV27  | CIV27  | CIV28  | CIV28 |
+|Base ID + 14| 8   | CIV29  | CIV29  | CIV30  | CIV30  | CIV31  | CIV31  | CIV32  | CIV32 |
+|Base ID + 15| 8   | ODC1   | ODC2   | ODC3   | ODC4   | ODC5   | ODC6   | ODC7   | ODC8  |
 
 - *Base ID + 0*
     - `DI` - Digital Inputs
         - Bit 0 - Input 1
         - Bit 1 - Input 2
     - `DS` - Device State
-        - Device State
-            - 0 = `Power On`
-            - 1 = `Starting`
-            - 2 = `Run`
-            - 3 = `Sleep`
-            - 4 = `Wake Up`
-            - 5 = `Overtemp`
-            - 6 = `Error`
+        - Bits 0 to 3
+            - Device State
+                - 0 = `Run`
+                - 1 = `Sleep`
+                - 2 = `Overtemp`
+                - 3 = `Error`
+        - Bits 4 to 7
+            - PDM Type
+                - 0 = dingoPDM
+                - 1 = dingoPDM-Max
     - `TC` - Total Current (Amps * 10)
         - 2 bytes
     - `BV` - Battery Voltage (V * 10)
@@ -143,10 +155,6 @@ dingoPDM sends output, input and device information over CAN (and/or USB) cyclic
         - Bit 1 - Out 2
         - Bit 2 - Out 3
         - Bit 3 - Out 4
-        - Bit 4 - Input 1
-        - Bit 5 - Input 2
-        - Bit 6 - Input 3
-        - Bit 7 - Input 4
 - *Base ID + 4*
     - `OR1` to `OR8` - Output n Reset Count
 - *Base ID + 5*
@@ -158,13 +166,24 @@ dingoPDM sends output, input and device information over CAN (and/or USB) cyclic
     - `VI` - Virtual Input Results
         - Byte 4 - Inputs 1 to 8
         - Byte 5 - Inputs 9 to 16
-
+- *Base ID + 6*
+    - `CNT1` to `CNT4` - Counter Values
+    - `CON` - Condition Results
+        - Byte 4 - Conditions 0 to 8
+        - Byte 5 - Conditions 9 to 16
+        - Byte 6 - Conditions 17 to 24
+        - Byte 7 - Conditions 25 to 32
+- *Base ID + 7* TO *Base ID + 14*
+    - `CIV1` to `CIV32` - CAN Input Values
+        - 2 bytes each
+- *Base ID + 15*
+    - `ODC1` to `ODC8` - Output Duty Cycle (%)
 
 ## Settings
 
 To change configuration settings on the PDM, settings messages must be sent over CAN (or USB). 
 
-These settings messages have an uppercase letter prefix that is sent in the first byte of the message. 
+These settings messages have a prefix that is sent in the first byte of the message. 
 
 They must also be sent with a special CAN message ID, Base ID - 1
 
@@ -173,7 +192,28 @@ They must also be sent with a special CAN message ID, Base ID - 1
 
 For every valid settings message, a response message will be sent back. 
 
-The response message will have a lowercase letter prefix and will respond on ID = Base ID + 30
+The response message will be the prefix + 128 and will respond on ID = Base ID + 30
+
+| Setting           | Prefix    | Response  |
+|:------------------|:---------:|:---------:|
+|`CAN`              | ***1***   | ***129*** |
+|`Inputs`           | ***5***   | ***133*** |
+|`Outputs`          | ***10***  | ***138*** |
+|`Outputs PWM`      | ***11***  | ***139*** |
+|`Virtual Inputs`   | ***15***  | ***143*** |
+|`Wiper`            | ***20***  | ***148*** |
+|`Wiper Speed`      | ***21***  | ***149*** |
+|`Wiper Delays`     | ***22***  | ***150*** |
+|`Flashers`         | ***25***  | ***153*** |
+|`Starter Disable`  | ***30***  | ***158*** |
+|`CAN Inputs`       | ***35***  | ***163*** |
+|`CAN Inputs IDs`   | ***36***  | ***164*** |
+|`Counters`         | ***40***  | ***168*** |
+|`Conditions`       | ***45***  | ***173*** |
+|`Version Info`     | ***120*** | ***248*** |
+|`Sleep`            | ***121*** | ***249*** |
+|`Enter Bootloader` | ***125*** | ***253*** |
+|`Burn Settings`    | ***127*** | ***255*** |
 
 ### CAN
 
