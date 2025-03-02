@@ -219,21 +219,19 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 
 | Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
 |:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 1   | C      |        |        |        |        |        |        |       |
-|Set     | 5   | C      | SPE    | IDH    | IDL    | TXR    |        |        |       |
-|Response| 5   | c      | SPE    | IDH    | IDL    | TXR    |        |        |       |
+|Get     | 1   | 1      |        |        |        |        |        |        |       |
+|Set     | 5   | 1      | SPE    | IDH    | IDL    | TXR    |        |        |       |
+|Response| 5   | 129    | SPE    | IDH    | IDL    | TXR    |        |        |       |
 
 - `SPE`
     - Bit 0 = CAN enable/disable
-        - 0 = `Disable`
-        - 1 = `Enable`
-    - Bit 1 = CAN transmit enable/disable
         - 0 = `Disable`
         - 1 = `Enable`
     - Bit 4 to 7 = CAN speed
         - 0 = `1000K`
         - 1 = `500K`
         - 2 = `250K`
+        - 3 = `125K`
 - `IDH` - Base ID high byte
 - `IDL` - Base ID low byte
 - `TXR` - Transmit rate, delay between transmit (ms / 10)
@@ -242,10 +240,11 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 
 | Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
 |:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 2   | N      | NUM    |        |        |        |        |        |       |
-|Set     | 7   | N      | OME    | NUM    | IDH    | IDL    | BYT    | MSK    |       |
-|Response| 7   | n      | OME    | NUM    | IDH    | IDL    | BYT    | MSK    |       |
+|Get     | 35  | 35     | NUM    |        |        |        |        |        |       |
+|Set     | 35  | 35     | NUM    | OME    | POS    | ARG    | ARG    | TIM    |       |
+|Response| 163 | 163    | NUM    | OME    | POS    | ARG    | ARG    | TIM    |       |
 
+- `NUM` - Input number
 - `OME`
     - Bit 0 = Input enable/disable
         - 0 = `Disable`
@@ -254,19 +253,23 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
         - 0 = `Num`
         - 1 = `Momentary`
         - 2 = `Latching`
+    - Bit 3 = Timeout enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
     - Bit 4 to 7 = Operator
         - 0 = `Equal`
-        - 1 = `Greater Than`
-        - 2 = `Less Than`
-        - 3 = `Bitwise And`
-        - 4 = `Bitwise Nand`
-- `NUM` - Input number
-- `IDH` - CAN ID high byte
-- `IDL` - CAN ID low byte
-- `BYT`
-    - Bit 0 to 4 = Low byte
-    - Bit 5 to 7 = High byte
-- `MSK` - Mask
+        - 1 = `Not Equal`
+        - 2 = `Greater Than`
+        - 3 = `Less Than`
+        - 4 = `Greater Than or Equal`
+        - 5 = `Less Than or Equal`
+        - 6 = `Bitwise And`
+        - 7 = `Bitwise Nand`
+- `POS` - Value Position
+  - Bit 0 to 3 = Starting Byte
+  - Bit 4 to 7 = Number of bytes (1 or 2)
+- `ARG` - Argument (2 bytes)
+- `TIM` - Timeout Time (ms / 100)
 
 ### Input
 
