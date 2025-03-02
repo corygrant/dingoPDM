@@ -89,12 +89,11 @@ On the next power up, the CAN Base ID will be updated.
 | Add device sleep           | :green_square: |
 | Add verbose error handling | :green_square: |
 | Add keypad support         | :yellow_square:|
-| Add PWM output support     | :red_square:   |
+| Add PWM output support     | :green_square:   |
 | Switch-less bootloader     | :green_square: |
-| Build software installer   | :red_square:   |
-| Add auto-updating          | :red_square:   |
 | Add soft HMI buttons       | :yellow_square:|
-| Add I/O plotting           | :yellow_square:|
+| Finish plots in software         | :yellow_square:|
+| Move to ChibiOS          | :green_square:|
 
 ## Disclaimer
 
