@@ -5,7 +5,7 @@ CAN input format is not restricted or defined by the firmware.
 The handling of CAN inputs is defined by the user using DingoConfigurator. 
 
 !!! Warning
-    If timeout is enabled, CAN messages must be received at least every timeout interval or the input will be set to 0
+        If timeout is enabled, CAN messages must be received at least every timeout interval or the input will be set to 0
 
 - *ID*:
     - CAN ID of the message to evaluate 
@@ -33,14 +33,14 @@ The handling of CAN inputs is defined by the user using DingoConfigurator.
     - `BitwiseNand`
         - Result = !(Byte value(s) & Arg)
 - *Mode*:
-  - `Momentary`
-    - Result true when message solves to true
-  - `Latching`
-    - Result transitions between true/false when message solves to true
+    - `Momentary`
+        - Result true when message solves to true
+    - `Latching`
+        - Result transitions between true/false when message solves to true
 - *Timeout*:
-  - `Enable`
-    - When enabled, messages must be received before the timeout expires
-    - If the timeout expires, the result will be false
+    - `Enable`
+        - When enabled, messages must be received before the timeout expires
+        - If the timeout expires, the result will be false
   
 ## Input Examples
 
