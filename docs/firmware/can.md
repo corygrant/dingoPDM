@@ -5,64 +5,68 @@ CAN input format is not restricted or defined by the firmware.
 The handling of CAN inputs is defined by the user using DingoConfigurator. 
 
 !!! Warning
-    CAN messages must be received at least every 2 seconds or the input will be set to 0
+    If timeout is enabled, CAN messages must be received at least every timeout interval or the input will be set to 0
 
 - *ID*:
     - CAN ID of the message to evaluate 
-- *L Byte*:
-    - Low byte of the message to evaluate
-    - If only one byte, low byte = high byte
-- *H Byte*:
-    - High byte of the message to evaluate
-    - If only one byte, set H Byte to 0
-    - Example, 16 bit number at byte 0-1:
-        - L Byte = 0
-        - H Byte = 1
-    - Only 2 bytes are ever used
+    - 11-bit standard IDs and 29-bit extended IDs are valid
+- *Start Byte*:
+    - First byte of the message to evaluate
+- *# Bytes*:
+    - 1 or 2 bytes
+    - Number of bytes to evaluate
 - *Operator*:
-    - Mode `Num`
-        - Note: Always momentary
-        - `Equal`:
-            - Result = Byte value(s) == Mask
-        - `GreaterThan`:
-            - Result = Byte value(s) > Mask
-        - `LessThan`
-            - Result = Byte value(s) < Mask
-        - `BitwiseAnd`
-            - Result = Byte value(s) & Mask
-        - `BitwiseNand`
-            - Result = !(Byte value(s) & Mask)
-    - Mode `Latching` or `Momentary`
-        - `BitwiseAnd`
-            - Result = Byte value(s) & Mask
-        - `BitwiseNand`
-            - Result = !(Byte value(s) & Mask)
-
+    - `Equal`:
+        - Result = Byte value(s) == Arg
+    - `Not Equal`:
+        - Result = Byte value(s) != Arg
+    - `Greater Than`:
+        - Result = Byte value(s) > Arg
+    - `Less Than`
+        - Result = Byte value(s) < Arg
+    - `Greater Than or Equal`:
+        - Result = Byte value(s) >= Arg
+    - `Less Than or Equal`
+        - Result = Byte value(s) <= Arg
+    - `BitwiseAnd`
+        - Result = Byte value(s) & Arg
+    - `BitwiseNand`
+        - Result = !(Byte value(s) & Arg)
+- *Mode*:
+  - `Momentary`
+    - Result true when message solves to true
+  - `Latching`
+    - Result transitions between true/false when message solves to true
+- *Timeout*:
+  - `Enable`
+    - When enabled, messages must be received before the timeout expires
+    - If the timeout expires, the result will be false
+  
 ## Input Examples
 
 - Blink Marine Button 1 (Message 405, byte 0, bit 0)
     - ID = 405
-    - L Byte = 0
-    - H Byte = 0
+    - Start Byte = 0
+    - Num Bytes = 1
     - Operator = BitwiseAnd
-    - Mask = 1
+    - Arg = 1
     - Mode = Latching or Momentary
 
 - CANBoard Rotary Switch 4 at Position 2, Base ID 0x640 (Message 1602, byte 1 (high nibble))
     - ID = 1600
-    - L Byte = 1
-    - H Byte = 1
+    - Start Byte = 1
+    - Num Bytes = 1
     - Operator = Equal
-    - Mask = 32 (2 << 4)
-    - Mode = Num
+    - Arg = 32 = (2 << 4)
+    - Mode = Momentary
 
 - CANBoard Analog In 2 > 500mV, Base ID 0x650 (Message 1616, byte 2-3)
     - ID = 1616
-    - L Byte = 2
-    - H Byte = 3
+    - Start Byte = 2
+    - Num Bytes = 2
     - Operator = GreaterThan
-    - Mask = 500
-    - Mode = Num
+    - Arg = 500
+    - Mode = Momentary
 
 ## Output
 
@@ -499,8 +503,8 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
         - 6 = `Bitwise And`
         - 7 = `Bitwise Nand`
 - `POS` - Value Position
-  - Bit 0 to 3 = Starting Byte
-  - Bit 4 to 7 = Number of bytes (1 or 2)
+    - Bit 0 to 3 = Starting Byte
+    - Bit 4 to 7 = Number of bytes (1 or 2)
 - `ARG` - Argument (2 bytes)
 - `TIM` - Timeout Time (ms / 100)
 
