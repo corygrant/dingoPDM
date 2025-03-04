@@ -75,26 +75,26 @@ dingoPDM sends output, input and device information over CAN (and/or USB) cyclic
 
 !!! Note
     Messages not marked as always sent are only sent when their contents are enabled
-    
 
-| Always Sent                       | CAN ID     | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
-| :-------------------------------: |:----------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|:material-checkbox-outline:        |Base ID + 0 | 8   | DI     | DS     | TC     | TC     | BV     | BV     | BT     | BT    |
-|:material-checkbox-outline:        |Base ID + 1 | 8   | OC1    | OC1    | OC2    | OC2    | OC3    | OC3    | OC4    | OC4   |
-|:material-checkbox-outline:        |Base ID + 2 | 8   | OC5    | OC5    | OC6    | OC6    | OC7    | OC7    | OC8    | OC8   |
-|:material-checkbox-outline:        |Base ID + 3 | 8   | OS12   | OS34   | OS56   | OS78   | WO     | WSS    | FIO    | 0     |
-|:material-checkbox-outline:        |Base ID + 4 | 8   | OR1    | OR2    | OR3    | OR4    | OR5    | OR6    | OR7    | OR8   |
-|:material-checkbox-blank-outline:  |Base ID + 5 | 8   | CI     | CI     | CI     | CI     | VI     | VI     | 0      | 0     |
-|:material-checkbox-blank-outline:  |Base ID + 6 | 8   | CNT1   | CNT2   | CNT3   | CNT4   | CON    | CON    | CON    | CON   |
-|:material-checkbox-blank-outline:  |Base ID + 7 | 8   | CIV1   | CIV1   | CIV2   | CIV2   | CIV3   | CIV3   | CIV4   | CIV4  |
-|:material-checkbox-blank-outline:  |Base ID + 8 | 8   | CIV5   | CIV5   | CIV6   | CIV6   | CIV7   | CIV7   | CIV8   | CIV8  |
-|:material-checkbox-blank-outline:  |Base ID + 9 | 8   | CIV9   | CIV9   | CIV10  | CIV10  | CIV11  | CIV11  | CIV12  | CIV12 |
-|:material-checkbox-blank-outline:  |Base ID + 10| 8   | CIV13  | CIV13  | CIV14  | CIV14  | CIV15  | CIV15  | CIV16  | CIV16 |
-|:material-checkbox-blank-outline:  |Base ID + 11| 8   | CIV17  | CIV17  | CIV18  | CIV18  | CIV19  | CIV19  | CIV20  | CIV20 |
-|:material-checkbox-blank-outline:  |Base ID + 12| 8   | CIV21  | CIV21  | CIV22  | CIV22  | CIV23  | CIV23  | CIV24  | CIV24 |
-|:material-checkbox-blank-outline:  |Base ID + 13| 8   | CIV25  | CIV25  | CIV26  | CIV26  | CIV27  | CIV27  | CIV28  | CIV28 |
-|:material-checkbox-blank-outline:  |Base ID + 14| 8   | CIV29  | CIV29  | CIV30  | CIV30  | CIV31  | CIV31  | CIV32  | CIV32 |
-|:material-checkbox-outline:        |Base ID + 15| 8   | ODC1   | ODC2   | ODC3   | ODC4   | ODC5   | ODC6   | ODC7   | ODC8  |
+
+| Always Sent   | CAN ID     | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+| :-----------: |:----------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|:green_square: |Base ID + 0 | 8   | DI     | DS     | TC     | TC     | BV     | BV     | BT     | BT    |
+|:green_square: |Base ID + 1 | 8   | OC1    | OC1    | OC2    | OC2    | OC3    | OC3    | OC4    | OC4   |
+|:green_square: |Base ID + 2 | 8   | OC5    | OC5    | OC6    | OC6    | OC7    | OC7    | OC8    | OC8   |
+|:green_square: |Base ID + 3 | 8   | OS12   | OS34   | OS56   | OS78   | WO     | WSS    | FIO    | 0     |
+|:green_square: |Base ID + 4 | 8   | OR1    | OR2    | OR3    | OR4    | OR5    | OR6    | OR7    | OR8   |
+|               |Base ID + 5 | 8   | CI     | CI     | CI     | CI     | VI     | VI     | 0      | 0     |
+|               |Base ID + 6 | 8   | CNT1   | CNT2   | CNT3   | CNT4   | CON    | CON    | CON    | CON   |
+|               |Base ID + 7 | 8   | CIV1   | CIV1   | CIV2   | CIV2   | CIV3   | CIV3   | CIV4   | CIV4  |
+|               |Base ID + 8 | 8   | CIV5   | CIV5   | CIV6   | CIV6   | CIV7   | CIV7   | CIV8   | CIV8  |
+|               |Base ID + 9 | 8   | CIV9   | CIV9   | CIV10  | CIV10  | CIV11  | CIV11  | CIV12  | CIV12 |
+|               |Base ID + 10| 8   | CIV13  | CIV13  | CIV14  | CIV14  | CIV15  | CIV15  | CIV16  | CIV16 |
+|               |Base ID + 11| 8   | CIV17  | CIV17  | CIV18  | CIV18  | CIV19  | CIV19  | CIV20  | CIV20 |
+|               |Base ID + 12| 8   | CIV21  | CIV21  | CIV22  | CIV22  | CIV23  | CIV23  | CIV24  | CIV24 |
+|               |Base ID + 13| 8   | CIV25  | CIV25  | CIV26  | CIV26  | CIV27  | CIV27  | CIV28  | CIV28 |
+|               |Base ID + 14| 8   | CIV29  | CIV29  | CIV30  | CIV30  | CIV31  | CIV31  | CIV32  | CIV32 |
+|:green_square: |Base ID + 15| 8   | ODC1   | ODC2   | ODC3   | ODC4   | ODC5   | ODC6   | ODC7   | ODC8  |
 
 - *Base ID + 0*
     - `DI` - Digital Inputs
