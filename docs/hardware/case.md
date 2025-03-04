@@ -61,6 +61,6 @@ xychart-beta
 
 Models of the baseplate, heatsink and case can be found here:
 
-[**Case STEP Files**](https://github.com/corygrant/DingoPDM/tree/master/Export/V7.2/Case)
+[**Case STEP Files**](https://github.com/corygrant/DingoPDM/tree/master/Export/V7.4/Case)
 
-[**Complete STEP File**](https://github.com/corygrant/DingoPDM/tree/master/Export/V7.2) (DingoPDM_V7_2.step)
+[**Complete STEP File**](https://github.com/corygrant/DingoPDM/tree/master/Export/V7.4) (DingoPDM_V7_4.step)
