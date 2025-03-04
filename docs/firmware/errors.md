@@ -25,3 +25,4 @@ A [message](./can.md#messages) will be sent over CAN and/or USB and the [Error L
 | 11            | I2C                |
 | 12            | RCC                |
 | 13            | Temperature        |
+| 14            | PWM                |

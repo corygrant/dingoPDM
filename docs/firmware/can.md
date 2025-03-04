@@ -194,26 +194,26 @@ For every valid settings message, a response message will be sent back.
 
 The response message will be the prefix + 128 and will respond on ID = Base ID + 30
 
-| Setting           | Prefix    | Response  |
-|:------------------|:---------:|:---------:|
-|`CAN`              | ***1***   | ***129*** |
-|`Inputs`           | ***5***   | ***133*** |
-|`Outputs`          | ***10***  | ***138*** |
-|`Outputs PWM`      | ***11***  | ***139*** |
-|`Virtual Inputs`   | ***15***  | ***143*** |
-|`Wiper`            | ***20***  | ***148*** |
-|`Wiper Speed`      | ***21***  | ***149*** |
-|`Wiper Delays`     | ***22***  | ***150*** |
-|`Flashers`         | ***25***  | ***153*** |
-|`Starter Disable`  | ***30***  | ***158*** |
-|`CAN Inputs`       | ***35***  | ***163*** |
-|`CAN Inputs IDs`   | ***36***  | ***164*** |
-|`Counters`         | ***40***  | ***168*** |
-|`Conditions`       | ***45***  | ***173*** |
-|`Version Info`     | ***120*** | ***248*** |
-|`Sleep`            | ***121*** | ***249*** |
-|`Enter Bootloader` | ***125*** | ***253*** |
-|`Burn Settings`    | ***127*** | ***255*** |
+| Setting                               | Prefix    | Response  |
+|:--------------------------------------|:---------:|:---------:|
+|[`CAN`](#can)                          | ***1***   | ***129*** |
+|[`Inputs`](#input)                     | ***5***   | ***133*** |
+|[`Outputs`](#output)                   | ***10***  | ***138*** |
+|[`Outputs PWM`](#output-pwm)           | ***11***  | ***139*** |
+|[`Virtual Inputs`](#virtual-input)     | ***15***  | ***143*** |
+|[`Wiper`](#wiper)                      | ***20***  | ***148*** |
+|[`Wiper Speed`](#wiper-speed)          | ***21***  | ***149*** |
+|[`Wiper Delays`](#wiper-delay)         | ***22***  | ***150*** |
+|[`Flashers`](#flasher)                 | ***25***  | ***153*** |
+|[`Starter Disable`](#starter-disable)  | ***30***  | ***158*** |
+|[`CAN Inputs`](#can-input)             | ***35***  | ***163*** |
+|[`CAN Inputs IDs`](#can-input-id)      | ***36***  | ***164*** |
+|[`Counters`](#counter)                 | ***40***  | ***168*** |
+|[`Conditions`](#condition)             | ***45***  | ***173*** |
+|[`Version Info`](#version)             | ***120*** | ***248*** |
+|[`Sleep`](#sleep)                      | ***121*** | ***249*** |
+|[`Enter Bootloader`](#bootloader)      | ***125*** | ***253*** |
+|[`Burn Settings`](#burn)               | ***127*** | ***255*** |
 
 ### CAN
 
@@ -236,48 +236,15 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 - `IDL` - Base ID low byte
 - `TXR` - Transmit rate, delay between transmit (ms / 10)
 
-### CAN Input
 
-| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
-|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 35  | 35     | NUM    |        |        |        |        |        |       |
-|Set     | 35  | 35     | NUM    | OME    | POS    | ARG    | ARG    | TIM    |       |
-|Response| 163 | 163    | NUM    | OME    | POS    | ARG    | ARG    | TIM    |       |
-
-- `NUM` - Input number
-- `OME`
-    - Bit 0 = Input enable/disable
-        - 0 = `Disable`
-        - 1 = `Enable`
-    - Bit 1 to Bit 2 = Mode
-        - 0 = `Num`
-        - 1 = `Momentary`
-        - 2 = `Latching`
-    - Bit 3 = Timeout enable/disable
-        - 0 = `Disable`
-        - 1 = `Enable`
-    - Bit 4 to 7 = Operator
-        - 0 = `Equal`
-        - 1 = `Not Equal`
-        - 2 = `Greater Than`
-        - 3 = `Less Than`
-        - 4 = `Greater Than or Equal`
-        - 5 = `Less Than or Equal`
-        - 6 = `Bitwise And`
-        - 7 = `Bitwise Nand`
-- `POS` - Value Position
-  - Bit 0 to 3 = Starting Byte
-  - Bit 4 to 7 = Number of bytes (1 or 2)
-- `ARG` - Argument (2 bytes)
-- `TIM` - Timeout Time (ms / 100)
 
 ### Input
 
 | Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
 |:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 2   | I      | NUM    |        |        |        |        |        |       |
-|Set     | 4   | I      | INS    | DBT    | PUL    |        |        |        |       |
-|Response| 4   | i      | INS    | DBT    | PUL    |        |        |        |       |
+|Get     | 2   | 5      | NUM    |        |        |        |        |        |       |
+|Set     | 4   | 5      | INS    | DBT    | PUL    |        |        |        |       |
+|Response| 4   | 133    | INS    | DBT    | PUL    |        |        |        |       |
 
 - `NUM` - Input number
 - `INS`
@@ -285,9 +252,8 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
         - 0 = `Disable`
         - 1 = `Enable`
     - Bit 1-2 = Mode
-        - 0 = `Num`
-        - 1 = `Momentary`
-        - 2 = `Latching`
+        - 0 = `Momentary`
+        - 1 = `Latching`
     - Bit 3 = Invert input logic
     - Bit 4-7 = Input number
 - `DBT` - Debounce time (ms / 10)
@@ -300,9 +266,9 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 
 | Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
 |:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 2   | O      | NUM    |        |        |        |        |        |       |
-|Set     | 8   | O      | NUM    | IN     | CL     | RES    | RT     | INL    | INT   |
-|Response| 8   | o      | NUM    | IN     | CL     | RES    | RT     | INL    | INT   |
+|Get     | 2   | 10     | NUM    |        |        |        |        |        |       |
+|Set     | 8   | 10     | NUM    | IN     | CL     | RES    | RT     | INL    | INT   |
+|Response| 8   | 138    | NUM    | IN     | CL     | RES    | RT     | INL    | INT   |
 
 - `NUM`
     - Bit 0 = Output enable/disable
@@ -321,13 +287,46 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 - `INL` - Inrush limit (A)
 - `INT` - Inrush time (ms / 10)
 
+### Output PWM
+
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 2   | 11     | NUM    |        |        |        |        |        |       |
+|Set     | 8   | 11     | NUM    | IN     | FRQ    | FDC    | SSR    | SSR    | DCI   |
+|Response| 8   | 139    | NUM    | IN     | FRQ    | FDC    | SSR    | SSR    | DCI   |
+
+- `NUM`
+    - Bit 0 = PWM enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bit 1 = Soft start enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bit 2 = Variable duty cycle
+        - 0 = `Fixed duty cycle`
+        - 1 = `Variable duty cycle` 
+    - Bit 4-7 = Output number
+- `IN` - Duty cycle input number (see [Variable Map](variablemap.md))
+- `CL` - Current limit (A)
+- `FRQ`- PWM base frequency (Hz)
+    - 9 bit value
+    - Bits 1-8 in Byte 3
+    - Bit 0 in `FDC`
+- `FDC` - Fixed duty cycle (%)
+    - Bit 0 = PWM base frequency bit 0
+    - Bits 1-8 = Fixed duty cycle
+- `SSR` - Soft start ramp time (ms)
+- `DCI` - Duty cycle denominator input (see [Variable Map](variablemap.md))
+    - CAN Input Values are the only valid inputs
+    - All other input values are boolean
+
 ### Virtual Input
 
 | Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
 |:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 2   | U      | NUM    |        |        |        |        |        |       |
-|Set     | 7   | U      | NOT    | NUM    | VR0    | VR1    | VR2    | MDC    |       |
-|Response| 7   | u      | NOT    | NUM    | VR0    | VR1    | VR2    | MDC    |       |
+|Get     | 2   | 15     | NUM    |        |        |        |        |        |       |
+|Set     | 7   | 15     | NOT    | NUM    | VR0    | VR1    | VR2    | MDC    |       |
+|Response| 7   | 143    | NOT    | NUM    | VR0    | VR1    | VR2    | MDC    |       |
 
 - `NUM` - Virtual input number
 - `NOT`
@@ -349,35 +348,16 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
         - 2 = `Nor`
     - Bit 2-3 = Condition 1
     - Bit 6-7 = Mode
-        - 0 = `Num`
-        - 1 = `Momentary`
-        - 2 = `Latching`
-
-### Flasher
-
-| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
-|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 2   | H      | NUM    |        |        |        |        |        |       |
-|Set     | 6   | H      | NUM    | IN     |        | ON     | OFF    |        |       |
-|Response| 6   | h      | NUM    | IN     |        | ON     | OFF    |        |       |
-
-- `NUM`
-    - Bit 0 = Flasher enable/disable
-        - 0 = `Disable`
-        - 1 = `Enable`
-    - Bit 1 = Single/continous flash
-    - Bit 4-7 = Flasher number
-- `IN` - Flasher input (see [Variable Map](variablemap.md))
-- `ON` - Flash on time (ms / 10)
-- `OFF` - Flash off time (ms / 10)
+        - 0 = `Momentary`
+        - 1 = `Latching`
 
 ### Wiper
 
 | Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
 |:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 1   | W      |        |        |        |        |        |        |       |
-|Set     | 8   | W      | CLM    | SIN    | FIN    | IIN    | OIN    | PIN    | WIN   |
-|Response| 8   | w      | CLM    | SIN    | FIN    | IIN    | OIN    | PIN    | WIN   |
+|Get     | 1   | 20     |        |        |        |        |        |        |       |
+|Set     | 8   | 20     | CLM    | SIN    | FIN    | IIN    | OIN    | PIN    | WIN   |
+|Response| 8   | 148    | CLM    | SIN    | FIN    | IIN    | OIN    | PIN    | WIN   |
 
 - `CLM`
     - Bit 0 = Wiper enable/disable
@@ -405,16 +385,13 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 - `PIN` - Park input (see [Variable Map](variablemap.md))
 - `WIN` - Wash input (see [Variable Map](variablemap.md))
 
-!!! Bug
-    `Mode` = `Dig` is the only mode that is currently supported.  
-
 ### Wiper Speed
 
 | Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
 |:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 1   | P      |        |        |        |        |        |        |       |
-|Set     | 7   | P      | SWI    | SPI    | S01    | S23    | S45    | S67    |       |
-|Response| 7   | p      | SWI    | SPI    | S01    | S23    | S45    | S67    |       |
+|Get     | 1   | 21     |        |        |        |        |        |        |       |
+|Set     | 7   | 21     | SWI    | SPI    | S01    | S23    | S45    | S67    |       |
+|Response| 7   | 149    | SWI    | SPI    | S01    | S23    | S45    | S67    |       |
 
 - `SWI` - Swipe input (see [Variable Map](variablemap.md))
 - `SPI` - Speed integer input (see [Variable Map](variablemap.md))
@@ -446,19 +423,37 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 
 | Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
 |:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 1   | Y      |        |        |        |        |        |        |       |
-|Set     | 7   | Y      | IT0    | IT1    | IT2    | IT3    | IT4    | IT5    |       |
-|Response| 7   | y      | IT0    | IT1    | IT2    | IT3    | IT4    | IT5    |       |
+|Get     | 1   | 22     |        |        |        |        |        |        |       |
+|Set     | 7   | 22     | IT0    | IT1    | IT2    | IT3    | IT4    | IT5    |       |
+|Response| 7   | 150    | IT0    | IT1    | IT2    | IT3    | IT4    | IT5    |       |
 
 - `ITn` - Wiper intermittent time (ms / 100)
 
+### Flasher
+
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 2   | 25     | NUM    |        |        |        |        |        |       |
+|Set     | 6   | 25     | NUM    | IN     |        | ON     | OFF    |        |       |
+|Response| 6   | 153    | NUM    | IN     |        | ON     | OFF    |        |       |
+
+- `NUM`
+    - Bit 0 = Flasher enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bit 1 = Single/continous flash
+    - Bit 4-7 = Flasher number
+- `IN` - Flasher input (see [Variable Map](variablemap.md))
+- `ON` - Flash on time (ms / 10)
+- `OFF` - Flash off time (ms / 10)
+- 
 ### Starter Disable
 
 | Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
 |:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 1   | D      |        |        |        |        |        |        |       |
-|Set     | 4   | D      | EN     | IN     | OUT    |        |        |        |       |
-|Response| 4   | d      | EN     | IN     | OUT    |        |        |        |       |
+|Get     | 1   | 30     |        |        |        |        |        |        |       |
+|Set     | 4   | 30     | EN     | IN     | OUT    |        |        |        |       |
+|Response| 4   | 158    | EN     | IN     | OUT    |        |        |        |       |
 
 - `EN`
     - Bit 0 = Starter disable enable/disable
@@ -470,9 +465,147 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
     - Bit n = Output n+1
     - Bit 7 = Output 8
 
+### CAN Input
+
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 2   | 35     | NUM    |        |        |        |        |        |       |
+|Set     | 7   | 35     | NUM    | OME    | POS    | ARG    | ARG    | TIM    |       |
+|Response| 7   | 163    | NUM    | OME    | POS    | ARG    | ARG    | TIM    |       |
+
+- `NUM` - Input number
+- `OME`
+    - Bit 0 = Input enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bit 1 to Bit 2 = Mode
+        - 0 = `Num`
+        - 1 = `Momentary`
+        - 2 = `Latching`
+    - Bit 3 = Timeout enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bit 4 to 7 = Operator
+        - 0 = `Equal`
+        - 1 = `Not Equal`
+        - 2 = `Greater Than`
+        - 3 = `Less Than`
+        - 4 = `Greater Than or Equal`
+        - 5 = `Less Than or Equal`
+        - 6 = `Bitwise And`
+        - 7 = `Bitwise Nand`
+- `POS` - Value Position
+  - Bit 0 to 3 = Starting Byte
+  - Bit 4 to 7 = Number of bytes (1 or 2)
+- `ARG` - Argument (2 bytes)
+- `TIM` - Timeout Time (ms / 100)
+
+### CAN Input ID
+
+|   Type   |  DLC  | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 |
+| :------: | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+|   Get    |   2   |   36   |  NUM   |        |        |        |        |        |        |
+|   Set    |   8   |   36   |  NUM   |  SID   |  SID   |  EID   |  EID   |  EID   |  EID   |
+| Response |   8   |  164   |  NUM   |  SID   |  SID   |  EID   |  EID   |  EID   |  EID   |
+
+- `NUM` - Input number
+- `SID` - Standard CAN ID
+    - 11 bit
+    - 3 bits of Byte 2 (0x07)
+- `EID` - Extended CAN ID
+    - 29 bit
+    - 6 bits of Byte 4 (0x1F)
+
+### Counter
+
+|   Type   |  DLC  | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 |
+| :------: | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+|   Get    |   2   |   40   |  NUM   |        |        |        |        |        |        |
+|   Set    |   8   |   40   |  NUM   |  ENA   |  ICI   |  DCI   |  RSI   |  CNT   |  EDG   |
+| Response |   8   |  168   |  NUM   |  ENA   |  ICI   |  DCI   |  RSI   |  CNT   |  EDG   |
+
+- `NUM` - Counter number
+- `ENA` - Counter enable/disable
+    - Bit 0
+      - 0 = `Disable`
+      - 1 = `Enable`
+    - Bit 1 = Value Wraparound
+- `ICI` - Increment input (see [Variable Map](variablemap.md))
+- `DCI` - Decrement input (see [Variable Map](variablemap.md))
+- `RSI` - Reset input (see [Variable Map](variablemap.md))
+- `CNT` - Count min/max
+    - Bits 0 to 3 = Minimum value
+    - Bits 4 to 7 = Maximum value
+- `EDG` - Edge type
+    - Bits 0 to 1 = Increment edge type
+    - Bits 2 to 3 = Decrement edge type
+    - Bits 4 to 5 = Reset edge type
+      - 0 = `Rising`
+      - 1 = `Falling`
+      - 2 = `Both`
+    
+### Condition
+
+|   Type   |  DLC  | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 |
+| :------: | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+|   Get    |   2   |   45   |  NUM   |        |        |        |        |        |        |
+|   Set    |   6   |   45   |  NUM   |  OPE   |  IN    |  ARG   |  ARG   |        |        |
+| Response |   6   |  173   |  NUM   |  OPE   |  IN    |  ARG   |  ARG   |        |        |
+
+- `NUM` - Condition number
+- `OPE`
+    - Bit 0 = Condition enable/disable
+      - 0 = `Disable`
+      - 1 = `Enable`
+    - Bits 4 to 7 = Operator
+      - 0 = `Equal`
+      - 1 = `Not Equal`
+      - 2 = `Greater Than`
+      - 3 = `Less Than`
+      - 4 = `Greater Than or Equal`
+      - 5 = `Less Than or Equal`
+      - 6 = `Bitwise And`
+      - 7 = `Bitwise Nand`
+- `IN` - Condition input (see [Variable Map](variablemap.md))
+- `ARG` - Argument
+  
 ## Special
 
 There are some special messages that are used for special functions. 
+
+### Version
+
+This message gets the firmware version
+
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 1   | 120    |        |        |        |        |        |        |       |
+|Response| 5   | 248    | MA     |  MI    |  BH    |  BL    |        |        |       |
+
+- `MA` - Major
+- `MI` - Minor
+- `BH` - Build High Byte
+- `BL` - Build Low Byte
+- 
+### Sleep
+
+The sleep message triggers the PDM to immediately go to sleep. 
+
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 4   | 121    | U      | I      | T      |        |        |        |       |
+|Response| 2   | 249    | OK     |        |        |        |        |        |       |
+
+!!! Note
+    This message will not have an effect if the sleep conditions are not met, see Sleep
+
+### Bootloader
+
+This message jumps to the bootloader for firmware updating
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 4   | 125    |        |        |        |        |        |        |       |
+|Response| 2   | 253    | OK     |        |        |        |        |        |       |
 
 ### Burn
 
@@ -484,23 +617,11 @@ A response will be sent with the result of the Burn
 
 | Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
 |:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 4   | B      | 1      | 3      | 8      |        |        |        |       |
-|Response| 2   | b      | OK     |        |        |        |        |        |       |
+|Get     | 4   | 127    | 1      | 3      | 8      |        |        |        |       |
+|Response| 2   | 255    | OK     |        |        |        |        |        |       |
 
 !!! Tip
     This is an easy way to test new settings. Try new settings without Burn and then cycle power to restore the old settings
-
-### Sleep
-
-The sleep message triggers the PDM to immediately go to sleep. 
-
-| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
-|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 4   | Q      | U      | I      | T      |        |        |        |       |
-|Response| 2   | q      | OK     |        |        |        |        |        |       |
-
-!!! Note
-    This message will not have an effect if the sleep conditions are not met, see Sleep
 
 ### Wake Up
 
@@ -510,30 +631,6 @@ There is no response to this message.
 
 !!! Tip
     The format of this message is not critical, any CAN message will wake the PDM
-
-### Version
-
-This message gets the firmware version
-
-| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
-|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 1   | V      |        |        |        |        |        |        |       |
-|Response| 5   | v      | MA     |  MI    |  BH    |  BL    |        |        |       |
-
-- `MA` - Major
-- `MI` - Minor
-- `BH` - Build High Byte
-- `BL` - Build Low Byte
-
-### Bootloader
-
-This message jumps to the bootloader for firmware updating
-| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
-|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
-|Get     | 4   | ~      | B      | O      | O      | T      | L      |        |       |
-|Response| 2   | `      | OK     |        |        |        |        |        |       |
-
-
 
 ## Messages
 
@@ -584,3 +681,4 @@ The only way to reset is to cycle power on the device.
 | 16     | I2C               |             |                |             | I2C init error                  |
 | 17     | Temperature Sensor|             |                |             | Temperature sensor init error   |
 | 18     | USB Connected     |             |                |             | USB cable connection detected   |
+| 19     | Init              |             |                |             | Error during initialization     |
