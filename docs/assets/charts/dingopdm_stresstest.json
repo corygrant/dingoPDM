@@ -1,0 +1,124 @@
+{
+    "description": "dingoPDM Stress Test 71A",
+    "title": "dingoPDM Full Load Test (71A)",
+    "data": {
+        "url": "assets/charts/data/dingopdm_stresstest.csv"
+    },
+    "mark": {
+        "type": "line",
+        "point": false
+    },
+    "encoding": {
+        "x": {
+            "field": "time",
+            "type": "temporal",
+            "title": "Time On (HH:MM)",
+            "axis": {
+                "format": "%H:%M"
+            }
+        },
+        "y": {
+            "field": "temp",
+            "type": "quantitative",
+            "title": "PCB Temperature (°F)"
+        },
+        "color": {
+            "field": "type",
+            "type": "nominal",
+            "title": "Legend",
+            "scale": {
+                "domain": [
+                    "Temp",
+                    "Warning",
+                    "Critical"
+                ],
+                "range": [
+                    "lime",
+                    "yellow",
+                    "red"
+                ]
+            }
+        }
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "line",
+                "point": true,
+                "interpolate": "linear"
+            },
+            "transform": [
+                {
+                    "calculate": "'Temp'",
+                    "as": "type"
+                }
+            ]
+        },
+        {
+            "mark": {
+                "type": "rule",
+                "strokeDash": [
+                    6,
+                    4
+                ]
+            },
+            "encoding": {
+                "y": {
+                    "datum": 131,
+                    "type": "quantitative"
+                },
+                "x": {
+                    "value": 0
+                },
+                "x2": {
+                    "value": "width"
+                },
+                "color": {
+                    "value": "yellow"
+                },
+                "size": {
+                    "value": 2
+                }
+            },
+            "transform": [
+                {
+                    "calculate": "'Warning'",
+                    "as": "type"
+                }
+            ]
+        },
+        {
+            "mark": {
+                "type": "rule",
+                "strokeDash": [
+                    6,
+                    4
+                ]
+            },
+            "encoding": {
+                "y": {
+                    "datum": 176,
+                    "type": "quantitative"
+                },
+                "x": {
+                    "value": 0
+                },
+                "x2": {
+                    "value": "width"
+                },
+                "color": {
+                    "value": "red"
+                },
+                "size": {
+                    "value": 2
+                }
+            },
+            "transform": [
+                {
+                    "calculate": "'Critical'",
+                    "as": "type"
+                }
+            ]
+        }
+    ]
+}

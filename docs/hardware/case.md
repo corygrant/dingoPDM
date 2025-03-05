@@ -38,23 +38,16 @@ The mechanical design is centered around simple designs that can be created in a
 
 ## Stress Testing
 
-Stress tests were conducted with a dummy load at 70A total.
+Stress tests were conducted with a dummy load at 71A total.
 
 The device was mounted horizontaly (worst case).
 
 Ambient temperature in the mid 60s F
 
-![Stress Testing](../images/dingoPDM_StressTest.png)
-
-``` mermaid
-xychart-beta
-    title "dingoPDM Stress Test (74A)"
-    x-axis "Time Since Output On (minutes)" [0, 14, 34, 68, 121, 132, 152, 167]
-
-    y-axis "Temperature (F)" 40 --> 200
-    line "Board Temp" [66, 71, 78, 88, 88, 88, 90, 90]
-    line "Overtemp" [122, 122, 122, 122, 122, 122, 122, 122]
-    line "Critical" [176, 176, 176, 176, 176, 176, 176, 176]
+```vegalite 
+{
+    "schema-url": "assets/charts/dingopdm_stresstest.json"
+}
 ```
 
 ## Models
