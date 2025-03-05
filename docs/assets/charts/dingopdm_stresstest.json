@@ -20,7 +20,10 @@
         "y": {
             "field": "temp",
             "type": "quantitative",
-            "title": "PCB Temperature (°F)"
+            "title": "PCB Temperature (°F)",
+            "axis": {
+                "tickCount": 10
+            }
         },
         "color": {
             "field": "type",
