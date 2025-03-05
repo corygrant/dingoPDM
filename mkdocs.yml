@@ -63,6 +63,11 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg  
   - pymdownx.tasklist:
       custom_checkbox: true   
+  - pymdownx.superfences:
+      custom_fences:
+        - name: vegalite
+          class: vegalite
+          format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/vega@5
   - https://cdn.jsdelivr.net/npm/vega-lite@5
@@ -72,12 +77,6 @@ plugins:
   - search
   - macros
   - charts
-markdown_extensions:
-  - pymdownx.superfences:
-      custom_fences:
-        - name: vegalite
-          class: vegalite
-          format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
 nav:
   - Getting Started:
     - Introduction: 'gettingstarted/introduction.md'
