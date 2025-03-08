@@ -82,6 +82,7 @@ nav:
     - PCB: 'hardware/pcb.md'
     - Connections: 'hardware/connections.md'
     - Case: 'hardware/case.md'
+    - Thermal: 'hardware/thermal.md'
   - Firmware:
     - Introduction: 'firmware/introduction.md'
     - Design: 'firmware/design.md'

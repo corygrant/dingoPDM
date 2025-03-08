@@ -36,19 +36,6 @@ The mechanical design is centered around simple designs that can be created in a
 |10.1| Light Pipe          | `PLPC2-10MM`                | 3   |
 |  13| Connector Screws    | `No. 6, 5/8" Thread Forming`| 2   |
 
-## Stress Testing
-
-Stress tests were conducted with a dummy load at 71A total.
-
-The device was mounted horizontaly (worst case).
-
-Ambient temperature in the mid 60s F
-
-```vegalite 
-{
-    "schema-url": "assets/charts/dingopdm_stresstest.json"
-}
-```
 
 ## Models
 
