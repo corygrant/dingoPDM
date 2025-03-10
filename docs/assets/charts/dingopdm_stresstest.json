@@ -26,16 +26,18 @@
             }
         },
         "color": {
-            "field": "type",
+            "field": "symbol",
             "type": "nominal",
             "title": "Legend",
             "scale": {
                 "domain": [
-                    "Temp",
+                    "DC_50",
+                    "DC_100",
                     "Warning",
                     "Critical"
                 ],
                 "range": [
+                    "orange",
                     "lime",
                     "yellow",
                     "red"
@@ -49,13 +51,7 @@
                 "type": "line",
                 "point": true,
                 "interpolate": "linear"
-            },
-            "transform": [
-                {
-                    "calculate": "'Temp'",
-                    "as": "type"
-                }
-            ]
+            }
         },
         {
             "mark": {
