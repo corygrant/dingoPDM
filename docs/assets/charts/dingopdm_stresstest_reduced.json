@@ -2,7 +2,7 @@
     "description": "dingoPDM Stress Test 71A",
     "title": "dingoPDM Full Load Test (71A)",
     "data": {
-        "url": "assets/charts/data/dingopdm_stresstest.csv"
+        "url": "assets/charts/data/dingopdm_stresstest_reduced.csv"
     },
     "mark": {
         "type": "line",
@@ -14,7 +14,8 @@
             "type": "temporal",
             "title": "Time On (HH:MM)",
             "axis": {
-                "format": "%H:%M"
+                "format": "%H:%M",
+                "tickCount": 10
             }
         },
         "y": {
