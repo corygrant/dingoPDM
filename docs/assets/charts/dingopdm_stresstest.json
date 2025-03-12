@@ -57,13 +57,7 @@
             },
             {
                 "field": "temp",
-                "type": "quantitative",
-                "title": "PCB Temperature (°C)"
-            },
-            {
-                "field": "symbol",
-                "type": "nominal",
-                "title": "Legend"
+                "type": "quantitative"
             }
         ]
     },
@@ -157,7 +151,7 @@
                     "condition": {
                         "param": "hover",
                         "empty": false,
-                        "value": "black"
+                        "value": "white"
                     },
                     "value": "transparent"
                 }
