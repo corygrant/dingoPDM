@@ -21,7 +21,7 @@
         "y": {
             "field": "temp",
             "type": "quantitative",
-            "title": "PCB Temperature (°F)",
+            "title": "PCB Temperature (°C)",
             "axis": {
                 "tickCount": 10
             }
@@ -68,7 +68,7 @@
             },
             "encoding": {
                 "y": {
-                    "datum": 131,
+                    "datum": 55,
                     "type": "quantitative"
                 },
                 "x": {
@@ -101,7 +101,7 @@
             },
             "encoding": {
                 "y": {
-                    "datum": 176,
+                    "datum": 80,
                     "type": "quantitative"
                 },
                 "x": {

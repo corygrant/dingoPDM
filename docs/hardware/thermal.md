@@ -1,5 +1,7 @@
 ## Full Load Test
 
+<sub>`Note: if graphs do not load, refresh the page`</sub>
+
 ```vegalite 
 {
     "schema-url": "assets/charts/dingopdm_stresstest.json"
@@ -14,7 +16,7 @@
 
 - Full load tests were conducted with a dummy load at 71A total.
 - The device was mounted horizontaly (worst case).
-- Ambient temperature `66°F` (`19°C`)
+- Ambient temperature `19°C`
 - Resistive load on all outputs
 - Temperature taken with onboard temperature sensor, unless otherwise noted
 - All outputs on and under load
@@ -35,17 +37,17 @@
     - Case installed
     - Temperature taken at top of Profet (output 3/4) using thermocouple
 - Yellow
-    - Warning temperature limit `131°F` (`55°C`)
+    - Warning temperature limit `55°C`
     - Reaction: warning message sent
 - Red
-    - Critical temperature limit `176°F` (`80°C`)
+    - Critical temperature limit `80°C`
     - Reaction: device shutdown, power cycle required
 
 ### Notes
 
 - Thermal performance is similar with or without PWM (on resistive loads)
 - The onboard temperature sensor follows the junction temperature within a few degrees after 10 minutes
-- Installing the case increases the temperature by a maximum of `10°F` (`5°C`)
+- Installing the case increases the temperature by a maximum of `5°C`
 - The temperatures seen by the onboard sensor and thermocouple are much lower than the maximum temperature of the Profet junction `150°C`
 
 
@@ -54,7 +56,7 @@
 
 These images were captured during the 100% duty cycle full load test. 
 
-The highest temperature recorded was 140°F (61°C) at the top of the output 3/4 Profet (BTS7008-2EPA). 
+The highest temperature recorded was 61°C at the top of the output 3/4 Profet (BTS7008-2EPA). 
 
 ![Thermal1](../images/thermal1.jpg)
 ![Thermal2](../images/thermal2.jpg)
