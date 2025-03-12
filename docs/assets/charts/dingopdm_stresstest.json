@@ -47,7 +47,25 @@
                     "red"
                 ]
             }
-        }
+        },
+        "tooltip": [
+            {
+                "field": "time",
+                "type": "temporal",
+                "title": "Time On (HH:MM)",
+                "format": "%H:%M"
+            },
+            {
+                "field": "temp",
+                "type": "quantitative",
+                "title": "PCB Temperature (°C)"
+            },
+            {
+                "field": "symbol",
+                "type": "nominal",
+                "title": "Legend"
+            }
+        ]
     },
     "layer": [
         {
@@ -122,6 +140,28 @@
                     "as": "type"
                 }
             ]
+        },
+        {
+            "mark": "rule",
+            "params": [
+                {
+                    "name": "hover",
+                    "select": {
+                        "type": "point",
+                        "on": "pointerover"
+                    }
+                }
+            ],
+            "encoding": {
+                "color": {
+                    "condition": {
+                        "param": "hover",
+                        "empty": false,
+                        "value": "black"
+                    },
+                    "value": "transparent"
+                }
+            }
         }
     ]
 }
