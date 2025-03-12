@@ -4,10 +4,6 @@
     "data": {
         "url": "assets/charts/data/dingopdm_stresstest.csv"
     },
-    "mark": {
-        "type": "line",
-        "point": false
-    },
     "encoding": {
         "x": {
             "field": "time",
@@ -25,29 +21,6 @@
                 "tickCount": 10
             }
         },
-        "color": {
-            "field": "symbol",
-            "type": "nominal",
-            "title": "Legend",
-            "scale": {
-                "domain": [
-                    "DC_50",
-                    "DC_100",
-                    "CLOSED",
-                    "TOP",
-                    "WARNING",
-                    "CRITICAL"
-                ],
-                "range": [
-                    "orange",
-                    "lime",
-                    "pink",
-                    "purple",
-                    "yellow",
-                    "red"
-                ]
-            }
-        },
         "tooltip": [
             {
                 "field": "time",
@@ -56,7 +29,19 @@
                 "format": "%H:%M"
             },
             {
-                "field": "temp",
+                "field": "DC_100",
+                "type": "quantitative"
+            },
+            {
+                "field": "DC_50",
+                "type": "quantitative"
+            },
+            {
+                "field": "CLOSED",
+                "type": "quantitative"
+            },
+            {
+                "field": "TOP",
                 "type": "quantitative"
             }
         ]
@@ -67,6 +52,95 @@
                 "type": "line",
                 "point": true,
                 "interpolate": "linear"
+            },
+            "encoding": {
+                "x": {
+                    "field": "time",
+                    "type": "temporal",
+                    "title": "Time On (HH:MM)",
+                    "axis": {
+                        "format": "%H:%M"
+                    }
+                },
+                "y": {
+                    "field": "DC_100",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "value": "lime"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "line",
+                "point": true,
+                "interpolate": "linear"
+            },
+            "encoding": {
+                "x": {
+                    "field": "time",
+                    "type": "temporal",
+                    "title": "Time On (HH:MM)",
+                    "axis": {
+                        "format": "%H:%M"
+                    }
+                },
+                "y": {
+                    "field": "DC_50",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "value": "orange"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "line",
+                "point": true,
+                "interpolate": "linear"
+            },
+            "encoding": {
+                "x": {
+                    "field": "time",
+                    "type": "temporal",
+                    "title": "Time On (HH:MM)",
+                    "axis": {
+                        "format": "%H:%M"
+                    }
+                },
+                "y": {
+                    "field": "CLOSED",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "value": "pink"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "line",
+                "point": true,
+                "interpolate": "linear"
+            },
+            "encoding": {
+                "x": {
+                    "field": "time",
+                    "type": "temporal",
+                    "title": "Time On (HH:MM)",
+                    "axis": {
+                        "format": "%H:%M"
+                    }
+                },
+                "y": {
+                    "field": "TOP",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "value": "purple"
+                }
             }
         },
         {
@@ -134,28 +208,7 @@
                     "as": "type"
                 }
             ]
-        },
-        {
-            "mark": "rule",
-            "params": [
-                {
-                    "name": "hover",
-                    "select": {
-                        "type": "point",
-                        "on": "pointerover"
-                    }
-                }
-            ],
-            "encoding": {
-                "color": {
-                    "condition": {
-                        "param": "hover",
-                        "empty": false,
-                        "value": "white"
-                    },
-                    "value": "transparent"
-                }
-            }
         }
-    ]
+    ],
+    "config": {"axisY": {"minExtent": 30}}
 }
