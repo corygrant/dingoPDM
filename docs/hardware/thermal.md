@@ -1,18 +1,18 @@
 ## Full Load Test
 
-<sub>`Note: if graphs do not load, refresh the page`</sub>
-
 ```vegalite 
 {
     "schema-url": "assets/charts/dingopdm_stresstest.json"
 }
 ```
 
-```vegalite 
-{
-    "schema-url": "assets/charts/dingopdm_stresstest_reduced.json"
-}
-```
+!!! Tip
+    - Pan: click + drag
+    - Zoom: mouse wheel
+    - Reset: double click
+
+!!! Warning
+    If chart does not load, refresh the page
 
 - Full load tests were conducted with a dummy load at 71A total.
 - The device was mounted horizontaly (worst case).
@@ -23,23 +23,23 @@
 - All outputs wired using 14AWG TXL in free air and approx. 2 feet long
 - Battery power wired using 4AWG cable and copper lug
 - Ground wired using 20AWG TXL
-- Green
+- `DC_100`
     - `100%` duty cycle
     - No case
-- Orange
+- `DC_50`
     - `50%` duty cycle @ `400Hz`
     - No case
-- Pink
+- `CLOSED`
     - `100%` duty cycle
     - Case installed
-- Purple
+- `TOP`
     - `100%` duty cycle
     - Case installed
     - Temperature taken at top of Profet (output 3/4) using thermocouple
-- Yellow
+- `Yellow`
     - Warning temperature limit `55°C`
     - Reaction: warning message sent
-- Red
+- `Red`
     - Critical temperature limit `80°C`
     - Reaction: device shutdown, power cycle required
 
