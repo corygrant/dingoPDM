@@ -43,12 +43,11 @@
     - Critical temperature limit `80°C`
     - Reaction: device shutdown, power cycle required
 
-### Notes
-
-- Thermal performance is similar with or without PWM (on resistive loads)
-- The onboard temperature sensor follows the junction temperature within a few degrees after 10 minutes
-- Installing the case increases the temperature by a maximum of `5°C`
-- The temperatures seen by the onboard sensor and thermocouple are much lower than the maximum temperature of the Profet junction `150°C`
+!!! note "Notes"
+    - Thermal performance is similar with or without PWM (on resistive loads)
+    - The onboard temperature sensor follows the junction temperature within a few degrees after 10 minutes
+    - Installing the case increases the temperature by a maximum of `5°C`
+    - The temperatures seen by the onboard sensor and thermocouple are much lower than the maximum temperature of the Profet junction `150°C`
 
 
 
@@ -63,11 +62,10 @@ The highest temperature recorded was 61°C at the top of the output 3/4 Profet (
 ![ThermalDT](../images/thermal_dt.jpg)
 ![ThermalHigh](../images/thermal_high.jpg)
 
-### Notes
-
-- Deutsch DT connectors have an operating temperature range up to `125°C`
-  - While we do not know the actual internal temperature, the highest recorded external temperature during these tests was around `50°C`
-  - That is much lower than the rated operating temperature, which suggests higher current may be possible
+!!! note "Notes"
+    - Deutsch DT connectors have an operating temperature range up to `125°C`
+      - While we do not know the actual internal temperature, the highest recorded external temperature during these tests was around `50°C`
+      - That is much lower than the rated operating temperature, which suggests higher current may be possible
 
 
 
@@ -118,18 +116,20 @@ BTS7008-2EPA
 
 `Case Top(°C)` = Junction Temp - (Power * Ψ<sub>JTOP</sub>) = 63 - (1.408 x 1.7) = `60°C`
 
+
+Table format:
+
 | Model        | R<sub>DS(ON)</sub> @ 25°C (mΩ) | R<sub>DS(ON)</sub> @ 150°C (mΩ) | R<sub>DS(ON)</sub> (mΩ) | Current Per Output (A) | Dissipated Power (W) | # Channels | Total Dissipated Power (W) | Ambient Temp (°C) | R<sub>thJA</sub> (C/W) | Junction Temp (°C) | Ψ<sub>JTOP</sub> (C/W) | Case Top (°C) |
 |:------------:|:------------------------------:|:-------------------------------:|:-----------------------:|:----------------------:|:--------------------:|:----------:|:--------------------------:|:-----------------:|:----------------------:|:------------------:|:----------------------:|:-------------:|
 | BTS7002-1EPP | 2.6                            | 4.8                             | 3.2                     | 12                     | 0.461                | 1          | 0.461                      | 19                | 30.7                   | 33                 | 3                      | 32            |
 | BTS7008-2EPA | 9                              | 16                              | 11                      | 8                      | 0.704                | 2          | 1.408                      | 19                | 30.9                   | 63                 | 1.7                    | 60            |
 
-### Notes
-
-- The BTS7008-2EPA expected case temperature (`60°C`) is close to the measured values
-    - Thermocouple = `55°C` 
-        - May be reduced due to glue used to hold thermocouple
-    - Thermal camera = `61°C`
-- The BTS7002-1EPP expected case temperature (`32°C`) is lower than the measured value
-    - Thermal camera = `50°C`
-    - This may be caused by the adjacent BTS7008-2EPA which is at a higher temperature of `60°C`
-- The Profet maximum junction temperature is `150°C`, much higher than the temperatures we are seeing in these full load tests
+!!! note "Notes"
+    - The BTS7008-2EPA expected case temperature (`60°C`) is close to the measured values
+        - Thermocouple = `55°C` 
+            - May be reduced due to glue used to hold thermocouple
+        - Thermal camera = `61°C`
+    - The BTS7002-1EPP expected case temperature (`32°C`) is lower than the measured value
+        - Thermal camera = `50°C`
+        - This may be caused by the adjacent BTS7008-2EPA which is at a higher temperature of `60°C`
+    - The Profet maximum junction temperature is `150°C`, much higher than the temperatures we are seeing in these full load tests
