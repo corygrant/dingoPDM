@@ -80,7 +80,7 @@ The latest releases can be found on the Releases page for each repo:
 
 Built and tested dingoPDMs can be purchased through the Dingo Electronics Store. 
 
-All PDMs are assembled, tested and shipped from Virginia :flag_us:
+All PDMs are assembled and tested in Virginia :flag_us:
 
 [Dingo Electronics Store](https://dingo-electronics.square.site/)
 
