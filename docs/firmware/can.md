@@ -228,11 +228,14 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 | Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
 |:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
 |Get     | 1   | 1      |        |        |        |        |        |        |       |
-|Set     | 5   | 1      | SPE    | IDH    | IDL    | TXR    |        |        |       |
-|Response| 5   | 129    | SPE    | IDH    | IDL    | TXR    |        |        |       |
+|Set     | 4   | 1      | SPE    | IDH    | IDL    |        |        |        |       |
+|Response| 4   | 129    | SPE    | IDH    | IDL    |        |        |        |       |
 
 - `SPE`
-    - Bit 0 = CAN enable/disable
+    - Bit 0 = Sleep enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bit 1 = CAN filters enable/disable
         - 0 = `Disable`
         - 1 = `Enable`
     - Bit 4 to 7 = CAN speed
@@ -242,7 +245,6 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
         - 3 = `125K`
 - `IDH` - Base ID high byte
 - `IDL` - Base ID low byte
-- `TXR` - Transmit rate, delay between transmit (ms / 10)
 
 
 
