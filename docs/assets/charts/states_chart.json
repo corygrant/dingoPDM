@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 400,
+    "projection": {
+      "type": "albersUsa"
+    },
+    "data": {
+      "url": "https://vega.github.io/vega-datasets/data/us-10m.json",
+      "format": {"type": "topojson", "feature": "states"}
+    },
+    "transform": [
+      {
+        "lookup": "id",
+        "from": {
+          "data": {
+            "values": [
+              {"id": 51, "state": "Virginia", "highlight": "special"},
+              {"id": 37, "state": "North Carolina", "highlight": "normal"},
+              {"id": 36, "state": "New York", "highlight": "normal"},
+              {"id": 4, "state": "Arizona", "highlight": "normal"},
+              {"id": 32, "state": "Nevada", "highlight": "normal"},
+              {"id": 48, "state": "Texas", "highlight": "normal"},
+              {"id": 12, "state": "Florida", "highlight": "normal"},
+              {"id": 13, "state": "Georgia", "highlight": "normal"},
+              {"id": 8, "state": "Colorado", "highlight": "normal"},
+              {"id": 53, "state": "Washington", "highlight": "normal"},
+              {"id": 6, "state": "California", "highlight": "normal"}
+            ]
+          },
+          "key": "id",
+          "fields": ["state", "highlight"]
+        }
+      }
+    ],
+    "mark": "geoshape",
+    "encoding": {
+      "color": {
+        "field": "highlight",
+        "type": "nominal",
+        "scale": {
+          "domain": ["special", "normal", null],
+          "range": ["#ff00e5", "#7fff00", "#a3a3a3"]
+        },
+        "legend": null
+      }
+    }
+  }

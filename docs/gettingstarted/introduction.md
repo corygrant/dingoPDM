@@ -44,6 +44,22 @@ dingoPDM also includes:
 - Internal temperature sensor
 - Status LEDs
 
+## User Locations
+
+:flag_us: :flag_de: :flag_fr: :flag_gb: :flag_pt: :flag_au: :flag_kn: :flag_jp: :flag_bh:
+
+```vegalite 
+{
+    "schema-url": "assets/charts/countries_chart.json"
+}
+```
+
+```vegalite 
+{
+    "schema-url": "assets/charts/states_chart.json"
+}
+```
+
 ## Configuration
 
 The dingoPDM configuration can be accessed using:
@@ -52,6 +68,7 @@ The dingoPDM configuration can be accessed using:
 - A CAN connection to one or many dingoPDMs at once using a USB to CAN adapter such as [USB2CAN](https://github.com/corygrant/USB2CAN_HW)
 
 Configuration reading/writing and status monitoring are all done using the custom built Windows application [DingoConfigurator](../software/introduction.md) 
+
 
 ## Resources
 

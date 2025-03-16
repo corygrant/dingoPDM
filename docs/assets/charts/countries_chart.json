@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 400,
+    "projection": {
+      "type": "equalEarth"
+    },
+    "data": {
+      "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
+      "format": {"type": "topojson", "feature": "countries"}
+    },
+    "transform": [
+      {
+        "lookup": "id",
+        "from": {
+          "data": {
+            "values": [
+              {"id": 840, "country": "United States"},
+              {"id": 36, "country": "Australia"},
+              {"id": 620, "country": "Portugal"},
+              {"id": 250, "country": "France"},
+              {"id": 276, "country": "Germany"},
+              {"id": 826, "country": "United Kingdom"},
+              {"id": 392, "country": "Japan"},
+              {"id": 659, "country": "Saint Kitts and Nevis"},
+              {"id": 48, "country": "Bahrain"}
+            ]
+          },
+          "key": "id",
+          "fields": ["country"]
+        }
+      }
+    ],
+    "mark": "geoshape",
+    "encoding": {
+      "color": {
+        "condition": {
+          "test": "datum.country !== null",
+          "value": "#7fff00"
+        },
+        "value": "#a3a3a3"
+      },
+      "tooltip": {"field": "country", "type": "nominal"}
+    }
+  }
+  
