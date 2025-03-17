@@ -41,6 +41,8 @@ extra:
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.com/invite/TxnPYQkVu3
+    - icon: fontawesome/brands/facebook
+      link: http://facebook.com/dingo.elec
 markdown_extensions:
   - admonition
   - tables

@@ -108,6 +108,10 @@ See invite link at the bottom right of the page
 !!! Note
     If the link is expired, send a message on the store page 
 
+### Facebook
+
+See link at the bottom right of the page
+
 ## Test Config File
 
 When first powering on dingoPDM, whether one received from the store or built yourself, the included test file can be used to verify functionality. 
