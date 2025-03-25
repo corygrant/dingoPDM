@@ -1,3 +1,6 @@
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/donate/?hosted_button_id=HDE8YCVY9NR2L)
+[![Discord](https://img.shields.io/discord/1243358184266010667?label=discord)](https://discord.com/invite/TxnPYQkVu3)
+
 ## What Is It?
 
 dingoPDM is an automotive `Power Distribution Module`. 
