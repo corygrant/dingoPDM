@@ -1,0 +1,233 @@
+VERSION "0.4.12"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: 
+
+
+BO_ 2000 dingoPdmMaxMsg0: 8 Vector__XXX
+ SG_ BoardTemperature : 48|16@1+ (0.1,0) [0|215] "degC" Vector__XXX
+ SG_ BatteryVoltage : 32|16@1+ (0.1,0) [0|655.35] "V" Vector__XXX
+ SG_ TotalCurrent : 16|16@1+ (0.1,0) [0|655.35] "A" Vector__XXX
+ SG_ PDMType : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ DeviceState : 8|4@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DigitalInput_2 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DigitalInput_1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2001 dingoPdmMaxMsg1: 8 Vector__XXX
+ SG_ OutputCurrent_4 : 48|16@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ OutputCurrent_3 : 32|16@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ OutputCurrent_2 : 16|16@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ OutputCurrent_1 : 0|16@1+ (0.1,0) [0|0] "A" Vector__XXX
+
+BO_ 2003 dingoPdmMaxMsg3: 8 Vector__XXX
+ SG_ Flasher_4 : 51|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Flasher_3 : 50|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Flasher_2 : 49|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Flasher_1 : 48|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ WiperState : 44|4@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ WiperSpeed : 40|4@1+ (1,0) [0|8] "" Vector__XXX
+ SG_ WiperFastSpeed : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ WiperSlowSpeed : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OutputState_4 : 12|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OutputState_3 : 8|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OutputState_2 : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OutputState_1 : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2004 dingoPdmMaxMsg4: 8 Vector__XXX
+ SG_ OutputResetCount_4 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OutputResetCount_3 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OutputResetCount_2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OutputResetCount_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2005 dingoPdmMaxMsg5: 8 Vector__XXX
+ SG_ VirtualInput_16 : 47|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_15 : 46|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_14 : 45|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_13 : 44|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_12 : 43|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_11 : 42|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_10 : 41|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_9 : 40|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_8 : 39|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_7 : 38|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_6 : 37|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_5 : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_4 : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_3 : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_2 : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VirtualInput_1 : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_32 : 31|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_31 : 30|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_30 : 29|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_29 : 28|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_28 : 27|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_27 : 26|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_26 : 25|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_25 : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_24 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_23 : 22|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_22 : 21|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_21 : 20|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_20 : 19|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_19 : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_18 : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_17 : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_16 : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_15 : 14|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_14 : 13|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_13 : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_12 : 11|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_11 : 10|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_10 : 9|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_9 : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_8 : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_7 : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_6 : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_5 : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_4 : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_3 : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_2 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInput_1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2006 dingoPdmMaxMsg6: 8 Vector__XXX
+ SG_ ConditionResult_32 : 63|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_31 : 62|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_30 : 61|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_29 : 60|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_28 : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_27 : 58|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_26 : 57|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_25 : 56|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_24 : 55|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_23 : 54|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_22 : 53|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_21 : 52|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_20 : 51|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_19 : 50|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_18 : 49|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_17 : 48|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_16 : 47|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_15 : 46|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_14 : 45|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_13 : 44|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_12 : 43|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_11 : 42|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_10 : 41|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_9 : 40|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_8 : 39|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_7 : 38|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_6 : 37|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_5 : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_4 : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_3 : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_2 : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConditionResult_1 : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CounterValue_4 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CounterValue_3 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CounterValue_2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CounterValue_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2007 dingoPdmMaxMsg7: 8 Vector__XXX
+ SG_ CANInputValue_4 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_3 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_2 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_1 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2008 dingoPdmMaxMsg8: 8 Vector__XXX
+ SG_ CANInputValue_8 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_7 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_6 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_5 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2009 dingoPdmMaxMsg9: 8 Vector__XXX
+ SG_ CANInputValue_12 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_11 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_10 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_9 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2010 dingoPdmMaxMsg10: 8 Vector__XXX
+ SG_ CANInputValue_16 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_15 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_14 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_13 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2011 dingoPdmMaxMsg11: 8 Vector__XXX
+ SG_ CANInputValue_20 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_19 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_18 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_17 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2012 dingoPdmMaxMsg12: 8 Vector__XXX
+ SG_ CANInputValue_24 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_23 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_22 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_21 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2013 dingoPdmMaxMsg13: 8 Vector__XXX
+ SG_ CANInputValue_28 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_27 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_26 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_25 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2014 dingoPdmMaxMsg14: 8 Vector__XXX
+ SG_ CANInputValue_32 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_31 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_30 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANInputValue_29 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2015 dingoPdmMaxMsg15: 8 Vector__XXX
+ SG_ OutputDC_4 : 24|8@1+ (1,0) [0|0] "%" Vector__XXX
+ SG_ OutputDC_3 : 16|8@1+ (1,0) [0|0] "%" Vector__XXX
+ SG_ OutputDC_2 : 8|8@1+ (1,0) [0|0] "%" Vector__XXX
+ SG_ OutputDC_1 : 0|8@1+ (1,0) [0|0] "%" Vector__XXX
+
+
+
+
+
+
+
+
+VAL_ 2000 PDMType 0 "dingoPDM" 1 "dingoPDM-Max" ;
+VAL_ 2000 DeviceState 0 "Run" 1 "Sleep" 2 "Overtemp" 3 "Error" ;
+VAL_ 2003 WiperState 0 "Park" 1 "Parking" 2 "Slow" 3 "Fast" 4 "Intermit Pause" 5 "Intermit On" 6 "Wash" 7 "Swipe" ;
+VAL_ 2003 WiperSpeed 0 "Park" 1 "Slow" 2 "Fast" 3 "Intermit Speed 1" 4 "Intermit Speed 2" 5 "Intermit Speed 3" 6 "Intermit Speed 4" 7 "Intermit Speed 5" 8 "Intermit Speed 6" ;
+VAL_ 2003 OutputState_4 0 "Off" 1 "On" 2 "Overcurrent" 3 "Fault" ;
+VAL_ 2003 OutputState_3 0 "Off" 1 "On" 2 "Overcurrent" 3 "Fault" ;
+VAL_ 2003 OutputState_2 0 "Off" 1 "On" 2 "Overcurrent" 3 "Fault" ;
+VAL_ 2003 OutputState_1 0 "Off" 1 "On" 2 "Overcurrent" 3 "Fault" ;
+
+
+
