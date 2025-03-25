@@ -1,8 +1,8 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/donate/?hosted_button_id=HDE8YCVY9NR2L) 
 [![GitHub Release](https://img.shields.io/github/v/release/corygrant/dingoPDM?include_prereleases&display_name=tag)](https://github.com/corygrant/dingoPDM/releases)
-![GitHub last commit](https://img.shields.io/github/last-commit/corygrant/dingoPDM)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/corygrant/dingoPDM)
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fcorygrant.github.io%2FdingoPDM%2F&label=docs)
+[![GitHub last commit](https://img.shields.io/github/last-commit/corygrant/dingoPDM)](https://github.com/corygrant/dingoPDM/commits/master/)
+[![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/corygrant/dingoPDM)](https://github.com/corygrant/dingoPDM/issues)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fcorygrant.github.io%2FdingoPDM%2F&label=docs)](https://corygrant.github.io/dingoPDM/)
 ![Discord](https://img.shields.io/discord/1243358184266010667?label=discord)
 
 
