@@ -7,6 +7,13 @@
 !!! bug
     Firmware documentation is a work in progress
 
+dingoPDM uses [ChibiOS](https://www.chibios.org/dokuwiki/doku.php) RTOS 
+
+![Chibi](../images/chibi.png)
+
+dingoPDM and dingoPDM-Max both use the same firmware, with only a variable change during build. 
+
+
 ## Firmware Download
 
 The latest version can be downloaded here: [DingoPDM_FW](https://github.com/corygrant/DingoPDM_FW/releases)

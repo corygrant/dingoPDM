@@ -93,7 +93,7 @@ nav:
     - Design: 'firmware/design.md'
     - CAN: 'firmware/can.md'
     - LEDs: 'firmware/leds.md' 
-    - Digital Inputs: 'firmware/digitalinputs.md'
+    - Wipers: 'firmware/wipers.md'
     - Configuration: 'firmware/configuration.md'
     - Variable Mapping: 'firmware/variablemap.md'
     - Errors: 'firmware/errors.md'

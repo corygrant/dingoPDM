@@ -1,3 +1,12 @@
+!!! Info
+    To reduce complexity, USB uses the same message format as CAN
+
+    dingoPDM sends the same messages over CAN and USB 
+    
+    dingoPDM can also receive the same settings change messages over USB
+
+    There is no difference in message formatting between CAN and USB
+
 ## Input
 
 CAN input format is not restricted or defined by the firmware. 

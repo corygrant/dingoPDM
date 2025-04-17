@@ -8,6 +8,7 @@ Sleep state can be exited by one of these Wake inputs:
 
 - Any CAN traffic
 - Digital Input changing state
+- USB cable connected
 
 !!!Tip
     To further reduce power consumption, the power LED can be disabled by cutting the solder bridge near the LED
