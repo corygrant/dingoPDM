@@ -7,6 +7,13 @@
 
     There is no difference in message formatting between CAN and USB
 
+## DBC
+
+DBC files can be found in the firmware repo [here](https://github.com/corygrant/DingoPDM_FW/tree/master/dbc)
+
+!!! Info
+    DBC files are built using the python dbc_builder in the `dbc_builder` folder
+
 ## Input
 
 CAN input format is not restricted or defined by the firmware. 
