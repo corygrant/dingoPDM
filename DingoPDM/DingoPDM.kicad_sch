@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "8948e307-9174-4227-9c28-3ff885e6e83d")
 	(paper "USLetter")
 	(title_block
@@ -62,11 +62,16 @@
 					(hide yes)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -136,10 +141,10 @@
 			(symbol "C_Small_0_1"
 				(polyline
 					(pts
-						(xy -1.524 -0.508) (xy 1.524 -0.508)
+						(xy -1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -148,10 +153,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.508) (xy 1.524 0.508)
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -197,11 +202,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:D_Zener_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -269,18 +279,6 @@
 			(symbol "D_Zener_Small_0_1"
 				(polyline
 					(pts
-						(xy 0.762 0) (xy -0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -0.254 1.016) (xy -0.762 1.016) (xy -0.762 -1.016)
 					)
 					(stroke
@@ -297,6 +295,18 @@
 					)
 					(stroke
 						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0) (xy -0.762 0)
+					)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -342,11 +352,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small_US"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -416,7 +431,7 @@
 			(symbol "R_Small_US_1_1"
 				(polyline
 					(pts
-						(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+						(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
 					)
 					(stroke
 						(width 0)
@@ -428,7 +443,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+						(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
 					)
 					(stroke
 						(width 0)
@@ -475,6 +490,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+12V"
 			(power)
@@ -552,7 +568,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -564,7 +580,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -578,7 +594,8 @@
 			(symbol "+12V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+12V"
 						(effects
 							(font
@@ -595,6 +612,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -674,7 +692,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -691,7 +710,32 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "Microcontroller"
+		(exclude_from_sim no)
+		(at 132.715 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "16eeb9be-3601-4dc0-922f-1b74a7490431")
+	)
+	(text "V7.4\n-Added schottky before VXO780x-500-M for reverse battery protection\n\nV7.3\n-Added power LED bridged jumper (cut trace to disable)\n-Added CAN standby connection to PC12\n-Added 5.1k resistors on USB-C CC pins to enable use of USB-C to USB-C cable\n-Increased M3 mounting hole size\n\nV7.2\n-Added schottky to VXO7805 output to prevent backfeed from USB\n-Can't use PB13 (STM32 VBUS issue), shifted pins over\n-Fixed USB VBUS resistor divider values\n\nV7.1\n-Fixed FRAM SCL/SDA backwards\n-Changed top copper fill from solid to thermal reliefs to make soldering easier\n-Added 2x status LEDs\n-Fixed silkscreen\n\nV7\n-Changed to STM32F446RET6\n-Added USB again, for DFU and easy settings change\n-Switched BTS724 to 2x BTS7008-2EPA\n-Added another op-amp for IS\n-Added boot selector again to enable DFU\n"
+		(exclude_from_sim no)
+		(at 69.85 196.215 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5554cde-b5e1-4809-b7b2-36ac9ac8efee")
 	)
 	(junction
 		(at 93.345 113.03)
@@ -850,30 +894,6 @@
 			(type default)
 		)
 		(uuid "a2157de2-999e-40e2-a54e-c6e32038ad77")
-	)
-	(text "Microcontroller"
-		(exclude_from_sim no)
-		(at 132.715 120.65 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "16eeb9be-3601-4dc0-922f-1b74a7490431")
-	)
-	(text "V7.4\n-Added schottky before VXO780x-500-M for reverse battery protection\n\nV7.3\n-Added power LED bridged jumper (cut trace to disable)\n-Added CAN standby connection to PC12\n-Added 5.1k resistors on USB-C CC pins to enable use of USB-C to USB-C cable\n-Increased M3 mounting hole size\n\nV7.2\n-Added schottky to VXO7805 output to prevent backfeed from USB\n-Can't use PB13 (STM32 VBUS issue), shifted pins over\n-Fixed USB VBUS resistor divider values\n\nV7.1\n-Fixed FRAM SCL/SDA backwards\n-Changed top copper fill from solid to thermal reliefs to make soldering easier\n-Added 2x status LEDs\n-Fixed silkscreen\n\nV7\n-Changed to STM32F446RET6\n-Added USB again, for DFU and easy settings change\n-Switched BTS724 to 2x BTS7008-2EPA\n-Added another op-amp for IS\n-Added boot selector again to enable DFU\n"
-		(exclude_from_sim no)
-		(at 69.85 196.215 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d5554cde-b5e1-4809-b7b2-36ac9ac8efee")
 	)
 	(global_label "PF_DEN5_6"
 		(shape output)
@@ -2290,6 +2310,10 @@
 	(sheet
 		(at 117.475 63.5)
 		(size 43.18 52.07)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -2319,313 +2343,313 @@
 		)
 		(pin "CAN_H" bidirectional
 			(at 160.655 67.31 0)
+			(uuid "dc22d2c2-2904-49cd-90fb-d4147c161761")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "dc22d2c2-2904-49cd-90fb-d4147c161761")
 		)
 		(pin "CAN_L" bidirectional
 			(at 160.655 69.85 0)
+			(uuid "61b3b6ae-0667-4d5c-955b-bad82546fe39")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "61b3b6ae-0667-4d5c-955b-bad82546fe39")
 		)
 		(pin "BATT_SENSE" input
 			(at 117.475 113.03 180)
+			(uuid "38cfdb8e-e74f-4be3-ba6f-8a932163c310")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "38cfdb8e-e74f-4be3-ba6f-8a932163c310")
 		)
 		(pin "I2C1_SDA" bidirectional
 			(at 117.475 66.675 180)
+			(uuid "009bf83b-41be-4d72-a997-6d63825d7901")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "009bf83b-41be-4d72-a997-6d63825d7901")
 		)
 		(pin "I2C1_SCL" bidirectional
 			(at 117.475 69.215 180)
+			(uuid "0aa6728b-0ee6-454c-a5e3-3bac24e4821d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "0aa6728b-0ee6-454c-a5e3-3bac24e4821d")
 		)
 		(pin "DIG_IN1" input
 			(at 117.475 75.565 180)
+			(uuid "e62bafb6-f609-4df8-8058-61884c94a3c5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e62bafb6-f609-4df8-8058-61884c94a3c5")
 		)
 		(pin "PF_IN5" output
 			(at 160.655 93.98 0)
+			(uuid "6cfa1ec5-b16a-4780-9c66-ba2768cc9269")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "6cfa1ec5-b16a-4780-9c66-ba2768cc9269")
 		)
 		(pin "PF_IN6" output
 			(at 160.655 96.52 0)
+			(uuid "6f12b57c-b279-4d67-b899-87caf7acc6db")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "6f12b57c-b279-4d67-b899-87caf7acc6db")
 		)
 		(pin "PF_IN3" output
 			(at 160.655 83.82 0)
+			(uuid "d401127b-8353-4d13-a93f-ac4966d987c3")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "d401127b-8353-4d13-a93f-ac4966d987c3")
 		)
 		(pin "PF_IN4" output
 			(at 160.655 86.36 0)
+			(uuid "3c68785e-b251-4f4c-b09a-b8a7a8fc3296")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "3c68785e-b251-4f4c-b09a-b8a7a8fc3296")
 		)
 		(pin "PF2_IS" input
 			(at 117.475 88.9 180)
+			(uuid "161eb8a2-823b-4df5-97a8-57a3fdc4197d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "161eb8a2-823b-4df5-97a8-57a3fdc4197d")
 		)
 		(pin "PF1_IS" input
 			(at 117.475 86.36 180)
+			(uuid "38faff9c-b435-4478-bcaa-8ee84810a594")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "38faff9c-b435-4478-bcaa-8ee84810a594")
 		)
 		(pin "PF3_4_IS" input
 			(at 117.475 91.44 180)
+			(uuid "b0dd08cc-0939-460b-86ba-79695cfc38cb")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "b0dd08cc-0939-460b-86ba-79695cfc38cb")
 		)
 		(pin "PF_DEN2" output
 			(at 160.655 81.28 0)
+			(uuid "94571e66-e0bc-49d4-a982-496522e2956c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "94571e66-e0bc-49d4-a982-496522e2956c")
 		)
 		(pin "PF_DEN3_4" output
 			(at 160.655 88.9 0)
+			(uuid "b061ca8c-72d0-4653-95bf-ba75d9c1edd6")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "b061ca8c-72d0-4653-95bf-ba75d9c1edd6")
 		)
 		(pin "PF_DSEL3_4" output
 			(at 160.655 91.44 0)
+			(uuid "b4e8a6ea-c832-4e40-88c0-62bca975cad6")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "b4e8a6ea-c832-4e40-88c0-62bca975cad6")
 		)
 		(pin "PF_IN1" output
 			(at 160.655 73.66 0)
+			(uuid "e1e71414-ff13-41f9-8d51-17ca161f4b01")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "e1e71414-ff13-41f9-8d51-17ca161f4b01")
 		)
 		(pin "PF_IN2" output
 			(at 160.655 78.74 0)
+			(uuid "2d97d770-b764-4b52-9b43-d9a8bf35c170")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "2d97d770-b764-4b52-9b43-d9a8bf35c170")
 		)
 		(pin "PF_DEN1" output
 			(at 160.655 76.2 0)
+			(uuid "dfa01fcb-5472-439d-842a-cf2a1204fcc2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "dfa01fcb-5472-439d-842a-cf2a1204fcc2")
 		)
 		(pin "PF_IN8" output
 			(at 160.655 106.68 0)
+			(uuid "4a46a89f-cea6-4ff3-aed7-14b477bb951b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "4a46a89f-cea6-4ff3-aed7-14b477bb951b")
 		)
 		(pin "DIG_IN2" input
 			(at 117.475 78.105 180)
+			(uuid "5854c105-72f4-452f-bbc5-498b9f7f4df8")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "5854c105-72f4-452f-bbc5-498b9f7f4df8")
 		)
 		(pin "PF_IN7" output
 			(at 160.655 104.14 0)
+			(uuid "63827fe6-508f-4a44-a05b-3ca42c096c7b")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "63827fe6-508f-4a44-a05b-3ca42c096c7b")
 		)
 		(pin "PF_DEN5_6" output
 			(at 160.655 99.06 0)
+			(uuid "63b34d45-eb21-4d01-ba94-f95e55e7fda9")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "63b34d45-eb21-4d01-ba94-f95e55e7fda9")
 		)
 		(pin "PF_IS5_6" input
 			(at 117.475 93.98 180)
+			(uuid "704580a2-6ccf-4764-a635-3ba19537caa3")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "704580a2-6ccf-4764-a635-3ba19537caa3")
 		)
 		(pin "PF_IS7_8" input
 			(at 117.475 96.52 180)
+			(uuid "fd169491-c24b-4aca-bd9d-5497a9181e01")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "fd169491-c24b-4aca-bd9d-5497a9181e01")
 		)
 		(pin "PF_DSEL7_8" output
 			(at 160.655 111.76 0)
+			(uuid "4854d7c9-2227-4fa6-ac75-fde35a5a3138")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "4854d7c9-2227-4fa6-ac75-fde35a5a3138")
 		)
 		(pin "PF_DEN7_8" output
 			(at 160.655 109.22 0)
+			(uuid "6b985f2f-101e-44b5-adea-c37f53fe4023")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "6b985f2f-101e-44b5-adea-c37f53fe4023")
 		)
 		(pin "PF_DSEL5_6" output
 			(at 160.655 101.6 0)
+			(uuid "6777ce36-ff03-435d-914f-919f46f5cf48")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "6777ce36-ff03-435d-914f-919f46f5cf48")
 		)
 		(pin "USB_DM" bidirectional
 			(at 117.475 102.87 180)
+			(uuid "b14dc047-bcaf-41f8-ac96-9e3416e90d20")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "b14dc047-bcaf-41f8-ac96-9e3416e90d20")
 		)
 		(pin "USB_DP" bidirectional
 			(at 117.475 100.965 180)
+			(uuid "e1740515-ae52-4fa0-ba2f-b32a0921551c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e1740515-ae52-4fa0-ba2f-b32a0921551c")
 		)
 		(pin "USB_VBUS" input
 			(at 117.475 105.41 180)
+			(uuid "b26831a5-819b-466f-8ea3-7885ec7f19b2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "b26831a5-819b-466f-8ea3-7885ec7f19b2")
 		)
 		(instances
 			(project "DingoPDM"
@@ -2638,6 +2662,10 @@
 	(sheet
 		(at 231.14 19.685)
 		(size 22.86 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -2676,6 +2704,10 @@
 	(sheet
 		(at 231.14 51.435)
 		(size 22.86 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -2723,6 +2755,10 @@
 	(sheet
 		(at 15.24 46.355)
 		(size 22.86 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -2761,6 +2797,10 @@
 	(sheet
 		(at 14.605 116.84)
 		(size 22.86 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -2799,6 +2839,10 @@
 	(sheet
 		(at 15.24 15.875)
 		(size 22.86 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -2837,6 +2881,10 @@
 	(sheet
 		(at 14.605 144.145)
 		(size 22.86 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -2877,4 +2925,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "cf58e2cb-3ad7-46d1-bde7-45f80172ffb6")
 	(paper "USLetter")
 	(title_block
@@ -103,17 +103,17 @@
 						(type background)
 					)
 				)
-				(pin output line
-					(at 7.62 0 180)
+				(pin input line
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "~"
+					(name "+"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -139,17 +139,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at -7.62 2.54 0)
+				(pin output line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "+"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -257,24 +257,6 @@
 						)
 					)
 				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -7.62 -2.54 0)
 					(length 2.54)
@@ -286,6 +268,24 @@
 						)
 					)
 					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -364,24 +364,6 @@
 			)
 			(symbol "LM324_5_1"
 				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "V-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
 					(at -2.54 7.62 270)
 					(length 3.81)
 					(name "V+"
@@ -399,12 +381,35 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -474,10 +479,10 @@
 			(symbol "C_Small_0_1"
 				(polyline
 					(pts
-						(xy -1.524 -0.508) (xy 1.524 -0.508)
+						(xy -1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -486,10 +491,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.508) (xy 1.524 0.508)
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -535,11 +540,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small_US"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -609,7 +619,7 @@
 			(symbol "R_Small_US_1_1"
 				(polyline
 					(pts
-						(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+						(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
 					)
 					(stroke
 						(width 0)
@@ -621,7 +631,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+						(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
 					)
 					(stroke
 						(width 0)
@@ -668,6 +678,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+12V"
 			(power)
@@ -745,7 +756,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -757,7 +768,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -771,7 +782,8 @@
 			(symbol "+12V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+12V"
 						(effects
 							(font
@@ -788,6 +800,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3V3"
 			(power)
@@ -865,7 +878,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -877,7 +890,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -891,7 +904,8 @@
 			(symbol "+3V3_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+3V3"
 						(effects
 							(font
@@ -908,6 +922,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -987,7 +1002,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -1004,6 +1020,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -2942,6 +2959,10 @@
 	(sheet
 		(at 45.72 24.765)
 		(size 26.67 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -2971,83 +2992,83 @@
 		)
 		(pin "BATT" input
 			(at 45.72 28.575 180)
+			(uuid "75cb80b7-104a-497f-b946-8d73c7ca3d1c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "75cb80b7-104a-497f-b946-8d73c7ca3d1c")
 		)
 		(pin "IN0" input
 			(at 45.72 33.655 180)
+			(uuid "2d424ce5-b4ca-4d3d-9a98-51532289ec4a")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "2d424ce5-b4ca-4d3d-9a98-51532289ec4a")
 		)
 		(pin "DEN" input
 			(at 45.72 42.545 180)
+			(uuid "e2d8716c-0b1e-4ff9-b9e0-a36e2941fa4c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e2d8716c-0b1e-4ff9-b9e0-a36e2941fa4c")
 		)
 		(pin "OUT0" output
 			(at 72.39 32.385 0)
+			(uuid "036a3977-cb57-432b-8d1e-e83d225ef58f")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "036a3977-cb57-432b-8d1e-e83d225ef58f")
 		)
 		(pin "IS" output
 			(at 72.39 45.085 0)
+			(uuid "f0be3b4a-0303-4a91-b85f-a3971f53d1eb")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "f0be3b4a-0303-4a91-b85f-a3971f53d1eb")
 		)
 		(pin "IN1" input
 			(at 45.72 36.195 180)
+			(uuid "6e407b73-5069-4e8b-980a-6112ce76d484")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "6e407b73-5069-4e8b-980a-6112ce76d484")
 		)
 		(pin "DSEL" input
 			(at 45.72 40.005 180)
+			(uuid "69503330-8126-434c-8d96-2295a7c453f7")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "69503330-8126-434c-8d96-2295a7c453f7")
 		)
 		(pin "OUT1" output
 			(at 72.39 38.735 0)
+			(uuid "6bc89ef8-b8c5-41c8-8d81-6bc4fafe1edc")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "6bc89ef8-b8c5-41c8-8d81-6bc4fafe1edc")
 		)
 		(instances
 			(project "DingoPDM"
@@ -3060,6 +3081,10 @@
 	(sheet
 		(at 46.99 98.425)
 		(size 26.67 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -3089,83 +3114,83 @@
 		)
 		(pin "BATT" input
 			(at 46.99 102.235 180)
+			(uuid "3f015c4b-ef74-47fb-871d-2978e9d4a878")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "3f015c4b-ef74-47fb-871d-2978e9d4a878")
 		)
 		(pin "IN0" input
 			(at 46.99 107.315 180)
+			(uuid "49b5b500-ae93-4bfe-b906-96d94275872a")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "49b5b500-ae93-4bfe-b906-96d94275872a")
 		)
 		(pin "DEN" input
 			(at 46.99 116.205 180)
+			(uuid "145916a8-82ad-4944-82a4-d7cb5740c2ba")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "145916a8-82ad-4944-82a4-d7cb5740c2ba")
 		)
 		(pin "OUT0" output
 			(at 73.66 106.045 0)
+			(uuid "947547fb-f44f-4547-bb81-3e9f7ec0f608")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "947547fb-f44f-4547-bb81-3e9f7ec0f608")
 		)
 		(pin "IS" output
 			(at 73.66 118.745 0)
+			(uuid "7c7bd5b4-e95c-4906-9d67-1ff3a591f242")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "7c7bd5b4-e95c-4906-9d67-1ff3a591f242")
 		)
 		(pin "IN1" input
 			(at 46.99 109.855 180)
+			(uuid "7fae0b51-b848-4d00-9681-83399b7bb96c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "7fae0b51-b848-4d00-9681-83399b7bb96c")
 		)
 		(pin "DSEL" input
 			(at 46.99 113.665 180)
+			(uuid "9105db6c-382f-411b-8265-ab54dd7ac497")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "9105db6c-382f-411b-8265-ab54dd7ac497")
 		)
 		(pin "OUT1" output
 			(at 73.66 112.395 0)
+			(uuid "7fe21b24-e84c-464c-a7f3-221ba3ffc202")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "7fe21b24-e84c-464c-a7f3-221ba3ffc202")
 		)
 		(instances
 			(project "DingoPDM"
@@ -3178,6 +3203,10 @@
 	(sheet
 		(at 46.355 62.23)
 		(size 26.67 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -3207,83 +3236,83 @@
 		)
 		(pin "BATT" input
 			(at 46.355 66.04 180)
+			(uuid "c9d07a4c-9001-426d-973e-ebaa923d1310")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "c9d07a4c-9001-426d-973e-ebaa923d1310")
 		)
 		(pin "IN0" input
 			(at 46.355 71.12 180)
+			(uuid "4b55baeb-ba5e-40ac-bd37-84c782f16a6e")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "4b55baeb-ba5e-40ac-bd37-84c782f16a6e")
 		)
 		(pin "DEN" input
 			(at 46.355 80.01 180)
+			(uuid "c8f49f56-de4d-43b4-a552-35d8a11a2ed8")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "c8f49f56-de4d-43b4-a552-35d8a11a2ed8")
 		)
 		(pin "OUT0" output
 			(at 73.025 69.85 0)
+			(uuid "05c2efd6-52c4-4618-85c0-dca42a5d08e5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "05c2efd6-52c4-4618-85c0-dca42a5d08e5")
 		)
 		(pin "IS" output
 			(at 73.025 82.55 0)
+			(uuid "9bf0c405-5a15-40ce-957e-fe3f55993b3e")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "9bf0c405-5a15-40ce-957e-fe3f55993b3e")
 		)
 		(pin "IN1" input
 			(at 46.355 73.66 180)
+			(uuid "95920a61-6f9e-4808-91cd-426bedd72d08")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "95920a61-6f9e-4808-91cd-426bedd72d08")
 		)
 		(pin "DSEL" input
 			(at 46.355 77.47 180)
+			(uuid "f3e02717-d3d9-4d8b-be76-3ccc18be33ae")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "f3e02717-d3d9-4d8b-be76-3ccc18be33ae")
 		)
 		(pin "OUT1" output
 			(at 73.025 76.2 0)
+			(uuid "93e3d399-f69b-46fd-b16a-884eb6bd035f")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "93e3d399-f69b-46fd-b16a-884eb6bd035f")
 		)
 		(instances
 			(project "DingoPDM"
