@@ -4,6 +4,12 @@ on:
     branches:
       - master 
       - main
+    paths:
+      - 'docs/**'
+  pull_request:
+    paths:
+      - 'docs/**'
+  workflow_dispatch:  # still allows manual trigger
 permissions:
   contents: write
 jobs:
