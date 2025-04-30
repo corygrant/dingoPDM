@@ -49,7 +49,7 @@ dingoPDM also includes:
 
 ## User Locations
 
-:flag_us: :flag_de: :flag_fr: :flag_gb: :flag_pt: :flag_au: :flag_kn: :flag_jp: :flag_bh:
+:flag_us: :flag_de: :flag_fr: :flag_gb: :flag_pt: :flag_au: :flag_kn: :flag_jp: :flag_bh: :flag_it:
 
 ```vegalite 
 {
