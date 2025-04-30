@@ -25,7 +25,8 @@
               {"id": 13, "state": "Georgia", "highlight": "normal"},
               {"id": 8, "state": "Colorado", "highlight": "normal"},
               {"id": 53, "state": "Washington", "highlight": "normal"},
-              {"id": 6, "state": "California", "highlight": "normal"}
+              {"id": 6, "state": "California", "highlight": "normal"},
+              {"id": 40, "state": "Oklahoma", "highlight": "normal"}
             ]
           },
           "key": "id",

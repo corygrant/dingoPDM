@@ -23,7 +23,8 @@
               {"id": 826, "country": "United Kingdom"},
               {"id": 392, "country": "Japan"},
               {"id": 659, "country": "Saint Kitts and Nevis"},
-              {"id": 48, "country": "Bahrain"}
+              {"id": 48, "country": "Bahrain"},
+              {"id": 380, "country": "Italy"}
             ]
           },
           "key": "id",
