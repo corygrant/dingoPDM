@@ -72,6 +72,10 @@ The dingoPDM configuration can be accessed using:
 
 Configuration reading/writing and status monitoring are all done using the custom built Windows application [DingoConfigurator](../software/introduction.md) 
 
+## Wiring Example
+
+![ExampleWiring](../images/dingoPDMExampleWiringWhite.svg#only-dark){ .off-glb }
+![ExampleWiring](../images/dingoPDMExampleWiringBlack.svg#only-light){ .off-glb }
 
 ## Resources
 
