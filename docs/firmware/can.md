@@ -498,9 +498,8 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
         - 0 = `Disable`
         - 1 = `Enable`
     - Bit 1 to Bit 2 = Mode
-        - 0 = `Num`
-        - 1 = `Momentary`
-        - 2 = `Latching`
+        - 0 = `Momentary`
+        - 1 = `Latching`
     - Bit 3 = Timeout enable/disable
         - 0 = `Disable`
         - 1 = `Enable`
@@ -588,6 +587,113 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 - `IN` - Condition input (see [Variable Map](variablemap.md))
 - `ARG` - Argument
   
+### Keypad
+
+|   Type   |  DLC  | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 |
+| :------: | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+|   Get    |   2   |   50   |  NUM   |        |        |        |        |        |        |
+|   Set    |   5   |   50   |  NUM   |  EBN   |  NID   |  TIM   |        |        |        |
+| Response |   5   |  178   |  NUM   |  EBN   |  NID   |  TIM   |        |        |        |
+
+- `NUM` - Keypad number
+- `EBN`
+    - Bit 0 = Keypad enable/disable
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bits 1 to 2 = Keypad brand
+        - 0 = `Blink Marine`
+        - 1 = `Grayhill`
+    - Bits 3 to 7 = Number of buttons/dials
+- `NID` 
+    - Bits 0 to 6 = Keypad CANopen Node ID
+        - 1 to 127
+    - Bit 7 = Timeout enable
+        - 0 = `Disable`
+        - 1 = `Enable`
+- `TIM` - Timeout Time (ms / 100)
+
+### Keypad LEDs
+
+|   Type   |  DLC  | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 |
+| :------: | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+|   Get    |   2   |   51   |  NUM   |        |        |        |        |        |        |
+|   Set    |   8   |   51   |  NUM   |  BLB   |  BLC   |  DLB   |  DIM   |  BTB   |  DBB   |
+| Response |   8   |  179   |  NUM   |  BLB   |  BLC   |  DLB   |  DIM   |  BTB   |  DBB   |
+
+- `NUM` - Keypad number
+- `BLB` - Backlight brightness - 0 (min) to 255 (100%)
+- `BLC` - Backlight color
+    - 0 = `Off`
+    - 1 = `Red`
+    - 2 = `Green`
+    - 3 = `Blue`
+    - 4 = `Yellow`
+    - 5 = `Cyan`
+    - 6 = `Violet`
+    - 7 = `White`
+    - 8 = `Amber`
+    - 9 = `Yellow Green`
+- `DLB` - Dim backlight brightness - 0 (min) to 255 (100%)
+- `DIM` - Dimming input (see [Variable Map](variablemap.md))
+- `BTB` - Button brightness (all buttons) - 0 (min) to 255 (100%)
+- `DBB` - Dim button brightness - 0 (min) to 255 (100%)
+
+### Keypad Buttons
+
+|   Type   |  DLC  | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 |
+| :------: | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+|   Get    |   2   |   52   |  NUM   |        |        |        |        |        |        |
+|   Set    |   8   |   52   |  NUM   |  ENA   |  VV0   |  VV1   |  VV2   |  VV3   |  FVV   |
+| Response |   8   |  180   |  NUM   |  ENA   |  VV0   |  VV1   |  VV2   |  VV3   |  FVV   |
+
+- `NUM`
+    - Bits 0 to 2 = Keypad number
+    - Bits 3 to 7 = Button number
+- `ENA`
+    - Bit 0 = Button enabled
+        - 0 = `Disable`
+        - 1 = `Enable`
+    - Bit 1 = Is Dial
+        - 0 = `No Dial`
+        - 1 = `Is Dial`
+    - Bit 2 to Bit 3 = Mode
+        - 0 = `Momentary`
+        - 1 = `Latching`
+- `VV0` to `VV3` - Val var 0 to 3 (see [Variable Map](variablemap.md))
+- `FVV` - Fault val var (see [Variable Map](variablemap.md))
+
+### Keypad Button LEDs
+
+|   Type   |  DLC  | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 |
+| :------: | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+|   Get    |   2   |   53   |  NUM   |        |        |        |        |        |        |
+|   Set    |   8   |   53   |  NUM   |  C01   |  C23   |  FVC   |  DMI   |  DMA   |  DOF   |
+| Response |   8   |  181   |  NUM   |  C01   |  C23   |  FVC   |  DMI   |  DMA   |  DOF   |
+
+- `NUM`
+    - Bits 0 to 2 = Keypad number
+    - Bits 3 to 7 = Button number
+- `C01`
+    - Bits 0 to 4 = Value 0 color
+    - Bits 5 to 7 = Value 1 color
+        - 0 = `Off`
+        - 1 = `Red`
+        - 2 = `Green`
+        - 3 = `Orange`
+        - 4 = `Blue`
+        - 5 = `Violet`
+        - 6 = `Cyan`
+        - 7 = `White`
+- `C23`
+    - Bits 0 to 4 = Value 2 color
+    - Bits 5 to 7 = Value 3 color
+- `FVC`
+    - Bits 0 to 4 = Fault value color
+    - Bits 5 to 7 = Num of color values (2 to 4)
+- `DMI` = Dial min LED
+- `DMA` = Dial max LED
+- `DOF` = Dial LED offset
+
 ## Special
 
 There are some special messages that are used for special functions. 
