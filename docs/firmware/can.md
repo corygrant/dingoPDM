@@ -592,18 +592,14 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 |   Type   |  DLC  | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 |
 | :------: | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 |   Get    |   2   |   50   |  NUM   |        |        |        |        |        |        |
-|   Set    |   5   |   50   |  NUM   |  EBN   |  NID   |  TIM   |        |        |        |
-| Response |   5   |  178   |  NUM   |  EBN   |  NID   |  TIM   |        |        |        |
+|   Set    |   6   |   50   |  NUM   |  ENA   |  NID   |  TIM   | MOD    |        |        |
+| Response |   6   |  178   |  NUM   |  ENA   |  NID   |  TIM   | MOD    |        |        |
 
 - `NUM` - Keypad number
-- `EBN`
+- `ENA`
     - Bit 0 = Keypad enable/disable
         - 0 = `Disable`
         - 1 = `Enable`
-    - Bits 1 to 2 = Keypad brand
-        - 0 = `Blink Marine`
-        - 1 = `Grayhill`
-    - Bits 3 to 7 = Number of buttons/dials
 - `NID` 
     - Bits 0 to 6 = Keypad CANopen Node ID
         - 1 to 127
@@ -611,6 +607,21 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
         - 0 = `Disable`
         - 1 = `Enable`
 - `TIM` - Timeout Time (ms / 100)
+- `MOD` - Keypad model
+    - 0 = `BLINK_2_KEY` 
+    - 1 = `BLINK_4_KEY`
+    - 2 = `BLINK_5_KEY`
+    - 3 = `BLINK_6_KEY`
+    - 4 = `BLINK_8_KEY`
+    - 5 = `BLINK_10_KEY`
+    - 6 = `BLINK_12_KEY`
+    - 7 = `BLINK_15_KEY`
+    - 8 = `BLINK_13_KEY_2_DIAL`
+    - 9 = `BLINK_RACEPAD`
+    - 10 = `GRAYHILL_6_KEY`
+    - 11 = `GRAYHILL_8_KEY`
+    - 12 = `GRAYHILL_15_KEY`
+    - 13 = `GRAYHILL_20_KEY`
 
 ### Keypad LEDs
 
@@ -656,9 +667,15 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
     - Bit 1 = Is Dial
         - 0 = `No Dial`
         - 1 = `Is Dial`
-    - Bit 2 to Bit 3 = Mode
+    - Bit 2 = Mode
         - 0 = `Momentary`
         - 1 = `Latching`
+    - Bit 3 to Bit 6 = Val Flashing
+        - 0 = `Solid`
+        - 1 = `Flashing`
+    - Bit 7 = Fault Flashing
+        - 0 = `Solid`
+        - 1 = `Flashing`
 - `VV0` to `VV3` - Val var 0 to 3 (see [Variable Map](variablemap.md))
 - `FVV` - Fault val var (see [Variable Map](variablemap.md))
 
@@ -667,8 +684,8 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 |   Type   |  DLC  | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 |
 | :------: | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 |   Get    |   2   |   53   |  NUM   |        |        |        |        |        |        |
-|   Set    |   8   |   53   |  NUM   |  C01   |  C23   |  FVC   |  DMI   |  DMA   |  DOF   |
-| Response |   8   |  181   |  NUM   |  C01   |  C23   |  FVC   |  DMI   |  DMA   |  DOF   |
+|   Set    |   8   |   53   |  NUM   |  C01   |  C23   |  FVC   |  B01   |  B23   |  FBC   |
+| Response |   8   |  181   |  NUM   |  C01   |  C23   |  FVC   |  B01   |  B23   |  FBC   |
 
 - `NUM`
     - Bits 0 to 2 = Keypad number
@@ -690,6 +707,26 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 - `FVC`
     - Bits 0 to 4 = Fault value color
     - Bits 5 to 7 = Num of color values (2 to 4)
+- `B01`
+    - Bits 0 to 4 = Blinking value 0 color
+    - Bits 5 to 7 = Blinking value 1 color
+- `B23`
+    - Bits 0 to 4 = Blinking value 2 color
+    - Bits 5 to 7 = Blinking value 3 color
+- `FBC`
+    - Bits 0 to 4 = Blinking fault value color
+
+### Keypad Dials
+
+|   Type   |  DLC  | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 |
+| :------: | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+|   Get    |   2   |   54   |  NUM   |        |        |        |        |        |        |
+|   Set    |   8   |   54   |  NUM   |  DMI   |  DMA   |  DOF   |        |        |        |
+| Response |   8   |  182   |  NUM   |  DMI   |  DMA   |  DOF   |        |        |        |
+
+- `NUM`
+    - Bits 0 to 2 = Keypad number
+    - Bits 3 to 7 = Button number
 - `DMI` = Dial min LED
 - `DMA` = Dial max LED
 - `DOF` = Dial LED offset

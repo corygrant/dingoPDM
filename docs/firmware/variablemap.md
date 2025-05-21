@@ -208,4 +208,12 @@ These are used to:
 |  190  | Keypad 2 Btn 18 |
 |  191  | Keypad 2 Btn 19 |
 |  192  | Keypad 2 Btn 20 |
-|  193  |    Always On    |
+|  193  | Keypad 1 Dial 1 |
+|  194  | Keypad 1 Dial 2 |
+|  195  | Keypad 1 Dial 3 |
+|  196  | Keypad 1 Dial 4 |
+|  197  | Keypad 2 Dial 1 |
+|  198  | Keypad 2 Dial 2 |
+|  199  | Keypad 2 Dial 3 |
+|  200  | Keypad 2 Dial 4 |
+|  201  |    Always On    |
