@@ -107,7 +107,10 @@ dingoPDM sends output, input and device information over CAN (and/or USB) cyclic
 |               |Base ID + 12| 8   | CIV21  | CIV21  | CIV22  | CIV22  | CIV23  | CIV23  | CIV24  | CIV24 |
 |               |Base ID + 13| 8   | CIV25  | CIV25  | CIV26  | CIV26  | CIV27  | CIV27  | CIV28  | CIV28 |
 |               |Base ID + 14| 8   | CIV29  | CIV29  | CIV30  | CIV30  | CIV31  | CIV31  | CIV32  | CIV32 |
-|:green_square: |Base ID + 15| 8   | ODC1   | ODC2   | ODC3   | ODC4   | ODC5   | ODC6   | ODC7   | ODC8  |
+|               |Base ID + 15| 8   | ODC1   | ODC2   | ODC3   | ODC4   | ODC5   | ODC6   | ODC7   | ODC8  |
+|               |Base ID + 16| 8   | K1B1   | K1B2   | K1B3   | K2B1   | K2B2   | K2B3   | 0      | 0     |
+|               |Base ID + 17| 8   | K1D1   | K1D1   | K1D2   | K1D2   | K1D3   | K1D3   | K1D4   | K1D4  |
+|               |Base ID + 18| 8   | K2D1   | K2D1   | K2D2   | K2D2   | K2D3   | K2D3   | K2D4   | K2D4  |
 
 - *Base ID + 0*
     - `DI` - Digital Inputs
@@ -195,6 +198,23 @@ dingoPDM sends output, input and device information over CAN (and/or USB) cyclic
         - 2 bytes each
 - *Base ID + 15*
     - `ODC1` to `ODC8` - Output Duty Cycle (%)
+- *Base ID + 16*
+    - `K1B1` - Keypad 1 Buttons 1-8
+    - `K1B2` - Keypad 1 Buttons 9-16
+    - `K1B3` - Keypad 1 Buttons 17-20
+    - `K2B1` - Keypad 2 Buttons 1-8
+    - `K2B2` - Keypad 2 Buttons 9-16
+    - `K2B3` - Keypad 2 Buttons 17-20
+- *Base ID + 17*
+    - `K1D1` - Keypad 1 Dial 1 Ticks
+    - `K1D2` - Keypad 1 Dial 2 Ticks
+    - `K1D3` - Keypad 1 Dial 3 Ticks
+    - `K1D4` - Keypad 1 Dial 4 Ticks
+- *Base ID + 18*
+    - `K2D1` - Keypad 2 Dial 1 Ticks
+    - `K2D2` - Keypad 2 Dial 2 Ticks
+    - `K2D3` - Keypad 2 Dial 3 Ticks
+    - `K2D4` - Keypad 2 Dial 4 Ticks
 
 ## Settings
 
