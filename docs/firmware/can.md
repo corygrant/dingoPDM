@@ -741,12 +741,12 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
 |   Type   |  DLC  | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 |
 | :------: | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 |   Get    |   2   |   54   |  NUM   |        |        |        |        |        |        |
-|   Set    |   8   |   54   |  NUM   |  DMI   |  DMA   |  DOF   |        |        |        |
-| Response |   8   |  182   |  NUM   |  DMI   |  DMA   |  DOF   |        |        |        |
+|   Set    |   5   |   54   |  NUM   |  DMI   |  DMA   |  DOF   |        |        |        |
+| Response |   5   |  182   |  NUM   |  DMI   |  DMA   |  DOF   |        |        |        |
 
 - `NUM`
     - Bits 0 to 2 = Keypad number
-    - Bits 3 to 7 = Button number
+    - Bits 3 to 7 = Dial number
 - `DMI` = Dial min LED
 - `DMA` = Dial max LED
 - `DOF` = Dial LED offset
