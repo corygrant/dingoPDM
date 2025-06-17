@@ -46,7 +46,7 @@
 			)
 			(layer "F.Mask"
 				(type "Top Solder Mask")
-				(color "Purple")
+				(color "Green")
 				(thickness 0.0254)
 			)
 			(layer "F.Cu"
@@ -88,7 +88,7 @@
 			)
 			(layer "B.Mask"
 				(type "Bottom Solder Mask")
-				(color "Purple")
+				(color "Green")
 				(thickness 0.0254)
 			)
 			(layer "B.Paste"
@@ -11634,7 +11634,6 @@
 		)
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/Models/CUI_VXO7805-500-M.step"
-			(hide yes)
 			(offset
 				(xyz -6.2484 -6.69798 0.9906)
 			)
@@ -22982,7 +22981,6 @@
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_TRACO_TSR-1_THT.wrl"
-			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
