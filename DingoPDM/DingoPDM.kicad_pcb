@@ -39905,7 +39905,7 @@
 			)
 		)
 	)
-	(gr_text "PDM v7.4"
+	(gr_text "PDM v7.5"
 		(at -36.322 3.302 270)
 		(layer "F.SilkS")
 		(uuid "8c875065-be0e-41c1-a837-74699c7ba035")
