@@ -2636,6 +2636,17 @@
 		)
 		(uuid "0ffe859e-23b8-447a-95dc-08dd22506767")
 	)
+	(text "Min 16V"
+		(exclude_from_sim no)
+		(at 141.732 46.482 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2c541f44-65f7-4881-8418-452b557ee5ce")
+	)
 	(text "5V to 3.3V"
 		(exclude_from_sim no)
 		(at 161.925 59.69 0)
@@ -2723,6 +2734,17 @@
 		)
 		(uuid "ba64cfb8-715f-4028-a130-c324f881c119")
 	)
+	(text "Min 16V"
+		(exclude_from_sim no)
+		(at 122.174 46.228 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f9f5b781-b31f-4aaf-bd5f-59d9a40887ca")
+	)
 	(junction
 		(at 110.49 31.75)
 		(diameter 0)
@@ -2748,16 +2770,16 @@
 		(uuid "16d97c88-d64d-4d58-96d6-19004fdee15d")
 	)
 	(junction
-		(at 138.43 31.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1f292cc5-13f0-4297-bb70-1e52c2f832cd")
-	)
-	(junction
 		(at 88.9 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2b456cb2-d7e2-4066-9280-9369b32e08b6")
+	)
+	(junction
+		(at 138.43 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e30f1ed-fcec-43e9-b345-a33ccb23bdbb")
 	)
 	(junction
 		(at 114.3 31.75)
@@ -2784,6 +2806,12 @@
 		(uuid "c6aa3aa6-1aed-4fed-ab46-aa23770c0bbc")
 	)
 	(junction
+		(at 132.08 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d9e412a1-51d9-4642-8e4e-3fa96e253d3c")
+	)
+	(junction
 		(at 144.78 24.13)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2801,7 +2829,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 31.75) (xy 138.43 38.1)
+			(xy 132.08 31.75) (xy 132.08 38.1)
 		)
 		(stroke
 			(width 0)
@@ -2881,7 +2909,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.255 31.75) (xy 138.43 31.75)
+			(xy 128.27 31.75) (xy 132.08 31.75)
 		)
 		(stroke
 			(width 0)
@@ -2951,7 +2979,17 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 31.75) (xy 127.635 31.75)
+			(xy 132.08 31.75) (xy 138.43 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51f2f889-d500-4e3a-bb61-23b4c0c7843e")
+	)
+	(wire
+		(pts
+			(xy 114.3 31.75) (xy 120.65 31.75)
 		)
 		(stroke
 			(width 0)
@@ -3168,6 +3206,16 @@
 			(type default)
 		)
 		(uuid "cae53933-15a8-46a7-a6e4-ceed5543bf95")
+	)
+	(wire
+		(pts
+			(xy 138.43 31.75) (xy 138.43 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de84e5a8-58b4-4562-aa68-440ce371ff13")
 	)
 	(wire
 		(pts
@@ -4994,16 +5042,15 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized_Small_US")
-		(at 138.43 40.64 0)
+		(at 132.08 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "06629598-a7da-476a-b4a7-6e6b30b6d4ae")
 		(property "Reference" "C41"
-			(at 140.97 38.9381 0)
+			(at 124.46 40.386 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5012,7 +5059,7 @@
 			)
 		)
 		(property "Value" "100uF"
-			(at 140.97 41.4781 0)
+			(at 124.46 42.926 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5020,8 +5067,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_Elec_6.3x7.7"
-			(at 138.43 40.64 0)
+		(property "Footprint" "Capacitor_SMD:C_2220_5750Metric"
+			(at 132.08 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5030,7 +5077,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 138.43 40.64 0)
+			(at 132.08 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5039,7 +5086,16 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small US symbol"
-			(at 138.43 40.64 0)
+			(at 132.08 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digi-Key_PN" "445-7935-1-ND"
+			(at 132.08 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5203,7 +5259,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
-		(at 131.445 31.75 180)
+		(at 124.46 31.75 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5212,7 +5268,7 @@
 		(fields_autoplaced yes)
 		(uuid "18aa44bf-ec62-454e-8ac9-e73d85a2bddf")
 		(property "Reference" "D18"
-			(at 131.7625 26.3357 0)
+			(at 124.7775 26.3357 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5220,7 +5276,7 @@
 			)
 		)
 		(property "Value" "Schottky"
-			(at 131.7625 28.7599 0)
+			(at 124.7775 28.7599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5228,7 +5284,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
-			(at 131.445 31.75 0)
+			(at 124.46 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5237,7 +5293,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 131.445 31.75 0)
+			(at 124.46 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5246,7 +5302,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 131.445 31.75 0)
+			(at 124.46 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5255,7 +5311,7 @@
 			)
 		)
 		(property "Digi-Key_PN" "1727-2394-1-ND"
-			(at 131.445 31.75 0)
+			(at 124.46 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5264,7 +5320,7 @@
 			)
 		)
 		(property "LCSC" "C179426"
-			(at 131.445 31.75 0)
+			(at 124.46 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5282,6 +5338,71 @@
 			(project "DingoPDM"
 				(path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f5cf2eb"
 					(reference "D18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 138.43 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2818c554-0eda-409c-9fd5-e934cf40bf2f")
+		(property "Reference" "#PWR0102"
+			(at 138.43 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 138.557 47.5742 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 138.43 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 138.43 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 138.43 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ec65639d-6a65-43bf-960a-5a88acd4c3e8")
+		)
+		(instances
+			(project "DingoPDM"
+				(path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f5cf2eb"
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -5714,6 +5835,84 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Polarized_Small_US")
+		(at 138.43 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9fd99b50-3e33-40ed-a1f4-0ea131b40dad")
+		(property "Reference" "C42"
+			(at 141.986 40.132 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100uF"
+			(at 141.986 42.672 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_2220_5750Metric"
+			(at 138.43 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 138.43 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, small US symbol"
+			(at 138.43 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digi-Key_PN" "445-7935-1-ND"
+			(at 138.43 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a9a52425-7ee0-4746-9801-895a0aba0622")
+		)
+		(pin "1"
+			(uuid "c581c153-7682-4699-9a50-4e992006724a")
+		)
+		(instances
+			(project "DingoPDM"
+				(path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f5cf2eb"
+					(reference "C42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5VP")
 		(at 57.15 68.58 0)
 		(unit 1)
@@ -5847,7 +6046,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 138.43 43.18 0)
+		(at 132.08 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5855,7 +6054,7 @@
 		(dnp no)
 		(uuid "c9b49754-9269-4ba6-af7e-7ce698b62c26")
 		(property "Reference" "#PWR0101"
-			(at 138.43 49.53 0)
+			(at 132.08 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5864,7 +6063,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 138.557 47.5742 0)
+			(at 132.207 47.5742 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5872,7 +6071,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 43.18 0)
+			(at 132.08 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5881,7 +6080,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 43.18 0)
+			(at 132.08 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5890,7 +6089,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 138.43 43.18 0)
+			(at 132.08 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
