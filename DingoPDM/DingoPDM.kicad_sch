@@ -5,9 +5,9 @@
 	(uuid "8948e307-9174-4227-9c28-3ff885e6e83d")
 	(paper "USLetter")
 	(title_block
-		(title "Dingo_PDM")
-		(date "2024-05-26")
-		(rev "v7.3")
+		(title "dingoPDM")
+		(date "2025-06-16")
+		(rev "v7.5")
 		(comment 3 "github.com/corygrant")
 		(comment 4 "Cory Grant")
 	)
@@ -726,7 +726,7 @@
 		)
 		(uuid "16eeb9be-3601-4dc0-922f-1b74a7490431")
 	)
-	(text "V7.4\n-Added schottky before VXO780x-500-M for reverse battery protection\n\nV7.3\n-Added power LED bridged jumper (cut trace to disable)\n-Added CAN standby connection to PC12\n-Added 5.1k resistors on USB-C CC pins to enable use of USB-C to USB-C cable\n-Increased M3 mounting hole size\n\nV7.2\n-Added schottky to VXO7805 output to prevent backfeed from USB\n-Can't use PB13 (STM32 VBUS issue), shifted pins over\n-Fixed USB VBUS resistor divider values\n\nV7.1\n-Fixed FRAM SCL/SDA backwards\n-Changed top copper fill from solid to thermal reliefs to make soldering easier\n-Added 2x status LEDs\n-Fixed silkscreen\n\nV7\n-Changed to STM32F446RET6\n-Added USB again, for DFU and easy settings change\n-Switched BTS724 to 2x BTS7008-2EPA\n-Added another op-amp for IS\n-Added boot selector again to enable DFU\n"
+	(text "V7.5 \n-Added 12V-5V DC-DC converter options\n-Add cap to 5V rail\n\nV7.4\n-Added schottky before VXO780x-500-M for reverse battery protection\n\nV7.3\n-Added power LED bridged jumper (cut trace to disable)\n-Added CAN standby connection to PC12\n-Added 5.1k resistors on USB-C CC pins to enable use of USB-C to USB-C cable\n-Increased M3 mounting hole size\n\nV7.2\n-Added schottky to VXO7805 output to prevent backfeed from USB\n-Can't use PB13 (STM32 VBUS issue), shifted pins over\n-Fixed USB VBUS resistor divider values\n\nV7.1\n-Fixed FRAM SCL/SDA backwards\n-Changed top copper fill from solid to thermal reliefs to make soldering easier\n-Added 2x status LEDs\n-Fixed silkscreen\n\nV7\n-Changed to STM32F446RET6\n-Added USB again, for DFU and easy settings change\n-Switched BTS724 to 2x BTS7008-2EPA\n-Added another op-amp for IS\n-Added boot selector again to enable DFU\n"
 		(exclude_from_sim no)
 		(at 69.85 196.215 0)
 		(effects

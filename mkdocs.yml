@@ -94,6 +94,7 @@ nav:
     - CAN: 'firmware/can.md'
     - LEDs: 'firmware/leds.md' 
     - Wipers: 'firmware/wipers.md'
+    - Keypad: 'firmware/keypad.md'
     - Configuration: 'firmware/configuration.md'
     - Variable Mapping: 'firmware/variablemap.md'
     - Errors: 'firmware/errors.md'

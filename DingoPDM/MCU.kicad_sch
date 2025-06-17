@@ -5,9 +5,9 @@
 	(uuid "6a36d07e-f020-42b1-b05b-cb2d3310ecd1")
 	(paper "USLetter")
 	(title_block
-		(title "Dingo_PDM")
-		(date "2024-05-26")
-		(rev "v7.3")
+		(title "dingoPDM")
+		(date "2025-06-16")
+		(rev "v7.5")
 		(comment 3 "github.com/corygrant")
 		(comment 4 "Cory Grant")
 	)
