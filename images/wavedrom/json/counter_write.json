@@ -1,0 +1,26 @@
+{"reg": 
+[
+  { "name": "Counter Message Command (40)",   bits: 8},
+  { "name": "Index",   bits: 8},
+  { "name": "Enable",   bits: 1 },
+  { "name": "Wrap",   bits: 1 },
+  {                 bits: 6, type:1},
+  { "name": "Increment Input",   bits: 8 },
+  { "name": "Decrement Input",   bits: 8 },
+  { "name": "Reset Input",   bits: 8 },
+  { "name": "Min Count",   bits: 4 },
+  { "name": "Max Count",   bits: 4 },
+  { "name": "Increment Edge",   bits: 2 },
+  { "name": "Decrement Edge",   bits: 2 },
+  { "name": "Reset Edge",   bits: 2 },
+  {                  bits: 2, type:1 }
+],
+config: {
+  lanes: 8, 
+  bits: 64, 
+  compact: true,
+  hflip:true,
+  vflip:false,
+  fontweight:"bold",
+  label: {right: ['0', '1','2','3','4','5','6','7']},}
+}
