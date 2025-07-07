@@ -5058,7 +5058,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100uF"
+		(property "Value" "47uF"
 			(at 124.46 42.926 0)
 			(effects
 				(font
@@ -5096,6 +5096,15 @@
 		)
 		(property "Digi-Key_PN" "445-7935-1-ND"
 			(at 132.08 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22388555"
+			(at 128.016 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5852,7 +5861,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100uF"
+		(property "Value" "47uF"
 			(at 141.986 42.672 0)
 			(effects
 				(font
@@ -5890,6 +5899,15 @@
 		)
 		(property "Digi-Key_PN" "445-7935-1-ND"
 			(at 138.43 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22388555"
+			(at 142.24 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
