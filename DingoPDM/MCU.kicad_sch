@@ -5618,7 +5618,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Crystals_Modify:Crystal_SMD_5032-2Pin_5.0x3.2mm_HandSoldering"
+		(property "Footprint" "dingoPDM:Crystal_SMD_5032-2Pin_5.0x3.2mm_HandSoldering"
 			(at 38.1 46.355 0)
 			(effects
 				(font
@@ -7173,7 +7173,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "digikey-footprints:SOT-23-3"
+		(property "Footprint" "dingoPDM:SOT-23-3"
 			(at 132.715 187.96 0)
 			(effects
 				(font
@@ -8052,7 +8052,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SlideSwitch:CJS-1200TB"
+		(property "Footprint" "dingoPDM:CJS-1200TB"
 			(at 69.85 31.115 0)
 			(effects
 				(font

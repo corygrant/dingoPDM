@@ -2190,7 +2190,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "DRTLogo:DRTLogo"
+		(property "Footprint" "dingoPDM:DRTLogo"
 			(at 252.73 157.48 0)
 			(effects
 				(font
@@ -2262,7 +2262,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "DRTLogo:DingoFaceNoFill"
+		(property "Footprint" "dingoPDM:DingoFaceNoFill"
 			(at 252.73 164.465 0)
 			(effects
 				(font

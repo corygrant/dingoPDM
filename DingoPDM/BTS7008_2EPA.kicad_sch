@@ -1494,7 +1494,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Profet:TDSO-14"
+		(property "Footprint" "dingoPDM:TDSO-14"
 			(at 118.11 85.09 0)
 			(effects
 				(font

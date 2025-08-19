@@ -3594,7 +3594,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "digikey-footprints:DO-214AB_TVS"
+		(property "Footprint" "dingoPDM:DO-214AB_TVS"
 			(at 35.56 38.1 0)
 			(effects
 				(font
@@ -3766,7 +3766,7 @@
 				)
 			)
 		)
-		(property "Footprint" "CUI_Regulators:VXO78x-500-M"
+		(property "Footprint" "dingoPDM:VXO78x-500-M"
 			(at 99.06 34.29 0)
 			(effects
 				(font
@@ -4161,7 +4161,7 @@
 				)
 			)
 		)
-		(property "Footprint" "digikey-footprints:SOT-223"
+		(property "Footprint" "dingoPDM:SOT-223"
 			(at 171.45 19.05 0)
 			(effects
 				(font
@@ -5219,7 +5219,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Converter_DCDC:Converter_DCDC_Murata_OKI-78SR_Horizontal"
+		(property "Footprint" "dingoPDM:Converter_DCDC_Murata_OKI-78SR_Horizontal"
 			(at 39.37 78.74 0)
 			(effects
 				(font
@@ -5796,7 +5796,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT"
+		(property "Footprint" "dingoPDM:Converter_DCDC_TRACO_TSR-1_THT"
 			(at 38.1 114.3 0)
 			(effects
 				(font

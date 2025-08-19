@@ -1,0 +1,135 @@
+(footprint "Converter_DCDC_Murata_OKI-78SR_Horizontal"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "https://power.murata.com/data/power/oki-78sr.pdf")
+	(tags "78sr3.3 78sr5 78sr9 78sr12 78srXX")
+	(property "Reference" "U14"
+		(at 0 -2.54 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "8bc1d5b8-853d-4460-8e0e-90df06be8ed6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "OKI-78SR-5_1.5-W36H-C"
+		(at 2.54 16.51 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b14fae85-e71c-432d-9a79-c263c8215427")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://power.murata.com/data/power/oki-78sr.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2ccc5647-dae6-486c-b477-204a34041298")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "1.5A Step-Down DC/DC-Regulator, 7-36V input, 5V fixed Output Voltage, LM78xx replacement, -40°C to +85°C, OKI-78SR_Horizontal"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7437d644-bf29-4c3b-b1db-2bbb4a224319")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -2.9 -1.52)
+		(end -2.9 15.48)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "06784a09-70a5-4b43-838a-dd8fcf3fcd04")
+	)
+	(fp_line
+		(start -2.9 15.48)
+		(end 8 15.48)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7c0a8170-0750-474e-a7b2-bbb158e7ade7")
+	)
+	(fp_line
+		(start 8 -1.52)
+		(end -2.9 -1.52)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4fc31b84-88ce-4140-93ca-f0f99eed3073")
+	)
+	(fp_line
+		(start 8 15.48)
+		(end 8 -1.52)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0a1e0823-906d-4ace-9782-6f09b532ab5f")
+	)
+	(pad "1" thru_hole rect
+		(at 0 0 180)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d2d3a4d2-d356-46dc-bf6b-d22c0bfd2170")
+	)
+	(pad "2" thru_hole circle
+		(at 2.54 0 180)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "64392369-fe4e-4ac0-990e-77550589326d")
+	)
+	(pad "3" thru_hole circle
+		(at 5.08 0 180)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c9ac1aae-5354-403a-834f-ee60d0b31aa0")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_Murata_OKI-78SR_Horizontal.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

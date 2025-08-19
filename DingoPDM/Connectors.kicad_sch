@@ -19,25 +19,23 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "J"
-				(at -10.16 19.05 0)
+			(property "Reference" "J5"
+				(at 0 21.9243 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "USB_C_Receptacle_USB2.0"
-				(at 19.05 19.05 0)
+				(at 0 19.5001 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4085"
 				(at 3.81 0 0)
 				(effects
 					(font
@@ -46,7 +44,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
+			(property "Datasheet" ""
 				(at 3.81 0 0)
 				(effects
 					(font
@@ -55,7 +53,16 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "USB 2.0-only Type-C Receptacle connector"
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Digi-Key_PN" "2073-USB4085-GF-ACT-ND"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4890,7 +4897,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "RedCube:M6_Hole_8Pin_7461084"
+		(property "Footprint" "dingoPDM:M6_Hole_8Pin_7461084"
 			(at 22.86 31.75 0)
 			(effects
 				(font
@@ -5408,7 +5415,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Deutsch_DT:DT15-12PA"
+		(property "Footprint" "dingoPDM:DT15-12PA"
 			(at 106.68 56.515 0)
 			(effects
 				(font
@@ -5837,7 +5844,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "RedCube:M6_Hole_8Pin_7461084"
+		(property "Footprint" "dingoPDM:M6_Hole_8Pin_7461084"
 			(at 31.75 34.29 0)
 			(effects
 				(font

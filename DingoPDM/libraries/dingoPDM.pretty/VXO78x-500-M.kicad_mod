@@ -1,0 +1,115 @@
+(footprint "VXO78x-500-M"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "U1"
+		(at -1.65 -7.8 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "15258345-feea-44ba-aa4d-8fdade61afcc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "VXO7805-500-M"
+		(at 0.2 8.5 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a3bd0bed-0e11-486b-93d8-671e782bafe3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "100d9129-d80d-437d-becf-d605b0d791dd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "beab49eb-eb4c-4e8c-896b-155c8411aabf")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Digi-Key_PN" "102-VXO7805-500-M-CT-ND"
+		(at -67.564 18.034 90)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fc0637cf-51fb-49c5-bddb-234800d50978")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" ""
+		(at -67.564 18.034 90)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ad600bfb-1814-4d11-bafd-5698cdaab159")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(pad "1" smd rect
+		(at -5.5 -6)
+		(size 2.5 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9500e5cd-fe2f-4279-a420-e3fb50e9897c")
+	)
+	(pad "2" smd rect
+		(at 5.5 -6)
+		(size 2.5 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "885c7fc3-de8a-4a1a-b656-f42bd52041bf")
+	)
+	(pad "3" smd rect
+		(at 5.5 6)
+		(size 2.5 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b0c5310f-adb6-4e76-a01c-d0982fc57c88")
+	)
+	(pad "4" smd rect
+		(at -5.5 6)
+		(size 2.5 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f5ed0e21-8757-4db1-9d48-801566a75862")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Models/CUI_VXO7805-500-M.step"
+		(offset
+			(xyz -6.2484 -6.69798 0.9906)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
