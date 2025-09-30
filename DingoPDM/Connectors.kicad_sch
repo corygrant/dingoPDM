@@ -4933,7 +4933,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C6828431"
 			(at 22.86 31.75 0)
 			(effects
 				(font
@@ -5442,7 +5442,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C5341788"
 			(at 106.68 56.515 0)
 			(effects
 				(font
@@ -5880,7 +5880,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C6828431"
 			(at 31.75 34.29 0)
 			(effects
 				(font
@@ -6242,6 +6242,15 @@
 			)
 		)
 		(property "Digi-Key_PN" "2073-USB4085-GF-ACT-ND"
+			(at 31.115 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C7095263"
 			(at 31.115 153.67 0)
 			(effects
 				(font

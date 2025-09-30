@@ -3110,7 +3110,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C6828431"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3224,7 +3224,7 @@
 			(remove_unused_layers no)
 			(net 5 "+12V")
 			(pintype "bidirectional")
-			(uuid "2a3403b9-b60d-4e40-88a2-d775c47c5c89")
+			(uuid "81bc71a6-d967-4bca-b7b6-f26e1aa19813")
 		)
 		(pad "1" thru_hole circle
 			(at -1.27 -3.81)
@@ -3234,7 +3234,7 @@
 			(remove_unused_layers no)
 			(net 5 "+12V")
 			(pintype "bidirectional")
-			(uuid "2a3403b9-b60d-4e40-88a2-d775c47c5c89")
+			(uuid "df6e424c-ab84-474c-be8d-20ff9e511a29")
 		)
 		(pad "1" thru_hole circle
 			(at -1.27 3.81)
@@ -3244,7 +3244,7 @@
 			(remove_unused_layers no)
 			(net 5 "+12V")
 			(pintype "bidirectional")
-			(uuid "2a3403b9-b60d-4e40-88a2-d775c47c5c89")
+			(uuid "7091734f-9ee8-4727-92bf-f69f64b216bb")
 		)
 		(pad "1" thru_hole circle
 			(at 1.27 -3.81)
@@ -3254,7 +3254,7 @@
 			(remove_unused_layers no)
 			(net 5 "+12V")
 			(pintype "bidirectional")
-			(uuid "2a3403b9-b60d-4e40-88a2-d775c47c5c89")
+			(uuid "b09ef761-1d97-4618-ad47-770d7b4369d7")
 		)
 		(pad "1" thru_hole circle
 			(at 1.27 3.81)
@@ -3264,7 +3264,7 @@
 			(remove_unused_layers no)
 			(net 5 "+12V")
 			(pintype "bidirectional")
-			(uuid "2a3403b9-b60d-4e40-88a2-d775c47c5c89")
+			(uuid "ed9e0e5a-83a5-49dc-8428-dada6b7fff6b")
 		)
 		(pad "1" thru_hole circle
 			(at 3.81 -3.81)
@@ -3274,7 +3274,7 @@
 			(remove_unused_layers no)
 			(net 5 "+12V")
 			(pintype "bidirectional")
-			(uuid "2a3403b9-b60d-4e40-88a2-d775c47c5c89")
+			(uuid "73ec78ae-4dca-4cf0-ab6f-f3e02f31339d")
 		)
 		(pad "1" thru_hole circle
 			(at 3.81 3.81)
@@ -3284,7 +3284,7 @@
 			(remove_unused_layers no)
 			(net 5 "+12V")
 			(pintype "bidirectional")
-			(uuid "2a3403b9-b60d-4e40-88a2-d775c47c5c89")
+			(uuid "0b796a5b-79d4-41e3-a182-ea083a8499cb")
 		)
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/Models/7461084_Download_STP_7461084_rev1.stp"
@@ -10079,7 +10079,7 @@
 				)
 			)
 		)
-		(property "Digi-Key_PN" "BTS70021EPPXUMA1CT-ND"
+		(property "Digi-Key_PN" "BTS70082EPAXUMA1CT-ND"
 			(at 1.778 23.622 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10091,7 +10091,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C534824"
+		(property "LCSC" "C2150060"
 			(at 1.778 23.622 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11266,7 +11266,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C5341788"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11580,7 +11580,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C5137464"
 			(at -67.564 18.034 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18228,7 +18228,7 @@
 				)
 			)
 		)
-		(property "Digi-Key_PN" "BTS70021EPPXUMA1CT-ND"
+		(property "Digi-Key_PN" "BTS70082EPAXUMA1CT-ND"
 			(at 1.778 23.622 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -18240,7 +18240,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C534824"
+		(property "LCSC" "C2150060"
 			(at 1.778 23.622 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -19138,6 +19138,19 @@
 				)
 			)
 		)
+		(property "LCSC" "C7095263"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f0d65d5c-f357-4da1-95e4-d44a54ec35f1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "USB*C*Receptacle*")
 		(path "/00000000-0000-0000-0000-00005f5b308f/ae662588-96ef-4236-9453-cbd4f6dc0355")
 		(sheetname "/Connectors/")
@@ -19791,7 +19804,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21016,7 +21029,7 @@
 				)
 			)
 		)
-		(property "Digi-Key_PN" "BTS70021EPPXUMA1CT-ND"
+		(property "Digi-Key_PN" "BTS70082EPAXUMA1CT-ND"
 			(at 1.778 23.622 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -21028,7 +21041,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C534824"
+		(property "LCSC" "C2150060"
 			(at 1.778 23.622 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -22901,6 +22914,32 @@
 				)
 			)
 		)
+		(property "Digi-Key_PN" "1951-2747-ND"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "405dfb05-525e-447f-baff-a7b7dd8e4eb0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C6886877"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0bb3f7e1-8236-4d9c-b4d1-205ca30c5427")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Converter*DCDC*TRACO*TSR?1*")
 		(path "/00000000-0000-0000-0000-00005f5cf2eb/7b604c33-fc78-4a76-9974-60eebbb67684")
 		(sheetname "/Power/")
@@ -23618,7 +23657,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27340,6 +27379,32 @@
 				)
 			)
 		)
+		(property "Digi-Key_PN" "811-2692-ND"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ed9d1de4-6603-43f5-90b8-49493f06814c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C266374"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d496d6ce-b0d8-4403-9551-44b364710047")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Converter*DCDC*Murata*OKI*78SR*Horizontal*")
 		(path "/00000000-0000-0000-0000-00005f5cf2eb/15ad5777-d7f9-42b6-8e79-438f5d1f6f32")
 		(sheetname "/Power/")
@@ -28210,7 +28275,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -31203,7 +31268,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -32143,7 +32208,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -33696,7 +33761,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
@@ -33726,6 +33791,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ea98402e-f8c0-4302-abb0-08ea71a2564b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C22388555"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "23cadde9-653e-41ba-bfe5-9aa0f6b4efe6")
 			(effects
 				(font
 					(size 1 1)
@@ -33908,7 +33986,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
@@ -33938,6 +34016,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7636c8e6-ab81-46ba-a4ba-4081995b825e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C22388555"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9e6e83cf-cc4e-4cdc-b0f1-5b553ebda52e")
 			(effects
 				(font
 					(size 1 1)
@@ -35882,7 +35973,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C6828431"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -35996,7 +36087,7 @@
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pintype "bidirectional")
-			(uuid "753a77f6-66ab-411e-a2c9-eb9aeb82e0a7")
+			(uuid "3fcd0a13-ef7a-436d-9c62-40f88e993c25")
 		)
 		(pad "1" thru_hole circle
 			(at -1.27 -3.81)
@@ -36006,7 +36097,7 @@
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pintype "bidirectional")
-			(uuid "753a77f6-66ab-411e-a2c9-eb9aeb82e0a7")
+			(uuid "07c43c14-f2fe-40cd-8590-28fa736f7e08")
 		)
 		(pad "1" thru_hole circle
 			(at -1.27 3.81)
@@ -36016,7 +36107,7 @@
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pintype "bidirectional")
-			(uuid "753a77f6-66ab-411e-a2c9-eb9aeb82e0a7")
+			(uuid "8de6f2e5-9a3f-44f4-9171-c58cfcb5ddcc")
 		)
 		(pad "1" thru_hole circle
 			(at 1.27 -3.81)
@@ -36026,7 +36117,7 @@
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pintype "bidirectional")
-			(uuid "753a77f6-66ab-411e-a2c9-eb9aeb82e0a7")
+			(uuid "448e9f62-6617-4c93-be7d-1c9fccaf4200")
 		)
 		(pad "1" thru_hole circle
 			(at 1.27 3.81)
@@ -36036,7 +36127,7 @@
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pintype "bidirectional")
-			(uuid "753a77f6-66ab-411e-a2c9-eb9aeb82e0a7")
+			(uuid "52527dbb-6268-49d2-8048-430144defa5e")
 		)
 		(pad "1" thru_hole circle
 			(at 3.81 -3.81)
@@ -36046,7 +36137,7 @@
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pintype "bidirectional")
-			(uuid "753a77f6-66ab-411e-a2c9-eb9aeb82e0a7")
+			(uuid "cf51eb12-f330-4228-bfe9-965ee7b18a0f")
 		)
 		(pad "1" thru_hole circle
 			(at 3.81 3.81)
@@ -36056,7 +36147,7 @@
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pintype "bidirectional")
-			(uuid "753a77f6-66ab-411e-a2c9-eb9aeb82e0a7")
+			(uuid "51c8a5fb-493e-40f8-94dc-0cf4a57f0ed6")
 		)
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/Models/7461084_Download_STP_7461084_rev1.stp"

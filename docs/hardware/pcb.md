@@ -59,7 +59,7 @@ dingoPDM-Max = 4 outputs (high current)
 
 ## MCU Pinouts
 
-# dingoPDM
+### dingoPDM
 
 | MCU Pin | Function                      | Type           |
 | ---     | ----------------------------- | -------------- |
@@ -114,7 +114,7 @@ dingoPDM-Max = 4 outputs (high current)
 | `PH0`   | Oscillator                    |                |
 | `PH1`   | Oscillator                    |                |
 
-# dingoPDM-Max
+### dingoPDM-Max
 
 | MCU Pin | Function                      | Type           |
 | ---     | ----------------------------- | -------------- |
@@ -168,3 +168,9 @@ dingoPDM-Max = 4 outputs (high current)
 | `PD2`   | -                             | -              |
 | `PH0`   | Oscillator                    |                |
 | `PH1`   | Oscillator                    |                |
+
+## BOMs
+
+[dingoPDM BOM](../bom/dingoPDM/ibom.html)
+
+[dingoPDM-Max BOM](../bom/dingoPDM-Max/ibom.html)
