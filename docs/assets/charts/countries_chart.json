@@ -24,7 +24,9 @@
               {"id": 392, "country": "Japan"},
               {"id": 659, "country": "Saint Kitts and Nevis"},
               {"id": 48, "country": "Bahrain"},
-              {"id": 380, "country": "Italy"}
+              {"id": 380, "country": "Italy"},
+              {"id": 246, "country": "Finland"},
+              {"id": 208, "country": "Denmark"}
             ]
           },
           "key": "id",

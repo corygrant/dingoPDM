@@ -26,7 +26,11 @@
               {"id": 8, "state": "Colorado", "highlight": "normal"},
               {"id": 53, "state": "Washington", "highlight": "normal"},
               {"id": 6, "state": "California", "highlight": "normal"},
-              {"id": 40, "state": "Oklahoma", "highlight": "normal"}
+              {"id": 40, "state": "Oklahoma", "highlight": "normal"},
+              {"id": 34, "state": "New Jersey", "highlight": "normal"},
+              {"id": 24, "state": "Maryland", "highlight": "normal"},
+              {"id": 39, "state": "Ohio", "highlight": "normal"},
+              {"id": 21, "state": "Kentucky", "highlight": "normal"}
             ]
           },
           "key": "id",
