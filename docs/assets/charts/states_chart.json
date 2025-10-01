@@ -17,6 +17,7 @@
             "values": [
               {"id": 51, "state": "Virginia", "highlight": "special"},
               {"id": 37, "state": "North Carolina", "highlight": "normal"},
+              {"id": 45, "state": "South Carolina", "highlight": "normal"},
               {"id": 36, "state": "New York", "highlight": "normal"},
               {"id": 4, "state": "Arizona", "highlight": "normal"},
               {"id": 32, "state": "Nevada", "highlight": "normal"},
