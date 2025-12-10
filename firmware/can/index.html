@@ -1,0 +1,4512 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://corygrant.github.io/dingoPDM/firmware/can/">
+      
+      
+        <link rel="prev" href="../design/">
+      
+      
+        <link rel="next" href="../leds/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>CAN - dingoPDM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dbc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="dingoPDM" class="md-header__button md-logo" aria-label="dingoPDM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            dingoPDM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CAN
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="lime" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="lime" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/corygrant/dingoPDM" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    corygrant/dingoPDM
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gettingstarted/introduction/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../hardware/pcb/" class="md-tabs__link">
+          
+  
+  
+  Hardware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introduction/" class="md-tabs__link">
+          
+  
+  
+  Firmware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../software/introduction/" class="md-tabs__link">
+          
+  
+  
+  Software
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="dingoPDM" class="md-nav__button md-logo" aria-label="dingoPDM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    dingoPDM
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/corygrant/dingoPDM" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    corygrant/dingoPDM
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1">
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gettingstarted/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/pcb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/connections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/case/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Case
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/thermal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thermal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firmware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Firmware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAN
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DBC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-pwm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output PWM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wiper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiper
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wiper-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiper Speed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wiper-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiper Delay
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flasher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flasher
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starter-disable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starter Disable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAN Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-input-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAN Input ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Counter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keypad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keypad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keypad-leds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keypad LEDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keypad-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keypad Buttons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keypad-button-leds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keypad Button LEDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keypad-dials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keypad Dials
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sleep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sleep
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bootloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bootloader
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#burn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Burn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wake-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wake Up
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Messages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LEDs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wipers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wipers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keypad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keypad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variablemap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variable Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Errors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sleep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sleep
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/toolbar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ToolBar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/devicetree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DeviceTree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/messagelist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MessageList
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/dingopdm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dingoPDM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/canboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CANBoard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/msglog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CANMsgLog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>CAN</h1>
+
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To reduce complexity, USB uses the same message format as CAN</p>
+<p>dingoPDM sends the same messages over CAN and USB </p>
+<p>dingoPDM can also receive the same settings change messages over USB</p>
+<p>There is no difference in message formatting between CAN and USB</p>
+</div>
+<h2 id="dbc">DBC</h2>
+<p>DBC files can be found in the firmware repo <a href="https://github.com/corygrant/DingoPDM_FW/tree/master/dbc">here</a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>DBC files are built using the python dbc_builder in the <code>dbc_builder</code> folder</p>
+</div>
+<h2 id="input">Input</h2>
+<p>CAN input format is not restricted or defined by the firmware. </p>
+<p>The handling of CAN inputs is defined by the user using DingoConfigurator. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<div class="language-text highlight"><pre><span></span><code>If timeout is enabled, CAN messages must be received at least every timeout interval or the input will be set to 0
+</code></pre></div>
+</div>
+<ul>
+<li><em>ID</em>:<ul>
+<li>CAN ID of the message to evaluate </li>
+<li>11-bit standard IDs and 29-bit extended IDs are valid</li>
+</ul>
+</li>
+<li><em>Start Byte</em>:<ul>
+<li>First byte of the message to evaluate</li>
+</ul>
+</li>
+<li><em># Bytes</em>:<ul>
+<li>1 or 2 bytes</li>
+<li>Number of bytes to evaluate</li>
+</ul>
+</li>
+<li><em>Operator</em>:<ul>
+<li><code>Equal</code>:<ul>
+<li>Result = Byte value(s) == Arg</li>
+</ul>
+</li>
+<li><code>Not Equal</code>:<ul>
+<li>Result = Byte value(s) != Arg</li>
+</ul>
+</li>
+<li><code>Greater Than</code>:<ul>
+<li>Result = Byte value(s) &gt; Arg</li>
+</ul>
+</li>
+<li><code>Less Than</code><ul>
+<li>Result = Byte value(s) &lt; Arg</li>
+</ul>
+</li>
+<li><code>Greater Than or Equal</code>:<ul>
+<li>Result = Byte value(s) &gt;= Arg</li>
+</ul>
+</li>
+<li><code>Less Than or Equal</code><ul>
+<li>Result = Byte value(s) &lt;= Arg</li>
+</ul>
+</li>
+<li><code>BitwiseAnd</code><ul>
+<li>Result = Byte value(s) &amp; Arg</li>
+</ul>
+</li>
+<li><code>BitwiseNand</code><ul>
+<li>Result = !(Byte value(s) &amp; Arg)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Mode</em>:<ul>
+<li><code>Momentary</code><ul>
+<li>Result true when message solves to true</li>
+</ul>
+</li>
+<li><code>Latching</code><ul>
+<li>Result transitions between true/false when message solves to true</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Timeout</em>:<ul>
+<li><code>Enable</code><ul>
+<li>When enabled, messages must be received before the timeout expires</li>
+<li>If the timeout expires, the result will be false</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="input-examples">Input Examples</h2>
+<ul>
+<li>
+<p>Blink Marine Button 1 (Message 405, byte 0, bit 0)</p>
+<ul>
+<li>ID = 405</li>
+<li>Start Byte = 0</li>
+<li>Num Bytes = 1</li>
+<li>Operator = BitwiseAnd</li>
+<li>Arg = 1</li>
+<li>Mode = Latching or Momentary</li>
+</ul>
+</li>
+<li>
+<p>CANBoard Rotary Switch 4 at Position 2, Base ID 0x640 (Message 1602, byte 1 (high nibble))</p>
+<ul>
+<li>ID = 1600</li>
+<li>Start Byte = 1</li>
+<li>Num Bytes = 1</li>
+<li>Operator = Equal</li>
+<li>Arg = 32 = (2 &lt;&lt; 4)</li>
+<li>Mode = Momentary</li>
+</ul>
+</li>
+<li>
+<p>CANBoard Analog In 2 &gt; 500mV, Base ID 0x650 (Message 1616, byte 2-3)</p>
+<ul>
+<li>ID = 1616</li>
+<li>Start Byte = 2</li>
+<li>Num Bytes = 2</li>
+<li>Operator = GreaterThan</li>
+<li>Arg = 500</li>
+<li>Mode = Momentary</li>
+</ul>
+</li>
+</ul>
+<h2 id="output">Output</h2>
+<p>dingoPDM sends output, input and device information over CAN (and/or USB) cyclically. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Default output transmit is every 100ms (10Hz)</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The output format is under development and subject to change</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Messages not marked as always sent are only sent when their contents are enabled</p>
+</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Always Sent</th>
+<th style="text-align: center;">CAN ID</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img alt="🟩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e9.svg" title=":green_square:"></td>
+<td style="text-align: center;">Base ID + 0</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">DI</td>
+<td style="text-align: center;">DS</td>
+<td style="text-align: center;">TC</td>
+<td style="text-align: center;">TC</td>
+<td style="text-align: center;">BV</td>
+<td style="text-align: center;">BV</td>
+<td style="text-align: center;">BT</td>
+<td style="text-align: center;">BT</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img alt="🟩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e9.svg" title=":green_square:"></td>
+<td style="text-align: center;">Base ID + 1</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">OC1</td>
+<td style="text-align: center;">OC1</td>
+<td style="text-align: center;">OC2</td>
+<td style="text-align: center;">OC2</td>
+<td style="text-align: center;">OC3</td>
+<td style="text-align: center;">OC3</td>
+<td style="text-align: center;">OC4</td>
+<td style="text-align: center;">OC4</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img alt="🟩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e9.svg" title=":green_square:"></td>
+<td style="text-align: center;">Base ID + 2</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">OC5</td>
+<td style="text-align: center;">OC5</td>
+<td style="text-align: center;">OC6</td>
+<td style="text-align: center;">OC6</td>
+<td style="text-align: center;">OC7</td>
+<td style="text-align: center;">OC7</td>
+<td style="text-align: center;">OC8</td>
+<td style="text-align: center;">OC8</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img alt="🟩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e9.svg" title=":green_square:"></td>
+<td style="text-align: center;">Base ID + 3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">OS12</td>
+<td style="text-align: center;">OS34</td>
+<td style="text-align: center;">OS56</td>
+<td style="text-align: center;">OS78</td>
+<td style="text-align: center;">WO</td>
+<td style="text-align: center;">WSS</td>
+<td style="text-align: center;">FIO</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img alt="🟩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f7e9.svg" title=":green_square:"></td>
+<td style="text-align: center;">Base ID + 4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">OR1</td>
+<td style="text-align: center;">OR2</td>
+<td style="text-align: center;">OR3</td>
+<td style="text-align: center;">OR4</td>
+<td style="text-align: center;">OR5</td>
+<td style="text-align: center;">OR6</td>
+<td style="text-align: center;">OR7</td>
+<td style="text-align: center;">OR8</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 5</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">CI</td>
+<td style="text-align: center;">CI</td>
+<td style="text-align: center;">CI</td>
+<td style="text-align: center;">CI</td>
+<td style="text-align: center;">VI</td>
+<td style="text-align: center;">VI</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 6</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">CNT1</td>
+<td style="text-align: center;">CNT2</td>
+<td style="text-align: center;">CNT3</td>
+<td style="text-align: center;">CNT4</td>
+<td style="text-align: center;">CON</td>
+<td style="text-align: center;">CON</td>
+<td style="text-align: center;">CON</td>
+<td style="text-align: center;">CON</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">CIV1</td>
+<td style="text-align: center;">CIV1</td>
+<td style="text-align: center;">CIV2</td>
+<td style="text-align: center;">CIV2</td>
+<td style="text-align: center;">CIV3</td>
+<td style="text-align: center;">CIV3</td>
+<td style="text-align: center;">CIV4</td>
+<td style="text-align: center;">CIV4</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 8</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">CIV5</td>
+<td style="text-align: center;">CIV5</td>
+<td style="text-align: center;">CIV6</td>
+<td style="text-align: center;">CIV6</td>
+<td style="text-align: center;">CIV7</td>
+<td style="text-align: center;">CIV7</td>
+<td style="text-align: center;">CIV8</td>
+<td style="text-align: center;">CIV8</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 9</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">CIV9</td>
+<td style="text-align: center;">CIV9</td>
+<td style="text-align: center;">CIV10</td>
+<td style="text-align: center;">CIV10</td>
+<td style="text-align: center;">CIV11</td>
+<td style="text-align: center;">CIV11</td>
+<td style="text-align: center;">CIV12</td>
+<td style="text-align: center;">CIV12</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 10</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">CIV13</td>
+<td style="text-align: center;">CIV13</td>
+<td style="text-align: center;">CIV14</td>
+<td style="text-align: center;">CIV14</td>
+<td style="text-align: center;">CIV15</td>
+<td style="text-align: center;">CIV15</td>
+<td style="text-align: center;">CIV16</td>
+<td style="text-align: center;">CIV16</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 11</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">CIV17</td>
+<td style="text-align: center;">CIV17</td>
+<td style="text-align: center;">CIV18</td>
+<td style="text-align: center;">CIV18</td>
+<td style="text-align: center;">CIV19</td>
+<td style="text-align: center;">CIV19</td>
+<td style="text-align: center;">CIV20</td>
+<td style="text-align: center;">CIV20</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 12</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">CIV21</td>
+<td style="text-align: center;">CIV21</td>
+<td style="text-align: center;">CIV22</td>
+<td style="text-align: center;">CIV22</td>
+<td style="text-align: center;">CIV23</td>
+<td style="text-align: center;">CIV23</td>
+<td style="text-align: center;">CIV24</td>
+<td style="text-align: center;">CIV24</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 13</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">CIV25</td>
+<td style="text-align: center;">CIV25</td>
+<td style="text-align: center;">CIV26</td>
+<td style="text-align: center;">CIV26</td>
+<td style="text-align: center;">CIV27</td>
+<td style="text-align: center;">CIV27</td>
+<td style="text-align: center;">CIV28</td>
+<td style="text-align: center;">CIV28</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 14</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">CIV29</td>
+<td style="text-align: center;">CIV29</td>
+<td style="text-align: center;">CIV30</td>
+<td style="text-align: center;">CIV30</td>
+<td style="text-align: center;">CIV31</td>
+<td style="text-align: center;">CIV31</td>
+<td style="text-align: center;">CIV32</td>
+<td style="text-align: center;">CIV32</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 15</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">ODC1</td>
+<td style="text-align: center;">ODC2</td>
+<td style="text-align: center;">ODC3</td>
+<td style="text-align: center;">ODC4</td>
+<td style="text-align: center;">ODC5</td>
+<td style="text-align: center;">ODC6</td>
+<td style="text-align: center;">ODC7</td>
+<td style="text-align: center;">ODC8</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 16</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">K1B1</td>
+<td style="text-align: center;">K1B2</td>
+<td style="text-align: center;">K1B3</td>
+<td style="text-align: center;">K2B1</td>
+<td style="text-align: center;">K2B2</td>
+<td style="text-align: center;">K2B3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 17</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">K1D1</td>
+<td style="text-align: center;">K1D1</td>
+<td style="text-align: center;">K1D2</td>
+<td style="text-align: center;">K1D2</td>
+<td style="text-align: center;">K1D3</td>
+<td style="text-align: center;">K1D3</td>
+<td style="text-align: center;">K1D4</td>
+<td style="text-align: center;">K1D4</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Base ID + 18</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">K2D1</td>
+<td style="text-align: center;">K2D1</td>
+<td style="text-align: center;">K2D2</td>
+<td style="text-align: center;">K2D2</td>
+<td style="text-align: center;">K2D3</td>
+<td style="text-align: center;">K2D3</td>
+<td style="text-align: center;">K2D4</td>
+<td style="text-align: center;">K2D4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>Base ID + 0</em><ul>
+<li><code>DI</code> - Digital Inputs<ul>
+<li>Bit 0 - Input 1</li>
+<li>Bit 1 - Input 2</li>
+</ul>
+</li>
+<li><code>DS</code> - Device State<ul>
+<li>Bits 0 to 3<ul>
+<li>Device State<ul>
+<li>0 = <code>Run</code></li>
+<li>1 = <code>Sleep</code></li>
+<li>2 = <code>Overtemp</code></li>
+<li>3 = <code>Error</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Bits 4 to 7<ul>
+<li>PDM Type<ul>
+<li>0 = dingoPDM</li>
+<li>1 = dingoPDM-Max</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>TC</code> - Total Current (Amps * 10)<ul>
+<li>2 bytes</li>
+</ul>
+</li>
+<li><code>BV</code> - Battery Voltage (V * 10)<ul>
+<li>2 bytes</li>
+</ul>
+</li>
+<li><code>BT</code> - Board Temperature (deg C * 10)<ul>
+<li>2 bytes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Base ID + 1</em><ul>
+<li><code>OC1</code> to <code>OC4</code> - Output n Current (Amps * 10)<ul>
+<li>2 bytes each</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Base ID + 2</em><ul>
+<li><code>OC5</code> to <code>OC8</code> - Output n Current (Amps * 10)<ul>
+<li>2 bytes each</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Base ID + 3</em><ul>
+<li><code>OSxy</code> - Output States x/y<ul>
+<li>Bits 0 to 3 - State x</li>
+<li>Bits 4 to 8 - State y<ul>
+<li>0 = <code>Off</code></li>
+<li>1 = <code>On</code></li>
+<li>2 = <code>Overcurrent</code></li>
+<li>3 = <code>Fault</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>WO</code> - Wiper Outputs<ul>
+<li>Bit 0 - Wiper Slow Speed Output</li>
+<li>Bit 1 - Wiper Fast Speed Output</li>
+</ul>
+</li>
+<li><code>WSS</code> - Wiper State and Speed<ul>
+<li>Bits 0 to 3 - Wiper Speed<ul>
+<li>0 = <code>Park</code></li>
+<li>1 = <code>Slow</code></li>
+<li>2 = <code>Fast</code></li>
+<li>3 = <code>Intermittent Speed 1</code></li>
+<li>4 = <code>Intermittent Speed 2</code></li>
+<li>5 = <code>Intermittent Speed 3</code></li>
+<li>6 = <code>Intermittent Speed 4</code></li>
+<li>7 = <code>Intermittent Speed 5</code></li>
+<li>8 = <code>Intermittent Speed 6</code></li>
+</ul>
+</li>
+<li>Bits 4 to 8 - Wiper State<ul>
+<li>0 = <code>Parked</code></li>
+<li>1 = <code>Parking</code></li>
+<li>2 = <code>Slow</code></li>
+<li>3 = <code>Fast</code></li>
+<li>4 = <code>Intermittent Pause</code></li>
+<li>5 = <code>Intermittent On</code></li>
+<li>6 = <code>Wash</code></li>
+<li>7 = <code>Swipe</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>FIO</code> - Flasher Inputs/Outputs<ul>
+<li>Bit 0 - Out 1</li>
+<li>Bit 1 - Out 2</li>
+<li>Bit 2 - Out 3</li>
+<li>Bit 3 - Out 4</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Base ID + 4</em><ul>
+<li><code>OR1</code> to <code>OR8</code> - Output n Reset Count</li>
+</ul>
+</li>
+<li><em>Base ID + 5</em><ul>
+<li><code>CI</code> - CAN Input Results<ul>
+<li>Byte 0 - Inputs 1 to 8</li>
+<li>Byte 1 - Inputs 9 to 16</li>
+<li>Byte 2 - Inputs 17 to 24</li>
+<li>Byte 3 - Inputs 25 to 32</li>
+</ul>
+</li>
+<li><code>VI</code> - Virtual Input Results<ul>
+<li>Byte 4 - Inputs 1 to 8</li>
+<li>Byte 5 - Inputs 9 to 16</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Base ID + 6</em><ul>
+<li><code>CNT1</code> to <code>CNT4</code> - Counter Values</li>
+<li><code>CON</code> - Condition Results<ul>
+<li>Byte 4 - Conditions 0 to 8</li>
+<li>Byte 5 - Conditions 9 to 16</li>
+<li>Byte 6 - Conditions 17 to 24</li>
+<li>Byte 7 - Conditions 25 to 32</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Base ID + 7</em> TO <em>Base ID + 14</em><ul>
+<li><code>CIV1</code> to <code>CIV32</code> - CAN Input Values<ul>
+<li>2 bytes each</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Base ID + 15</em><ul>
+<li><code>ODC1</code> to <code>ODC8</code> - Output Duty Cycle (%)</li>
+</ul>
+</li>
+<li><em>Base ID + 16</em><ul>
+<li><code>K1B1</code> - Keypad 1 Buttons 1-8</li>
+<li><code>K1B2</code> - Keypad 1 Buttons 9-16</li>
+<li><code>K1B3</code> - Keypad 1 Buttons 17-20</li>
+<li><code>K2B1</code> - Keypad 2 Buttons 1-8</li>
+<li><code>K2B2</code> - Keypad 2 Buttons 9-16</li>
+<li><code>K2B3</code> - Keypad 2 Buttons 17-20</li>
+</ul>
+</li>
+<li><em>Base ID + 17</em><ul>
+<li><code>K1D1</code> - Keypad 1 Dial 1 Ticks</li>
+<li><code>K1D2</code> - Keypad 1 Dial 2 Ticks</li>
+<li><code>K1D3</code> - Keypad 1 Dial 3 Ticks</li>
+<li><code>K1D4</code> - Keypad 1 Dial 4 Ticks</li>
+</ul>
+</li>
+<li><em>Base ID + 18</em><ul>
+<li><code>K2D1</code> - Keypad 2 Dial 1 Ticks</li>
+<li><code>K2D2</code> - Keypad 2 Dial 2 Ticks</li>
+<li><code>K2D3</code> - Keypad 2 Dial 3 Ticks</li>
+<li><code>K2D4</code> - Keypad 2 Dial 4 Ticks</li>
+</ul>
+</li>
+</ul>
+<h2 id="settings">Settings</h2>
+<p>To change configuration settings on the PDM, settings messages must be sent over CAN (or USB). </p>
+<p>These settings messages have a prefix that is sent in the first byte of the message. </p>
+<p>They must also be sent with a special CAN message ID, Base ID - 1</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only messages with the ID = Base ID - 1 will be evaluated for settings changes</p>
+</div>
+<p>For every valid settings message, a response message will be sent back. </p>
+<p>The response message will be the prefix + 128 and will respond on ID = Base ID + 30</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: center;">Prefix</th>
+<th style="text-align: center;">Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#can"><code>CAN</code></a></td>
+<td style="text-align: center;"><strong><em>1</em></strong></td>
+<td style="text-align: center;"><strong><em>129</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#input"><code>Inputs</code></a></td>
+<td style="text-align: center;"><strong><em>5</em></strong></td>
+<td style="text-align: center;"><strong><em>133</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#output"><code>Outputs</code></a></td>
+<td style="text-align: center;"><strong><em>10</em></strong></td>
+<td style="text-align: center;"><strong><em>138</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#output-pwm"><code>Outputs PWM</code></a></td>
+<td style="text-align: center;"><strong><em>11</em></strong></td>
+<td style="text-align: center;"><strong><em>139</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#virtual-input"><code>Virtual Inputs</code></a></td>
+<td style="text-align: center;"><strong><em>15</em></strong></td>
+<td style="text-align: center;"><strong><em>143</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#wiper"><code>Wiper</code></a></td>
+<td style="text-align: center;"><strong><em>20</em></strong></td>
+<td style="text-align: center;"><strong><em>148</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#wiper-speed"><code>Wiper Speed</code></a></td>
+<td style="text-align: center;"><strong><em>21</em></strong></td>
+<td style="text-align: center;"><strong><em>149</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#wiper-delay"><code>Wiper Delays</code></a></td>
+<td style="text-align: center;"><strong><em>22</em></strong></td>
+<td style="text-align: center;"><strong><em>150</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#flasher"><code>Flashers</code></a></td>
+<td style="text-align: center;"><strong><em>25</em></strong></td>
+<td style="text-align: center;"><strong><em>153</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#starter-disable"><code>Starter Disable</code></a></td>
+<td style="text-align: center;"><strong><em>30</em></strong></td>
+<td style="text-align: center;"><strong><em>158</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#can-input"><code>CAN Inputs</code></a></td>
+<td style="text-align: center;"><strong><em>35</em></strong></td>
+<td style="text-align: center;"><strong><em>163</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#can-input-id"><code>CAN Inputs IDs</code></a></td>
+<td style="text-align: center;"><strong><em>36</em></strong></td>
+<td style="text-align: center;"><strong><em>164</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#counter"><code>Counters</code></a></td>
+<td style="text-align: center;"><strong><em>40</em></strong></td>
+<td style="text-align: center;"><strong><em>168</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#condition"><code>Conditions</code></a></td>
+<td style="text-align: center;"><strong><em>45</em></strong></td>
+<td style="text-align: center;"><strong><em>173</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#version"><code>Version Info</code></a></td>
+<td style="text-align: center;"><strong><em>120</em></strong></td>
+<td style="text-align: center;"><strong><em>248</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#sleep"><code>Sleep</code></a></td>
+<td style="text-align: center;"><strong><em>121</em></strong></td>
+<td style="text-align: center;"><strong><em>249</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#bootloader"><code>Enter Bootloader</code></a></td>
+<td style="text-align: center;"><strong><em>125</em></strong></td>
+<td style="text-align: center;"><strong><em>253</em></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#burn"><code>Burn Settings</code></a></td>
+<td style="text-align: center;"><strong><em>127</em></strong></td>
+<td style="text-align: center;"><strong><em>255</em></strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="can">CAN</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">SPE</td>
+<td style="text-align: center;">IDH</td>
+<td style="text-align: center;">IDL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">129</td>
+<td style="text-align: center;">SPE</td>
+<td style="text-align: center;">IDH</td>
+<td style="text-align: center;">IDL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>SPE</code><ul>
+<li>Bit 0 = Sleep enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+<li>Bit 1 = CAN filters enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+<li>Bit 4 to 7 = CAN speed<ul>
+<li>0 = <code>1000K</code></li>
+<li>1 = <code>500K</code></li>
+<li>2 = <code>250K</code></li>
+<li>3 = <code>125K</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>IDH</code> - Base ID high byte</li>
+<li><code>IDL</code> - Base ID low byte</li>
+</ul>
+<h3 id="input_1">Input</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">INS</td>
+<td style="text-align: center;">DBT</td>
+<td style="text-align: center;">PUL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">133</td>
+<td style="text-align: center;">INS</td>
+<td style="text-align: center;">DBT</td>
+<td style="text-align: center;">PUL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code> - Input number</li>
+<li><code>INS</code><ul>
+<li>Bit 0 = Input enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+<li>Bit 1-2 = Mode<ul>
+<li>0 = <code>Momentary</code></li>
+<li>1 = <code>Latching</code></li>
+</ul>
+</li>
+<li>Bit 3 = Invert input logic</li>
+<li>Bit 4-7 = Input number</li>
+</ul>
+</li>
+<li><code>DBT</code> - Debounce time (ms / 10)</li>
+<li><code>PUL</code> - Pullup/pulldown<ul>
+<li>0 = <code>No pull</code></li>
+<li>1 = <code>Pullup</code></li>
+<li>2 = <code>Pulldown</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="output_1">Output</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">IN</td>
+<td style="text-align: center;">CL</td>
+<td style="text-align: center;">RES</td>
+<td style="text-align: center;">RT</td>
+<td style="text-align: center;">INL</td>
+<td style="text-align: center;">INT</td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">138</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">IN</td>
+<td style="text-align: center;">CL</td>
+<td style="text-align: center;">RES</td>
+<td style="text-align: center;">RT</td>
+<td style="text-align: center;">INL</td>
+<td style="text-align: center;">INT</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code><ul>
+<li>Bit 0 = Output enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+<li>Bit 4-7 = Output number</li>
+</ul>
+</li>
+<li><code>IN</code> - Input number (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>CL</code> - Current limit (A)</li>
+<li><code>RES</code><ul>
+<li>Bit 0-3 = Reset Mode<ul>
+<li>0 = <code>None</code></li>
+<li>1 = <code>Count</code></li>
+<li>2 = <code>Endless</code></li>
+</ul>
+</li>
+<li>Bit 4-7 = Reset Count Limit</li>
+</ul>
+</li>
+<li><code>RT</code> - Reset time (ms / 10)</li>
+<li><code>INL</code> - Inrush limit (A)</li>
+<li><code>INT</code> - Inrush time (ms / 10)</li>
+</ul>
+<h3 id="output-pwm">Output PWM</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">IN</td>
+<td style="text-align: center;">FRQ</td>
+<td style="text-align: center;">FDC</td>
+<td style="text-align: center;">SSR</td>
+<td style="text-align: center;">SSR</td>
+<td style="text-align: center;">DCI</td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">139</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">IN</td>
+<td style="text-align: center;">FRQ</td>
+<td style="text-align: center;">FDC</td>
+<td style="text-align: center;">SSR</td>
+<td style="text-align: center;">SSR</td>
+<td style="text-align: center;">DCI</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code><ul>
+<li>Bit 0 = PWM enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+<li>Bit 1 = Soft start enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+<li>Bit 2 = Variable duty cycle<ul>
+<li>0 = <code>Fixed duty cycle</code></li>
+<li>1 = <code>Variable duty cycle</code> </li>
+</ul>
+</li>
+<li>Bit 4-7 = Output number</li>
+</ul>
+</li>
+<li><code>IN</code> - Duty cycle input number (see <a href="../variablemap/">Variable Map</a>)<ul>
+<li>CAN Input Values are the only valid inputs</li>
+<li>All other input values are boolean</li>
+</ul>
+</li>
+<li><code>CL</code> - Current limit (A)</li>
+<li><code>FRQ</code>- PWM base frequency (Hz)<ul>
+<li>9 bit value</li>
+<li>Bits 1-8 in Byte 3</li>
+<li>Bit 0 in <code>FDC</code></li>
+</ul>
+</li>
+<li><code>FDC</code> - Fixed duty cycle (%)<ul>
+<li>Bit 0 = PWM base frequency bit 0</li>
+<li>Bits 1-8 = Fixed duty cycle</li>
+</ul>
+</li>
+<li><code>SSR</code> - Soft start ramp time (ms)</li>
+<li><code>DCI</code> - Duty cycle denominator<ul>
+<li>0 to 255</li>
+<li><code>IN</code> / <code>DCI</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="virtual-input">Virtual Input</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">NOT</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">VR0</td>
+<td style="text-align: center;">VR1</td>
+<td style="text-align: center;">VR2</td>
+<td style="text-align: center;">MDC</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">143</td>
+<td style="text-align: center;">NOT</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">VR0</td>
+<td style="text-align: center;">VR1</td>
+<td style="text-align: center;">VR2</td>
+<td style="text-align: center;">MDC</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code> - Virtual input number</li>
+<li><code>NOT</code><ul>
+<li>Bit 0 = Virtual input enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+<li>Bit 1 = Not variable 0<ul>
+<li>0 = <code>No invert</code></li>
+<li>1 = <code>Invert</code></li>
+</ul>
+</li>
+<li>Bit 2 = Not variable 1</li>
+<li>Bit 3 = Not variable 2</li>
+</ul>
+</li>
+<li><code>VR0</code> - Variable 0 (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>VR1</code> - Variable 1 (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>VR2</code> - Variable 2 (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>MDC</code><ul>
+<li>Bit 0-1 = Condition 0<ul>
+<li>0 = <code>And</code></li>
+<li>1 = <code>Or</code></li>
+<li>2 = <code>Nor</code></li>
+</ul>
+</li>
+<li>Bit 2-3 = Condition 1</li>
+<li>Bit 6-7 = Mode<ul>
+<li>0 = <code>Momentary</code></li>
+<li>1 = <code>Latching</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="wiper">Wiper</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">CLM</td>
+<td style="text-align: center;">SIN</td>
+<td style="text-align: center;">FIN</td>
+<td style="text-align: center;">IIN</td>
+<td style="text-align: center;">OIN</td>
+<td style="text-align: center;">PIN</td>
+<td style="text-align: center;">WIN</td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">148</td>
+<td style="text-align: center;">CLM</td>
+<td style="text-align: center;">SIN</td>
+<td style="text-align: center;">FIN</td>
+<td style="text-align: center;">IIN</td>
+<td style="text-align: center;">OIN</td>
+<td style="text-align: center;">PIN</td>
+<td style="text-align: center;">WIN</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>CLM</code><ul>
+<li>Bit 0 = Wiper enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+<li>Bit 1-2 = Mode<ul>
+<li>0 = <code>Dig</code> Digital inputs for speed<ul>
+<li>Must use at least <code>Slow</code> and <code>Park</code> inputs</li>
+<li><code>Fast</code> and <code>Intermittent</code> inputs optional</li>
+</ul>
+</li>
+<li>1 = <code>Int</code> Integer speed input to select slow/fast/intermittent/park. Digital input for park<ul>
+<li>One speed input value must be park (<code>0</code>)</li>
+<li>Must use <code>Speed</code> and <code>Park</code> inputs</li>
+<li>Use case: Rotary switch to select wiper on/speed</li>
+</ul>
+</li>
+<li>2 = <code>Mix</code> Integer input for slow/fast/intermittent. Digital inputs for on and park<ul>
+<li>Must use <code>Speed</code>, <code>On</code> and <code>Park</code> input</li>
+<li>Use case: Rotary switch to select speed, latching button to turn wipers on/off</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Bit 3 = Park level<ul>
+<li>0 = Stop when input is low</li>
+<li>1 = Stop when input is high</li>
+</ul>
+</li>
+<li>Bit 4-7 = Wash cycles count, number of swipes after wash</li>
+</ul>
+</li>
+<li><code>SIN</code> - Slow speed input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>FIN</code> - Fast speed input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>IIN</code> - Intermittent speed input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>OIN</code> - On input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>PIN</code> - Park input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>WIN</code> - Wash input (see <a href="../variablemap/">Variable Map</a>)</li>
+</ul>
+<h3 id="wiper-speed">Wiper Speed</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">SWI</td>
+<td style="text-align: center;">SPI</td>
+<td style="text-align: center;">S01</td>
+<td style="text-align: center;">S23</td>
+<td style="text-align: center;">S45</td>
+<td style="text-align: center;">S67</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">149</td>
+<td style="text-align: center;">SWI</td>
+<td style="text-align: center;">SPI</td>
+<td style="text-align: center;">S01</td>
+<td style="text-align: center;">S23</td>
+<td style="text-align: center;">S45</td>
+<td style="text-align: center;">S67</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>SWI</code> - Swipe input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>SPI</code> - Speed integer input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>S01</code><ul>
+<li>Bit 0-3 = Speed map 0</li>
+<li>Bit 4-7 = Speed map 1 </li>
+</ul>
+</li>
+<li><code>S23</code><ul>
+<li>Bit 0-3 = Speed map 2</li>
+<li>Bit 4-7 = Speed map 3</li>
+</ul>
+</li>
+<li><code>S45</code><ul>
+<li>Bit 0-3 = Speed map 4</li>
+<li>Bit 4-7 = Speed map 5</li>
+</ul>
+</li>
+<li><code>S67</code><ul>
+<li>Bit 0-3 = Speed map 6</li>
+<li>Bit 4-7 = Speed map 7</li>
+</ul>
+</li>
+<li>Speed map values are used when <code>Mode</code> is set to <code>Int</code> or <code>Mix</code></li>
+<li>The values of the speed map correspond to different speeds/states when the <code>Speed</code> input has that value<ul>
+<li>0 = <code>Park</code></li>
+<li>1 = <code>Slow</code></li>
+<li>2 = <code>Fast</code></li>
+<li>3 = <code>Intermittent 0</code></li>
+<li>4 = <code>Intermittent 1</code></li>
+<li>5 = <code>Intermittent 2</code></li>
+<li>6 = <code>Intermittent 3</code></li>
+<li>7 = <code>Intermittent 4</code></li>
+<li>8 = <code>Intermittent 5</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="wiper-delay">Wiper Delay</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">IT0</td>
+<td style="text-align: center;">IT1</td>
+<td style="text-align: center;">IT2</td>
+<td style="text-align: center;">IT3</td>
+<td style="text-align: center;">IT4</td>
+<td style="text-align: center;">IT5</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">150</td>
+<td style="text-align: center;">IT0</td>
+<td style="text-align: center;">IT1</td>
+<td style="text-align: center;">IT2</td>
+<td style="text-align: center;">IT3</td>
+<td style="text-align: center;">IT4</td>
+<td style="text-align: center;">IT5</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>ITn</code> - Wiper intermittent time (ms / 100)</li>
+</ul>
+<h3 id="flasher">Flasher</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">IN</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">ON</td>
+<td style="text-align: center;">OFF</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">153</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">IN</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">ON</td>
+<td style="text-align: center;">OFF</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code><ul>
+<li>Bit 0 = Flasher enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+<li>Bit 1 = Single/continous flash</li>
+<li>Bit 4-7 = Flasher number</li>
+</ul>
+</li>
+<li><code>IN</code> - Flasher input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>ON</code> - Flash on time (ms / 10)</li>
+<li><code>OFF</code> - Flash off time (ms / 10)</li>
+<li></li>
+</ul>
+<h3 id="starter-disable">Starter Disable</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">EN</td>
+<td style="text-align: center;">IN</td>
+<td style="text-align: center;">OUT</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">158</td>
+<td style="text-align: center;">EN</td>
+<td style="text-align: center;">IN</td>
+<td style="text-align: center;">OUT</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>EN</code><ul>
+<li>Bit 0 = Starter disable enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>IN</code> - Starter disable input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>OUT</code> - Starter disable outputs<ul>
+<li>Bit 0 = Output 1</li>
+<li>Bit n = Output n+1</li>
+<li>Bit 7 = Output 8</li>
+</ul>
+</li>
+</ul>
+<h3 id="can-input">CAN Input</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">OME</td>
+<td style="text-align: center;">POS</td>
+<td style="text-align: center;">ARG</td>
+<td style="text-align: center;">ARG</td>
+<td style="text-align: center;">TIM</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">163</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">OME</td>
+<td style="text-align: center;">POS</td>
+<td style="text-align: center;">ARG</td>
+<td style="text-align: center;">ARG</td>
+<td style="text-align: center;">TIM</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code> - Input number</li>
+<li><code>OME</code><ul>
+<li>Bit 0 = Input enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+<li>Bit 1 to Bit 2 = Mode<ul>
+<li>0 = <code>Momentary</code></li>
+<li>1 = <code>Latching</code></li>
+</ul>
+</li>
+<li>Bit 3 = Timeout enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+<li>Bit 4 to 7 = Operator<ul>
+<li>0 = <code>Equal</code></li>
+<li>1 = <code>Not Equal</code></li>
+<li>2 = <code>Greater Than</code></li>
+<li>3 = <code>Less Than</code></li>
+<li>4 = <code>Greater Than or Equal</code></li>
+<li>5 = <code>Less Than or Equal</code></li>
+<li>6 = <code>Bitwise And</code></li>
+<li>7 = <code>Bitwise Nand</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>POS</code> - Value Position<ul>
+<li>Bit 0 to 3 = Starting Byte</li>
+<li>Bit 4 to 7 = Number of bytes (1 or 2)</li>
+</ul>
+</li>
+<li><code>ARG</code> - Argument (2 bytes)</li>
+<li><code>TIM</code> - Timeout Time (ms / 100)</li>
+</ul>
+<h3 id="can-input-id">CAN Input ID</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">SID</td>
+<td style="text-align: center;">SID</td>
+<td style="text-align: center;">EID</td>
+<td style="text-align: center;">EID</td>
+<td style="text-align: center;">EID</td>
+<td style="text-align: center;">EID</td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">164</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">SID</td>
+<td style="text-align: center;">SID</td>
+<td style="text-align: center;">EID</td>
+<td style="text-align: center;">EID</td>
+<td style="text-align: center;">EID</td>
+<td style="text-align: center;">EID</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code> - Input number</li>
+<li><code>SID</code> - Standard CAN ID<ul>
+<li>11 bit</li>
+<li>3 bits of Byte 2 (0x07)</li>
+</ul>
+</li>
+<li><code>EID</code> - Extended CAN ID<ul>
+<li>29 bit</li>
+<li>6 bits of Byte 4 (0x1F)</li>
+</ul>
+</li>
+</ul>
+<h3 id="counter">Counter</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">ENA</td>
+<td style="text-align: center;">ICI</td>
+<td style="text-align: center;">DCI</td>
+<td style="text-align: center;">RSI</td>
+<td style="text-align: center;">CNT</td>
+<td style="text-align: center;">EDG</td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">168</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">ENA</td>
+<td style="text-align: center;">ICI</td>
+<td style="text-align: center;">DCI</td>
+<td style="text-align: center;">RSI</td>
+<td style="text-align: center;">CNT</td>
+<td style="text-align: center;">EDG</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code> - Counter number</li>
+<li><code>ENA</code> - Counter enable/disable<ul>
+<li>Bit 0</li>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+<li>Bit 1 = Value Wraparound</li>
+</ul>
+</li>
+<li><code>ICI</code> - Increment input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>DCI</code> - Decrement input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>RSI</code> - Reset input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>CNT</code> - Count min/max<ul>
+<li>Bits 0 to 3 = Minimum value</li>
+<li>Bits 4 to 7 = Maximum value</li>
+</ul>
+</li>
+<li><code>EDG</code> - Edge type<ul>
+<li>Bits 0 to 1 = Increment edge type</li>
+<li>Bits 2 to 3 = Decrement edge type</li>
+<li>Bits 4 to 5 = Reset edge type</li>
+<li>0 = <code>Rising</code></li>
+<li>1 = <code>Falling</code></li>
+<li>2 = <code>Both</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="condition">Condition</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">OPE</td>
+<td style="text-align: center;">IN</td>
+<td style="text-align: center;">ARG</td>
+<td style="text-align: center;">ARG</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">173</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">OPE</td>
+<td style="text-align: center;">IN</td>
+<td style="text-align: center;">ARG</td>
+<td style="text-align: center;">ARG</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code> - Condition number</li>
+<li><code>OPE</code><ul>
+<li>Bit 0 = Condition enable/disable</li>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+<li>Bits 4 to 7 = Operator</li>
+<li>0 = <code>Equal</code></li>
+<li>1 = <code>Not Equal</code></li>
+<li>2 = <code>Greater Than</code></li>
+<li>3 = <code>Less Than</code></li>
+<li>4 = <code>Greater Than or Equal</code></li>
+<li>5 = <code>Less Than or Equal</code></li>
+<li>6 = <code>Bitwise And</code></li>
+<li>7 = <code>Bitwise Nand</code></li>
+</ul>
+</li>
+<li><code>IN</code> - Condition input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>ARG</code> - Argument</li>
+</ul>
+<h3 id="keypad">Keypad</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">ENA</td>
+<td style="text-align: center;">NID</td>
+<td style="text-align: center;">TIM</td>
+<td style="text-align: center;">MOD</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">178</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">ENA</td>
+<td style="text-align: center;">NID</td>
+<td style="text-align: center;">TIM</td>
+<td style="text-align: center;">MOD</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code> - Keypad number</li>
+<li><code>ENA</code><ul>
+<li>Bit 0 = Keypad enable/disable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>NID</code> <ul>
+<li>Bits 0 to 6 = Keypad CANopen Node ID<ul>
+<li>1 to 127</li>
+</ul>
+</li>
+<li>Bit 7 = Timeout enable<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>TIM</code> - Timeout Time (ms / 100)</li>
+<li><code>MOD</code> - Keypad model<ul>
+<li>0 = <code>BLINK_2_KEY</code> </li>
+<li>1 = <code>BLINK_4_KEY</code></li>
+<li>2 = <code>BLINK_5_KEY</code></li>
+<li>3 = <code>BLINK_6_KEY</code></li>
+<li>4 = <code>BLINK_8_KEY</code></li>
+<li>5 = <code>BLINK_10_KEY</code></li>
+<li>6 = <code>BLINK_12_KEY</code></li>
+<li>7 = <code>BLINK_15_KEY</code></li>
+<li>8 = <code>BLINK_13_KEY_2_DIAL</code></li>
+<li>9 = <code>BLINK_RACEPAD</code></li>
+<li>10 = <code>GRAYHILL_6_KEY</code></li>
+<li>11 = <code>GRAYHILL_8_KEY</code></li>
+<li>12 = <code>GRAYHILL_15_KEY</code></li>
+<li>13 = <code>GRAYHILL_20_KEY</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="keypad-leds">Keypad LEDs</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">51</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">51</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">BLB</td>
+<td style="text-align: center;">BLC</td>
+<td style="text-align: center;">DLB</td>
+<td style="text-align: center;">DIM</td>
+<td style="text-align: center;">BTB</td>
+<td style="text-align: center;">DBB</td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">179</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">BLB</td>
+<td style="text-align: center;">BLC</td>
+<td style="text-align: center;">DLB</td>
+<td style="text-align: center;">DIM</td>
+<td style="text-align: center;">BTB</td>
+<td style="text-align: center;">DBB</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code> - Keypad number</li>
+<li><code>BLB</code> - Backlight brightness - 0 (min) to 255 (100%)</li>
+<li><code>BLC</code> - Backlight color<ul>
+<li>0 = <code>Off</code></li>
+<li>1 = <code>Red</code></li>
+<li>2 = <code>Green</code></li>
+<li>3 = <code>Blue</code></li>
+<li>4 = <code>Yellow</code></li>
+<li>5 = <code>Cyan</code></li>
+<li>6 = <code>Violet</code></li>
+<li>7 = <code>White</code></li>
+<li>8 = <code>Amber</code></li>
+<li>9 = <code>Yellow Green</code></li>
+</ul>
+</li>
+<li><code>DLB</code> - Dim backlight brightness - 0 (min) to 255 (100%)</li>
+<li><code>DIM</code> - Dimming input (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>BTB</code> - Button brightness (all buttons) - 0 (min) to 255 (100%)</li>
+<li><code>DBB</code> - Dim button brightness - 0 (min) to 255 (100%)</li>
+</ul>
+<h3 id="keypad-buttons">Keypad Buttons</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">ENA</td>
+<td style="text-align: center;">VV0</td>
+<td style="text-align: center;">VV1</td>
+<td style="text-align: center;">VV2</td>
+<td style="text-align: center;">VV3</td>
+<td style="text-align: center;">FVV</td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">180</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">ENA</td>
+<td style="text-align: center;">VV0</td>
+<td style="text-align: center;">VV1</td>
+<td style="text-align: center;">VV2</td>
+<td style="text-align: center;">VV3</td>
+<td style="text-align: center;">FVV</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code><ul>
+<li>Bits 0 to 2 = Keypad number</li>
+<li>Bits 3 to 7 = Button number</li>
+</ul>
+</li>
+<li><code>ENA</code><ul>
+<li>Bit 0 = Button enabled<ul>
+<li>0 = <code>Disable</code></li>
+<li>1 = <code>Enable</code></li>
+</ul>
+</li>
+<li>Bit 2 = Mode<ul>
+<li>0 = <code>Momentary</code></li>
+<li>1 = <code>Latching</code></li>
+</ul>
+</li>
+<li>Bit 3 to Bit 6 = Val Flashing<ul>
+<li>0 = <code>Solid</code></li>
+<li>1 = <code>Flashing</code></li>
+</ul>
+</li>
+<li>Bit 7 = Fault Flashing<ul>
+<li>0 = <code>Solid</code></li>
+<li>1 = <code>Flashing</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>VV0</code> to <code>VV3</code> - Val var 0 to 3 (see <a href="../variablemap/">Variable Map</a>)</li>
+<li><code>FVV</code> - Fault val var (see <a href="../variablemap/">Variable Map</a>)</li>
+</ul>
+<h3 id="keypad-button-leds">Keypad Button LEDs</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">53</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">53</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">C01</td>
+<td style="text-align: center;">C23</td>
+<td style="text-align: center;">FVC</td>
+<td style="text-align: center;">B01</td>
+<td style="text-align: center;">B23</td>
+<td style="text-align: center;">FBC</td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">181</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">C01</td>
+<td style="text-align: center;">C23</td>
+<td style="text-align: center;">FVC</td>
+<td style="text-align: center;">B01</td>
+<td style="text-align: center;">B23</td>
+<td style="text-align: center;">FBC</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code><ul>
+<li>Bits 0 to 2 = Keypad number</li>
+<li>Bits 3 to 7 = Button number</li>
+</ul>
+</li>
+<li><code>C01</code><ul>
+<li>Bits 0 to 4 = Value 0 color</li>
+<li>Bits 5 to 7 = Value 1 color<ul>
+<li>0 = <code>Off</code></li>
+<li>1 = <code>Red</code></li>
+<li>2 = <code>Green</code></li>
+<li>3 = <code>Orange</code></li>
+<li>4 = <code>Blue</code></li>
+<li>5 = <code>Violet</code></li>
+<li>6 = <code>Cyan</code></li>
+<li>7 = <code>White</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>C23</code><ul>
+<li>Bits 0 to 4 = Value 2 color</li>
+<li>Bits 5 to 7 = Value 3 color</li>
+</ul>
+</li>
+<li><code>FVC</code><ul>
+<li>Bits 0 to 4 = Fault value color</li>
+<li>Bits 5 to 7 = Num of color values (2 to 4)</li>
+</ul>
+</li>
+<li><code>B01</code><ul>
+<li>Bits 0 to 4 = Blinking value 0 color</li>
+<li>Bits 5 to 7 = Blinking value 1 color</li>
+</ul>
+</li>
+<li><code>B23</code><ul>
+<li>Bits 0 to 4 = Blinking value 2 color</li>
+<li>Bits 5 to 7 = Blinking value 3 color</li>
+</ul>
+</li>
+<li><code>FBC</code><ul>
+<li>Bits 0 to 4 = Blinking fault value color</li>
+</ul>
+</li>
+</ul>
+<h3 id="keypad-dials">Keypad Dials</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">54</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Set</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">54</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">DMI</td>
+<td style="text-align: center;">DMA</td>
+<td style="text-align: center;">DOF</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">182</td>
+<td style="text-align: center;">NUM</td>
+<td style="text-align: center;">DMI</td>
+<td style="text-align: center;">DMA</td>
+<td style="text-align: center;">DOF</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>NUM</code><ul>
+<li>Bits 0 to 2 = Keypad number</li>
+<li>Bits 3 to 7 = Dial number</li>
+</ul>
+</li>
+<li><code>DMI</code> = Dial min LED</li>
+<li><code>DMA</code> = Dial max LED</li>
+<li><code>DOF</code> = Dial LED offset</li>
+</ul>
+<h2 id="special">Special</h2>
+<p>There are some special messages that are used for special functions. </p>
+<h3 id="version">Version</h3>
+<p>This message gets the firmware version</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">120</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">248</td>
+<td style="text-align: center;">MA</td>
+<td style="text-align: center;">MI</td>
+<td style="text-align: center;">BH</td>
+<td style="text-align: center;">BL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>MA</code> - Major</li>
+<li><code>MI</code> - Minor</li>
+<li><code>BH</code> - Build High Byte</li>
+<li><code>BL</code> - Build Low Byte</li>
+<li></li>
+</ul>
+<h3 id="sleep">Sleep</h3>
+<p>The sleep message triggers the PDM to immediately go to sleep. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">121</td>
+<td style="text-align: center;">U</td>
+<td style="text-align: center;">I</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">249</td>
+<td style="text-align: center;">OK</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This message will not have an effect if the sleep conditions are not met, see Sleep</p>
+</div>
+<h3 id="bootloader">Bootloader</h3>
+<p>This message jumps to the bootloader for firmware updating
+| Type   | DLC | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7|
+|:------:|:---:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:-----:|
+|Get     | 4   | 125    |        |        |        |        |        |        |       |
+|Response| 2   | 253    | OK     |        |        |        |        |        |       |</p>
+<h3 id="burn">Burn</h3>
+<p>The burn message triggers the PDM to save the configuration to FRAM memory. </p>
+<p>Without this message, any settings change will be lost on a power cycle</p>
+<p>A response will be sent with the result of the Burn</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Get</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">127</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Response</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">255</td>
+<td style="text-align: center;">OK</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This is an easy way to test new settings. Try new settings without Burn and then cycle power to restore the old settings</p>
+</div>
+<h3 id="wake-up">Wake Up</h3>
+<p>This message triggers the PDM to wake up from sleep.</p>
+<p>There is no response to this message.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The format of this message is not critical, any CAN message will wake the PDM</p>
+</div>
+<h2 id="messages">Messages</h2>
+<p>Periodically, the device will send info, warning or error messages to facilitate debugging. </p>
+<p>These messages will have the format below. </p>
+<p>The first byte is a message type, the second is the ID number and 3rd-5th are extra integer parameters that are added to some messages. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">DLC</th>
+<th style="text-align: center;">Byte 0</th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+<th style="text-align: center;">Byte 4</th>
+<th style="text-align: center;">Byte 5</th>
+<th style="text-align: center;">Byte 6</th>
+<th style="text-align: center;">Byte 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Info</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">SRC</td>
+<td style="text-align: center;">N1</td>
+<td style="text-align: center;">N2</td>
+<td style="text-align: center;">N3</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Warning</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">SRC</td>
+<td style="text-align: center;">N1</td>
+<td style="text-align: center;">N2</td>
+<td style="text-align: center;">N3</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Error</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">SRC</td>
+<td style="text-align: center;">N1</td>
+<td style="text-align: center;">N2</td>
+<td style="text-align: center;">N3</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>SRC</code> - Source, see table below</li>
+<li><code>N1</code> - Integer parameter</li>
+<li><code>N2</code> - Integer parameter</li>
+<li><code>N3</code> - Integer parameter</li>
+</ul>
+<h4 id="errors">Errors</h4>
+<p>Errors messages are sent when a non-recoverable issue occurs.</p>
+<p>The only way to reset is to cycle power on the device. </p>
+<p><code>N1</code> will contain the <a href="../errors/#error-numbers">error number</a>. </p>
+<h3 id="source">Source</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">SRC Num</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Parameter 1</th>
+<th style="text-align: center;">Parameter 2</th>
+<th style="text-align: center;">Parameter 3</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">State Power On</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Device is in it's initial state</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">State Starting</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Initializing peripherals</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">State Run</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Normal operating state</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">State Over Temp</td>
+<td style="text-align: center;">Temp (C*10)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Board temp &gt; Max, outputs off</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">State Error</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Fatal error, power cycle</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">State Sleep</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Low power sleep, no activity</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">State Wake</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Wake from low power sleep</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">Overcurrent</td>
+<td style="text-align: center;">Output Num</td>
+<td style="text-align: center;">Current (A*10)</td>
+<td style="text-align: center;"></td>
+<td>Overcurrent on output</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">Battery Voltage</td>
+<td style="text-align: center;">Volts (V*10)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Battery voltage under/over</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">CAN</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>CAN warning or error</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">USB</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>USB warning or error</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">Over Temperature</td>
+<td style="text-align: center;">Temp (C*10)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Board temp warning or error</td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">Configuration</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Device config init error</td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">FRAM</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>FRAM init error</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">ADC</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>ADC DMA init error</td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">I2C</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>I2C init error</td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">Temperature Sensor</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Temperature sensor init error</td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">USB Connected</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>USB cable connection detected</td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">Init</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Error during initialization</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../design/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Design">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Design
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../leds/" class="md-footer__link md-footer__link--next" aria-label="Next: LEDs">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                LEDs
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.com/invite/TxnPYQkVu3" target="_blank" rel="noopener" title="discord.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://facebook.com/dingo.elec" target="_blank" rel="noopener" title="facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.expand", "navigation.path", "toc.follow", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/mkdocs-charts-plugin.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
