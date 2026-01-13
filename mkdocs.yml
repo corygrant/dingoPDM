@@ -100,6 +100,7 @@ nav:
     - Errors: 'firmware/errors.md'
     - Sleep: 'firmware/sleep.md'
     - Updating: 'firmware/updating.md'
+    - Customization: 'firmware/custom.md'
     - Build: 'firmware/build.md'
   - Software:
     - Introduction: 'software/introduction.md'

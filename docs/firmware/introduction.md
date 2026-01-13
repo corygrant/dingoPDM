@@ -11,13 +11,22 @@ dingoPDM uses [ChibiOS](https://www.chibios.org/dokuwiki/doku.php) RTOS
 
 ![Chibi](../images/chibi.png)
 
-dingoPDM and dingoPDM-Max both use the same firmware, with only a variable change during build. 
+dingoPDM and dingoPDM-Max both use the same firmware, with only a variable change during build.
 
-
-## Firmware Download
+## Download
 
 The latest version can be downloaded here: [DingoPDM_FW](https://github.com/corygrant/DingoPDM_FW/releases)
 
-## Firmware Update
+## Update
 
 See [Updating](./updating.md) for firmware updating instructions
+
+## Build
+
+To build dingoPDM firmware on your machine refer to [Build](./build.md)
+
+## Custom PCB Firmware
+
+dingoPDM firmware was designed to be easily modified to work on custom PCBs with varying numbers of outputs and inputs. 
+
+See [Customization](./custom.md) for information on customizing dingoPDM firmware to match your custom hardware. 
