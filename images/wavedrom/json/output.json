@@ -1,0 +1,23 @@
+{"reg": 
+[
+  { "name": "Output Message Command (10)",   bits: 8},
+  { "name": "Enabled",   bits: 1},
+  {                      bits: 3, type:1},
+  { "name": "Index", bits:4},
+  { "name": "Input",   bits: 8},
+  { "name": "Current Limit (A / 10)",   bits: 8 },
+  { "name": "Reset Mode",   bits: 4 },
+  { "name": "Reset Limit",   bits: 4 },
+  { "name": "Reset Time (ms / 100)",   bits: 8 },
+  { "name": "Inrush Current Limit (A / 10)",   bits: 8 },
+  { "name": "Inrush Time (ms / 100)",   bits: 8 }
+],
+config: {
+  lanes: 8, 
+  bits: 64, 
+  compact: true,
+  hflip:true,
+  vflip:false,
+  fontweight:"bold",
+  label: {right: ['0','1','2','3','4','5','6','7']}}
+}

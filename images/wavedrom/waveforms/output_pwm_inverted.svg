@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="output_pwm.svg"
+   id="svg558"
+   version="1.1"
+   class="WaveDrom"
+   viewBox="0 0 800 273"
+   height="273"
+   width="800">
+  <metadata
+     id="metadata564">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs562">
+    <filter
+       id="filter1393"
+       inkscape:label="Invert"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix1389"
+         result="color1"
+         values="180"
+         type="hueRotate" />
+      <feColorMatrix
+         id="feColorMatrix1391"
+         result="color2"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 " />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     showgrid="false"
+     id="namedview560"
+     inkscape:window-height="480"
+     inkscape:window-width="640"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <g
+     style="filter:url(#filter1393)"
+     id="g556"
+     font-weight="bold"
+     font-family="sans-serif"
+     font-size="14"
+     text-anchor="middle"
+     transform="translate(0.5,0.5)">
+    <g
+       id="g64"
+       transform="translate(4,21)">
+      <g
+         id="g38"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black">
+        <line
+           id="line2"
+           x2="715" />
+        <line
+           id="line4"
+           y2="31" />
+        <line
+           id="line6"
+           y2="31"
+           y1="31"
+           x2="715" />
+        <line
+           id="line8"
+           y2="31"
+           x2="715"
+           x1="715" />
+        <line
+           id="line10"
+           y2="3"
+           x2="626"
+           x1="626" />
+        <line
+           id="line12"
+           y2="28"
+           y1="31"
+           x2="626"
+           x1="626" />
+        <line
+           id="line14"
+           y2="3"
+           x2="536"
+           x1="536" />
+        <line
+           id="line16"
+           y2="28"
+           y1="31"
+           x2="536"
+           x1="536" />
+        <line
+           id="line18"
+           y2="3"
+           x2="447"
+           x1="447" />
+        <line
+           id="line20"
+           y2="28"
+           y1="31"
+           x2="447"
+           x1="447" />
+        <line
+           id="line22"
+           y2="3"
+           x2="358"
+           x1="358" />
+        <line
+           id="line24"
+           y2="28"
+           y1="31"
+           x2="358"
+           x1="358" />
+        <line
+           id="line26"
+           y2="3"
+           x2="268"
+           x1="268" />
+        <line
+           id="line28"
+           y2="28"
+           y1="31"
+           x2="268"
+           x1="268" />
+        <line
+           id="line30"
+           y2="3"
+           x2="179"
+           x1="179" />
+        <line
+           id="line32"
+           y2="28"
+           y1="31"
+           x2="179"
+           x1="179" />
+        <line
+           id="line34"
+           y2="3"
+           x2="89"
+           x1="89" />
+        <line
+           id="line36"
+           y2="28"
+           y1="31"
+           x2="89"
+           x1="89" />
+      </g>
+      <g
+         id="g54">
+        <g
+           id="g40" />
+        <g
+           id="g42"
+           transform="translate(45,-11)" />
+        <g
+           id="g50"
+           transform="translate(45,15)">
+          <g
+             id="g48"
+             transform="translate(313)">
+            <text
+               id="text46"
+               y="6"><tspan
+                 id="tspan44">Counter Message Command (11)</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g52"
+           transform="translate(45,39)" />
+      </g>
+      <g
+         id="g62"
+         text-anchor="start">
+        <g
+           id="g60"
+           transform="translate(719,16)">
+          <text
+             id="text58"
+             y="6"><tspan
+               id="tspan56">0</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g140"
+       transform="translate(4,52)">
+      <g
+         id="g94"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black">
+        <line
+           id="line66"
+           x2="715" />
+        <line
+           id="line68"
+           y2="31" />
+        <line
+           id="line70"
+           y2="31"
+           y1="31"
+           x2="715" />
+        <line
+           id="line72"
+           y2="31"
+           x2="715"
+           x1="715" />
+        <line
+           id="line74"
+           y2="31"
+           x2="626"
+           x1="626" />
+        <line
+           id="line76"
+           y2="31"
+           x2="536"
+           x1="536" />
+        <line
+           id="line78"
+           y2="31"
+           x2="447"
+           x1="447" />
+        <line
+           id="line80"
+           y2="31"
+           x2="358"
+           x1="358" />
+        <line
+           id="line82"
+           y2="3"
+           x2="268"
+           x1="268" />
+        <line
+           id="line84"
+           y2="28"
+           y1="31"
+           x2="268"
+           x1="268" />
+        <line
+           id="line86"
+           y2="3"
+           x2="179"
+           x1="179" />
+        <line
+           id="line88"
+           y2="28"
+           y1="31"
+           x2="179"
+           x1="179" />
+        <line
+           id="line90"
+           y2="3"
+           x2="89"
+           x1="89" />
+        <line
+           id="line92"
+           y2="28"
+           y1="31"
+           x2="89"
+           x1="89" />
+      </g>
+      <g
+         id="g130">
+        <g
+           id="g98">
+          <rect
+             id="rect96"
+             style="fill-opacity:0.1"
+             field="undefined"
+             height="31"
+             width="89"
+             x="358" />
+        </g>
+        <g
+           id="g100"
+           transform="translate(45,-11)" />
+        <g
+           id="g126"
+           transform="translate(45,15)">
+          <g
+             id="g106"
+             transform="translate(626)">
+            <text
+               id="text104"
+               y="6"><tspan
+                 id="tspan102">PwmEnabled</tspan></text>
+          </g>
+          <g
+             id="g112"
+             transform="translate(536)">
+            <text
+               id="text110"
+               y="6"><tspan
+                 id="tspan108">Soft Start</tspan></text>
+          </g>
+          <g
+             id="g118"
+             transform="translate(447)">
+            <text
+               id="text116"
+               y="6"><tspan
+                 id="tspan114">Variable DC</tspan></text>
+          </g>
+          <g
+             id="g124"
+             transform="translate(134)">
+            <text
+               id="text122"
+               y="6"><tspan
+                 id="tspan120">Index</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g128"
+           transform="translate(45,39)" />
+      </g>
+      <g
+         id="g138"
+         text-anchor="start">
+        <g
+           id="g136"
+           transform="translate(719,16)">
+          <text
+             id="text134"
+             y="6"><tspan
+               id="tspan132">1</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g204"
+       transform="translate(4,83)">
+      <g
+         id="g178"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black">
+        <line
+           id="line142"
+           x2="715" />
+        <line
+           id="line144"
+           y2="31" />
+        <line
+           id="line146"
+           y2="31"
+           y1="31"
+           x2="715" />
+        <line
+           id="line148"
+           y2="31"
+           x2="715"
+           x1="715" />
+        <line
+           id="line150"
+           y2="3"
+           x2="626"
+           x1="626" />
+        <line
+           id="line152"
+           y2="28"
+           y1="31"
+           x2="626"
+           x1="626" />
+        <line
+           id="line154"
+           y2="3"
+           x2="536"
+           x1="536" />
+        <line
+           id="line156"
+           y2="28"
+           y1="31"
+           x2="536"
+           x1="536" />
+        <line
+           id="line158"
+           y2="3"
+           x2="447"
+           x1="447" />
+        <line
+           id="line160"
+           y2="28"
+           y1="31"
+           x2="447"
+           x1="447" />
+        <line
+           id="line162"
+           y2="3"
+           x2="358"
+           x1="358" />
+        <line
+           id="line164"
+           y2="28"
+           y1="31"
+           x2="358"
+           x1="358" />
+        <line
+           id="line166"
+           y2="3"
+           x2="268"
+           x1="268" />
+        <line
+           id="line168"
+           y2="28"
+           y1="31"
+           x2="268"
+           x1="268" />
+        <line
+           id="line170"
+           y2="3"
+           x2="179"
+           x1="179" />
+        <line
+           id="line172"
+           y2="28"
+           y1="31"
+           x2="179"
+           x1="179" />
+        <line
+           id="line174"
+           y2="3"
+           x2="89"
+           x1="89" />
+        <line
+           id="line176"
+           y2="28"
+           y1="31"
+           x2="89"
+           x1="89" />
+      </g>
+      <g
+         id="g194">
+        <g
+           id="g180" />
+        <g
+           id="g182"
+           transform="translate(45,-11)" />
+        <g
+           id="g190"
+           transform="translate(45,15)">
+          <g
+             id="g188"
+             transform="translate(313)">
+            <text
+               id="text186"
+               y="6"><tspan
+                 id="tspan184">Duty Cycle Input</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g192"
+           transform="translate(45,39)" />
+      </g>
+      <g
+         id="g202"
+         text-anchor="start">
+        <g
+           id="g200"
+           transform="translate(719,16)">
+          <text
+             id="text198"
+             y="6"><tspan
+               id="tspan196">2</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g268"
+       transform="translate(4,114)">
+      <g
+         id="g242"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black">
+        <line
+           id="line206"
+           x2="715" />
+        <line
+           id="line208"
+           y2="31" />
+        <line
+           id="line210"
+           y2="31"
+           y1="31"
+           x2="715" />
+        <line
+           id="line212"
+           y2="31"
+           x2="715"
+           x1="715" />
+        <line
+           id="line214"
+           y2="3"
+           x2="626"
+           x1="626" />
+        <line
+           id="line216"
+           y2="28"
+           y1="31"
+           x2="626"
+           x1="626" />
+        <line
+           id="line218"
+           y2="3"
+           x2="536"
+           x1="536" />
+        <line
+           id="line220"
+           y2="28"
+           y1="31"
+           x2="536"
+           x1="536" />
+        <line
+           id="line222"
+           y2="3"
+           x2="447"
+           x1="447" />
+        <line
+           id="line224"
+           y2="28"
+           y1="31"
+           x2="447"
+           x1="447" />
+        <line
+           id="line226"
+           y2="3"
+           x2="358"
+           x1="358" />
+        <line
+           id="line228"
+           y2="28"
+           y1="31"
+           x2="358"
+           x1="358" />
+        <line
+           id="line230"
+           y2="3"
+           x2="268"
+           x1="268" />
+        <line
+           id="line232"
+           y2="28"
+           y1="31"
+           x2="268"
+           x1="268" />
+        <line
+           id="line234"
+           y2="3"
+           x2="179"
+           x1="179" />
+        <line
+           id="line236"
+           y2="28"
+           y1="31"
+           x2="179"
+           x1="179" />
+        <line
+           id="line238"
+           y2="3"
+           x2="89"
+           x1="89" />
+        <line
+           id="line240"
+           y2="28"
+           y1="31"
+           x2="89"
+           x1="89" />
+      </g>
+      <g
+         id="g258">
+        <g
+           id="g244" />
+        <g
+           id="g246"
+           transform="translate(45,-11)" />
+        <g
+           id="g254"
+           transform="translate(45,15)">
+          <g
+             id="g252"
+             transform="translate(313)">
+            <text
+               id="text250"
+               y="6"><tspan
+                 id="tspan248">Frequency</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g256"
+           transform="translate(45,39)" />
+      </g>
+      <g
+         id="g266"
+         text-anchor="start">
+        <g
+           id="g264"
+           transform="translate(719,16)">
+          <text
+             id="text262"
+             y="6"><tspan
+               id="tspan260">3</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g336"
+       transform="translate(4,145)">
+      <g
+         id="g304"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black">
+        <line
+           id="line270"
+           x2="715" />
+        <line
+           id="line272"
+           y2="31" />
+        <line
+           id="line274"
+           y2="31"
+           y1="31"
+           x2="715" />
+        <line
+           id="line276"
+           y2="31"
+           x2="715"
+           x1="715" />
+        <line
+           id="line278"
+           y2="31"
+           x2="626"
+           x1="626" />
+        <line
+           id="line280"
+           y2="3"
+           x2="536"
+           x1="536" />
+        <line
+           id="line282"
+           y2="28"
+           y1="31"
+           x2="536"
+           x1="536" />
+        <line
+           id="line284"
+           y2="3"
+           x2="447"
+           x1="447" />
+        <line
+           id="line286"
+           y2="28"
+           y1="31"
+           x2="447"
+           x1="447" />
+        <line
+           id="line288"
+           y2="3"
+           x2="358"
+           x1="358" />
+        <line
+           id="line290"
+           y2="28"
+           y1="31"
+           x2="358"
+           x1="358" />
+        <line
+           id="line292"
+           y2="3"
+           x2="268"
+           x1="268" />
+        <line
+           id="line294"
+           y2="28"
+           y1="31"
+           x2="268"
+           x1="268" />
+        <line
+           id="line296"
+           y2="3"
+           x2="179"
+           x1="179" />
+        <line
+           id="line298"
+           y2="28"
+           y1="31"
+           x2="179"
+           x1="179" />
+        <line
+           id="line300"
+           y2="3"
+           x2="89"
+           x1="89" />
+        <line
+           id="line302"
+           y2="28"
+           y1="31"
+           x2="89"
+           x1="89" />
+      </g>
+      <g
+         id="g326">
+        <g
+           id="g306" />
+        <g
+           id="g308"
+           transform="translate(45,-11)" />
+        <g
+           id="g322"
+           transform="translate(45,15)">
+          <g
+             id="g314"
+             transform="translate(626)">
+            <text
+               id="text312"
+               y="6"><tspan
+                 id="tspan310">Frequency</tspan></text>
+          </g>
+          <g
+             id="g320"
+             transform="translate(268)">
+            <text
+               id="text318"
+               y="6"><tspan
+                 id="tspan316">Fixed Duty Cycle</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g324"
+           transform="translate(45,39)" />
+      </g>
+      <g
+         id="g334"
+         text-anchor="start">
+        <g
+           id="g332"
+           transform="translate(719,16)">
+          <text
+             id="text330"
+             y="6"><tspan
+               id="tspan328">4</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g400"
+       transform="translate(4,176)">
+      <g
+         id="g374"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black">
+        <line
+           id="line338"
+           x2="715" />
+        <line
+           id="line340"
+           y2="31" />
+        <line
+           id="line342"
+           y2="31"
+           y1="31"
+           x2="715" />
+        <line
+           id="line344"
+           y2="31"
+           x2="715"
+           x1="715" />
+        <line
+           id="line346"
+           y2="3"
+           x2="626"
+           x1="626" />
+        <line
+           id="line348"
+           y2="28"
+           y1="31"
+           x2="626"
+           x1="626" />
+        <line
+           id="line350"
+           y2="3"
+           x2="536"
+           x1="536" />
+        <line
+           id="line352"
+           y2="28"
+           y1="31"
+           x2="536"
+           x1="536" />
+        <line
+           id="line354"
+           y2="3"
+           x2="447"
+           x1="447" />
+        <line
+           id="line356"
+           y2="28"
+           y1="31"
+           x2="447"
+           x1="447" />
+        <line
+           id="line358"
+           y2="3"
+           x2="358"
+           x1="358" />
+        <line
+           id="line360"
+           y2="28"
+           y1="31"
+           x2="358"
+           x1="358" />
+        <line
+           id="line362"
+           y2="3"
+           x2="268"
+           x1="268" />
+        <line
+           id="line364"
+           y2="28"
+           y1="31"
+           x2="268"
+           x1="268" />
+        <line
+           id="line366"
+           y2="3"
+           x2="179"
+           x1="179" />
+        <line
+           id="line368"
+           y2="28"
+           y1="31"
+           x2="179"
+           x1="179" />
+        <line
+           id="line370"
+           y2="3"
+           x2="89"
+           x1="89" />
+        <line
+           id="line372"
+           y2="28"
+           y1="31"
+           x2="89"
+           x1="89" />
+      </g>
+      <g
+         id="g390">
+        <g
+           id="g376" />
+        <g
+           id="g378"
+           transform="translate(45,-11)" />
+        <g
+           id="g386"
+           transform="translate(45,15)">
+          <g
+             id="g384"
+             transform="translate(313)">
+            <text
+               id="text382"
+               y="6"><tspan
+                 id="tspan380">Soft Start Ramp Time</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g388"
+           transform="translate(45,39)" />
+      </g>
+      <g
+         id="g398"
+         text-anchor="start">
+        <g
+           id="g396"
+           transform="translate(719,16)">
+          <text
+             id="text394"
+             y="6"><tspan
+               id="tspan392">5</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g464"
+       transform="translate(4,207)">
+      <g
+         id="g438"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black">
+        <line
+           id="line402"
+           x2="715" />
+        <line
+           id="line404"
+           y2="31" />
+        <line
+           id="line406"
+           y2="31"
+           y1="31"
+           x2="715" />
+        <line
+           id="line408"
+           y2="31"
+           x2="715"
+           x1="715" />
+        <line
+           id="line410"
+           y2="3"
+           x2="626"
+           x1="626" />
+        <line
+           id="line412"
+           y2="28"
+           y1="31"
+           x2="626"
+           x1="626" />
+        <line
+           id="line414"
+           y2="3"
+           x2="536"
+           x1="536" />
+        <line
+           id="line416"
+           y2="28"
+           y1="31"
+           x2="536"
+           x1="536" />
+        <line
+           id="line418"
+           y2="3"
+           x2="447"
+           x1="447" />
+        <line
+           id="line420"
+           y2="28"
+           y1="31"
+           x2="447"
+           x1="447" />
+        <line
+           id="line422"
+           y2="3"
+           x2="358"
+           x1="358" />
+        <line
+           id="line424"
+           y2="28"
+           y1="31"
+           x2="358"
+           x1="358" />
+        <line
+           id="line426"
+           y2="3"
+           x2="268"
+           x1="268" />
+        <line
+           id="line428"
+           y2="28"
+           y1="31"
+           x2="268"
+           x1="268" />
+        <line
+           id="line430"
+           y2="3"
+           x2="179"
+           x1="179" />
+        <line
+           id="line432"
+           y2="28"
+           y1="31"
+           x2="179"
+           x1="179" />
+        <line
+           id="line434"
+           y2="3"
+           x2="89"
+           x1="89" />
+        <line
+           id="line436"
+           y2="28"
+           y1="31"
+           x2="89"
+           x1="89" />
+      </g>
+      <g
+         id="g454">
+        <g
+           id="g440" />
+        <g
+           id="g442"
+           transform="translate(45,-11)" />
+        <g
+           id="g450"
+           transform="translate(45,15)">
+          <g
+             id="g448"
+             transform="translate(313)">
+            <text
+               id="text446"
+               y="6"><tspan
+                 id="tspan444">Soft Start Ramp Time</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g452"
+           transform="translate(45,39)" />
+      </g>
+      <g
+         id="g462"
+         text-anchor="start">
+        <g
+           id="g460"
+           transform="translate(719,16)">
+          <text
+             id="text458"
+             y="6"><tspan
+               id="tspan456">6</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g528"
+       transform="translate(4,238)">
+      <g
+         id="g502"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black">
+        <line
+           id="line466"
+           x2="715" />
+        <line
+           id="line468"
+           y2="31" />
+        <line
+           id="line470"
+           y2="31"
+           y1="31"
+           x2="715" />
+        <line
+           id="line472"
+           y2="31"
+           x2="715"
+           x1="715" />
+        <line
+           id="line474"
+           y2="3"
+           x2="626"
+           x1="626" />
+        <line
+           id="line476"
+           y2="28"
+           y1="31"
+           x2="626"
+           x1="626" />
+        <line
+           id="line478"
+           y2="3"
+           x2="536"
+           x1="536" />
+        <line
+           id="line480"
+           y2="28"
+           y1="31"
+           x2="536"
+           x1="536" />
+        <line
+           id="line482"
+           y2="3"
+           x2="447"
+           x1="447" />
+        <line
+           id="line484"
+           y2="28"
+           y1="31"
+           x2="447"
+           x1="447" />
+        <line
+           id="line486"
+           y2="3"
+           x2="358"
+           x1="358" />
+        <line
+           id="line488"
+           y2="28"
+           y1="31"
+           x2="358"
+           x1="358" />
+        <line
+           id="line490"
+           y2="3"
+           x2="268"
+           x1="268" />
+        <line
+           id="line492"
+           y2="28"
+           y1="31"
+           x2="268"
+           x1="268" />
+        <line
+           id="line494"
+           y2="3"
+           x2="179"
+           x1="179" />
+        <line
+           id="line496"
+           y2="28"
+           y1="31"
+           x2="179"
+           x1="179" />
+        <line
+           id="line498"
+           y2="3"
+           x2="89"
+           x1="89" />
+        <line
+           id="line500"
+           y2="28"
+           y1="31"
+           x2="89"
+           x1="89" />
+      </g>
+      <g
+         id="g518">
+        <g
+           id="g504" />
+        <g
+           id="g506"
+           transform="translate(45,-11)" />
+        <g
+           id="g514"
+           transform="translate(45,15)">
+          <g
+             id="g512"
+             transform="translate(313)">
+            <text
+               id="text510"
+               y="6"><tspan
+                 id="tspan508">Duty Cycle Input Denominator</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g516"
+           transform="translate(45,39)" />
+      </g>
+      <g
+         id="g526"
+         text-anchor="start">
+        <g
+           id="g524"
+           transform="translate(719,16)">
+          <text
+             id="text522"
+             y="6"><tspan
+               id="tspan520">7</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g554"
+       transform="translate(4,-3)">
+      <g
+         id="g532"
+         transform="translate(45,11)">
+        <text
+           id="text530"
+           y="6">7</text>
+      </g>
+      <g
+         id="g536"
+         transform="translate(313,11)">
+        <text
+           id="text534"
+           y="6">4</text>
+      </g>
+      <g
+         id="g540"
+         transform="translate(402,11)">
+        <text
+           id="text538"
+           y="6">3</text>
+      </g>
+      <g
+         id="g544"
+         transform="translate(492,11)">
+        <text
+           id="text542"
+           y="6">2</text>
+      </g>
+      <g
+         id="g548"
+         transform="translate(581,11)">
+        <text
+           id="text546"
+           y="6">1</text>
+      </g>
+      <g
+         id="g552"
+         transform="translate(670,11)">
+        <text
+           id="text550"
+           y="6">0</text>
+      </g>
+    </g>
+  </g>
+</svg>

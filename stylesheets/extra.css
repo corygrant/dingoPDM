@@ -1,0 +1,5 @@
+/* Ensure Vega-Lite containers have a minimum size */
+.vega-embed {
+    min-height: 400px;
+    display: block !important;
+  }
