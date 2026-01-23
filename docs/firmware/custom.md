@@ -315,3 +315,7 @@ After building and flashing:
 - Validate multiplexing on `DSEL` (BTS7008-2EPP only)
 
 For questions, refer to the main [dingoPDM GitHub repository](https://github.com/corygrant/DingoPDM_FW)
+
+!!! Note
+ 
+    Thanks to **jabbarider** for this write up
