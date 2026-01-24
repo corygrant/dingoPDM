@@ -12,10 +12,11 @@ The pins you need depend on which Profets (switching devices) you're planning to
 
 #### BTS7002-1EPP
 
-| Pin Type       | Count | Name | Purpose                               |
-| -------------- | ----- | ---- | ------------------------------------- |
-| Analog Input   | 1     | `IS` | Current feedback                      |
-| Digital Output | 1     | `IN` | Drive transistor ON/OFF (PWM-enabled) |
+| Pin Type       | Count | Name  | Purpose                               |
+| -------------- | ----- | ----- | ------------------------------------- |
+| Analog Input   | 1     | `IS`  | Current feedback                      |
+| Digital Output | 1     | `IN`  | Drive transistor ON/OFF (PWM-enabled) |
+| Digital Output | 1     | `DEN` | Enable current sensing                |
 
 #### BTS7008-2EPP Variant
 
