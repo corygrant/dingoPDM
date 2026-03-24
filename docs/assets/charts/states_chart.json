@@ -31,7 +31,9 @@
               {"id": 34, "state": "New Jersey", "highlight": "normal"},
               {"id": 24, "state": "Maryland", "highlight": "normal"},
               {"id": 39, "state": "Ohio", "highlight": "normal"},
-              {"id": 21, "state": "Kentucky", "highlight": "normal"}
+              {"id": 21, "state": "Kentucky", "highlight": "normal"},
+              {"id": 50, "state": "Vermont", "highlight": "normal"},
+              {"id": 19, "state": "Iowa", "highlight": "normal"}
             ]
           },
           "key": "id",
