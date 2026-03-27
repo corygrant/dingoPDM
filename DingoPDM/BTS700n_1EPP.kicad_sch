@@ -3215,7 +3215,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Profet:TDSO-14"
+		(property "Footprint" "dingoPDM:TDSO-14"
 			(at 121.92 82.55 0)
 			(effects
 				(font
@@ -3346,7 +3346,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "digikey-footprints:DO-214AC"
+		(property "Footprint" "dingoPDM:DO-214AC"
 			(at 170.18 104.14 0)
 			(effects
 				(font

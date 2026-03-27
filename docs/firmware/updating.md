@@ -1,5 +1,9 @@
 dingoPDM firmware can be updated using the onboard USB-C connection. 
 
+## Latest Firmware
+
+The latest built firmware can be found on the repo on [the release page](https://github.com/corygrant/DingoPDM_FW/releases)
+
 ## STM32CubeProgrammer
 
 To update the firmware, the STMicroelectronics STM32CubeProgrammer is used. 

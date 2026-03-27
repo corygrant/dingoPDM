@@ -7,6 +7,13 @@
 
     There is no difference in message formatting between CAN and USB
 
+## DBC
+
+DBC files can be found in the firmware repo [here](https://github.com/corygrant/DingoPDM_FW/tree/master/dbc)
+
+!!! Info
+    DBC files are built using the python dbc_builder in the `dbc_builder` folder
+
 ## Input
 
 CAN input format is not restricted or defined by the firmware. 
@@ -346,6 +353,8 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
         - 1 = `Variable duty cycle` 
     - Bit 4-7 = Output number
 - `IN` - Duty cycle input number (see [Variable Map](variablemap.md))
+    - CAN Input Values are the only valid inputs
+    - All other input values are boolean
 - `CL` - Current limit (A)
 - `FRQ`- PWM base frequency (Hz)
     - 9 bit value
@@ -355,9 +364,9 @@ The response message will be the prefix + 128 and will respond on ID = Base ID +
     - Bit 0 = PWM base frequency bit 0
     - Bits 1-8 = Fixed duty cycle
 - `SSR` - Soft start ramp time (ms)
-- `DCI` - Duty cycle denominator input (see [Variable Map](variablemap.md))
-    - CAN Input Values are the only valid inputs
-    - All other input values are boolean
+- `DCI` - Duty cycle denominator
+    - 0 to 255
+    - `IN` / `DCI`
 
 ### Virtual Input
 

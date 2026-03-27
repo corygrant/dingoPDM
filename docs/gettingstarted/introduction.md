@@ -49,7 +49,7 @@ dingoPDM also includes:
 
 ## User Locations
 
-:flag_us: :flag_de: :flag_fr: :flag_gb: :flag_pt: :flag_au: :flag_kn: :flag_jp: :flag_bh:
+:flag_us: :flag_de: :flag_fr: :flag_gb: :flag_pt: :flag_au: :flag_kn: :flag_jp: :flag_bh: :flag_it: :flag_fi: :flag_dk:
 
 ```vegalite 
 {
@@ -72,6 +72,10 @@ The dingoPDM configuration can be accessed using:
 
 Configuration reading/writing and status monitoring are all done using the custom built Windows application [DingoConfigurator](../software/introduction.md) 
 
+## Wiring Example
+
+![ExampleWiring](../images/dingoPDMExampleWiringWhite.svg#only-dark){ .off-glb }
+![ExampleWiring](../images/dingoPDMExampleWiringBlack.svg#only-light){ .off-glb }
 
 ## Resources
 
@@ -163,21 +167,41 @@ On the next power up, the CAN Base ID will be updated.
 - :yellow_square: : In Progess
 - :red_square: : Not Started
 
-| Recent Open Items          | Status         |
-|----------------------------|----------------|
-| Finish case design         | :green_square: |
-| Test thermal performance   | :green_square: |
-| Support USB C to C cables  | :green_square: |
-| Develop dingoPDM-Max       | :green_square: |
-| Finish documentation       | :yellow_square:|
-| Add device sleep           | :green_square: |
-| Add verbose error handling | :green_square: |
-| Add keypad support         | :yellow_square:|
-| Add PWM output support     | :green_square: |
-| Switch-less bootloader     | :green_square: |
-| Add soft HMI buttons       | :yellow_square:|
-| Finish plots in software   | :yellow_square:|
-| Move to ChibiOS            | :green_square: |
+| Recent Open Items          | Status          |
+| -------------------------- | --------------- |
+| Finish case design         | :green_square:  |
+| Test thermal performance   | :green_square:  |
+| Support USB C to C cables  | :green_square:  |
+| Develop dingoPDM-Max       | :green_square:  |
+| Finish documentation       | :yellow_square: |
+| Add device sleep           | :green_square:  |
+| Add verbose error handling | :green_square:  |
+| Add keypad support         | :yellow_square: |
+| Add PWM output support     | :green_square:  |
+| Switch-less bootloader     | :green_square:  |
+| Add soft HMI buttons       | :yellow_square: |
+| Finish plots in software   | :yellow_square: |
+| Move to ChibiOS            | :green_square:  |
+
+## Documentation Status
+
+???+ Note
+
+    Any help with the documentation is always welcome. 
+    
+    If you're familiar with git, submit a PR with your updates. 
+    
+    If not, you can message me the updates/additions on Discord and I can make the changes. 
+
+    Markdown preferred, but not required. 
+
+
+- :yellow_square: : Needs to be updated
+- :red_square: : Does not exist
+
+| Section                                | Status          | Notes                                 |
+| -------------------------------------- | --------------- | ------------------------------------- |
+| [Customization](../firmware/custom.md) | :yellow_square: | PCB and VarMap info needs to be added |
 
 ## Disclaimer
 

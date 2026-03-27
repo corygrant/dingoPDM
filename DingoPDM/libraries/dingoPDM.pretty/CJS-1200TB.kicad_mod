@@ -1,0 +1,252 @@
+(footprint "CJS-1200TB"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "SW1"
+		(at -11.4 -14.6 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "bd2923f8-9e30-4dba-af6d-cbbdbfb6672b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "BOOT"
+		(at 0 3.429 270)
+		(layer "F.SilkS")
+		(uuid "c0fb0e95-2e42-4b4b-ad40-412a3fbbc33e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e6813321-9012-478d-a319-35c0273cac65")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "43136d4d-fd89-4609-accc-72faf0040cf1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Digi-Key_PN" "563-CJS-1200TB1CT-ND"
+		(at 52.705 63.627 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1c1693fb-bd2a-4191-ad15-a4134dee8570")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C2921631"
+		(at 52.705 63.627 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "600bb123-3f48-47c5-85a5-0af6991700cb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.7 -1.25)
+		(end 2.7 -1.25)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2d916801-b8fa-4eba-b1b8-e7f9f942487b")
+	)
+	(fp_line
+		(start -2.7 1.25)
+		(end -2.7 -1.25)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "eddec697-b265-4ff3-9729-54192e078c7a")
+	)
+	(fp_line
+		(start -1.3 -0.5)
+		(end 1.3 -0.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4ec3d585-3bfb-4f5f-843b-6938834e38d0")
+	)
+	(fp_line
+		(start -1.3 0.5)
+		(end -1.3 -0.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b853beef-8e9d-4696-a19e-4175a9feb2eb")
+	)
+	(fp_line
+		(start 1.3 -0.5)
+		(end 1.3 0.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4715c563-a640-44bc-b063-fe6629d12b4d")
+	)
+	(fp_line
+		(start 1.3 0.5)
+		(end -1.3 0.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9db696a6-56b6-42bd-bd38-76adcbfd7836")
+	)
+	(fp_line
+		(start 2.7 -1.25)
+		(end 2.7 1.25)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "60f83879-b8cb-4014-8599-aa5dc183cf54")
+	)
+	(fp_line
+		(start 2.7 1.25)
+		(end -2.7 1.25)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ba92fff8-f6ec-4eae-bc30-064c0822f400")
+	)
+	(fp_poly
+		(pts
+			(xy 0.8 -0.5) (xy 0.4 -0.5) (xy 0.4 -1.2) (xy 0.8 -1.2)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "7f4890a4-ba29-4ae7-b8f3-5baec0ae648f")
+	)
+	(fp_poly
+		(pts
+			(xy 0.8 1.2) (xy 0.4 1.2) (xy 0.4 0.5) (xy 0.8 0.5)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "c6460989-4f3f-4893-980f-14976dc61424")
+	)
+	(fp_line
+		(start -2.9 -1.5)
+		(end 2.9 -1.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9b867ca2-e57e-431a-a6a7-af4c89ab9f65")
+	)
+	(fp_line
+		(start -2.9 1.5)
+		(end -2.9 -1.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2e83bc04-6951-4cda-bea8-202aba210d9b")
+	)
+	(fp_line
+		(start 2.9 -1.5)
+		(end 2.9 1.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ae9a7cae-a4f8-4ddf-b64d-604cb14358fb")
+	)
+	(fp_line
+		(start 2.9 1.5)
+		(end -2.9 1.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "21930561-11c9-41f5-beae-536508295750")
+	)
+	(pad "1" smd rect
+		(at -1.75 1.95)
+		(size 1 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "65f0c70d-105f-43fa-aa0f-ce7eb131df17")
+	)
+	(pad "2" smd rect
+		(at 0 -1.95)
+		(size 1 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "84c8abd5-8641-4cb0-a6df-26acb3ba3895")
+	)
+	(pad "3" smd rect
+		(at 1.75 1.95)
+		(size 1 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "92bd14e0-c3f1-418c-9bff-8aa175d5b6ba")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Models/CJS-1200TB.stp"
+		(offset
+			(xyz 0 0 2.49936)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+)

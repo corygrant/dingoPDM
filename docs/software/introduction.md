@@ -4,8 +4,8 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/corygrant/dingoConfigurator)](https://github.com/corygrant/dingoConfigurator/commits/master/)
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/corygrant/dingoConfigurator)](https://github.com/corygrant/dingoConfigurator/issues)
 
-!!! bug
-    Software documentation is a work in progress
+!!! warning
+    DingoConfigurator has been replaced by [dingoConfig](https://github.com/corygrant/dingoConfig/releases). Documentation will be updated. 
 
 DingoConfigurator is a Windows application designed to configure and monitor dingoPDM. 
 

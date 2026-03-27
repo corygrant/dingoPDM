@@ -6,6 +6,12 @@
 }
 ```
 
+```vegalite 
+{
+    "schema-url": "assets/charts/dingopdmmax_stresstest.json"
+}
+```
+
 !!! Tip
     - Pan: click + drag
     - Zoom: mouse wheel
