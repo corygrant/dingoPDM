@@ -6,8 +6,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "dingoPDM")
-		(date "2025-06-16")
-		(rev "v7.5")
+		(date "2026-03-27")
+		(rev "v7.6")
 		(comment 3 "github.com/corygrant")
 		(comment 4 "Cory Grant")
 	)
