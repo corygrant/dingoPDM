@@ -6,8 +6,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "dingoPDM")
-		(date "2025-06-16")
-		(rev "v7.5")
+		(date "2026-03-27")
+		(rev "v7.6")
 		(comment 3 "github.com/corygrant")
 		(comment 4 "Cory Grant")
 	)
@@ -5119,7 +5119,7 @@
 			(uuid "a62c3302-d6cf-486c-8d6c-a1714a51ae0f")
 		)
 		(instances
-			(project ""
+			(project "DingoPDM"
 				(path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f5cf2eb"
 					(reference "C41")
 					(unit 1)
@@ -5871,7 +5871,7 @@
 			(uuid "b4a26605-5010-442e-b476-2b8ea58801a1")
 		)
 		(instances
-			(project ""
+			(project "DingoPDM"
 				(path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f5cf2eb"
 					(reference "U15")
 					(unit 1)
@@ -6090,7 +6090,7 @@
 			(uuid "0a5da3f4-4915-4391-b516-91912dd7e88e")
 		)
 		(instances
-			(project ""
+			(project "DingoPDM"
 				(path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f5cf2eb"
 					(reference "#PWR095")
 					(unit 1)
@@ -6221,7 +6221,7 @@
 			(uuid "6841d0dc-5149-4688-8e5a-11f0a36b6ae5")
 		)
 		(instances
-			(project ""
+			(project "DingoPDM"
 				(path "/8948e307-9174-4227-9c28-3ff885e6e83d/00000000-0000-0000-0000-00005f5cf2eb"
 					(reference "#PWR094")
 					(unit 1)
