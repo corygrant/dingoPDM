@@ -492,7 +492,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "v7.5"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -794,7 +794,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "..\\Export\\V7.5\\JLC\\DingoPDM.csv",
+    "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -933,7 +933,7 @@
       {
         "filename": "DingoPDM.kicad_sch",
         "name": "DingoPDM",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "8948e307-9174-4227-9c28-3ff885e6e83d"
       }
     ],
     "used_designators": "",
@@ -942,7 +942,7 @@
   "sheets": [
     [
       "8948e307-9174-4227-9c28-3ff885e6e83d",
-      "Root"
+      "DingoPDM"
     ],
     [
       "00000000-0000-0000-0000-00005f5cf2eb",
