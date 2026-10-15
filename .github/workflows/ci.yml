@@ -5,10 +5,8 @@ on:
       - master 
       - main
     paths:
-      - 'docs/**'
-  pull_request:
-    paths:
-      - 'docs/**'
+      - 'redirect/**'
+      - '.github/workflows/ci.yml'
   workflow_dispatch:
 
 permissions:
@@ -21,26 +19,16 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# The docs moved to https://corygrant.github.io/dingoElec/
+# This publishes redirect pages so old links still work
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
-      - uses: actions/cache@v3
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-glightbox mkdocs-macros-plugin mkdocs-charts-plugin
-      - run: mkdocs build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: redirect
 
   deploy:
     needs: build

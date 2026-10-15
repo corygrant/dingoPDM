@@ -2,14 +2,14 @@
 [![GitHub Release](https://img.shields.io/github/v/release/corygrant/dingoPDM?include_prereleases&display_name=tag)](https://github.com/corygrant/dingoPDM/releases)
 [![GitHub last commit](https://img.shields.io/github/last-commit/corygrant/dingoPDM)](https://github.com/corygrant/dingoPDM/commits/master/)
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/corygrant/dingoPDM)](https://github.com/corygrant/dingoPDM/issues)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fcorygrant.github.io%2FdingoPDM%2F&label=docs)](https://corygrant.github.io/dingoPDM/)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fcorygrant.github.io%2FdingoElec%2F&label=docs)](https://corygrant.github.io/dingoElec/dingopdm/introduction/)
 ![Discord](https://img.shields.io/discord/1243358184266010667?label=discord)
 
 
 ## dingoPDM
 dingoPDM is an Infineon Profet based Power Distribution Module. 
 
-# [**Documentation**](https://corygrant.github.io/dingoPDM/)
+# [**Documentation**](https://corygrant.github.io/dingoElec/dingopdm/introduction/)
 
 # [**Store**](https://dingo-electronics.square.site/product/dingopdm/1)
 
